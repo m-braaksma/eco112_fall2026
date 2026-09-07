@@ -8,21 +8,13 @@ title: "Course Overview and Syllabus"
 |--------|------------|---------|-----------|
 | Class  | Tue & Thu  | 2:00–3:30 PM | Hagfors Center 151 |
 
-## Course Description
+## Course Overview
 
-ECO 112 introduces you to macroeconomics: the study of modern economies at a national level. We'll focus on national income accounts, monetary and fiscal policy, and economic growth, building toward the ability to analyze national economies, engage in policy debates, and follow international economic events.
+ECO 112 introduces you to macroeconomics: the study of modern economies at a national level. We'll focus on national income accounts, monetary and fiscal policy, and economic growth. By the end of the course, you should be able to apply these concepts to analyze national economies, engage in policy debates, and follow international economic events with real understanding.
 
-## Textbook
+## Required Materials
 
-- [McConnell, Brue, and Flynn: *Macroeconomics*, 2026 Release](https://www.mheducation.com/), McGraw Hill Education
-
-The electronic edition is **required** through McGraw Hill Connect (which also hosts homework, quizzes, and SmartBook readings); a print copy is optional.
-
-## How the Course Runs
-
-- **Tuesday:** Homework/quiz due on the previous chapter, then lecture on a new chapter.
-- **Thursday:** Student presentation on the previous chapter (starting Week 6), then lecture continues.
-
+The textbook for this course is McConnell, Brue, and Flynn, *Macroeconomics*, 2026 Release, McGraw Hill Education.
 
 ## Grading
 
@@ -33,8 +25,6 @@ The electronic edition is **required** through McGraw Hill Connect (which also h
 | Presentation | 20% |
 | Connect Homework | 20% |
 | Quizzes | 10% |
-
-Quizzes are short, paper, in-class checks of understanding (two lowest dropped). Homework is completed on Connect, due Tuesdays. Presentations start in Week 6 and run through 7 slots across the semester.
 
 Full policy detail, including the late-work policy, AI use policy, attendance requirements, and university-required statements, is in the official syllabus below.
 

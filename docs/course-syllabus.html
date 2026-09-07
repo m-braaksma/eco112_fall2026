@@ -155,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lecture/ch01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ch 1 — Choices</span></a>
+ <span class="menu-text">Ch 1: Choices</span></a>
   </div>
 </li>
       </ul>
@@ -171,9 +171,8 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#course-info" id="toc-course-info" class="nav-link active" data-scroll-target="#course-info">Course info</a></li>
-  <li><a href="#course-description" id="toc-course-description" class="nav-link" data-scroll-target="#course-description">Course Description</a></li>
-  <li><a href="#textbook" id="toc-textbook" class="nav-link" data-scroll-target="#textbook">Textbook</a></li>
-  <li><a href="#how-the-course-runs" id="toc-how-the-course-runs" class="nav-link" data-scroll-target="#how-the-course-runs">How the Course Runs</a></li>
+  <li><a href="#course-overview" id="toc-course-overview" class="nav-link" data-scroll-target="#course-overview">Course Overview</a></li>
+  <li><a href="#required-materials" id="toc-required-materials" class="nav-link" data-scroll-target="#required-materials">Required Materials</a></li>
   <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
   <li><a href="#assignments" id="toc-assignments" class="nav-link" data-scroll-target="#assignments">Assignments</a></li>
   <li><a href="#official-syllabus" id="toc-official-syllabus" class="nav-link" data-scroll-target="#official-syllabus">Official Syllabus</a></li>
@@ -223,23 +222,13 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </section>
-<section id="course-description" class="level2">
-<h2 class="anchored" data-anchor-id="course-description">Course Description</h2>
-<p>ECO 112 introduces you to macroeconomics: the study of modern economies at a national level. We’ll focus on national income accounts, monetary and fiscal policy, and economic growth, building toward the ability to analyze national economies, engage in policy debates, and follow international economic events.</p>
+<section id="course-overview" class="level2">
+<h2 class="anchored" data-anchor-id="course-overview">Course Overview</h2>
+<p>ECO 112 introduces you to macroeconomics: the study of modern economies at a national level. We’ll focus on national income accounts, monetary and fiscal policy, and economic growth. By the end of the course, you should be able to apply these concepts to analyze national economies, engage in policy debates, and follow international economic events with real understanding.</p>
 </section>
-<section id="textbook" class="level2">
-<h2 class="anchored" data-anchor-id="textbook">Textbook</h2>
-<ul>
-<li><a href="https://www.mheducation.com/">McConnell, Brue, and Flynn: <em>Macroeconomics</em>, 2026 Release</a>, McGraw Hill Education</li>
-</ul>
-<p>The electronic edition is <strong>required</strong> through McGraw Hill Connect (which also hosts homework, quizzes, and SmartBook readings); a print copy is optional.</p>
-</section>
-<section id="how-the-course-runs" class="level2">
-<h2 class="anchored" data-anchor-id="how-the-course-runs">How the Course Runs</h2>
-<ul>
-<li><strong>Tuesday:</strong> Homework/quiz due on the previous chapter, then lecture on a new chapter.</li>
-<li><strong>Thursday:</strong> Student presentation on the previous chapter (starting Week 6), then lecture continues.</li>
-</ul>
+<section id="required-materials" class="level2">
+<h2 class="anchored" data-anchor-id="required-materials">Required Materials</h2>
+<p>The textbook for this course is McConnell, Brue, and Flynn, <em>Macroeconomics</em>, 2026 Release, McGraw Hill Education.</p>
 </section>
 <section id="grading" class="level2">
 <h2 class="anchored" data-anchor-id="grading">Grading</h2>
@@ -273,7 +262,6 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>Quizzes are short, paper, in-class checks of understanding (two lowest dropped). Homework is completed on Connect, due Tuesdays. Presentations start in Week 6 and run through 7 slots across the semester.</p>
 <p>Full policy detail, including the late-work policy, AI use policy, attendance requirements, and university-required statements, is in the official syllabus below.</p>
 </section>
 <section id="assignments" class="level2">
@@ -365,7 +353,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/your-username\.github\.io\/eco112_fall2026\/");
+        var filterRegex = new RegExp("https:\/\/m-braaksma\.github\.io\/eco112_fall2026\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

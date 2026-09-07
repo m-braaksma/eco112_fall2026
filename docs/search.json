@@ -11,7 +11,7 @@
     "href": "course-support.html",
     "title": "Course support",
     "section": "",
-    "text": "Instructor\n\n\n\n\nName: Matt BraaksmaOffice: Email: braaksma@augsburg.eduOffice Hours: TTH 3:45-4:45 PM",
+    "text": "Instructor\n\n\n\n\nName: Matt BraaksmaOffice: Email: braaksma@augsburg.eduOffice Hours: TTH 3:30-4:30 PM",
     "crumbs": [
       "Course information",
       "Support"
@@ -25,7 +25,7 @@
     "text": "Open in new tab",
     "crumbs": [
       "Topics",
-      "Ch 1 — Choices"
+      "Ch 1: Choices"
     ]
   },
   {
@@ -62,33 +62,22 @@
     ]
   },
   {
-    "objectID": "course-syllabus.html#course-description",
-    "href": "course-syllabus.html#course-description",
+    "objectID": "course-syllabus.html#course-overview",
+    "href": "course-syllabus.html#course-overview",
     "title": "Course Overview and Syllabus",
-    "section": "Course Description",
-    "text": "Course Description\nECO 112 introduces you to macroeconomics: the study of modern economies at a national level. We’ll focus on national income accounts, monetary and fiscal policy, and economic growth, building toward the ability to analyze national economies, engage in policy debates, and follow international economic events.",
+    "section": "Course Overview",
+    "text": "Course Overview\nECO 112 introduces you to macroeconomics: the study of modern economies at a national level. We’ll focus on national income accounts, monetary and fiscal policy, and economic growth. By the end of the course, you should be able to apply these concepts to analyze national economies, engage in policy debates, and follow international economic events with real understanding.",
     "crumbs": [
       "Course information",
       "Overview and Syllabus"
     ]
   },
   {
-    "objectID": "course-syllabus.html#textbook",
-    "href": "course-syllabus.html#textbook",
+    "objectID": "course-syllabus.html#required-materials",
+    "href": "course-syllabus.html#required-materials",
     "title": "Course Overview and Syllabus",
-    "section": "Textbook",
-    "text": "Textbook\n\nMcConnell, Brue, and Flynn: Macroeconomics, 2026 Release, McGraw Hill Education\n\nThe electronic edition is required through McGraw Hill Connect (which also hosts homework, quizzes, and SmartBook readings); a print copy is optional.",
-    "crumbs": [
-      "Course information",
-      "Overview and Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#how-the-course-runs",
-    "href": "course-syllabus.html#how-the-course-runs",
-    "title": "Course Overview and Syllabus",
-    "section": "How the Course Runs",
-    "text": "How the Course Runs\n\nTuesday: Homework/quiz due on the previous chapter, then lecture on a new chapter.\nThursday: Student presentation on the previous chapter (starting Week 6), then lecture continues.",
+    "section": "Required Materials",
+    "text": "Required Materials\nThe textbook for this course is McConnell, Brue, and Flynn, Macroeconomics, 2026 Release, McGraw Hill Education.",
     "crumbs": [
       "Course information",
       "Overview and Syllabus"
@@ -99,7 +88,7 @@
     "href": "course-syllabus.html#grading",
     "title": "Course Overview and Syllabus",
     "section": "Grading",
-    "text": "Grading\n\n\n\nCategory\n% of Grade\n\n\n\n\nExam 1\n25%\n\n\nExam 2\n25%\n\n\nPresentation\n20%\n\n\nConnect Homework\n20%\n\n\nQuizzes\n10%\n\n\n\nQuizzes are short, paper, in-class checks of understanding (two lowest dropped). Homework is completed on Connect, due Tuesdays. Presentations start in Week 6 and run through 7 slots across the semester.\nFull policy detail, including the late-work policy, AI use policy, attendance requirements, and university-required statements, is in the official syllabus below.",
+    "text": "Grading\n\n\n\nCategory\n% of Grade\n\n\n\n\nExam 1\n25%\n\n\nExam 2\n25%\n\n\nPresentation\n20%\n\n\nConnect Homework\n20%\n\n\nQuizzes\n10%\n\n\n\nFull policy detail, including the late-work policy, AI use policy, attendance requirements, and university-required statements, is in the official syllabus below.",
     "crumbs": [
       "Course information",
       "Overview and Syllabus"
