@@ -6,4 +6,4 @@ subtitle: "Lecture slides"
 
 <iframe src="../slides/ch01.html" width="100%" height="600"></iframe>
 
-[Open in new tab](../slides/ch01.html)
+[Open in full screen](../slides/ch01.html)
