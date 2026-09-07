@@ -5,7 +5,8 @@ project:
     - quarto render ../syllabus/
     - quarto render ../lecture-slides/
 
-  post-render: []
+  post-render:
+    - touch docs/.nojekyll
 
 website:
   page-navigation: false
