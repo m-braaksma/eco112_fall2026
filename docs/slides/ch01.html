@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="ch01_files/libs/clipboard/clipboard.min.js"></script>
+<script src="ch01_files/libs/quarto-html/tabby.min.js"></script>
+<script src="ch01_files/libs/quarto-html/popper.min.js"></script>
+<script src="ch01_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="ch01_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="ch01_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="ch01_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.26">
+
+  <title>Chapter 1: Limits, Alternatives, and Choices</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="ch01_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="ch01_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="ch01_files/libs/revealjs/dist/theme/quarto-47ef377ee77cdf85c61adfa0b07e2c12.css">
+  <link href="ch01_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="ch01_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="ch01_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="ch01_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+  
+  <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+  <script>
+  window.PlotlyConfig = {MathJaxConfig: 'local'};
+  if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
+  </script>
+  <script type="module">import "https://cdn.plot.ly/plotly-3.7.0.min"</script>
+
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title"><p>Chapter 1: Limits, Alternatives, and Choices</p></h1>
+  <p class="subtitle"></p><div class="line-block">ECO 112 Principles of Macroeconomics</div><p></p>
+
+<div class="quarto-title-authors">
+</div>
+
+</section>
+<section id="todays-roadmap" class="slide level2">
+<h2>Today’s Roadmap</h2>
+<h3 id="key-concepts">Key Concepts</h3>
+<ul>
+<li>The economic perspective: how economists think about decisions</li>
+<li>The individual’s economizing problem: budget lines and tradeoffs</li>
+<li>Society’s economizing problem: production possibilities</li>
+<li>MB equals MC: the decision rule behind almost everything in this course</li>
+</ul>
+<!-- Suggested image: a simple photo representing "too many choices, limited resources," e.g. a crowded grocery shelf or a person choosing between two paths. Free sources: unsplash.com, pexels.com. Search term: "decision fork road" or "grocery shelf choice." -->
+</section>
+<section>
+<section id="the-economic-perspective" class="title-slide slide level1 center">
+<h1>The Economic Perspective</h1>
+
+</section>
+<section id="economics-the-basics" class="slide level2">
+<h2>Economics: The Basics</h2>
+<ul>
+<li><p>Economics is a social science concerned with making <em>optimal choices under conditions of scarcity</em>.</p></li>
+<li><p>We have unlimited wants but limited resources, so choices have to be made.</p>
+<ul>
+<li>If resources were unlimited, nobody would ever have to choose between two things they want, and economics as a field would not need to exist.</li>
+</ul></li>
+</ul>
+
+<img data-src="https://images.unsplash.com/vector-1774785393554-2f5b212c770f?q=80&amp;w=3198&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="economics-is-divided-into-two-main-branches" class="slide level2">
+<h2>Economics is divided into two main branches</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="microeconomics">Microeconomics</h3>
+<p>Decision making by individual consumers, households, and firms.</p>
+<ul>
+<li>Consumer and household decisions:
+<ul>
+<li>Why do some people choose to buy generic brands instead of name brands?</li>
+</ul></li>
+<li>Firm and business decisions:
+<ul>
+<li>Why did a local restaurant decide to hire more workers during the summer?</li>
+</ul></li>
+<li>Market interactions:
+<ul>
+<li>Why do salaries differ between similar jobs in different cities?</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="macroeconomics">Macroeconomics</h3>
+<p>Behavior of the entire economy at once: inflation, unemployment, interest rates, and how all the sectors interact.</p>
+<ul>
+<li>Broad economic trends:
+<ul>
+<li>Why did unemployment rise during the 2020 pandemic?</li>
+</ul></li>
+<li>Interconnected sectors:
+<ul>
+<li>How do changes in oil prices ripple through different industries?</li>
+</ul></li>
+<li>Long-term patterns:
+<ul>
+<li>Why do some regions experience persistent poverty while others prosper?</li>
+</ul></li>
+</ul>
+</div></div>
+<div style="font-size: 1em; padding-top: 0.5em;">
+<p>This course is entirely about the macro side, though we will occasionally use micro tools like supply and demand to build up to it.</p>
+</div>
+</section>
+<section id="positive-vs.-normative-economics" class="slide level2">
+<h2>Positive vs.&nbsp;Normative Economics</h2>
+<div style="font-size: 1.25em;">
+<ul>
+<li><strong>Positive economics:</strong> statements of fact that can be tested against data. “Unemployment rose to five percent last quarter” is positive, it is either true or false.</li>
+<li><strong>Normative economics:</strong> statements involving value judgments about what ought to be. “The government should raise the minimum wage” is normative, reasonable people can disagree.</li>
+</ul>
+</div>
+<div style="font-size: 1.4em; padding-top: 0.3em;">
+<p>Knowing the difference matters: a lot of arguments about the economy are really disagreements about values, dressed up as disagreements about facts.</p>
+</div>
+</section>
+<section id="the-economic-perspective-1" class="slide level2">
+<h2>The Economic Perspective</h2>
+<div style="font-size: 1.15em;">
+<p>Three habits of mind that separate economic thinking from everyday thinking:</p>
+<ul>
+<li><strong>Scarcity and choice:</strong> you cannot have it all, so every choice involves giving something up</li>
+<li><strong>Purposeful behavior:</strong> people make decisions on purpose, weighing costs and benefits, rather than choosing at random</li>
+<li><strong>Marginal analysis:</strong> comparing the <em>additional</em> benefit of one more unit against the <em>additional</em> cost, rather than looking only at totals</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="individuals-economizing-problem" class="title-slide slide level1 center">
+<h1>Individual’s Economizing Problem</h1>
+
+</section>
+<section id="the-budget-line" class="slide level2">
+<h2>The Budget Line</h2>
+<div style="font-size: 1.3em;">
+<p>A <strong>budget line</strong> shows the various combinations of two products a consumer can purchase with a specific income, given fixed prices.</p>
+<p>It is the simplest possible picture of scarcity: you have a fixed amount of money, two things you want to buy, and a hard limit on how much of both you can have at once.</p>
+</div>
+</section>
+<section id="example-coffee-and-biscuits" class="slide level2">
+<h2>Example: Coffee and Biscuits</h2>
+<div style="font-size: 1.2em;">
+<p>You have <strong>$25</strong> to spend. Every morning you like to buy coffee and biscuits.</p>
+<p>A cup of coffee costs <strong>$5</strong>. A cookie costs <strong>$2.50</strong>.</p>
+<p>Work with a neighbor: list every combination of coffee and cookies you could buy while spending exactly your $25.</p>
+</div>
+
+<img data-src="https://images.unsplash.com/photo-1586714932157-5853aed2e64b?w=900&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29mZmVlJTIwY29va2llc3xlbnwwfHwwfHx8Mg%3D%3D" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="coffee-and-biscuits-solution" class="slide level2">
+<h2>Coffee and Biscuits: Solution</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="font-size: 1.7em;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Coffee</th>
+<th>Cookies</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>5</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div><div class="column" style="width:50%;">
+<div style="font-size: 1.3em;">
+<ul>
+<li>Every single combination costs exactly $25.
+<ul>
+<li>That is your budget line.</li>
+</ul></li>
+<li>Notice the tradeoff:
+<ul>
+<li>Buying one more coffee always means giving up two cookies.</li>
+<li>That tradeoff is opportunity cost.</li>
+</ul></li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="reading-a-budget-line" class="slide level2">
+<h2>Reading a Budget Line</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div id="419d6443" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<div style="height:520px; width:650px;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.7.0.min.js" integrity="sha256-jvTGqxNp8AGWEcvNLVuKr+8j5dGe9Yw51LQkmDH+IYA=" crossorigin="anonymous"></script>                <div id="8d0d3c36-51d5-49f5-81c4-89c42612ed42" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("8d0d3c36-51d5-49f5-81c4-89c42612ed42")) {                    Plotly.newPlot(                        "8d0d3c36-51d5-49f5-81c4-89c42612ed42",                        [{"hovertemplate":"\u003cb\u003eBudget line ($25 income)\u003c\u002fb\u003e\u003cbr\u003eCookies: %{x}\u003cbr\u003eCoffee: %{y}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#1f4e79","width":3},"mode":"lines","name":"Budget line ($25 income)","x":[0,10],"y":[5,0],"type":"scatter"},{"fill":"tozeroy","fillcolor":"#9dc3e6","hoverinfo":"skip","line":{"color":"rgba(0,0,0,0)"},"mode":"lines","showlegend":false,"x":[0,10,0],"y":[5,0,0],"type":"scatter"},{"hovertemplate":"\u003cb\u003eBudget line ($35 income)\u003c\u002fb\u003e\u003cbr\u003eCookies: %{x}\u003cbr\u003eCoffee: %{y}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#c55a11","dash":"dash","width":2.5},"mode":"lines","name":"Budget line ($35 income)","x":[0,14],"y":[7,0],"type":"scatter"},{"hovertemplate":"\u003cb\u003eOn the line\u003c\u002fb\u003e\u003cbr\u003eCookies: %{x}\u003cbr\u003eCoffee: %{y}\u003cbr\u003eCost: $25 (full budget)\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#1f4e79","line":{"color":"white","width":1.5},"size":11},"mode":"markers","showlegend":false,"x":[4],"y":[3],"type":"scatter"},{"hovertemplate":"\u003cb\u003eInside the line\u003c\u002fb\u003e\u003cbr\u003eCookies: %{x}\u003cbr\u003eCoffee: %{y}\u003cbr\u003eCost: $15 (attainable)\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#548235","line":{"color":"white","width":1.5},"size":11},"mode":"markers","showlegend":false,"x":[2],"y":[2],"type":"scatter"},{"hovertemplate":"\u003cb\u003eOutside the line\u003c\u002fb\u003e\u003cbr\u003eCookies: %{x}\u003cbr\u003eCoffee: %{y}\u003cbr\u003eCost: $40 (unattainable)\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#c00000","line":{"color":"white","width":1.5},"size":11},"mode":"markers","showlegend":false,"x":[8],"y":[4],"type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"annotations":[{"arrowcolor":"#c55a11","arrowhead":2,"arrowsize":1,"arrowwidth":2.5,"ax":4,"axref":"x","ay":3,"ayref":"y","x":6,"xref":"x","y":4,"yref":"y"},{"font":{"color":"#c55a11","size":10.5},"showarrow":false,"text":"Income rises\u003cbr\u003eline shifts out","x":6,"xanchor":"center","y":3}],"xaxis":{"title":{"text":"Cookies"},"range":[0,15],"showgrid":true,"gridwidth":1,"gridcolor":"lightgray"},"yaxis":{"title":{"text":"Coffee"},"range":[0,8],"showgrid":true,"gridwidth":1,"gridcolor":"lightgray"},"legend":{"x":0.65,"y":0.95},"width":650,"height":520,"hovermode":"closest","plot_bgcolor":"white"},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('8d0d3c36-51d5-49f5-81c4-89c42612ed42');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+</div>
+</div><div class="column" style="width:40%;">
+<div style="font-size: 1em;">
+<ul>
+<li><strong>On the line:</strong> full budget spent</li>
+<li><strong>Inside the line:</strong> attainable, but not spending everything</li>
+<li><strong>Outside the line:</strong> unattainable at current income</li>
+<li>Income rises: line shifts out. Income falls: line shifts in
+<ul>
+<li>What happens if the price of coffee rises?</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p><em>The line pivots inward, because you can now afford less coffee for the same income.</em></p>
+</div>
+</div>
+</div></div>
+</section></section>
+<section>
+<section id="societys-economizing-problem" class="title-slide slide level1 center">
+<h1>Society’s Economizing Problem</h1>
+
+</section>
+<section id="assumptions-of-the-ppf-model" class="slide level2">
+<h2>Assumptions of the PPF Model</h2>
+<div style="font-size: 1.15em;">
+<p>To keep the model simple enough to actually draw and reason about, we make a few assumptions:</p>
+<ul>
+<li>Full employment of all available resources</li>
+<li>A fixed quantity of resources</li>
+<li>Fixed technology, no new inventions during the period we are modeling</li>
+<li>Only two categories of goods:
+<ul>
+<li><strong>Consumer goods</strong>, which satisfy wants directly, like pizza, entertainment, or clothes</li>
+<li><strong>Capital goods</strong>, which satisfy wants indirectly by helping produce other goods, like factories, equipment, and roads</li>
+</ul></li>
+</ul>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://images.unsplash.com/photo-1540340061722-9293d5163008?w=900&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YWlzbGVzfGVufDB8fDB8fHwy" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://images.unsplash.com/photo-1717386255773-1e3037c81788?w=900&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFjaGluZXJ5fGVufDB8fDB8fHwy" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="what-are-resources" class="slide level2">
+<h2>What Are Resources?</h2>
+<div style="font-size: 1.25em;">
+<p>Economists group everything used to produce goods and services into four categories:</p>
+<ul>
+<li><strong>Land:</strong> natural resources, everything nature provides</li>
+<li><strong>Labor:</strong> human physical and mental effort</li>
+<li><strong>Capital:</strong> human made tools and equipment used in production. Note that this is not the same thing as money. Money itself produces nothing, it is only used to purchase actual capital goods</li>
+<li><strong>Entrepreneurial ability:</strong> the person who organizes the other three resources and takes on the risk of a new venture</li>
+</ul>
+</div>
+
+<img data-src="https://images.unsplash.com/photo-1685540343851-6c83edfef439?w=900&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bGFuZCUyMGxhYm9yJTIwY2FwaXRhbHxlbnwwfHwwfHx8Mg%3D%3D" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="the-production-possibilities-curve" class="slide level2">
+<h2>The Production Possibilities Curve</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div id="a2028aa5" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div style="height:480px; width:600px;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.7.0.min.js" integrity="sha256-jvTGqxNp8AGWEcvNLVuKr+8j5dGe9Yw51LQkmDH+IYA=" crossorigin="anonymous"></script>                <div id="09706790-2532-4161-8e20-e4370ca570c4" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("09706790-2532-4161-8e20-e4370ca570c4")) {                    Plotly.newPlot(                        "09706790-2532-4161-8e20-e4370ca570c4",                        [{"hovertemplate":"\u003cb\u003ePoint %{text}\u003c\u002fb\u003e\u003cbr\u003ePizzas: %{x} (hundred thousands)\u003cbr\u003eRobots: %{y} (thousands)\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#1f4e79","width":3},"marker":{"color":"#1f4e79","line":{"color":"white","width":1.5},"size":9},"mode":"lines+markers+text","name":"Production possibilities curve","text":["A","B","C","D","E"],"textfont":{"color":"black","size":13},"textposition":"top right","x":[0,1,2,3,4],"y":[10,9,7,4,0],"type":"scatter"},{"fill":"tozeroy","fillcolor":"#9dc3e6","hoverinfo":"skip","line":{"color":"rgba(0,0,0,0)"},"mode":"lines","showlegend":false,"x":[0,1,2,3,4,0],"y":[10,9,7,4,0,0],"type":"scatter"},{"hovertemplate":"\u003cb\u003ePoint W\u003c\u002fb\u003e\u003cbr\u003ePizzas: 4.1 (hundred thousands)\u003cbr\u003eRobots: 6.5 (thousands)\u003cbr\u003eUnattainable with current resources\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#c55a11","line":{"color":"white","width":1.5},"size":11},"mode":"markers+text","showlegend":false,"text":["W"],"textfont":{"color":"#c55a11","size":13},"textposition":"top right","x":[4.1],"y":[6.5],"type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"annotations":[{"font":{"color":"#1f4e79","size":12,"style":"italic"},"showarrow":false,"text":"Attainable","x":1.3,"y":2}],"xaxis":{"title":{"text":"Pizzas (hundred thousands)"},"range":[0,6],"showgrid":true,"gridwidth":1,"gridcolor":"lightgray"},"yaxis":{"title":{"text":"Robots (thousands)"},"range":[0,11],"showgrid":true,"gridwidth":1,"gridcolor":"lightgray"},"legend":{"x":0.5,"y":1.1,"orientation":"h"},"width":600,"height":480,"hovermode":"closest","plot_bgcolor":"white"},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('09706790-2532-4161-8e20-e4370ca570c4');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+</div>
+</div><div class="column" style="width:45%;">
+<div style="font-size: 1.05em;">
+<ul>
+<li>Every point sitting directly on the curve is efficient
+<ul>
+<li>The economy is using every available resource fully.</li>
+<li>Points inside the curve represent waste, resources sitting idle.</li>
+<li>Points outside the curve are simply unreachable given current resources and technology.</li>
+</ul></li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="why-the-curve-bows-outward" class="slide level2">
+<h2>Why the Curve Bows Outward</h2>
+<div style="font-size: 1.2em;">
+<p>This shape has a name: the <strong>law of increasing opportunity costs</strong>. As an economy produces more and more of one good, the opportunity cost of each additional unit keeps rising.</p>
+<p><em>Why does this happen?</em></p>
+<ul>
+<li>Resources are not equally well suited to producing both goods.</li>
+<li>As production of one good increases, the resources used become less efficient at producing the other good.</li>
+<li>The resources best suited to good A get shifted into producing good A first. To keep expanding production of good A, we eventually have to pull in resources that are much better suited to good B, and that gets expensive fast.</li>
+</ul>
+</div>
+</section>
+<section id="seeing-the-law-in-action" class="slide level2">
+<h2>Seeing the Law in Action</h2>
+<div id="96c4a02f" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<div style="height:440px; width:950px;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.7.0.min.js" integrity="sha256-jvTGqxNp8AGWEcvNLVuKr+8j5dGe9Yw51LQkmDH+IYA=" crossorigin="anonymous"></script>                <div id="3f1a8345-0f93-4629-97ff-6c0782060b7a" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("3f1a8345-0f93-4629-97ff-6c0782060b7a")) {                    Plotly.newPlot(                        "3f1a8345-0f93-4629-97ff-6c0782060b7a",                        [{"hovertemplate":"Pizza unit 1\u003cbr\u003eCost: 1 robots\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#9dc3e6","width":4},"marker":{"color":"#9dc3e6","line":{"color":"white","width":1.5},"size":9},"mode":"lines+markers","showlegend":false,"x":[0,1],"y":[10,9],"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"Pizza unit 2\u003cbr\u003eCost: 2 robots\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#5b9bd5","width":4},"marker":{"color":"#5b9bd5","line":{"color":"white","width":1.5},"size":9},"mode":"lines+markers","showlegend":false,"x":[1,2],"y":[9,7],"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"Pizza unit 3\u003cbr\u003eCost: 3 robots\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#c55a11","width":4},"marker":{"color":"#c55a11","line":{"color":"white","width":1.5},"size":9},"mode":"lines+markers","showlegend":false,"x":[2,3],"y":[7,4],"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"Pizza unit 4\u003cbr\u003eCost: 4 robots\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#c00000","width":4},"marker":{"color":"#c00000","line":{"color":"white","width":1.5},"size":9},"mode":"lines+markers","showlegend":false,"x":[3,4],"y":[4,0],"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"%{x} pizza unit\u003cbr\u003eCost: %{y} robots\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":["#9dc3e6","#5b9bd5","#c55a11","#c00000"]},"showlegend":false,"x":["1st","2nd","3rd","4th"],"y":[1,2,3,4],"type":"bar","xaxis":"x2","yaxis":"y2"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"xaxis":{"anchor":"y","domain":[0.0,0.45],"title":{"text":"Pizzas (hundred thousands)"},"range":[-0.3,4.3],"showgrid":true,"gridwidth":1,"gridcolor":"lightgray"},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Robots (thousands)"},"range":[0,11],"showgrid":true,"gridwidth":1,"gridcolor":"lightgray"},"xaxis2":{"anchor":"y2","domain":[0.55,1.0],"title":{"text":"Pizza unit"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray"},"yaxis2":{"anchor":"x2","domain":[0.0,1.0],"title":{"text":"Robots given up"},"range":[0,5],"showgrid":true,"gridwidth":1,"gridcolor":"lightgray"},"annotations":[{"font":{"size":16},"showarrow":false,"text":"The PPF, segment by segment","x":0.225,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"Opportunity cost per pizza unit","x":0.775,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{"size":13},"showarrow":false,"text":"A","x":0,"xref":"x","y":10,"yref":"y","yshift":14},{"font":{"size":13},"showarrow":false,"text":"B","x":1,"xref":"x","y":9,"yref":"y","yshift":14},{"font":{"size":13},"showarrow":false,"text":"C","x":2,"xref":"x","y":7,"yref":"y","yshift":14},{"font":{"size":13},"showarrow":false,"text":"D","x":3,"xref":"x","y":4,"yref":"y","yshift":14},{"font":{"size":13},"showarrow":false,"text":"E","x":4,"xref":"x","y":0,"yref":"y","yshift":14}],"width":950,"height":440,"plot_bgcolor":"white"},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('3f1a8345-0f93-4629-97ff-6c0782060b7a');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+</div>
+<div style="font-size: 1em;">
+<p>Same four segments, same four colors, in both panels. As the curve gets steeper (left), the opportunity cost climbs (right): 1, 2, 3, then 4 robots given up for each additional pizza unit.</p>
+</div>
+</section>
+<section id="producing-inside-the-curve" class="slide level2">
+<h2>Producing Inside the Curve</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1XRpN&amp;width=670&amp;height=525" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowtransparency="true" loading="lazy">
+</iframe>
+</div><div class="column" style="width:30%;">
+<p>Series: <strong>UNRATE</strong>. The gray bars mark recessions.</p>
+<ol type="1">
+<li>During a recession, is the economy operating on its PPF, or inside it? What tells you that?</li>
+<li>What kind of resource is sitting idle when unemployment rises? Which of our four resource categories does that fall under?</li>
+<li>If a recession ends and unemployment falls back down, does that mean the PPF itself shifted outward, or did the economy just move back toward a curve that was already there?</li>
+</ol>
+</div></div>
+</section></section>
+<section>
+<section id="mb-equals-mc-the-universal-decision-rule" class="title-slide slide level1 center">
+<h1>MB Equals MC: The Universal Decision Rule</h1>
+
+</section>
+<section id="why-mb-falls-and-mc-rises" class="slide level2">
+<h2>Why MB Falls and MC Rises</h2>
+<div style="font-size: 1.15em;">
+<p>These are not arbitrary shapes, they come from real economic logic.</p>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="marginal-benefit-mb">Marginal Benefit (MB)</h3>
+<ul>
+<li>MB slopes downward: diminishing marginal utility.</li>
+<li>Each additional unit satisfies a less urgent want than the one before it.</li>
+<li>Examples:
+<ul>
+<li>Your first slice of pizza satisfies real hunger. Your fifth satisfies almost nothing.</li>
+<li>Your first hour of studying for an exam is very valuable. Your fifth hour is almost worthless.</li>
+<li>First doctor visit for a health problem is very valuable. The tenth visit is almost worthless.</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="marginal-cost-mc">Marginal Cost (MC)</h3>
+<ul>
+<li>MC slopes upward: increasing opportunity costs.</li>
+<li>Each additional unit costs more to produce because you have to pull in progressively less well suited resources.</li>
+<li>Examples:
+<ul>
+<li>Environment: First pollution controls use cheap filters; removing final pollutants requires expensive technology.</li>
+<li>Public health: Initial awareness campaigns are cheap; fully eliminating risky behaviors, like smoking, is much more expensive.</li>
+</ul></li>
+</ul>
+</div></div>
+</section>
+<section id="economic-decisions-compare-mb-and-mc" class="slide level2">
+<h2>Economic Decisions Compare MB and MC</h2>
+<div style="font-size: 1.25em;">
+<p>Every decision, whether made by an individual, a business, or an entire society, comes down to the same comparison:</p>
+<ul>
+<li><strong>Marginal Benefit (MB)</strong> against <strong>Marginal Cost (MC)</strong>.
+<ul>
+<li>If MB is greater than MC, doing more makes you better off</li>
+<li>If MB is less than MC, doing more makes you worse off, so do less</li>
+<li>If MB equals MC, you have found the optimal amount, doing more or less would both leave you worse off</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="the-mb-mc-rule-visualized" class="slide level2">
+<h2>The MB = MC Rule, Visualized</h2>
+<div id="c1f85b29" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div style="height:460px; width:650px;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.7.0.min.js" integrity="sha256-jvTGqxNp8AGWEcvNLVuKr+8j5dGe9Yw51LQkmDH+IYA=" crossorigin="anonymous"></script>                <div id="c1be1837-5b83-42ac-930e-ceede8b1348b" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("c1be1837-5b83-42ac-930e-ceede8b1348b")) {                    Plotly.newPlot(                        "c1be1837-5b83-42ac-930e-ceede8b1348b",                        [{"hovertemplate":"Quantity: %{x}\u003cbr\u003eMB: $%{y}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#1f4e79","width":3},"mode":"lines","name":"Marginal Benefit (MB)","x":[0,1,2,3,4,5,6,7,8,9,10],"y":[10,9,8,7,6,5,4,3,2,1,0],"type":"scatter"},{"hovertemplate":"Quantity: %{x}\u003cbr\u003eMC: $%{y}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#c55a11","width":3},"mode":"lines","name":"Marginal Cost (MC)","x":[0,1,2,3,4,5,6,7,8,9,10],"y":[0,1,2,3,4,5,6,7,8,9,10],"type":"scatter"},{"hovertemplate":"Optimal quantity: 5\u003cbr\u003eMB = MC = $5\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"black","size":12},"mode":"markers+text","showlegend":false,"text":["MB = MC"],"textposition":"top center","x":[5],"y":[5],"type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"shapes":[{"line":{"color":"gray","dash":"dash"},"type":"line","x0":5,"x1":5,"xref":"x","y0":0,"y1":1,"yref":"y domain"}],"annotations":[{"font":{"color":"#548235","size":12},"showarrow":false,"text":"MB \u003e MC\u003cbr\u003eproduce more","x":2,"y":1},{"font":{"color":"#c00000","size":12},"showarrow":false,"text":"MB \u003c MC\u003cbr\u003eproduce less","x":8,"y":1}],"legend":{"x":0.55,"y":1.15,"orientation":"h"},"xaxis":{"title":{"text":"Quantity"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray"},"yaxis":{"title":{"text":"Dollars"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray","range":[0,11]},"width":650,"height":460,"plot_bgcolor":"white"},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('c1be1837-5b83-42ac-930e-ceede8b1348b');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+</div>
+<div style="font-size: 0.95em;">
+<p>Left of the intersection, MB exceeds MC, so producing more adds value. Right of it, MC exceeds MB, so producing more destroys value. The crossing point is the only quantity where you cannot do better.</p>
+</div>
+</section>
+<section id="example-printer-purchase" class="slide level2">
+<h2>Example: Printer Purchase</h2>
+<div style="font-size: 1.15em;">
+<p>Your office is deciding how many printers to buy. Each additional printer costs <strong>$2,000</strong>.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Printer</th>
+<th>Added Benefit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1st</td>
+<td>$2,500</td>
+</tr>
+<tr class="even">
+<td>2nd</td>
+<td>$2,250</td>
+</tr>
+<tr class="odd">
+<td>3rd</td>
+<td>$2,000</td>
+</tr>
+<tr class="even">
+<td>4th</td>
+<td>$1,500</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>How many printers should the office buy, and why?</p>
+</blockquote>
+</div>
+
+<img data-src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=900&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8b2ZmaWNlJTIwcHJpbnRlcnxlbnwwfHwwfHx8Mg%3D%3D" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="printer-purchase-solution" class="slide level2">
+<h2>Printer Purchase: Solution</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div id="f51dc094" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div style="height:430px; width:600px;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.7.0.min.js" integrity="sha256-jvTGqxNp8AGWEcvNLVuKr+8j5dGe9Yw51LQkmDH+IYA=" crossorigin="anonymous"></script>                <div id="6049eeb7-442a-4ac4-be3b-d0d3d7a4f267" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("6049eeb7-442a-4ac4-be3b-d0d3d7a4f267")) {                    Plotly.newPlot(                        "6049eeb7-442a-4ac4-be3b-d0d3d7a4f267",                        [{"hovertemplate":"%{x} printer\u003cbr\u003eAdded benefit: $%{y}\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":["#548235","#548235","#548235","#c00000"]},"x":["1st","2nd","3rd","4th"],"y":[2500,2250,2000,1500],"type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"shapes":[{"line":{"color":"black","dash":"dash"},"type":"line","x0":0,"x1":1,"xref":"x domain","y0":2000,"y1":2000,"yref":"y"}],"annotations":[{"showarrow":false,"text":"Cost per printer: $2,000","x":1,"xanchor":"right","xref":"x domain","y":2000,"yanchor":"bottom","yref":"y"}],"xaxis":{"title":{"text":"Printer"},"showgrid":false},"yaxis":{"title":{"text":"Dollars"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray","range":[0,2800]},"width":600,"height":430,"plot_bgcolor":"white","showlegend":false},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('6049eeb7-442a-4ac4-be3b-d0d3d7a4f267');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+</div>
+</div><div class="column" style="width:40%;">
+<div style="font-size: 1.05em;">
+<div class="fragment">
+<p>Green bars clear the $2,000 cost line, buy those. The red bar does not, skip it.</p>
+<p><strong>Answer</strong>: 3 printers, exactly where added benefit meets added cost.</p>
+</div>
+</div>
+</div></div>
+</section></section>
+<section>
+<section id="graphs-and-slopes" class="title-slide slide level1 center">
+<h1>Graphs and Slopes</h1>
+
+</section>
+<section id="graphs-and-slopes-1" class="slide level2">
+<h2>Graphs and Slopes</h2>
+<h3 id="why-this-matters">Why This Matters</h3>
+<div style="font-size: 1.2em;">
+<p>Every model you will see this semester, the PPF you just saw, supply and demand, aggregate demand and aggregate supply, is read the same way. Learn to read a slope now, and you can read every graph for the rest of the course.</p>
+</div>
+<h3 id="how-graphs-work">How Graphs Work</h3>
+<div style="font-size: 1.2em;">
+<ul>
+<li><strong>Horizontal axis (x):</strong> usually the independent variable, the one you change first</li>
+<li><strong>Vertical axis (y):</strong> usually the dependent variable, the one that responds</li>
+<li>One important exception: in economics, price or cost is placed on the vertical axis even in the cases where it is technically the independent variable. This trips up almost everyone at first, so it is worth remembering on purpose.</li>
+</ul>
+</div>
+</section>
+<section id="slope-of-a-curve" class="slide level2">
+<h2>Slope of a Curve</h2>
+<div style="font-size: 1.15em;">
+<p><span class="math display">\[
+\text{Slope} = \frac{\Delta y}{\Delta x} = \frac{\text{rise}}{\text{run}}
+\]</span></p>
+<ul>
+<li>Example: how many more cans of soda would a street vendor sell for each one degree increase in temperature?
+<ul>
+<li>That relationship, more heat leads to more sales, has a steepness, and that steepness is its slope.</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="reading-rise-and-run" class="slide level2">
+<h2>Reading Rise and Run</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div id="56205592" class="cell" data-execution_count="6">
+<div class="cell-output cell-output-display">
+<div style="height:440px; width:580px;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.7.0.min.js" integrity="sha256-jvTGqxNp8AGWEcvNLVuKr+8j5dGe9Yw51LQkmDH+IYA=" crossorigin="anonymous"></script>                <div id="92f8185a-4554-4d0e-9c6a-05fb7805c965" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("92f8185a-4554-4d0e-9c6a-05fb7805c965")) {                    Plotly.newPlot(                        "92f8185a-4554-4d0e-9c6a-05fb7805c965",                        [{"hoverinfo":"skip","line":{"color":"#1f4e79","width":3},"mode":"lines","showlegend":false,"x":[7,23],"y":[26.5,18.5],"type":"scatter"},{"hovertemplate":"(%{x}, %{y})\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#1f4e79","line":{"color":"white","width":1.5},"size":11},"mode":"markers+text","showlegend":false,"text":["A","B"],"textposition":"top center","x":[10,20],"y":[25,20],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"#595959","dash":"dash","width":1.5},"mode":"lines","showlegend":false,"x":[10,20],"y":[25,25],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"#595959","dash":"dash","width":1.5},"mode":"lines","showlegend":false,"x":[20,20],"y":[25,20],"type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"annotations":[{"font":{"color":"#595959","size":12},"showarrow":false,"text":"run = 10","x":15.0,"y":26.2},{"font":{"color":"#595959","size":12},"showarrow":false,"text":"rise = -5","x":22.2,"y":22.5},{"font":{"color":"#1f4e79","size":13},"showarrow":false,"text":"slope = -5\u002f10 = -0.5","x":23.5,"y":17}],"xaxis":{"title":{"text":"x"},"range":[5,30],"showgrid":true,"gridwidth":1,"gridcolor":"lightgray"},"yaxis":{"title":{"text":"y"},"range":[15,30],"showgrid":true,"gridwidth":1,"gridcolor":"lightgray"},"width":580,"height":440,"plot_bgcolor":"white"},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('92f8185a-4554-4d0e-9c6a-05fb7805c965');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+</div>
+</div><div class="column" style="width:45%;">
+<div style="font-size: 1.1em;">
+<p>Moving from Point A to Point B:</p>
+<ul>
+<li>y changes from 25 down to 20, so the rise is negative 5</li>
+<li>x changes from 10 up to 20, so the run is 10</li>
+</ul>
+<p><span class="math display">\[\text{slope} = \frac{-5}{10} = -0.5\]</span></p>
+<p>A negative slope tells you the two variables move in opposite directions:</p>
+<ul>
+<li>As x goes up, y goes down</li>
+<li>Economists call this an <em>inverse relationship</em>.</li>
+</ul>
+</div>
+</div></div>
+</section></section>
+<section>
+<section id="real-data-fred" class="title-slide slide level1 center">
+<h1>Real Data: FRED</h1>
+
+</section>
+<section id="why-look-at-real-data" class="slide level2">
+<h2>Why Look at Real Data?</h2>
+<div style="font-size: 1.2em;">
+<ul>
+<li>Everything we covered today, scarcity, tradeoffs, marginal decisions, shows up in real economic data every single day.</li>
+<li>FRED, which stands for Federal Reserve Economic Data, is free, official, and always current.</li>
+</ul>
+</div>
+
+<img data-src="https://fsc.stevens.edu/content/images/2023/05/FRED-Logo-1-1.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="live-consumer-price-index" class="slide level2">
+<h2>Live: Consumer Price Index</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1XRU0&amp;width=670&amp;height=525" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowtransparency="true" loading="lazy">
+</iframe>
+</div><div class="column" style="width:30%;">
+<p>Series: <strong>CPIAUCSL</strong></p>
+<ol type="1">
+<li>Look at the steepest section of this line. What do you think was happening in the economy at that point?</li>
+<li>If prices are rising, does that automatically mean everyone is worse off? Who might actually benefit when prices rise?</li>
+<li>How does rising prices connect back to scarcity? Think about what is becoming relatively more scarce when a specific price rises quickly.</li>
+</ol>
+</div></div>
+</section>
+<section id="live-gas-prices" class="slide level2">
+<h2>Live: Gas Prices</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1Y2Yq&amp;width=670&amp;height=525" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowtransparency="true" loading="lazy">
+</iframe>
+</div><div class="column" style="width:30%;">
+<p>Series: <strong>GASREGW</strong></p>
+<ol type="1">
+<li>Gas prices swing much more sharply than most other prices. Why might that be, thinking about supply and demand?</li>
+<li>Has anyone here changed a decision recently because of gas prices, a trip you skipped, a purchase you delayed? That is opportunity cost in your own life.</li>
+<li>If gas becomes more expensive, what does that do to the opportunity cost of driving somewhere versus other options like public transit or staying home?</li>
+</ol>
+</div></div>
+</section>
+<section class="slide level2">
+
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="ch01_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="ch01_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="ch01_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="ch01_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="ch01_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="ch01_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="ch01_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="ch01_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="ch01_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="ch01_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': true,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
