@@ -13,7 +13,7 @@ website:
   bread-crumbs: false
   title: ECO 112 - Fall 2026
   description: ECO 112 | Principles of Macroeconomics | Fall 2026
-  favicon: assets/eco112_icon_globe.png
+  favicon: assets/favicon.ico
   site-url: https://m-braaksma.github.io/eco112_fall2026/
 
   page-footer:
@@ -27,7 +27,7 @@ website:
 
   sidebar:
     background: "#660033"
-    logo: "assets/eco112_icon_text.png"
+    logo: "assets/sidebar_logo.png"
     pinned: true
     align: center
     style: "docked"
