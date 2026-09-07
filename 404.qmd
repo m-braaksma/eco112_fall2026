@@ -1,16 +1,7 @@
 ---
-title: 404 not found
+title: 404 Not Found
 ---
 
-The page you are looking for does not exist. Check the URL for any unobserved confounders.
+This page lies outside the production possibilities frontier: given the resources currently available, it cannot be produced.
 
-```{mermaid}
-graph LR
-    X[URL] --> Y[Page Content]
-    Z[Unobserved Confounder]
-    Z --> X
-    Z --> Y
-    style Z fill:#f9d,stroke:#333,stroke-width:2px
-    style X fill:#bbf,stroke:#333,stroke-width:2px
-    style Y fill:#f99,stroke:#333,stroke-width:2px
-```
+[Back to the schedule](index.html)
