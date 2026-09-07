@@ -1,0 +1,94 @@
+project:
+  type: website
+  output-dir: docs
+  pre-render:
+    - quarto render ../syllabus/
+    - quarto render ../lecture-slides/
+
+  post-render: []
+
+website:
+  page-navigation: false
+  open-graph: true
+  bread-crumbs: false
+  title: ECO 112 - Fall 2026
+  description: ECO 112 | Principles of Macroeconomics | Fall 2026
+  favicon: assets/eco112_icon_globe.png
+  site-url: https://m-braaksma.github.io/eco112_fall2026/
+
+  page-footer:
+    right: >
+      <div style='text-align:right;'>
+        &copy; Copyright 2026<br>
+        This site is built with
+        <a href='https://quarto.org/' style='color:#a9a9aa;font-weight:bold;'>Quarto</a>
+      </div>
+    background: "#660033"
+
+  sidebar:
+    background: "#660033"
+    logo: "assets/eco112_icon_text.png"
+    pinned: true
+    align: center
+    style: "docked"
+    collapse-level: 2
+    search: true
+    tools:
+      - icon: mortarboard-fill
+        href: https://moodle.augsburg.edu/
+        text: "Moodle"
+        target: _blank
+      - icon: journal-bookmark-fill
+        href: https://connect.mheducation.com/
+        text: "Connect"
+        target: _blank
+
+    contents:
+      - section: "Course information"
+        contents:
+          - href: course-syllabus.qmd
+            text: Overview and Syllabus
+          - href: index.qmd
+            text: Schedule
+          - href: course-support.qmd
+            text: Support
+
+      - section: "Topics"
+        contents:
+          - href: lecture/ch01.qmd
+            text: "Ch 1: Choices"
+          # - href: lecture/ch01a.qmd
+          #   text: "Ch 1A: Graphs and Their Meaning"
+          # - href: lecture/ch02.qmd
+          #   text: "Ch 2: Market System"
+          # - href: lecture/ch03.qmd
+          #   text: "Ch 3: Supply, Demand, Equilibrium"
+          # - href: lecture/ch06.qmd
+          #   text: "Ch 6: Intro to Macroeconomics"
+          # - href: lecture/ch07.qmd
+          #   text: "Ch 7: National Income"
+          # - href: lecture/ch08.qmd
+          #   text: "Ch 8: Economic Growth"
+          # - href: lecture/ch09.qmd
+          #   text: "Ch 9: Business Cycles, Unemployment, Inflation"
+          # - href: lecture/ch10.qmd
+          #   text: "Ch 10: Basic Macroeconomic Relationships"
+          # - href: lecture/ch11.qmd
+          #   text: "Ch 11: Aggregate Expenditure Model"
+          # - href: lecture/ch12.qmd
+          #   text: "Ch 12: Aggregate Demand & Supply"
+          # - href: lecture/ch13.qmd
+          #   text: "Ch 13: Fiscal Policy"
+          # - href: lecture/ch14_15.qmd
+          #   text: "Ch 14-15: Money, Banking & Monetary Policy"
+          # - href: lecture/ch16_17.qmd
+          #   text: "Ch 16-17: Interest Rates & Financial Economics"
+          # - href: lecture/capstone.qmd
+          #   text: "Capstone Macro & the Environment"
+
+format:
+  html:
+    theme: [sandstone, theme.scss]
+    code-copy: true
+    code-overflow: wrap
+    toc: true

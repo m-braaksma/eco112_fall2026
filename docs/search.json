@@ -1,0 +1,130 @@
+[
+  {
+    "objectID": "assets/create_logo.html",
+    "href": "assets/create_logo.html",
+    "title": "ECO 112 - Fall 2026",
+    "section": "",
+    "text": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom matplotlib.patches import Circle\n\n# ------------------------------------------------------------------\n# Augsburg colors\n# ------------------------------------------------------------------\n\nMAROON = \"#660033\"\nMAROON_LIGHT = \"#74233d\"\nSILVER = \"#a9a9aa\"\nLIGHT_GRAY = \"#dddddd\"\n\n# ------------------------------------------------------------------\n# Figure\n# ------------------------------------------------------------------\n\nfig, ax = plt.subplots(figsize=(6, 6), facecolor=\"white\")\n\nax.set_xlim(0, 10)\nax.set_ylim(0, 10)\nax.set_aspect(\"equal\")\n\n# ------------------------------------------------------------------\n# Globe\n# ------------------------------------------------------------------\n\ncenter_y = 4.8\ncenter_x = 5\nradius = 3.0\n\n# Outer globe\nglobe = Circle(\n    (center_x, center_y),\n    radius,\n    fill=False,\n    linewidth=2.5,\n    edgecolor=MAROON,\n    alpha=0.9,\n)\n\nax.add_patch(globe)\n\n# ------------------------------------------------------------------\n# Latitude lines\n# ------------------------------------------------------------------\n\ntheta = np.linspace(0, 2 * np.pi, 300)\n\nfor scale in [0.45, 0.75]:\n\n    x = center_x + radius * np.cos(theta)\n    y = center_y + radius * scale * np.sin(theta)\n\n    ax.plot(\n        x,\n        y,\n        color=SILVER,\n        linewidth=1.2,\n        alpha=0.8,\n    )\n\n# ------------------------------------------------------------------\n# Longitude lines\n# ------------------------------------------------------------------\n\nfor scale in [0.45, 0.75]:\n\n    x = center_x + radius * scale * np.cos(theta)\n    y = center_y + radius * np.sin(theta)\n\n    ax.plot(\n        x,\n        y,\n        color=SILVER,\n        linewidth=1.2,\n        alpha=0.8,\n    )\n\n# Equator\nax.plot(\n    [center_x - radius, center_x + radius],\n    [center_y, center_y],\n    color=SILVER,\n    linewidth=1.2,\n    alpha=0.8,\n)\n\n# Vertical center line\nax.plot(\n    [center_x, center_x],\n    [center_y - radius, center_y + radius],\n    color=SILVER,\n    linewidth=1.2,\n    alpha=0.8,\n)\n\n# ------------------------------------------------------------------\n# Economic growth line across the globe\n# ------------------------------------------------------------------\n\nx = np.linspace(2.4, 7.6, 100)\n\ny = (\n    center_y\n    - 0.9\n    + 0.28 * (x - 2.4)\n    + 0.18 * np.sin((x - 2.4) * 2.2)\n)\n\n# Clip approximately to globe boundaries visually\nax.plot(\n    x,\n    y,\n    color=MAROON,\n    linewidth=3,\n    alpha=0.95,\n)\n\n# Small data points along the trend\nx_pts = np.linspace(2.8, 7.2, 7)\n\ny_pts = (\n    center_y\n    - 0.9\n    + 0.28 * (x_pts - 2.4)\n    + 0.18 * np.sin((x_pts - 2.4) * 2.2)\n)\n\nax.scatter(\n    x_pts,\n    y_pts,\n    color=MAROON_LIGHT,\n    s=35,\n    alpha=0.9,\n    zorder=3,\n)\n\n# ------------------------------------------------------------------\n# Text\n# ------------------------------------------------------------------\n\nax.text(\n    5,\n    9.55,\n    \"Principles of\",\n    fontsize=28,\n    ha=\"center\",\n    va=\"top\",\n    fontweight=\"bold\",\n    color=MAROON,\n    family=\"sans-serif\",\n)\n\nax.text(\n    5,\n    8.75,\n    \"Macroeconomics\",\n    fontsize=27,\n    ha=\"center\",\n    va=\"top\",\n    fontweight=\"bold\",\n    color=MAROON,\n    family=\"sans-serif\",\n)\n\n# Change this to your actual course number\nax.text(\n    5,\n    0.55,\n    \"ECO 112\",\n    fontsize=24,\n    ha=\"center\",\n    va=\"bottom\",\n    fontweight=\"normal\",\n    color=MAROON,\n    family=\"sans-serif\",\n)\n\n# ------------------------------------------------------------------\n# Clean up and save\n# ------------------------------------------------------------------\n\nax.axis(\"off\")\n\nplt.tight_layout()\n\nplt.savefig(\n    \"eco112_icon_text.png\",\n    dpi=300,\n    bbox_inches=\"tight\",\n    facecolor=\"white\",\n)\n\nplt.show()\n\n\n\n\n\n\n\n\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom matplotlib.patches import Circle\n\nMAROON = \"#660033\"\nMAROON_LIGHT = \"#74233d\"\nSILVER = \"#a9a9aa\"\n\nfig, ax = plt.subplots(figsize=(6, 6), facecolor=\"none\")\nax.set_aspect(\"equal\")\n\ncenter_x = 5\ncenter_y = 4.8\nradius = 3.0\nbuffer = 0.05  # Small buffer to ensure the circle is fully visible\n\nax.set_xlim(center_x - radius - buffer, center_x + radius + buffer)\nax.set_ylim(center_y - radius - buffer, center_y + radius + buffer)\n\n# --- globe, lat/long lines, and trend line/points — same as before ---\nglobe = Circle((center_x, center_y), radius, fill=False, linewidth=2.5, edgecolor=MAROON, alpha=0.9)\nax.add_patch(globe)\n\ntheta = np.linspace(0, 2 * np.pi, 300)\nfor scale in [0.45, 0.75]:\n    x = center_x + radius * np.cos(theta)\n    y = center_y + radius * scale * np.sin(theta)\n    ax.plot(x, y, color=SILVER, linewidth=1.2, alpha=0.8)\nfor scale in [0.45, 0.75]:\n    x = center_x + radius * scale * np.cos(theta)\n    y = center_y + radius * np.sin(theta)\n    ax.plot(x, y, color=SILVER, linewidth=1.2, alpha=0.8)\n\nax.plot([center_x - radius, center_x + radius], [center_y, center_y], color=SILVER, linewidth=1.2, alpha=0.8)\nax.plot([center_x, center_x], [center_y - radius, center_y + radius], color=SILVER, linewidth=1.2, alpha=0.8)\n\nx = np.linspace(2.4, 7.6, 100)\ny = center_y - 0.9 + 0.28 * (x - 2.4) + 0.18 * np.sin((x - 2.4) * 2.2)\nax.plot(x, y, color=MAROON, linewidth=3, alpha=0.95)\n\nx_pts = np.linspace(2.8, 7.2, 7)\ny_pts = center_y - 0.9 + 0.28 * (x_pts - 2.4) + 0.18 * np.sin((x_pts - 2.4) * 2.2)\nax.scatter(x_pts, y_pts, color=MAROON_LIGHT, s=35, alpha=0.9, zorder=3)\n\n# Remove the spatial axes entirely\nax.axis(\"off\")\n\n# Save file with absolute zero margin padding\nplt.savefig(\n    \"eco112_icon_globe.png\",\n    dpi=300,\n    bbox_inches=\"tight\",\n    pad_inches=0,\n    transparent=True,\n)"
+  },
+  {
+    "objectID": "course-support.html",
+    "href": "course-support.html",
+    "title": "Course support",
+    "section": "",
+    "text": "Instructor\n\n\n\n\nName: Matt BraaksmaOffice: Email: braaksma@augsburg.eduOffice Hours: TTH 3:45-4:45 PM",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "lecture/ch01.html",
+    "href": "lecture/ch01.html",
+    "title": "Chapter 1: Choices",
+    "section": "",
+    "text": "Open in new tab",
+    "crumbs": [
+      "Topics",
+      "Ch 1 — Choices"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ECO 112: Principles of Macroeconomics",
+    "section": "",
+    "text": "Week\nDates\nMaterial\nTuesday\nThursday\n\n\n\n\n1\nSep 2-4\nChapter 1: Choices\n—\n• Intro/Syllabus\n\n\n2\nSep 7-11\nChapter 2: Market System\n• Intro/Syllabus Quiz\n-\n\n\n3\nSep 14–18\nChapter 3: Supply, Demand, Equilibrium\n• Ch1+2 Quiz• Ch1 HW due• Ch2 HW due\n-\n\n\n4\nSep 21–25\nChapter 6: Intro to Macroeconomics\n• Ch3 Quiz• Ch3 HW due\n-\n\n\n5\nSep 28–Oct 2\nChapter 7: National Income\n• Ch6 Quiz• Ch6 HW due\nTBD: Zoom or Reschedule\n\n\n6\nOct 5–9\nChapter 8: Economic Growth\n• Ch7 Quiz• Ch7 HW due\n• Ch7 Presentation\n\n\n7\nOct 12–16\nChapter 9: Business Cycles, Unemployment, Inflation\n• Ch8 Quiz• Ch8 HW due\n• Ch8 Presentation\n\n\n8\nOct 19–23\nExam 1 Review\n• Ch9 Quiz• Ch9 HW due• Exam 1 Review\nEXAM 1 (Ch 1, 2, 3, 6, 7, 8, 9)\n\n\n9\nOct 26–30\nChapter 10: Basic Macroeconomic Relationships\n-\n-\n\n\n10\nNov 2–6\nChapter 11: Aggregate Expenditure Model\n• Ch10 Quiz• Ch10 HW due\n• Ch10 Presentation\n\n\n11\nNov 9–13\nChapter 12: Aggregate Demand & Supply\n• Ch11 Quiz• Ch11 HW due\n• Ch11 Presentation\n\n\n12\nNov 16–20\nChapter 13: Fiscal Policy\nTBD: Zoom or Reschedule• Ch12 Quiz• Ch12 HW due\nTBD: Zoom or Reschedule• Ch12 Presentation\n\n\n13\nNov 23–27\nChapters 14–15: Money, Banking & Monetary Policy\n• Ch13 Quiz• Ch13 HW due\nNo class — Thanksgiving\n\n\n14\nNov 30–Dec 4\nChapters 16–17: Interest Rates & Financial Economics\n• Ch14–15 Quiz• Ch14–15 HW due\n• Ch14–15 Presentation\n\n\n15\nDec 7–11\nMacro & the Environment\n• Ch16–17 Quiz• Ch16–17 HW due\n• Ch16–17 Presentation\n\n\n16\nDec 14–17\nFinal Exams\n-\nEXAM 2 at 12:00 PM\n\n\n\nThis page contains an outline of the topics, content, and assignments for the course. Note that this schedule will be updated as the semester progresses, with all changes documented here.",
+    "crumbs": [
+      "Course information",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html",
+    "href": "course-syllabus.html",
+    "title": "Course Overview and Syllabus",
+    "section": "",
+    "text": "Days\nTime\nLocation\n\n\n\n\nClass\nTue & Thu\n2:00–3:30 PM\nHagfors Center 151",
+    "crumbs": [
+      "Course information",
+      "Overview and Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#course-info",
+    "href": "course-syllabus.html#course-info",
+    "title": "Course Overview and Syllabus",
+    "section": "",
+    "text": "Days\nTime\nLocation\n\n\n\n\nClass\nTue & Thu\n2:00–3:30 PM\nHagfors Center 151",
+    "crumbs": [
+      "Course information",
+      "Overview and Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#course-description",
+    "href": "course-syllabus.html#course-description",
+    "title": "Course Overview and Syllabus",
+    "section": "Course Description",
+    "text": "Course Description\nECO 112 introduces you to macroeconomics: the study of modern economies at a national level. We’ll focus on national income accounts, monetary and fiscal policy, and economic growth, building toward the ability to analyze national economies, engage in policy debates, and follow international economic events.",
+    "crumbs": [
+      "Course information",
+      "Overview and Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#textbook",
+    "href": "course-syllabus.html#textbook",
+    "title": "Course Overview and Syllabus",
+    "section": "Textbook",
+    "text": "Textbook\n\nMcConnell, Brue, and Flynn: Macroeconomics, 2026 Release, McGraw Hill Education\n\nThe electronic edition is required through McGraw Hill Connect (which also hosts homework, quizzes, and SmartBook readings); a print copy is optional.",
+    "crumbs": [
+      "Course information",
+      "Overview and Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#how-the-course-runs",
+    "href": "course-syllabus.html#how-the-course-runs",
+    "title": "Course Overview and Syllabus",
+    "section": "How the Course Runs",
+    "text": "How the Course Runs\n\nTuesday: Homework/quiz due on the previous chapter, then lecture on a new chapter.\nThursday: Student presentation on the previous chapter (starting Week 6), then lecture continues.",
+    "crumbs": [
+      "Course information",
+      "Overview and Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#grading",
+    "href": "course-syllabus.html#grading",
+    "title": "Course Overview and Syllabus",
+    "section": "Grading",
+    "text": "Grading\n\n\n\nCategory\n% of Grade\n\n\n\n\nExam 1\n25%\n\n\nExam 2\n25%\n\n\nPresentation\n20%\n\n\nConnect Homework\n20%\n\n\nQuizzes\n10%\n\n\n\nQuizzes are short, paper, in-class checks of understanding (two lowest dropped). Homework is completed on Connect, due Tuesdays. Presentations start in Week 6 and run through 7 slots across the semester.\nFull policy detail, including the late-work policy, AI use policy, attendance requirements, and university-required statements, is in the official syllabus below.",
+    "crumbs": [
+      "Course information",
+      "Overview and Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#assignments",
+    "href": "course-syllabus.html#assignments",
+    "title": "Course Overview and Syllabus",
+    "section": "Assignments",
+    "text": "Assignments\nHomework is completed in Connect, tied to each chapter. See the Schedule page for exact due dates.",
+    "crumbs": [
+      "Course information",
+      "Overview and Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#official-syllabus",
+    "href": "course-syllabus.html#official-syllabus",
+    "title": "Course Overview and Syllabus",
+    "section": "Official Syllabus",
+    "text": "Official Syllabus\n  Download PDF File\n   \n    Unable to display PDF file. Download instead.",
+    "crumbs": [
+      "Course information",
+      "Overview and Syllabus"
+    ]
+  }
+]

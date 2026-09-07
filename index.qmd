@@ -1,0 +1,24 @@
+---
+title: "ECO 112: Principles of Macroeconomics"
+---
+
+| Week | Dates | Material | Tuesday | Thursday |
+|---|---|---|---|---|
+| 1 | Sep 2-4 | Chapter 1: Choices | — | • Intro/Syllabus |
+| 2 | Sep 7-11 | Chapter 2: Market System | • Intro/Syllabus Quiz | - |
+| 3 | Sep 14–18 | Chapter 3: Supply, Demand, Equilibrium | • Ch1+2 Quiz<br>• Ch1 HW due<br>• Ch2 HW due | - |
+| 4 | Sep 21–25 | Chapter 6: Intro to Macroeconomics | • Ch3 Quiz<br>• Ch3 HW due | - |
+| 5 | Sep 28–Oct 2 | Chapter 7: National Income | • Ch6 Quiz<br>• Ch6 HW due | **TBD: Zoom or Reschedule** |
+| 6 | Oct 5–9 | Chapter 8: Economic Growth | • Ch7 Quiz<br>• Ch7 HW due | • Ch7 Presentation |
+| 7 | Oct 12–16 | Chapter 9: Business Cycles, Unemployment, Inflation | • Ch8 Quiz<br>• Ch8 HW due | • Ch8 Presentation |
+| 8 | Oct 19–23 | Exam 1 Review | • Ch9 Quiz<br>• Ch9 HW due<br>• Exam 1 Review | **EXAM 1** (Ch 1, 2, 3, 6, 7, 8, 9) |
+| 9 | Oct 26–30 | Chapter 10: Basic Macroeconomic Relationships | - | - |
+| 10 | Nov 2–6 | Chapter 11: Aggregate Expenditure Model | • Ch10 Quiz<br>• Ch10 HW due | • Ch10 Presentation |
+| 11 | Nov 9–13 | Chapter 12: Aggregate Demand & Supply | • Ch11 Quiz<br>• Ch11 HW due | • Ch11 Presentation |
+| 12 | Nov 16–20 | Chapter 13: Fiscal Policy | **TBD: Zoom or Reschedule**<br>• Ch12 Quiz<br>• Ch12 HW due | **TBD: Zoom or Reschedule**<br>• Ch12 Presentation |
+| 13 | Nov 23–27 | Chapters 14–15: Money, Banking & Monetary Policy | • Ch13 Quiz<br>• Ch13 HW due | *No class — Thanksgiving* |
+| 14 | Nov 30–Dec 4 | Chapters 16–17: Interest Rates & Financial Economics | • Ch14–15 Quiz<br>• Ch14–15 HW due | • Ch14–15 Presentation |
+| 15 | Dec 7–11 | Macro & the Environment | • Ch16–17 Quiz<br>• Ch16–17 HW due| • Ch16–17 Presentation  |
+| 16 | Dec 14–17 | [Final Exams](https://www.augsburg.edu/registrar/calendars/finals/) | - | **EXAM 2** at 12:00 PM |
+
+This page contains an outline of the topics, content, and assignments for the course. Note that this schedule will be updated as the semester progresses, with all changes documented here.
