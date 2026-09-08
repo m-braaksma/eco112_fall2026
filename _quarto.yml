@@ -36,11 +36,11 @@ website:
     search: true
     tools:
       - icon: mortarboard-fill
-        href: https://moodle.augsburg.edu/
+        href: https://moodle.augsburg.edu/moodle2021/course/view.php?id=17214
         text: "Moodle"
         target: _blank
       - icon: journal-bookmark-fill
-        href: https://connect.mheducation.com/
+        href: https://connect.edu.mheducation.com/instructor/course/156928764/section/156928765?isLMSRequest=true&isDeployToLms=false
         text: "Connect"
         target: _blank
 

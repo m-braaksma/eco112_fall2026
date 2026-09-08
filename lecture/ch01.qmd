@@ -1,6 +1,6 @@
 ---
-title: "Chapter 1: Choices"
-subtitle: "Lecture slides"
+title: "Chapter 1"
+subtitle: "Choices"
 ---
 
 
