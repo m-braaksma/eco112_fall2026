@@ -1,0 +1,9 @@
+---
+title: "Chapter 13: Fiscal Policy, Deficits, and Debt"
+subtitle: "Lecture slides"
+---
+
+
+<iframe src="../slides/ch13.html" width="100%" height="600"></iframe>
+
+[Open in full screen](../slides/ch13.html)

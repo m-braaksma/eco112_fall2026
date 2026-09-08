@@ -1,0 +1,16 @@
+---
+title: "Chapter 7: Useful Links"
+subtitle: "Instructional videos and other resources"
+---
+
+## Real Data
+
+- [FRED: Nominal Gross Domestic Product](https://fred.stlouisfed.org/series/GDP)
+- [FRED: Real Gross Domestic Product](https://fred.stlouisfed.org/series/GDPC1)
+
+## Instructional Videos
+
+- [Khan Academy: GDP Expenditures](https://www.khanacademy.org/economics-finance-domain/macroeconomics/macro-economic-indicators-and-the-business-cycle/macro-the-circular-flow-and-gdp/v/income-and-expenditure-views-of-gdp?modal=1)
+- [Khan Academy: Components of GDP](https://www.khanacademy.org/economics-finance-domain/macroeconomics/macro-economic-indicators-and-the-business-cycle/macro-the-circular-flow-and-gdp/v/components-of-gdp?modal=1)
+- [Khan Academy: Nominal vs Real GDP](https://www.khanacademy.org/economics-finance-domain/macroeconomics/macro-economic-indicators-and-the-business-cycle/macro-real-vs-nominal-gdp/v/real-gdp-and-nominal-gdp?modal=1)
+

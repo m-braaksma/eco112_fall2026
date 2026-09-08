@@ -1,0 +1,9 @@
+---
+title: "Chapter 10: Basic Macroeconomic Relationships"
+subtitle: "Lecture slides"
+---
+
+
+<iframe src="../slides/ch10.html" width="100%" height="600"></iframe>
+
+[Open in full screen](../slides/ch10.html)

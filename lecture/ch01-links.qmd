@@ -1,0 +1,13 @@
+---
+title: "Chapter 1: Useful Links"
+subtitle: "Instructional videos and other resources"
+---
+
+## Instructional Videos
+
+- [How to find a slope](https://youtu.be/ADLoWIxKsyQ?si=jWJfeCExrSwPT7qA)
+- [Khan Academy: finding the slope of a line](https://youtu.be/R948Tsyq4vA?si=MCRf01xsVW83zS53)
+- [Khan Academy: production possibilities](https://www.khanacademy.org/economics-finance-domain/ap-macroeconomics/basic-economics-concepts-macro/production-possibilities-curve-scarcity-choice-and-opportunity-cost-macro/v/production-possibilities-frontier)
+- [Production possibilities frontier, part 1](https://www.federalreserveeducation.org/teaching-resources/economics/scarcity/the-production-possibilities-frontier-scarcity-and-opportunity-cost)
+- [Production possibilities frontier, part 2](https://www.federalreserveeducation.org/teaching-resources/economics/scarcity/the-production-possibilities-frontier-underemployment-and-economic-growth)
+- [Production possibilities frontier, part 3](https://www.federalreserveeducation.org/teaching-resources/economics/scarcity/the-production-possibilities-frontier-increasing-opportunity-cost)

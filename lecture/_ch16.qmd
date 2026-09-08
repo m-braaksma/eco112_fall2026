@@ -1,0 +1,9 @@
+---
+title: "Chapter 16: Financial Economics"
+subtitle: "Lecture slides"
+---
+
+
+<iframe src="../slides/ch16.html" width="100%" height="600"></iframe>
+
+[Open in full screen](../slides/ch16.html)

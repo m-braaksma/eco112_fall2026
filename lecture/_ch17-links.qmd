@@ -1,0 +1,12 @@
+---
+title: "Chapter 17: Useful Links"
+subtitle: "Instructional videos and other resources"
+---
+
+## Real Data
+
+- [FRED: 30-Year Fixed Mortgage Rate](https://fred.stlouisfed.org/series/MORTGAGE30US)
+
+## Instructional Videos
+
+<!-- TODO: add video links for this chapter (Khan Academy, YouTube, etc.) -->

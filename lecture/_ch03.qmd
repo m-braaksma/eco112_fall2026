@@ -1,0 +1,9 @@
+---
+title: "Chapter 03: Supply, Demand, and Market Equilibrium"
+subtitle: "Lecture slides"
+---
+
+
+<iframe src="../slides/ch03.html" width="100%" height="600"></iframe>
+
+[Open in full screen](../slides/ch03.html)

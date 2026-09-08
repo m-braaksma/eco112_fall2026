@@ -1,0 +1,12 @@
+---
+title: "Chapter 8: Useful Links"
+subtitle: "Instructional videos and other resources"
+---
+
+## Real Data
+
+- [FRED: Real Gross Domestic Product (long-run growth trend)](https://fred.stlouisfed.org/series/GDPC1)
+
+## Instructional Videos
+
+- [Rising unemployment](https://www.wsj.com/video/unemployment-rises-to-43-as-hiring-slows-missing-expectations/3714689A-1EA7-4B46-B17A-C54B5D7B08A9?page=1)

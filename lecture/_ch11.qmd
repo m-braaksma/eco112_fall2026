@@ -1,0 +1,9 @@
+---
+title: "Chapter 11: The Aggregate Expenditures Model"
+subtitle: "Lecture slides"
+---
+
+
+<iframe src="../slides/ch11.html" width="100%" height="600"></iframe>
+
+[Open in full screen](../slides/ch11.html)

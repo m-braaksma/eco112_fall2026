@@ -1,0 +1,15 @@
+---
+title: "Chapter 3: Useful Links"
+subtitle: "Instructional videos and other resources"
+---
+
+## Real Data
+
+- [FRED: WTI Crude Oil Price (a classic supply/demand example)](https://fred.stlouisfed.org/series/DCOILWTICO)
+
+## Instructional Videos
+
+- [Khan Academy Demand Video](https://www.khanacademy.org/economics-finance-domain/microeconomics/supply-demand-equilibrium/demand-curve-tutorial/v/law-of-demand)
+- [Khan Academy Supply Video](https://www.khanacademy.org/economics-finance-domain/microeconomics/supply-demand-equilibrium/supply-curve-tutorial/v/law-of-supply)
+- [Khan Academy Equilibrium Video](https://www.khanacademy.org/economics-finance-domain/microeconomics/supply-demand-equilibrium/equilibrium-tutorial/v/market-equilibrium)
+- [Khan Academy Shifts in Supply Video](https://www.khanacademy.org/economics-finance-domain/ap-microeconomics/unit-2-supply-and-demnd/22/v/factors-affecting-supply)

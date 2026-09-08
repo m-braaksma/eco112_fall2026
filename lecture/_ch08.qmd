@@ -1,0 +1,9 @@
+---
+title: "Chapter 08: Economic Growth"
+subtitle: "Lecture slides"
+---
+
+
+<iframe src="../slides/ch08.html" width="100%" height="600"></iframe>
+
+[Open in full screen](../slides/ch08.html)

@@ -1,0 +1,15 @@
+---
+title: "PDF Export of Slides"
+---
+
+If you want to print the lecture slides, you can export them to PDF using the following instructions:
+
+1. Open the slides in full screen more. 
+2. Toggle into Print View using the `E` key (or using the Navigation Menu). 
+3. Change the Destination setting to Save as PDF.
+4. Change the Layout to Landscape.
+5. Change the Margins to None.
+6. Enable the Background graphics option.
+7. Click Save
+
+*Note: This feature has only been confirmed to work in Google Chrome and Chromium.*

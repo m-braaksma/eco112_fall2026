@@ -1,0 +1,14 @@
+---
+title: "Chapter 06: Useful Links"
+subtitle: "Instructional videos and other resources"
+---
+
+## Real Data
+
+- [FRED: Real Gross Domestic Product](https://fred.stlouisfed.org/series/GDPC1)
+- [FRED: Unemployment Rate](https://fred.stlouisfed.org/series/UNRATE)
+- [FRED: Consumer Price Index](https://fred.stlouisfed.org/series/CPIAUCSL)
+
+## Instructional Videos
+
+<!-- TODO: add video links for this chapter (Khan Academy, YouTube, etc.) -->

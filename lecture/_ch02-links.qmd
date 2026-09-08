@@ -1,0 +1,12 @@
+---
+title: "Chapter 02: Useful Links"
+subtitle: "Instructional videos and other resources"
+---
+
+## Real Data
+
+- [FRED: Personal Consumption Expenditures](https://fred.stlouisfed.org/series/PCE)
+
+## Instructional Videos
+
+<!-- TODO: add video links for this chapter (Khan Academy, YouTube, etc.) -->

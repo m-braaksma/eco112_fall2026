@@ -1,0 +1,9 @@
+---
+title: "Chapter 12: Aggregate Demand and Aggregate Supply"
+subtitle: "Lecture slides"
+---
+
+
+<iframe src="../slides/ch12.html" width="100%" height="600"></iframe>
+
+[Open in full screen](../slides/ch12.html)

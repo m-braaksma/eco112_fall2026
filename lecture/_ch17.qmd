@@ -1,0 +1,9 @@
+---
+title: "Chapter 17: Extending the Analysis of Aggregate Supply"
+subtitle: "Lecture slides"
+---
+
+
+<iframe src="../slides/ch17.html" width="100%" height="600"></iframe>
+
+[Open in full screen](../slides/ch17.html)

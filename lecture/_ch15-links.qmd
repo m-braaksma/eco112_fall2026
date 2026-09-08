@@ -1,0 +1,12 @@
+---
+title: "Chapter 15: Useful Links"
+subtitle: "Instructional videos and other resources"
+---
+
+## Real Data
+
+- [FRED: Federal Funds Rate](https://fred.stlouisfed.org/series/FEDFUNDS)
+
+## Instructional Videos
+
+- [Overnight Reverse Repurchase Agreements: Short-Term Parking for Reserves](https://fredblog.stlouisfed.org/2021/08/overnight-reverse-repurchase-agreements-short-term-parking-for-reserves/?utm_source=series_page&utm_medium=related_content&utm_term=related_resources&utm_campaign=fredblog)

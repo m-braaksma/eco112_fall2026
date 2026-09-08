@@ -1,0 +1,9 @@
+---
+title: "Chapter 06: The U.S. Economy: Private and Public Sectors"
+subtitle: "Lecture slides"
+---
+
+
+<iframe src="../slides/ch06.html" width="100%" height="600"></iframe>
+
+[Open in full screen](../slides/ch06.html)

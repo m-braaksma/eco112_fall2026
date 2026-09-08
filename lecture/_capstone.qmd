@@ -1,0 +1,9 @@
+---
+title: "Chapter Capstone: Macro and the Environment"
+subtitle: "Lecture slides"
+---
+
+
+<iframe src="../slides/chcapstone.html" width="100%" height="600"></iframe>
+
+[Open in full screen](../slides/chcapstone.html)

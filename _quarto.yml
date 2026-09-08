@@ -53,39 +53,109 @@ website:
             text: Schedule
           - href: course-support.qmd
             text: Support
+          - href: course-printing.qmd
+            text: Printing Help
 
       - section: "Topics"
         contents:
-          - href: lecture/ch01.qmd
-            text: "Ch 1: Choices"
+          - section: "Ch 1: Choices"
+            contents:
+              - href: lecture/ch01.qmd
+                text: Slides
+              - href: lecture/ch01-links.qmd
+                text: Useful Links
           # - href: lecture/ch01a.qmd
           #   text: "Ch 1A: Graphs and Their Meaning"
-          # - href: lecture/ch02.qmd
-          #   text: "Ch 2: Market System"
-          # - href: lecture/ch03.qmd
-          #   text: "Ch 3: Supply, Demand, Equilibrium"
-          # - href: lecture/ch06.qmd
-          #   text: "Ch 6: Intro to Macroeconomics"
-          # - href: lecture/ch07.qmd
-          #   text: "Ch 7: National Income"
-          # - href: lecture/ch08.qmd
-          #   text: "Ch 8: Economic Growth"
-          # - href: lecture/ch09.qmd
-          #   text: "Ch 9: Business Cycles, Unemployment, Inflation"
-          # - href: lecture/ch10.qmd
-          #   text: "Ch 10: Basic Macroeconomic Relationships"
-          # - href: lecture/ch11.qmd
-          #   text: "Ch 11: Aggregate Expenditure Model"
-          # - href: lecture/ch12.qmd
-          #   text: "Ch 12: Aggregate Demand & Supply"
-          # - href: lecture/ch13.qmd
-          #   text: "Ch 13: Fiscal Policy"
-          # - href: lecture/ch14_15.qmd
-          #   text: "Ch 14-15: Money, Banking & Monetary Policy"
-          # - href: lecture/ch16_17.qmd
-          #   text: "Ch 16-17: Interest Rates & Financial Economics"
-          # - href: lecture/capstone.qmd
-          #   text: "Capstone Macro & the Environment"
+          - section: "Ch 2: Market System"
+            contents:
+              - href: lecture/ch02.qmd
+                text: Slides
+              # - href: lecture/ch02-links.qmd
+              #   text: Useful Links
+          - section: "Ch 3: Supply, Demand, Equilibrium"
+            contents:
+              # - href: lecture/ch03.qmd
+              #   text: Slides
+              # - href: lecture/ch03-links.qmd
+              #   text: Useful Links
+          # - section: "Ch 6: Intro to Macroeconomics"
+          #   contents:
+          #     - href: lecture/ch06.qmd
+          #       text: Slides
+          #     - href: lecture/ch06-links.qmd
+          #       text: Useful Links
+          # - section: "Ch 7: National Income"
+          #   contents:
+          #     - href: lecture/ch07.qmd
+          #       text: Slides
+          #     - href: lecture/ch07-links.qmd
+          #       text: Useful Links
+          # - section: "Ch 8: Economic Growth"
+          #   contents:
+          #     - href: lecture/ch08.qmd
+          #       text: Slides
+          #     - href: lecture/ch08-links.qmd
+          #       text: Useful Links
+          # - section: "Ch 9: Business Cycles, Unemployment, Inflation"
+          #   contents:
+          #     - href: lecture/ch09.qmd
+          #       text: Slides
+          #     - href: lecture/ch09-links.qmd
+          #       text: Useful Links
+          # - section: "Ch 10: Basic Macroeconomic Relationships"
+          #   contents:
+          #     - href: lecture/ch10.qmd
+          #       text: Slides
+          #     - href: lecture/ch10-links.qmd
+          #       text: Useful Links
+          # - section: "Ch 11: Aggregate Expenditure Model"
+          #   contents:
+          #     - href: lecture/ch11.qmd
+          #       text: Slides
+          #     - href: lecture/ch11-links.qmd
+          #       text: Useful Links
+          # - section: "Ch 12: Aggregate Demand & Supply"
+          #   contents:
+          #     - href: lecture/ch12.qmd
+          #       text: Slides
+          #     - href: lecture/ch12-links.qmd
+          #       text: Useful Links
+          # - section: "Ch 13: Fiscal Policy"
+          #   contents:
+          #     - href: lecture/ch13.qmd
+          #       text: Slides
+          #     - href: lecture/ch13-links.qmd
+          #       text: Useful Links
+          # - section: "Ch 14: Money and Banking"
+          #   contents:
+          #     - href: lecture/ch14.qmd
+          #       text: Slides
+          #     - href: lecture/ch14-links.qmd
+          #       text: Useful Links
+          # - section: "Ch 15: Monetary Policy"
+          #   contents:
+          #     - href: lecture/ch15.qmd
+          #       text: Slides
+          #     - href: lecture/ch15-links.qmd
+          #       text: Useful Links
+          # - section: "Ch 16: Financial Economics"
+          #   contents:
+          #     - href: lecture/ch16.qmd
+          #       text: Slides
+          #     - href: lecture/ch16-links.qmd
+          #       text: Useful Links
+          # - section: "Ch 17: Extending Aggregate Supply"
+          #   contents:
+          #     - href: lecture/ch17.qmd
+          #       text: Slides
+          #     - href: lecture/ch17-links.qmd
+          #       text: Useful Links
+          # - section: "Capstone: Macro and the Environment"
+          #   contents:
+          #     - href: lecture/capstone.qmd
+          #       text: Slides
+          #     - href: lecture/capstone-links.qmd
+          #       text: Useful Links
 
 format:
   html:
