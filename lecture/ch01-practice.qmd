@@ -1,0 +1,99 @@
+---
+title: "Chapter 1: Limits, Alternatives, and Choices"
+subtitle: "Practice Problems"
+---
+
+## Problem 1: Production Possibilities
+
+A society produces two goods, corn and cars, and faces the following production possibilities.
+Corn is measured in units of 100,000 bushels, cars in units of 100,000.
+
+| Combination | Corn | Cars |
+|---|---|---|
+| A | 0 | 7 |
+| B | 7 | 6 |
+| C | 13 | 5 |
+| D | 18 | 4 |
+| E | 22 | 3 |
+| F | 25 | 2 |
+| G | 27 | 1 |
+| H | 28 | 0 |
+
+a. Plot the data to obtain a production possibilities curve, with corn on the vertical axis and
+   cars on the horizontal axis.
+b. Fill in the opportunity cost, in units of corn, of producing the 1st through 7th car unit.
+c. What is the marginal opportunity cost of the 3rd car unit, in units of corn?
+d. What is the total opportunity cost of producing 6 car units, in units of corn?
+
+<details>
+<summary>Show Answer</summary>
+
+```{python}
+#| echo: false
+#| fig-align: center
+
+import plotly.graph_objects as go
+
+BLUE = "#1f4e79"
+LIGHTBLUE = "#9dc3e6"
+
+cars = [7, 6, 5, 4, 3, 2, 1, 0]
+corn = [0, 7, 13, 18, 22, 25, 27, 28]
+labels = ["A", "B", "C", "D", "E", "F", "G", "H"]
+
+fig = go.Figure()
+fig.add_trace(go.Scatter(
+    x=cars, y=corn, mode="lines+markers+text",
+    line=dict(color=BLUE, width=3),
+    marker=dict(size=9, color=BLUE, line=dict(color="white", width=1.5)),
+    text=labels, textposition="top center",
+    hovertemplate="<b>Point %{text}</b><br>Cars: %{x}<br>Corn: %{y}<extra></extra>"
+))
+fig.add_trace(go.Scatter(
+    x=cars + [0], y=corn + [28],
+    fill="tozeroy", fillcolor=LIGHTBLUE, mode="lines",
+    line=dict(color="rgba(0,0,0,0)"), hoverinfo="skip", showlegend=False
+))
+
+fig.update_layout(
+    xaxis_title="Cars (hundred thousands)",
+    yaxis_title="Corn (hundred thousands of bushels)",
+    width=560, height=440, plot_bgcolor="white", showlegend=False
+)
+fig.update_xaxes(showgrid=True, gridwidth=1, gridcolor="lightgray")
+fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="lightgray")
+fig.show()
+```
+
+b. Opportunity cost per car unit, in corn: 1st = 1, 2nd = 1, 3rd = 1, 4th = 2, 5th = 3, 6th = 3,
+   7th = 4 (moving from H back to A, one car unit at a time).
+c. The marginal opportunity cost of the 3rd car unit is 1 unit of corn.
+d. The total opportunity cost of producing 6 car units (moving from H to B) is 21 units of corn
+   (28 minus 7).
+
+</details>
+
+## Problem 2: Opportunity Cost with Two Goods
+
+A society produces two goods, pizzas and pizza ovens. It is currently producing at point C: 45
+units of pizzas and 11 units of pizza ovens. Two other attainable points on the same production
+possibilities curve are point B (60 pizzas, 6 ovens) and point D (30 pizzas, 15 ovens).
+
+a. Using points B and C, what is the opportunity cost of one more unit of pizzas?
+b. Using points C and D, what is the opportunity cost of one more unit of pizza ovens?
+
+<details>
+<summary>Show Answer</summary>
+
+a. Moving from C to B: pizzas rise by 15 (60 minus 45), ovens fall by 5 (11 minus 6). Giving up
+   ovens to get pizzas: 5 ovens divided by 15 pizzas equals *0.33* ovens per pizza. The opportunity
+   cost of one more pizza is about a third of an oven.
+b. Moving from C to D: pizzas fall by 15 (45 minus 30), ovens rise by 4 (15 minus 11). Giving up
+   pizzas to get ovens: 15 pizzas divided by 4 ovens equals *3.75* pizzas per oven. The opportunity
+   cost of one more pizza oven is 3.75 pizzas.
+
+Notice the two answers are not simple reciprocals of each other, since the curve is not a straight
+line, the opportunity cost changes depending on which section of the curve you are on. That is the
+law of increasing opportunity cost in action.
+
+</details>

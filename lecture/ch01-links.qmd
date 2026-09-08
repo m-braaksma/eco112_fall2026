@@ -1,6 +1,6 @@
 ---
-title: "Chapter 1: Useful Links"
-subtitle: "Instructional videos and other resources"
+title: "Chapter 1: Limits, Alternatives, and Choices"
+subtitle: "Useful links and other resources"
 ---
 
 ## Real Data

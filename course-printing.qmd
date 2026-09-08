@@ -1,5 +1,6 @@
 ---
-title: "PDF Export of Slides"
+title: "Printing Lecture Slides"
+subtitle: "Instructions for PDF export"
 ---
 
 If you want to print the lecture slides, you can export them to PDF using the following instructions:

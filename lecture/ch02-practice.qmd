@@ -1,0 +1,71 @@
+---
+title: "Chapter 2: The Market System and the Circular Flow"
+subtitle: "Practice Problems"
+---
+
+## Problem 1: Least Cost Method
+
+A firm can produce 100 units of good Y using three different methods, combining labor, land,
+capital, and entrepreneurial ability. Labor costs $3 per unit, land costs $2 per unit, capital
+costs $4 per unit, and entrepreneurial ability costs $10 per unit.
+
+| Resource | Method 1 | Method 2 | Method 3 |
+|---|---|---|---|
+| Labor | 6 | 10 | 4 |
+| Land | 5 | 2 | 8 |
+| Capital | 2 | 3 | 2 |
+| Entrepreneurial ability | 1 | 1 | 1 |
+
+a. Which method is the least costly way to produce 100 units of Y?
+b. If Y sells for 90 cents per unit, what is the firm's economic profit using the least cost
+   method?
+c. If the price of land rises from $2 to $4 per unit, does the least cost method change? What is
+   the new economic profit?
+
+<details>
+<summary>Show Answer</summary>
+
+Total cost of each method:
+
+- Method 1: (6 × $3) + (5 × $2) + (2 × $4) + (1 × $10) = $18 + $10 + $8 + $10 = **$46**
+- Method 2: (10 × $3) + (2 × $2) + (3 × $4) + (1 × $10) = $30 + $4 + $12 + $10 = **$56**
+- Method 3: (4 × $3) + (8 × $2) + (2 × $4) + (1 × $10) = $12 + $16 + $8 + $10 = **$46**
+
+a. Methods 1 and 3 tie at $46, both cheaper than Method 2. Either is a valid least cost choice;
+   assume the firm picks Method 1.
+b. Total revenue = 100 × $0.90 = $90. Economic profit = $90 minus $46 = **$44**.
+c. Recompute with land at $4 per unit: Method 1 = (6 × $3) + (5 × $4) + (2 × $4) + (1 × $10) = $18
+   + $20 + $8 + $10 = $56. Method 3 = (4 × $3) + (8 × $4) + (2 × $4) + (1 × $10) = $12 + $32 + $8 +
+   $10 = $62. Method 2 = (10 × $3) + (2 × $4) + (3 × $4) + (1 × $10) = $30 + $8 + $12 + $10 = $60.
+   Method 1 is now the cheapest at $56, so the least cost method does not change here, but its cost
+   rose. New economic profit = $90 minus $56 = **$34**.
+
+</details>
+
+## Problem 2: Self-Interest and Competition
+
+A small town has exactly one hardware store. A national chain announces it is opening a second
+hardware store two blocks away next year.
+
+a. Before the new store arrives, what does the existing store's *self-interest* push it to do
+   about prices and service quality, given it has no local competitor?
+b. After the new store opens, how does *competition* change what self-interest pushes the existing
+   store to do?
+c. Explain, in one or two sentences, why economists say it takes self-interest *and* competition
+   together to benefit consumers, not self-interest alone.
+
+<details>
+<summary>Show Answer</summary>
+
+a. With no competitor, the existing store's self-interest still points toward profit, but nothing
+   forces that profit-seeking to benefit customers. It could charge higher prices or offer weaker
+   service and customers would have nowhere else to go locally.
+b. Once a competitor opens nearby, self-interest now requires competing for the same customers.
+   The store has an incentive to lower prices, improve service, or both, or risk losing business to
+   the new entrant.
+c. Self-interest alone only guarantees a business tries to maximize its own gain. Competition is
+   what forces that self-interest to serve customers, since a business that ignores customers loses
+   them to a rival. Remove competition and the same self-interested motive can just as easily lead
+   to worse outcomes for consumers.
+
+</details>

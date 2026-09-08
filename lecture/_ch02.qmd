@@ -1,9 +1,0 @@
----
-title: "Chapter 02: The Market System"
-subtitle: "Lecture slides"
----
-
-
-<iframe src="../slides/ch02.html" width="100%" height="600"></iframe>
-
-[Open in full screen](../slides/ch02.html)

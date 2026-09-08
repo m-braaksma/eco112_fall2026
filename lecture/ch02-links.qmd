@@ -1,0 +1,10 @@
+---
+title: "Chapter 2: The Market System and the Circular Flow"
+subtitle: "Useful links and other resources"
+---
+
+## Real Data
+
+- [FRED: Personal Consumption Expenditures](https://fred.stlouisfed.org/series/PCE)
+
+
