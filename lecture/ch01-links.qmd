@@ -3,6 +3,12 @@ title: "Chapter 1: Useful Links"
 subtitle: "Instructional videos and other resources"
 ---
 
+## Real Data
+
+- [FRED: Unemployment Rate](https://fred.stlouisfed.org/series/UNRATE)
+- [FRED: Consumer Price Index](https://fred.stlouisfed.org/series/CPIAUCSL)
+- [FRED: Gas Prices](https://fred.stlouisfed.org/series/GASREGW)
+
 ## Instructional Videos
 
 - [How to find a slope](https://youtu.be/ADLoWIxKsyQ?si=jWJfeCExrSwPT7qA)

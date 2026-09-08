@@ -72,8 +72,8 @@ website:
                 text: Slides
               # - href: lecture/ch02-links.qmd
               #   text: Useful Links
-          - section: "Ch 3: Supply, Demand, Equilibrium"
-            contents:
+          # - section: "Ch 3: Supply, Demand, Equilibrium"
+          #   contents:
               # - href: lecture/ch03.qmd
               #   text: Slides
               # - href: lecture/ch03-links.qmd
