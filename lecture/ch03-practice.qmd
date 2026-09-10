@@ -1,0 +1,109 @@
+---
+title: "Chapter 3: Supply, Demand, and Market Equilibrium"
+subtitle: "Practice Problems"
+---
+
+## Problem 1: Equilibrium and Price Supports
+
+The table below shows the demand and supply schedules for soybeans.
+
+| Price | Quantity Demanded | Quantity Supplied |
+|---|---|---|
+| $7.20 | 10 | 40 |
+| $7.00 | 15 | 35 |
+| $6.80 | 20 | 30 |
+| $6.60 | 25 | 25 |
+| $6.40 | 30 | 20 |
+| $6.20 | 35 | 15 |
+
+*Quantities are in thousands of bushels.*
+
+a. What is the equilibrium price of soybeans?
+b. How many thousand bushels will be exchanged at that price?
+c. If the federal government supports a price of $7.00 per bushel, is there a shortage or a
+   surplus, and how many thousand bushels?
+
+<details>
+<summary>Show Answer</summary>
+
+```{python}
+#| echo: false
+#| fig-align: center
+
+import plotly.graph_objects as go
+
+BLUE = "#1f4e79"
+ORANGE = "#c55a11"
+GRAY = "#595959"
+
+price = [7.20, 7.00, 6.80, 6.60, 6.40, 6.20]
+qd = [10, 15, 20, 25, 30, 35]
+qs = [40, 35, 30, 25, 20, 15]
+
+fig = go.Figure()
+fig.add_trace(go.Scatter(
+    x=qd, y=price, mode="lines", name="Demand",
+    line=dict(color=BLUE, width=3),
+    hovertemplate="Quantity: %{x}<br>Price: $%{y}<extra></extra>"
+))
+fig.add_trace(go.Scatter(
+    x=qs, y=price, mode="lines", name="Supply",
+    line=dict(color=ORANGE, width=3),
+    hovertemplate="Quantity: %{x}<br>Price: $%{y}<extra></extra>"
+))
+fig.add_trace(go.Scatter(
+    x=[25], y=[6.60], mode="markers+text", text=["Equilibrium"], textposition="bottom right",
+    marker=dict(size=11, color="black"), showlegend=False,
+    hovertemplate="Equilibrium<br>Quantity: 25<br>Price: $6.60<extra></extra>"
+))
+fig.add_hline(y=7.00, line_dash="dash", line_color=GRAY,
+              annotation_text="Price support: $7.00", annotation_position="top left")
+
+fig.update_layout(
+    xaxis_title="Quantity (thousand bushels)", yaxis_title="Price",
+    width=520, height=400, plot_bgcolor="white",
+    legend=dict(x=0.7, y=1.15, orientation="h")
+)
+fig.update_xaxes(showgrid=True, gridwidth=1, gridcolor="lightgray")
+fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="lightgray")
+fig.show()
+```
+
+a. Equilibrium price is *$6.60*, where quantity demanded equals quantity supplied.
+b. *25* thousand bushels are exchanged at equilibrium.
+c. At the $7.00 price support, quantity demanded is 15 and quantity supplied is 35. That is a
+   *surplus* of *20* thousand bushels, the government's price floor sits above equilibrium, so
+   sellers offer more than buyers want at that price.
+
+</details>
+
+## Problem 2: Equilibrium with a Price Ceiling
+
+The table below summarizes the market for principles of economics textbooks.
+
+| Price | Quantity Demanded | Quantity Supplied |
+|---|---|---|
+| $40 | 4,200 | 200 |
+| $50 | 2,200 | 600 |
+| $60 | 1,200 | 1,200 |
+| $70 | 700 | 2,000 |
+| $80 | 550 | 3,000 |
+
+a. What is the market equilibrium price and quantity?
+b. A college places a $50 price ceiling on textbooks to control costs for students. How many
+   textbooks actually get sold at that price?
+c. While the ceiling is in effect, a new printing technology lowers production costs, shifting
+   supply to the right. What happens to the number of textbooks actually sold?
+
+<details>
+<summary>Show Answer</summary>
+
+a. Equilibrium is *$60*, where quantity demanded and quantity supplied both equal *1,200*.
+b. At the $50 ceiling, quantity demanded is 2,200 but quantity supplied is only 600. The number of
+   textbooks actually sold is capped by the *shorter* side of the market, so only *600* get sold,
+   even though far more students want one at that price. This leaves a shortage of 1,600 books.
+c. A rightward shift in supply means more textbooks are supplied at every price, including $50. As
+   long as the ceiling is still below the new equilibrium price, more textbooks get sold than
+   before (still capped by supply, but a higher supply quantity), narrowing the shortage.
+
+</details>

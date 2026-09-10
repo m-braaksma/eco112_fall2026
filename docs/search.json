@@ -88,16 +88,110 @@
     ]
   },
   {
-    "objectID": "lecture/ch02.html",
-    "href": "lecture/ch02.html",
-    "title": "Chapter 2: The Market System and the Circular Flow",
+    "objectID": "lecture/ch03.html",
+    "href": "lecture/ch03.html",
+    "title": "Chapter 3: Supply, Demand, and Market Equilibrium",
+    "section": "",
+    "text": "Open in full screen"
+  },
+  {
+    "objectID": "lecture/ch01.html",
+    "href": "lecture/ch01.html",
+    "title": "Chapter 1: Limits, Alternatives, and Choices",
     "section": "",
     "text": "Open in full screen",
     "crumbs": [
       "Topics",
-      "Ch 2: Market System",
+      "Ch 1: Choices",
       "Slides"
     ]
+  },
+  {
+    "objectID": "lecture/ch02-links.html",
+    "href": "lecture/ch02-links.html",
+    "title": "Chapter 2: The Market System and the Circular Flow",
+    "section": "",
+    "text": "FRED: Personal Consumption Expenditures",
+    "crumbs": [
+      "Topics",
+      "Ch 2: Market System",
+      "Useful Links"
+    ]
+  },
+  {
+    "objectID": "lecture/ch02-links.html#real-data",
+    "href": "lecture/ch02-links.html#real-data",
+    "title": "Chapter 2: The Market System and the Circular Flow",
+    "section": "",
+    "text": "FRED: Personal Consumption Expenditures",
+    "crumbs": [
+      "Topics",
+      "Ch 2: Market System",
+      "Useful Links"
+    ]
+  },
+  {
+    "objectID": "lecture/ch03-links.html",
+    "href": "lecture/ch03-links.html",
+    "title": "Chapter 3: Supply, Demand, and Market Equilibrium",
+    "section": "",
+    "text": "FRED: Average Price of Eggs, Grade A, Large (a classic supply/demand example)"
+  },
+  {
+    "objectID": "lecture/ch03-links.html#real-data",
+    "href": "lecture/ch03-links.html#real-data",
+    "title": "Chapter 3: Supply, Demand, and Market Equilibrium",
+    "section": "",
+    "text": "FRED: Average Price of Eggs, Grade A, Large (a classic supply/demand example)"
+  },
+  {
+    "objectID": "lecture/ch03-links.html#instructional-videos",
+    "href": "lecture/ch03-links.html#instructional-videos",
+    "title": "Chapter 3: Supply, Demand, and Market Equilibrium",
+    "section": "Instructional Videos",
+    "text": "Instructional Videos\n\nKhan Academy Demand Video\nKhan Academy Supply Video\nKhan Academy Equilibrium Video\nKhan Academy Shifts in Supply Video"
+  },
+  {
+    "objectID": "lecture/ch03-practice.html",
+    "href": "lecture/ch03-practice.html",
+    "title": "Chapter 3: Supply, Demand, and Market Equilibrium",
+    "section": "",
+    "text": "The table below shows the demand and supply schedules for soybeans.\n\n\n\nPrice\nQuantity Demanded\nQuantity Supplied\n\n\n\n\n$7.20\n10\n40\n\n\n$7.00\n15\n35\n\n\n$6.80\n20\n30\n\n\n$6.60\n25\n25\n\n\n$6.40\n30\n20\n\n\n$6.20\n35\n15\n\n\n\nQuantities are in thousands of bushels.\n\nWhat is the equilibrium price of soybeans?\nHow many thousand bushels will be exchanged at that price?\nIf the federal government supports a price of $7.00 per bushel, is there a shortage or a surplus, and how many thousand bushels?\n\n\n\nShow Answer\n\n\n\n                            \n                                            \n\n\n\nEquilibrium price is $6.60, where quantity demanded equals quantity supplied.\n25 thousand bushels are exchanged at equilibrium.\nAt the $7.00 price support, quantity demanded is 15 and quantity supplied is 35. That is a surplus of 20 thousand bushels, the government’s price floor sits above equilibrium, so sellers offer more than buyers want at that price."
+  },
+  {
+    "objectID": "lecture/ch03-practice.html#problem-1-equilibrium-and-price-supports",
+    "href": "lecture/ch03-practice.html#problem-1-equilibrium-and-price-supports",
+    "title": "Chapter 3: Supply, Demand, and Market Equilibrium",
+    "section": "",
+    "text": "The table below shows the demand and supply schedules for soybeans.\n\n\n\nPrice\nQuantity Demanded\nQuantity Supplied\n\n\n\n\n$7.20\n10\n40\n\n\n$7.00\n15\n35\n\n\n$6.80\n20\n30\n\n\n$6.60\n25\n25\n\n\n$6.40\n30\n20\n\n\n$6.20\n35\n15\n\n\n\nQuantities are in thousands of bushels.\n\nWhat is the equilibrium price of soybeans?\nHow many thousand bushels will be exchanged at that price?\nIf the federal government supports a price of $7.00 per bushel, is there a shortage or a surplus, and how many thousand bushels?\n\n\n\nShow Answer\n\n\n\n                            \n                                            \n\n\n\nEquilibrium price is $6.60, where quantity demanded equals quantity supplied.\n25 thousand bushels are exchanged at equilibrium.\nAt the $7.00 price support, quantity demanded is 15 and quantity supplied is 35. That is a surplus of 20 thousand bushels, the government’s price floor sits above equilibrium, so sellers offer more than buyers want at that price."
+  },
+  {
+    "objectID": "lecture/ch03-practice.html#problem-2-equilibrium-with-a-price-ceiling",
+    "href": "lecture/ch03-practice.html#problem-2-equilibrium-with-a-price-ceiling",
+    "title": "Chapter 3: Supply, Demand, and Market Equilibrium",
+    "section": "Problem 2: Equilibrium with a Price Ceiling",
+    "text": "Problem 2: Equilibrium with a Price Ceiling\nThe table below summarizes the market for principles of economics textbooks.\n\n\n\nPrice\nQuantity Demanded\nQuantity Supplied\n\n\n\n\n$40\n4,200\n200\n\n\n$50\n2,200\n600\n\n\n$60\n1,200\n1,200\n\n\n$70\n700\n2,000\n\n\n$80\n550\n3,000\n\n\n\n\nWhat is the market equilibrium price and quantity?\nA college places a $50 price ceiling on textbooks to control costs for students. How many textbooks actually get sold at that price?\nWhile the ceiling is in effect, a new printing technology lowers production costs, shifting supply to the right. What happens to the number of textbooks actually sold?\n\n\n\nShow Answer\n\n\nEquilibrium is $60, where quantity demanded and quantity supplied both equal 1,200.\nAt the $50 ceiling, quantity demanded is 2,200 but quantity supplied is only 600. The number of textbooks actually sold is capped by the shorter side of the market, so only 600 get sold, even though far more students want one at that price. This leaves a shortage of 1,600 books.\nA rightward shift in supply means more textbooks are supplied at every price, including $50. As long as the ceiling is still below the new equilibrium price, more textbooks get sold than before (still capped by supply, but a higher supply quantity), narrowing the shortage."
+  },
+  {
+    "objectID": "lecture/ch02-practice.html",
+    "href": "lecture/ch02-practice.html",
+    "title": "Chapter 2: The Market System and the Circular Flow",
+    "section": "",
+    "text": "A firm can produce 100 units of good Y using three different methods, combining labor, land, capital, and entrepreneurial ability. Labor costs $3 per unit, land costs $2 per unit, capital costs $4 per unit, and entrepreneurial ability costs $10 per unit.\n\n\n\nResource\nMethod 1\nMethod 2\nMethod 3\n\n\n\n\nLabor\n6\n10\n4\n\n\nLand\n5\n2\n8\n\n\nCapital\n2\n3\n2\n\n\nEntrepreneurial ability\n1\n1\n1\n\n\n\n\nWhich method is the least costly way to produce 100 units of Y?\nIf Y sells for 90 cents per unit, what is the firm’s economic profit using the least cost method?\nIf the price of land rises from $2 to $4 per unit, does the least cost method change? What is the new economic profit?\n\n\n\nShow Answer\n\nTotal cost of each method:\n\nMethod 1: (6 × $3) + (5 × $2) + (2 × $4) + (1 × $10) = $18 + $10 + $8 + $10 = $46\nMethod 2: (10 × $3) + (2 × $2) + (3 × $4) + (1 × $10) = $30 + $4 + $12 + $10 = $56\nMethod 3: (4 × $3) + (8 × $2) + (2 × $4) + (1 × $10) = $12 + $16 + $8 + $10 = $46\n\n\nMethods 1 and 3 tie at $46, both cheaper than Method 2. Either is a valid least cost choice; assume the firm picks Method 1.\nTotal revenue = 100 × $0.90 = $90. Economic profit = $90 minus $46 = $44.\nRecompute with land at $4 per unit: Method 1 = (6 × $3) + (5 × $4) + (2 × $4) + (1 × $10) = $18\n\n$20 + $8 + $10 = $56. Method 3 = (4 × $3) + (8 × $4) + (2 × $4) + (1 × $10) = $12 + $32 + $8 + $10 = $62. Method 2 = (10 × $3) + (2 × $4) + (3 × $4) + (1 × $10) = $30 + $8 + $12 + $10 = $60. Method 1 is now the cheapest at $56, so the least cost method does not change here, but its cost rose. New economic profit = $90 minus $56 = $34."
+  },
+  {
+    "objectID": "lecture/ch02-practice.html#problem-1-least-cost-method",
+    "href": "lecture/ch02-practice.html#problem-1-least-cost-method",
+    "title": "Chapter 2: The Market System and the Circular Flow",
+    "section": "",
+    "text": "A firm can produce 100 units of good Y using three different methods, combining labor, land, capital, and entrepreneurial ability. Labor costs $3 per unit, land costs $2 per unit, capital costs $4 per unit, and entrepreneurial ability costs $10 per unit.\n\n\n\nResource\nMethod 1\nMethod 2\nMethod 3\n\n\n\n\nLabor\n6\n10\n4\n\n\nLand\n5\n2\n8\n\n\nCapital\n2\n3\n2\n\n\nEntrepreneurial ability\n1\n1\n1\n\n\n\n\nWhich method is the least costly way to produce 100 units of Y?\nIf Y sells for 90 cents per unit, what is the firm’s economic profit using the least cost method?\nIf the price of land rises from $2 to $4 per unit, does the least cost method change? What is the new economic profit?\n\n\n\nShow Answer\n\nTotal cost of each method:\n\nMethod 1: (6 × $3) + (5 × $2) + (2 × $4) + (1 × $10) = $18 + $10 + $8 + $10 = $46\nMethod 2: (10 × $3) + (2 × $2) + (3 × $4) + (1 × $10) = $30 + $4 + $12 + $10 = $56\nMethod 3: (4 × $3) + (8 × $2) + (2 × $4) + (1 × $10) = $12 + $16 + $8 + $10 = $46\n\n\nMethods 1 and 3 tie at $46, both cheaper than Method 2. Either is a valid least cost choice; assume the firm picks Method 1.\nTotal revenue = 100 × $0.90 = $90. Economic profit = $90 minus $46 = $44.\nRecompute with land at $4 per unit: Method 1 = (6 × $3) + (5 × $4) + (2 × $4) + (1 × $10) = $18\n\n$20 + $8 + $10 = $56. Method 3 = (4 × $3) + (8 × $4) + (2 × $4) + (1 × $10) = $12 + $32 + $8 + $10 = $62. Method 2 = (10 × $3) + (2 × $4) + (3 × $4) + (1 × $10) = $30 + $8 + $12 + $10 = $60. Method 1 is now the cheapest at $56, so the least cost method does not change here, but its cost rose. New economic profit = $90 minus $56 = $34."
+  },
+  {
+    "objectID": "lecture/ch02-practice.html#problem-2-self-interest-and-competition",
+    "href": "lecture/ch02-practice.html#problem-2-self-interest-and-competition",
+    "title": "Chapter 2: The Market System and the Circular Flow",
+    "section": "Problem 2: Self-Interest and Competition",
+    "text": "Problem 2: Self-Interest and Competition\nA small town has exactly one hardware store. A national chain announces it is opening a second hardware store two blocks away next year.\n\nBefore the new store arrives, what does the existing store’s self-interest push it to do about prices and service quality, given it has no local competitor?\nAfter the new store opens, how does competition change what self-interest pushes the existing store to do?\nExplain, in one or two sentences, why economists say it takes self-interest and competition together to benefit consumers, not self-interest alone.\n\n\n\nShow Answer\n\n\nWith no competitor, the existing store’s self-interest still points toward profit, but nothing forces that profit-seeking to benefit customers. It could charge higher prices or offer weaker service and customers would have nowhere else to go locally.\nOnce a competitor opens nearby, self-interest now requires competing for the same customers. The store has an incentive to lower prices, improve service, or both, or risk losing business to the new entrant.\nSelf-interest alone only guarantees a business tries to maximize its own gain. Competition is what forces that self-interest to serve customers, since a business that ignores customers loses them to a rival. Remove competition and the same self-interested motive can just as easily lead to worse outcomes for consumers."
   },
   {
     "objectID": "lecture/ch01-links.html",
@@ -136,74 +230,14 @@
     ]
   },
   {
-    "objectID": "lecture/ch02-practice.html",
-    "href": "lecture/ch02-practice.html",
+    "objectID": "lecture/ch02.html",
+    "href": "lecture/ch02.html",
     "title": "Chapter 2: The Market System and the Circular Flow",
-    "section": "",
-    "text": "A firm can produce 100 units of good Y using three different methods, combining labor, land, capital, and entrepreneurial ability. Labor costs $3 per unit, land costs $2 per unit, capital costs $4 per unit, and entrepreneurial ability costs $10 per unit.\n\n\n\nResource\nMethod 1\nMethod 2\nMethod 3\n\n\n\n\nLabor\n6\n10\n4\n\n\nLand\n5\n2\n8\n\n\nCapital\n2\n3\n2\n\n\nEntrepreneurial ability\n1\n1\n1\n\n\n\n\nWhich method is the least costly way to produce 100 units of Y?\nIf Y sells for 90 cents per unit, what is the firm’s economic profit using the least cost method?\nIf the price of land rises from $2 to $4 per unit, does the least cost method change? What is the new economic profit?\n\n\n\nShow Answer\n\nTotal cost of each method:\n\nMethod 1: (6 × $3) + (5 × $2) + (2 × $4) + (1 × $10) = $18 + $10 + $8 + $10 = $46\nMethod 2: (10 × $3) + (2 × $2) + (3 × $4) + (1 × $10) = $30 + $4 + $12 + $10 = $56\nMethod 3: (4 × $3) + (8 × $2) + (2 × $4) + (1 × $10) = $12 + $16 + $8 + $10 = $46\n\n\nMethods 1 and 3 tie at $46, both cheaper than Method 2. Either is a valid least cost choice; assume the firm picks Method 1.\nTotal revenue = 100 × $0.90 = $90. Economic profit = $90 minus $46 = $44.\nRecompute with land at $4 per unit: Method 1 = (6 × $3) + (5 × $4) + (2 × $4) + (1 × $10) = $18\n\n$20 + $8 + $10 = $56. Method 3 = (4 × $3) + (8 × $4) + (2 × $4) + (1 × $10) = $12 + $32 + $8 + $10 = $62. Method 2 = (10 × $3) + (2 × $4) + (3 × $4) + (1 × $10) = $30 + $8 + $12 + $10 = $60. Method 1 is now the cheapest at $56, so the least cost method does not change here, but its cost rose. New economic profit = $90 minus $56 = $34.",
-    "crumbs": [
-      "Topics",
-      "Ch 2: Market System",
-      "Practice Problems"
-    ]
-  },
-  {
-    "objectID": "lecture/ch02-practice.html#problem-1-least-cost-method",
-    "href": "lecture/ch02-practice.html#problem-1-least-cost-method",
-    "title": "Chapter 2: The Market System and the Circular Flow",
-    "section": "",
-    "text": "A firm can produce 100 units of good Y using three different methods, combining labor, land, capital, and entrepreneurial ability. Labor costs $3 per unit, land costs $2 per unit, capital costs $4 per unit, and entrepreneurial ability costs $10 per unit.\n\n\n\nResource\nMethod 1\nMethod 2\nMethod 3\n\n\n\n\nLabor\n6\n10\n4\n\n\nLand\n5\n2\n8\n\n\nCapital\n2\n3\n2\n\n\nEntrepreneurial ability\n1\n1\n1\n\n\n\n\nWhich method is the least costly way to produce 100 units of Y?\nIf Y sells for 90 cents per unit, what is the firm’s economic profit using the least cost method?\nIf the price of land rises from $2 to $4 per unit, does the least cost method change? What is the new economic profit?\n\n\n\nShow Answer\n\nTotal cost of each method:\n\nMethod 1: (6 × $3) + (5 × $2) + (2 × $4) + (1 × $10) = $18 + $10 + $8 + $10 = $46\nMethod 2: (10 × $3) + (2 × $2) + (3 × $4) + (1 × $10) = $30 + $4 + $12 + $10 = $56\nMethod 3: (4 × $3) + (8 × $2) + (2 × $4) + (1 × $10) = $12 + $16 + $8 + $10 = $46\n\n\nMethods 1 and 3 tie at $46, both cheaper than Method 2. Either is a valid least cost choice; assume the firm picks Method 1.\nTotal revenue = 100 × $0.90 = $90. Economic profit = $90 minus $46 = $44.\nRecompute with land at $4 per unit: Method 1 = (6 × $3) + (5 × $4) + (2 × $4) + (1 × $10) = $18\n\n$20 + $8 + $10 = $56. Method 3 = (4 × $3) + (8 × $4) + (2 × $4) + (1 × $10) = $12 + $32 + $8 + $10 = $62. Method 2 = (10 × $3) + (2 × $4) + (3 × $4) + (1 × $10) = $30 + $8 + $12 + $10 = $60. Method 1 is now the cheapest at $56, so the least cost method does not change here, but its cost rose. New economic profit = $90 minus $56 = $34.",
-    "crumbs": [
-      "Topics",
-      "Ch 2: Market System",
-      "Practice Problems"
-    ]
-  },
-  {
-    "objectID": "lecture/ch02-practice.html#problem-2-self-interest-and-competition",
-    "href": "lecture/ch02-practice.html#problem-2-self-interest-and-competition",
-    "title": "Chapter 2: The Market System and the Circular Flow",
-    "section": "Problem 2: Self-Interest and Competition",
-    "text": "Problem 2: Self-Interest and Competition\nA small town has exactly one hardware store. A national chain announces it is opening a second hardware store two blocks away next year.\n\nBefore the new store arrives, what does the existing store’s self-interest push it to do about prices and service quality, given it has no local competitor?\nAfter the new store opens, how does competition change what self-interest pushes the existing store to do?\nExplain, in one or two sentences, why economists say it takes self-interest and competition together to benefit consumers, not self-interest alone.\n\n\n\nShow Answer\n\n\nWith no competitor, the existing store’s self-interest still points toward profit, but nothing forces that profit-seeking to benefit customers. It could charge higher prices or offer weaker service and customers would have nowhere else to go locally.\nOnce a competitor opens nearby, self-interest now requires competing for the same customers. The store has an incentive to lower prices, improve service, or both, or risk losing business to the new entrant.\nSelf-interest alone only guarantees a business tries to maximize its own gain. Competition is what forces that self-interest to serve customers, since a business that ignores customers loses them to a rival. Remove competition and the same self-interested motive can just as easily lead to worse outcomes for consumers.",
-    "crumbs": [
-      "Topics",
-      "Ch 2: Market System",
-      "Practice Problems"
-    ]
-  },
-  {
-    "objectID": "lecture/ch02-links.html",
-    "href": "lecture/ch02-links.html",
-    "title": "Chapter 2: The Market System and the Circular Flow",
-    "section": "",
-    "text": "FRED: Personal Consumption Expenditures",
-    "crumbs": [
-      "Topics",
-      "Ch 2: Market System",
-      "Useful Links"
-    ]
-  },
-  {
-    "objectID": "lecture/ch02-links.html#real-data",
-    "href": "lecture/ch02-links.html#real-data",
-    "title": "Chapter 2: The Market System and the Circular Flow",
-    "section": "",
-    "text": "FRED: Personal Consumption Expenditures",
-    "crumbs": [
-      "Topics",
-      "Ch 2: Market System",
-      "Useful Links"
-    ]
-  },
-  {
-    "objectID": "lecture/ch01.html",
-    "href": "lecture/ch01.html",
-    "title": "Chapter 1: Limits, Alternatives, and Choices",
     "section": "",
     "text": "Open in full screen",
     "crumbs": [
       "Topics",
-      "Ch 1: Choices",
+      "Ch 2: Market System",
       "Slides"
     ]
   },
@@ -212,36 +246,21 @@
     "href": "lecture/ch01-practice.html",
     "title": "Chapter 1: Limits, Alternatives, and Choices",
     "section": "",
-    "text": "A society produces two goods, corn and cars, and faces the following production possibilities. Corn is measured in units of 100,000 bushels, cars in units of 100,000.\n\n\n\nCombination\nCorn\nCars\n\n\n\n\nA\n0\n7\n\n\nB\n7\n6\n\n\nC\n13\n5\n\n\nD\n18\n4\n\n\nE\n22\n3\n\n\nF\n25\n2\n\n\nG\n27\n1\n\n\nH\n28\n0\n\n\n\n\nPlot the data to obtain a production possibilities curve, with corn on the vertical axis and cars on the horizontal axis.\nFill in the opportunity cost, in units of corn, of producing the 1st through 7th car unit.\nWhat is the marginal opportunity cost of the 3rd car unit, in units of corn?\nWhat is the total opportunity cost of producing 6 car units, in units of corn?\n\n\n\nShow Answer\n\n\n\n                            \n                                            \n\n\n\nOpportunity cost per car unit, in corn: 1st = 1, 2nd = 1, 3rd = 1, 4th = 2, 5th = 3, 6th = 3, 7th = 4 (moving from H back to A, one car unit at a time).\nThe marginal opportunity cost of the 3rd car unit is 1 unit of corn.\nThe total opportunity cost of producing 6 car units (moving from H to B) is 21 units of corn (28 minus 7).",
-    "crumbs": [
-      "Topics",
-      "Ch 1: Choices",
-      "Practice Problems"
-    ]
+    "text": "A society produces two goods, corn and cars, and faces the following production possibilities. Corn is measured in units of 100,000 bushels, cars in units of 100,000.\n\n\n\nCombination\nCorn\nCars\n\n\n\n\nA\n0\n7\n\n\nB\n7\n6\n\n\nC\n13\n5\n\n\nD\n18\n4\n\n\nE\n22\n3\n\n\nF\n25\n2\n\n\nG\n27\n1\n\n\nH\n28\n0\n\n\n\n\nPlot the data to obtain a production possibilities curve, with corn on the vertical axis and cars on the horizontal axis.\nFill in the opportunity cost, in units of corn, of producing the 1st through 7th car unit.\nWhat is the marginal opportunity cost of the 3rd car unit, in units of corn?\nWhat is the total opportunity cost of producing 6 car units, in units of corn?\n\n\n\nShow Answer\n\n\n\n                            \n                                            \n\n\n\nOpportunity cost per car unit, in corn: 1st = 1, 2nd = 1, 3rd = 1, 4th = 2, 5th = 3, 6th = 3, 7th = 4 (moving from H back to A, one car unit at a time).\nThe marginal opportunity cost of the 3rd car unit is 1 unit of corn.\nThe total opportunity cost of producing 6 car units (moving from H to B) is 21 units of corn (28 minus 7)."
   },
   {
     "objectID": "lecture/ch01-practice.html#problem-1-production-possibilities",
     "href": "lecture/ch01-practice.html#problem-1-production-possibilities",
     "title": "Chapter 1: Limits, Alternatives, and Choices",
     "section": "",
-    "text": "A society produces two goods, corn and cars, and faces the following production possibilities. Corn is measured in units of 100,000 bushels, cars in units of 100,000.\n\n\n\nCombination\nCorn\nCars\n\n\n\n\nA\n0\n7\n\n\nB\n7\n6\n\n\nC\n13\n5\n\n\nD\n18\n4\n\n\nE\n22\n3\n\n\nF\n25\n2\n\n\nG\n27\n1\n\n\nH\n28\n0\n\n\n\n\nPlot the data to obtain a production possibilities curve, with corn on the vertical axis and cars on the horizontal axis.\nFill in the opportunity cost, in units of corn, of producing the 1st through 7th car unit.\nWhat is the marginal opportunity cost of the 3rd car unit, in units of corn?\nWhat is the total opportunity cost of producing 6 car units, in units of corn?\n\n\n\nShow Answer\n\n\n\n                            \n                                            \n\n\n\nOpportunity cost per car unit, in corn: 1st = 1, 2nd = 1, 3rd = 1, 4th = 2, 5th = 3, 6th = 3, 7th = 4 (moving from H back to A, one car unit at a time).\nThe marginal opportunity cost of the 3rd car unit is 1 unit of corn.\nThe total opportunity cost of producing 6 car units (moving from H to B) is 21 units of corn (28 minus 7).",
-    "crumbs": [
-      "Topics",
-      "Ch 1: Choices",
-      "Practice Problems"
-    ]
+    "text": "A society produces two goods, corn and cars, and faces the following production possibilities. Corn is measured in units of 100,000 bushels, cars in units of 100,000.\n\n\n\nCombination\nCorn\nCars\n\n\n\n\nA\n0\n7\n\n\nB\n7\n6\n\n\nC\n13\n5\n\n\nD\n18\n4\n\n\nE\n22\n3\n\n\nF\n25\n2\n\n\nG\n27\n1\n\n\nH\n28\n0\n\n\n\n\nPlot the data to obtain a production possibilities curve, with corn on the vertical axis and cars on the horizontal axis.\nFill in the opportunity cost, in units of corn, of producing the 1st through 7th car unit.\nWhat is the marginal opportunity cost of the 3rd car unit, in units of corn?\nWhat is the total opportunity cost of producing 6 car units, in units of corn?\n\n\n\nShow Answer\n\n\n\n                            \n                                            \n\n\n\nOpportunity cost per car unit, in corn: 1st = 1, 2nd = 1, 3rd = 1, 4th = 2, 5th = 3, 6th = 3, 7th = 4 (moving from H back to A, one car unit at a time).\nThe marginal opportunity cost of the 3rd car unit is 1 unit of corn.\nThe total opportunity cost of producing 6 car units (moving from H to B) is 21 units of corn (28 minus 7)."
   },
   {
     "objectID": "lecture/ch01-practice.html#problem-2-opportunity-cost-with-two-goods",
     "href": "lecture/ch01-practice.html#problem-2-opportunity-cost-with-two-goods",
     "title": "Chapter 1: Limits, Alternatives, and Choices",
     "section": "Problem 2: Opportunity Cost with Two Goods",
-    "text": "Problem 2: Opportunity Cost with Two Goods\nA society produces two goods, pizzas and pizza ovens. It is currently producing at point C: 45 units of pizzas and 11 units of pizza ovens. Two other attainable points on the same production possibilities curve are point B (60 pizzas, 6 ovens) and point D (30 pizzas, 15 ovens).\n\nUsing points B and C, what is the opportunity cost of one more unit of pizzas?\nUsing points C and D, what is the opportunity cost of one more unit of pizza ovens?\n\n\n\nShow Answer\n\n\nMoving from C to B: pizzas rise by 15 (60 minus 45), ovens fall by 5 (11 minus 6). Giving up ovens to get pizzas: 5 ovens divided by 15 pizzas equals 0.33 ovens per pizza. The opportunity cost of one more pizza is about a third of an oven.\nMoving from C to D: pizzas fall by 15 (45 minus 30), ovens rise by 4 (15 minus 11). Giving up pizzas to get ovens: 15 pizzas divided by 4 ovens equals 3.75 pizzas per oven. The opportunity cost of one more pizza oven is 3.75 pizzas.\n\nNotice the two answers are not simple reciprocals of each other, since the curve is not a straight line, the opportunity cost changes depending on which section of the curve you are on. That is the law of increasing opportunity cost in action.",
-    "crumbs": [
-      "Topics",
-      "Ch 1: Choices",
-      "Practice Problems"
-    ]
+    "text": "Problem 2: Opportunity Cost with Two Goods\nA society produces two goods, pizzas and pizza ovens. It is currently producing at point C: 45 units of pizzas and 11 units of pizza ovens. Two other attainable points on the same production possibilities curve are point B (60 pizzas, 6 ovens) and point D (30 pizzas, 15 ovens).\n\nUsing points B and C, what is the opportunity cost of one more unit of pizzas?\nUsing points C and D, what is the opportunity cost of one more unit of pizza ovens?\n\n\n\nShow Answer\n\n\nMoving from C to B: pizzas rise by 15 (60 minus 45), ovens fall by 5 (11 minus 6). Giving up ovens to get pizzas: 5 ovens divided by 15 pizzas equals 0.33 ovens per pizza. The opportunity cost of one more pizza is about a third of an oven.\nMoving from C to D: pizzas fall by 15 (45 minus 30), ovens rise by 4 (15 minus 11). Giving up pizzas to get ovens: 15 pizzas divided by 4 ovens equals 3.75 pizzas per oven. The opportunity cost of one more pizza oven is 3.75 pizzas.\n\nNotice the two answers are not simple reciprocals of each other, since the curve is not a straight line, the opportunity cost changes depending on which section of the curve you are on. That is the law of increasing opportunity cost in action."
   },
   {
     "objectID": "course-printing.html",

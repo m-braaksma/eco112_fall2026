@@ -1,11 +1,11 @@
 ---
-title: "Chapter 3: Useful Links"
-subtitle: "Instructional videos and other resources"
+title: "Chapter 3: Supply, Demand, and Market Equilibrium"
+subtitle: "Useful links and other resources"
 ---
 
 ## Real Data
 
-- [FRED: WTI Crude Oil Price (a classic supply/demand example)](https://fred.stlouisfed.org/series/DCOILWTICO)
+- [FRED: Average Price of Eggs, Grade A, Large (a classic supply/demand example)](https://fred.stlouisfed.org/series/APU0000708111)
 
 ## Instructional Videos
 

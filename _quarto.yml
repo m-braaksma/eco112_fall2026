@@ -64,24 +64,24 @@ website:
                 text: Slides
               - href: lecture/ch01-links.qmd
                 text: Useful Links
-              - href: lecture/ch01-practice.qmd
-                text: Practice Problems
+              # - href: lecture/ch01-practice.qmd
+              #   text: Practice Problems
           - section: "Ch 2: Market System"
             contents:
               - href: lecture/ch02.qmd
                 text: Slides
               - href: lecture/ch02-links.qmd
                 text: Useful Links
-              - href: lecture/ch02-practice.qmd
-                text: Practice Problems
-          # - section: "Ch 3: Supply, Demand, Equilibrium"
-          #   contents:
-          #     - href: lecture/ch03.qmd
-          #       text: Slides
-          #     - href: lecture/ch03-links.qmd
-          #       text: Useful Links
-          #     - href: lecture/ch03-practice.qmd
-          #       text: Practice Problems
+              # - href: lecture/ch02-practice.qmd
+              #   text: Practice Problems
+          - section: "Ch 3: Supply, Demand, Equilibrium"
+            contents:
+              # - href: lecture/ch03.qmd
+              #   text: Slides
+              # - href: lecture/ch03-links.qmd
+              #   text: Useful Links
+              # - href: lecture/ch03-practice.qmd
+              #   text: Practice Problems
           # - section: "Ch 6: Intro to Macroeconomics"
           #   contents:
           #     - href: lecture/ch06.qmd

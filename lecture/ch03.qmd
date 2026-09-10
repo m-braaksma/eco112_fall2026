@@ -1,5 +1,5 @@
 ---
-title: "Chapter 03: Supply, Demand, and Market Equilibrium"
+title: "Chapter 3: Supply, Demand, and Market Equilibrium"
 subtitle: "Lecture slides"
 ---
 
