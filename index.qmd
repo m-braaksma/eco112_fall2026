@@ -7,7 +7,7 @@ title: "ECO 112: Principles of Macroeconomics"
 |---|---|---|---|---|
 | 1 | Sep 2-4 | [Chapter 1: Choices](lecture/ch01.qmd) | - | • Intro/[Syllabus](course-syllabus.qmd) |
 | 2 | Sep 7-11 | [Chapter 2: Market System](lecture/ch02.qmd) | • Intro/Syllabus Quiz | - |
-| 3 | Sep 14–18 | Chapter 3: Supply, Demand, Equilibrium | • Ch1+2 Quiz<br>• Ch1 HW due<br>• Ch2 HW due | - |
+| 3 | Sep 14–18 | [Chapter 3: Supply, Demand, Equilibrium](lecture/ch03.qmd) | • Ch1+2 Quiz<br>• Ch1 HW due<br>• Ch2 HW due | - |
 | 4 | Sep 21–25 | Chapter 6: Intro to Macroeconomics | • Ch3 Quiz<br>• Ch3 HW due | - |
 | 5 | Sep 28–*Oct 2* | Chapter 7: National Income | • Ch6 Quiz<br>• Ch6 HW due | - |
 | 6 | Oct 5–9 | Chapter 8: Economic Growth | • Ch7 Quiz<br>• Ch7 HW due | • Ch7 Presentation |
