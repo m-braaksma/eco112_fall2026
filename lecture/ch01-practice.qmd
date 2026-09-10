@@ -65,11 +65,9 @@ fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="lightgray")
 fig.show()
 ```
 
-b. Opportunity cost per car unit, in corn: 1st = 1, 2nd = 1, 3rd = 1, 4th = 2, 5th = 3, 6th = 3,
-   7th = 4 (moving from H back to A, one car unit at a time).
-c. The marginal opportunity cost of the 3rd car unit is 1 unit of corn.
-d. The total opportunity cost of producing 6 car units (moving from H to B) is 21 units of corn
-   (28 minus 7).
+b. Opportunity cost per car unit, in corn: 1st = 1, 2nd = 2, 3rd = 3, 4th = 4, 5th = 5, 6th = 6, 7th = 7 (moving from H back to A, one car unit at a time, each additional car costs one more unit of corn than the last, the law of increasing opportunity cost).
+c. The marginal opportunity cost of the 3rd car unit is 3 units of corn.
+d. The total opportunity cost of producing 6 car units (moving from H to B) is 21 units of corn (28 minus 7), which also matches summing the first six marginal costs: 1 plus 2 plus 3 plus 4 plus 5 plus 6.
 
 </details>
 
