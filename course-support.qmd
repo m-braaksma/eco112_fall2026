@@ -7,7 +7,7 @@ title: "Course support"
 
 | | |
 |---|---|
-| ![](assets/mbraak.jpg){width=120px} | **Name:** [Matt Braaksma](https://apec.umn.edu/people/matt-braaksma){target="_blank"}<br>**Office:** Hagfors Center 323 <br>**Email:** braaksma@augsburg.edu<br>**Office Hours:** TTH 3:30-4:30 PM |
+| ![](assets/mbraak.jpg){width=120px} | **Name:** [Matt Braaksma](https://m-braaksma.github.io/){target="_blank"}<br>**Office:** Hagfors Center 323 <br>**Email:** [braaksma@augsburg.edu](mailto:braaksma@augsburg.edu)<br>**Office Hours:** TTh 3:30-4:30 PM, by appointment only, [sign up here](https://calendar.app.google/z9SXD4aWPpBNnuY6A){target="_blank"}. If no appointments are booked by the time class ends, I will not hold office hours that day. |
 
 
 

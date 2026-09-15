@@ -3,6 +3,145 @@ title: "Chapter 3: Supply, Demand, and Market Equilibrium"
 subtitle: "Practice Problems"
 ---
 
+## Reading Supply and Demand Shifts
+
+For each situation below, determine which curve shifts and in which direction, then determine what happens to the equilibrium *price* and *quantity*. If one of price or quantity cannot be determined without more information, say so.
+
+a. Demand increases (shifts right), supply is unchanged.
+b. Supply increases (shifts right), demand is unchanged.
+c. Demand decreases (shifts left), supply is unchanged.
+d. Supply decreases (shifts left), demand is unchanged.
+e. Both demand and supply increase (both shift right) at the same time.
+f. Demand increases while supply decreases at the same time.
+g. The price of a close substitute for this good falls. What happens to this good's market?
+h. The price of a key input used to produce this good rises. What happens to this good's market?
+
+<details>
+<summary>Show Answer</summary>
+
+```{python}
+#| echo: false
+#| fig-align: center
+
+from plotly.subplots import make_subplots
+import plotly.graph_objects as go
+
+BLUE = "#1f4e79"
+ORANGE = "#c55a11"
+GRAY = "#595959"
+
+Q = [0, 20]
+
+# Baseline: D0: P = 20 - Q, S0: P = Q -> equilibrium (10, 10)
+d0 = [20 - q for q in Q]
+s0 = [q for q in Q]
+
+# a: demand right (+5) -> eq (12.5, 12.5): price up, quantity up
+d1 = [25 - q for q in Q]
+# b: supply right (+5, in Q) -> S1: P = Q - 5 -> eq with D0 (12.5, 7.5): price down, quantity up
+s1_q = [5, 20]
+s1 = [q - 5 for q in s1_q]
+# c: demand left (-5) -> eq with S0 (7.5, 7.5): price down, quantity down
+d2 = [15 - q for q in Q]
+# d: supply left (+5, in Q) -> S2: P = Q + 5 -> eq with D0 (7.5, 12.5): price up, quantity down
+s2 = [q + 5 for q in Q]
+
+panels = [
+    ("(a) Demand up", d0, s0, [Q, Q], [(10, 10, "black"), (12.5, 12.5, GRAY)], d1, None),
+    ("(b) Supply up", d0, s0, [Q, s1_q], [(10, 10, "black"), (12.5, 7.5, GRAY)], None, s1),
+    ("(c) Demand down", d0, s0, [Q, Q], [(10, 10, "black"), (7.5, 7.5, GRAY)], d2, None),
+    ("(d) Supply down", d0, s0, [Q, Q], [(10, 10, "black"), (7.5, 12.5, GRAY)], None, s2),
+]
+
+fig = make_subplots(rows=2, cols=2, subplot_titles=[p[0] for p in panels])
+positions = [(1, 1), (1, 2), (2, 1), (2, 2)]
+
+for (title, d0_, s0_, xr, eqs, d_shift, s_shift), (row, col) in zip(panels, positions):
+    fig.add_trace(go.Scatter(x=Q, y=d0_, mode="lines", line=dict(color=BLUE, width=2, dash="dash"),
+                              showlegend=False), row=row, col=col)
+    fig.add_trace(go.Scatter(x=Q, y=s0_, mode="lines", line=dict(color=ORANGE, width=2, dash="dash"),
+                              showlegend=False), row=row, col=col)
+    if d_shift is not None:
+        fig.add_trace(go.Scatter(x=Q, y=d_shift, mode="lines", line=dict(color=BLUE, width=3),
+                                  showlegend=False), row=row, col=col)
+    if s_shift is not None:
+        fig.add_trace(go.Scatter(x=xr[1], y=s_shift, mode="lines", line=dict(color=ORANGE, width=3),
+                                  showlegend=False), row=row, col=col)
+    for (qx, px, color) in eqs:
+        fig.add_trace(go.Scatter(x=[qx], y=[px], mode="markers", marker=dict(size=8, color=color),
+                                  showlegend=False, hoverinfo="skip"), row=row, col=col)
+    fig.update_xaxes(range=[0, 20], showticklabels=False, row=row, col=col)
+    fig.update_yaxes(range=[0, 25], showticklabels=False, row=row, col=col)
+
+fig.update_layout(width=620, height=560, plot_bgcolor="white")
+fig.show()
+```
+
+a. Demand shifts *right*. Both equilibrium price and quantity *increase* (dashed lines show the
+   original curves, black dot the original equilibrium, gray dot the new one).
+b. Supply shifts *right*. Equilibrium price *decreases* while quantity *increases*.
+c. Demand shifts *left*. Both equilibrium price and quantity *decrease*.
+d. Supply shifts *left*. Equilibrium price *increases* while quantity *decreases*.
+
+```{python}
+#| echo: false
+#| fig-align: center
+
+# e: both up (D +5, S +8 in Q) -> eq (16.5, 8.5)
+d1e = [25 - q for q in Q]
+s1e_q = [8, 20]
+s1e = [q - 8 for q in s1e_q]
+# f: demand up, supply down (D +5, S +3 in Q) -> eq (11, 14)
+s2f = [q + 3 for q in Q]
+# g: same pattern as (c), framed as a substitute good's price falling
+# h: same pattern as (d), framed as an input cost rising
+
+panels2 = [
+    ("(e) Both increase", [Q, s1e_q], [(10, 10, "black"), (16.5, 8.5, GRAY)], d1e, s1e, None),
+    ("(f) Demand up, supply down", [Q, Q], [(10, 10, "black"), (11, 14, GRAY)], d1e, s2f, None),
+    ("(g) Substitute's price falls", [Q, Q], [(10, 10, "black"), (7.5, 7.5, GRAY)], d2, None, None),
+    ("(h) Input cost rises", [Q, Q], [(10, 10, "black"), (7.5, 12.5, GRAY)], None, s2, None),
+]
+
+fig2 = make_subplots(rows=2, cols=2, subplot_titles=[p[0] for p in panels2])
+
+for (title, xr, eqs, d_shift, s_shift, _), (row, col) in zip(panels2, positions):
+    fig2.add_trace(go.Scatter(x=Q, y=d0, mode="lines", line=dict(color=BLUE, width=2, dash="dash"),
+                               showlegend=False), row=row, col=col)
+    fig2.add_trace(go.Scatter(x=Q, y=s0, mode="lines", line=dict(color=ORANGE, width=2, dash="dash"),
+                               showlegend=False), row=row, col=col)
+    if d_shift is not None:
+        fig2.add_trace(go.Scatter(x=xr[0], y=d_shift, mode="lines", line=dict(color=BLUE, width=3),
+                                   showlegend=False), row=row, col=col)
+    if s_shift is not None:
+        fig2.add_trace(go.Scatter(x=xr[1], y=s_shift, mode="lines", line=dict(color=ORANGE, width=3),
+                                   showlegend=False), row=row, col=col)
+    for (qx, px, color) in eqs:
+        fig2.add_trace(go.Scatter(x=[qx], y=[px], mode="markers", marker=dict(size=8, color=color),
+                                   showlegend=False, hoverinfo="skip"), row=row, col=col)
+    fig2.update_xaxes(range=[0, 20], showticklabels=False, row=row, col=col)
+    fig2.update_yaxes(range=[0, 25], showticklabels=False, row=row, col=col)
+
+fig2.update_layout(width=620, height=560, plot_bgcolor="white")
+fig2.show()
+```
+
+e. Both curves shift *right*. Equilibrium *quantity* unambiguously *increases* (both shifts push
+   quantity up), but equilibrium *price* is *ambiguous*, it depends on which shift is larger. The
+   panel above shows one example where the supply increase dominates and price falls; if the demand
+   increase had been larger instead, price could have risen.
+f. Demand shifts *right* while supply shifts *left*. Equilibrium *price* unambiguously *increases*
+   (both shifts push price up), but equilibrium *quantity* is *ambiguous*, it depends on which shift
+   is larger.
+g. A falling price for a substitute makes that substitute more attractive, so buyers switch away
+   from this good, this good's *demand shifts left*. That is the same pattern as (c): both
+   equilibrium price and quantity *decrease*.
+h. A higher input cost makes this good more expensive to produce at every quantity, so *supply
+   shifts left*. That is the same pattern as (d): equilibrium price *increases* while quantity
+   *decreases*.
+
+</details>
+
 ## Problem 1: Equilibrium and Price Supports
 
 The table below shows the demand and supply schedules for soybeans.
@@ -98,12 +237,377 @@ c. While the ceiling is in effect, a new printing technology lowers production c
 <details>
 <summary>Show Answer</summary>
 
+```{python}
+#| echo: false
+#| fig-align: center
+
+import plotly.graph_objects as go
+
+BLUE = "#1f4e79"
+ORANGE = "#c55a11"
+GREEN = "#548235"
+GRAY = "#595959"
+
+price = [40, 50, 60, 70, 80]
+qd = [4200, 2200, 1200, 700, 550]
+qs0 = [200, 600, 1200, 2000, 3000]
+
+# Supply after the new printing technology lowers costs (shifted right)
+qs1 = [500, 900, 1500, 2300, 3300]
+
+fig = go.Figure()
+fig.add_trace(go.Scatter(x=qd, y=price, mode="lines", name="Demand",
+                          line=dict(color=BLUE, width=3)))
+fig.add_trace(go.Scatter(x=qs0, y=price, mode="lines", name="Supply (original)",
+                          line=dict(color=ORANGE, width=2, dash="dash")))
+fig.add_trace(go.Scatter(x=qs1, y=price, mode="lines", name="Supply (after cost decrease)",
+                          line=dict(color=GREEN, width=3)))
+fig.add_hline(y=50, line_dash="dot", line_color=GRAY,
+              annotation_text="Price ceiling: $50", annotation_position="bottom right")
+fig.add_trace(go.Scatter(x=[1200], y=[60], mode="markers+text", text=["Original equilibrium"],
+                          textposition="top left", marker=dict(size=10, color="black"),
+                          showlegend=False, hoverinfo="text"))
+fig.add_trace(go.Scatter(x=[600], y=[50], mode="markers+text", text=["Qs (original)"],
+                          textposition="bottom right", marker=dict(size=9, color=ORANGE),
+                          showlegend=False, hoverinfo="text"))
+fig.add_trace(go.Scatter(x=[900], y=[50], mode="markers+text", text=["Qs (after)"],
+                          textposition="top right", marker=dict(size=9, color=GREEN),
+                          showlegend=False, hoverinfo="text"))
+fig.add_trace(go.Scatter(x=[2200], y=[50], mode="markers+text", text=["Qd at ceiling"],
+                          textposition="top left", marker=dict(size=9, color=BLUE),
+                          showlegend=False, hoverinfo="text"))
+
+fig.update_layout(
+    xaxis_title="Quantity (textbooks)", yaxis_title="Price",
+    width=600, height=420, plot_bgcolor="white",
+    legend=dict(x=0.35, y=1.18, orientation="h", font=dict(size=10))
+)
+fig.update_xaxes(showgrid=True, gridwidth=1, gridcolor="lightgray")
+fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="lightgray", range=[35, 85])
+fig.show()
+```
+
 a. Equilibrium is *$60*, where quantity demanded and quantity supplied both equal *1,200*.
 b. At the $50 ceiling, quantity demanded is 2,200 but quantity supplied is only 600. The number of
    textbooks actually sold is capped by the *shorter* side of the market, so only *600* get sold,
    even though far more students want one at that price. This leaves a shortage of 1,600 books.
 c. A rightward shift in supply means more textbooks are supplied at every price, including $50. As
    long as the ceiling is still below the new equilibrium price, more textbooks get sold than
-   before (still capped by supply, but a higher supply quantity), narrowing the shortage.
+   before (still capped by supply, but a higher supply quantity), narrowing the shortage. In the
+   graph above, quantity supplied at the $50 ceiling rises from *600* to *900*, so the shortage
+   shrinks from 1,600 to *1,300* books.
+
+</details>
+
+## Problem 3: Concert Tickets and StubHub
+
+A popular artist announces a stadium tour. Tickets go on sale through the venue at a fixed face
+price of $150, but the stadium only has 50,000 seats.
+
+a. Draw or describe what happens to the demand curve for this concert compared to a typical touring
+   act, and explain why.
+b. At the $150 face price, is the quantity of tickets demanded larger or smaller than the quantity
+   supplied (50,000 seats)? What does that imply happens in a resale market like StubHub?
+c. Suppose resale tickets end up selling for $600. Using the supply and demand model, explain why
+   the resale price is so much higher than the face price, even though it is the same seats being
+   sold.
+d. *Discussion:* A small number of platforms (like Live Nation-Ticketmaster) control both primary
+   ticket sales and much of the resale market for major tours, and have faced antitrust scrutiny
+   over this. Does having one dominant platform change how well the basic supply-and-demand model
+   predicts ticket prices? Why or why not?
+e. Airline seats on a specific flight are also fixed in number once the plane is scheduled. Is the
+   short-run supply curve for seats on a given flight similarly vertical? Given that, why do
+   airline tickets not typically show up on a resale market the way concert tickets do?
+
+<details>
+<summary>Show Answer</summary>
+
+```{python}
+#| echo: false
+#| fig-align: center
+
+import plotly.graph_objects as go
+
+BLUE = "#1f4e79"
+ORANGE = "#c55a11"
+GRAY = "#595959"
+
+Q = [0, 90]
+
+# Vertical supply: fixed 50,000 seats
+supply_q = [50, 50]
+supply_p = [0, 700]
+
+# Typical touring act demand: P = 300 - 3Q
+d_typical_p = [300 - 3*q for q in Q]
+# This artist's demand (shifted right): P = 750 - 3Q
+d_star_p = [750 - 3*q for q in Q]
+
+fig = go.Figure()
+fig.add_trace(go.Scatter(x=supply_q, y=supply_p, mode="lines", name="Supply (fixed seats)",
+                          line=dict(color=GRAY, width=3)))
+fig.add_trace(go.Scatter(x=Q, y=d_typical_p, mode="lines", name="Demand: typical act",
+                          line=dict(color=BLUE, width=2, dash="dash")))
+fig.add_trace(go.Scatter(x=Q, y=d_star_p, mode="lines", name="Demand: this artist",
+                          line=dict(color=ORANGE, width=3)))
+fig.add_trace(go.Scatter(x=[50], y=[150], mode="markers+text", text=["Face price"],
+                          textposition="bottom left", marker=dict(size=11, color=BLUE),
+                          showlegend=False, hoverinfo="text"))
+fig.add_trace(go.Scatter(x=[50], y=[600], mode="markers+text", text=["Resale price"],
+                          textposition="top left", marker=dict(size=11, color=ORANGE),
+                          showlegend=False, hoverinfo="text"))
+
+fig.update_layout(
+    xaxis_title="Seats (thousands)", yaxis_title="Price",
+    width=560, height=420, plot_bgcolor="white",
+    legend=dict(x=0.02, y=1.2, orientation="h", font=dict(size=10))
+)
+fig.update_xaxes(showgrid=True, gridwidth=1, gridcolor="lightgray", range=[0, 90])
+fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="lightgray", range=[0, 700])
+fig.show()
+```
+
+a. Demand for this concert shifts *far to the right* relative to a typical touring act; at every
+   price, many more people want a ticket, because the artist's popularity increases how much value
+   fans place on attending.
+b. Supply is fixed at 50,000 seats no matter the price (a vertical supply curve, at least in the
+   short run for a specific show date). If quantity demanded at $150 is far above 50,000, there is
+   an *excess quantity demanded* at the face price, some people who want a ticket at $150 will not
+   get one, which creates the incentive for a resale market to exist.
+c. Because supply is fixed, the face price of $150 does not do the job of *rationing* the limited
+   seats to only the people willing to pay the most. The resale price is close to the price at
+   which quantity demanded actually equals quantity supplied (50,000) once the artificially low
+   face price is removed, that market-clearing price reflects how much buyers are truly willing to
+   pay for a scarce good.
+d. *Open discussion.* The basic model still explains the *direction* of the price (fixed supply and
+   high demand push price up), but a dominant platform may be able to set or influence prices and
+   fees beyond what a fully competitive resale market would produce, which is a market power
+   question the simple supply-and-demand model does not fully capture. This is a preview of ideas
+   covered when we study market structure later in the course.
+e. Yes, the number of seats on a specific flight is also fixed once the plane is set, so short-run
+   supply for that one flight is *vertical* too, just like a single concert. The key difference is
+   on the pricing and transfer side, airlines themselves practice extensive *dynamic pricing*,
+   raising the fare many times as a flight fills up, so the airline (not a third party) captures
+   most of the value that would otherwise go to scalpers. Airline tickets are also typically
+   *non-transferable* (tied to a passenger's name and ID), which blocks a resale market from
+   forming the way concert tickets can be resold. One more difference worth noting: a concert is
+   *one* venue with a fixed number of seats, but "airline seats" as a market means many airlines
+   choosing flight frequency, routes, and plane size. Looking across a whole market like that, and
+   over a longer time frame, supply *does* start to look like a normal upward-sloping curve rather
+   than a single vertical line, airlines can and do add more seats when prices (and profits) are
+   high. The vertical-supply story applies best to one specific, already-scheduled flight in the
+   very short run.
+
+</details>
+
+## Problem 4: The Used Car Market During a Computer Chip Shortage
+
+In 2021, a global shortage of semiconductor chips forced automakers to slow down new car
+production, since modern cars need chips to run everything from engines to infotainment systems.
+
+a. What happens to the *supply* of new cars during the chip shortage? Which direction does the new
+   car supply curve shift?
+b. As new cars become harder to find, many buyers turn to the used car market instead. What happens
+   to the *demand* curve for used cars, and why?
+c. At the same time, some used car owners decide to hold onto their vehicles longer rather than
+   sell, since replacing the car would be difficult and expensive. What happens to the *supply*
+   curve for used cars?
+d. Using your answers to (b) and (c), explain what happens to the equilibrium *price* of used cars.
+   Can you say for certain what happens to the equilibrium *quantity* of used cars sold? Why or why
+   not?
+
+<details>
+<summary>Show Answer</summary>
+
+```{python}
+#| echo: false
+#| fig-align: center
+
+from plotly.subplots import make_subplots
+import plotly.graph_objects as go
+
+BLUE = "#1f4e79"
+ORANGE = "#c55a11"
+GRAY = "#595959"
+
+Q = list(range(0, 61))
+
+# New car market: supply shifts left (chip shortage), demand roughly unchanged
+d_new_p = [30 - 0.5*q for q in Q]
+s_new0_p = [0.5*q for q in Q]
+s_new1_p = [0.5*q + 10 for q in Q]
+
+# Used car market: demand shifts right (substitute), supply shifts left (owners hold on)
+d_used0_p = [30 - 0.5*q for q in Q]
+d_used1_p = [35 - 0.5*q for q in Q]
+s_used0_p = [0.5*q for q in Q]
+s_used1_p = [0.5*q + 10 for q in Q]
+
+fig = make_subplots(rows=1, cols=2, subplot_titles=("New Car Market", "Used Car Market"))
+
+# Panel 1: new cars, supply shift left only
+fig.add_trace(go.Scatter(x=Q, y=d_new_p, mode="lines", name="Demand",
+                          line=dict(color=BLUE, width=3), legendgroup="d"), row=1, col=1)
+fig.add_trace(go.Scatter(x=Q, y=s_new0_p, mode="lines", name="Supply (original)",
+                          line=dict(color=ORANGE, width=2, dash="dash"), legendgroup="s0"), row=1, col=1)
+fig.add_trace(go.Scatter(x=Q, y=s_new1_p, mode="lines", name="Supply (shifted left)",
+                          line=dict(color=ORANGE, width=3), legendgroup="s1"), row=1, col=1)
+fig.add_trace(go.Scatter(x=[30], y=[15], mode="markers", marker=dict(size=10, color="black"),
+                          showlegend=False, hoverinfo="skip"), row=1, col=1)
+fig.add_trace(go.Scatter(x=[20], y=[20], mode="markers", marker=dict(size=10, color=GRAY),
+                          showlegend=False, hoverinfo="skip"), row=1, col=1)
+
+# Panel 2: used cars, both curves shift
+fig.add_trace(go.Scatter(x=Q, y=d_used0_p, mode="lines", showlegend=False,
+                          line=dict(color=BLUE, width=2, dash="dash")), row=1, col=2)
+fig.add_trace(go.Scatter(x=Q, y=d_used1_p, mode="lines", name="Demand (shifted right)",
+                          line=dict(color=BLUE, width=3)), row=1, col=2)
+fig.add_trace(go.Scatter(x=Q, y=s_used0_p, mode="lines", showlegend=False,
+                          line=dict(color=ORANGE, width=2, dash="dash")), row=1, col=2)
+fig.add_trace(go.Scatter(x=Q, y=s_used1_p, mode="lines", showlegend=False,
+                          line=dict(color=ORANGE, width=3)), row=1, col=2)
+fig.add_trace(go.Scatter(x=[30], y=[15], mode="markers+text", text=["Original"],
+                          textposition="bottom right", marker=dict(size=10, color="black"),
+                          showlegend=False, hoverinfo="text"), row=1, col=2)
+fig.add_trace(go.Scatter(x=[25], y=[22.5], mode="markers+text", text=["New"],
+                          textposition="top left", marker=dict(size=10, color=GRAY),
+                          showlegend=False, hoverinfo="text"), row=1, col=2)
+
+fig.update_layout(
+    width=780, height=420, plot_bgcolor="white",
+    legend=dict(x=0.0, y=1.25, orientation="h", font=dict(size=10))
+)
+fig.update_xaxes(title_text="New cars (thousands)", showgrid=True, gridwidth=1,
+                  gridcolor="lightgray", range=[0, 60], row=1, col=1)
+fig.update_xaxes(title_text="Used cars (thousands)", showgrid=True, gridwidth=1,
+                  gridcolor="lightgray", range=[0, 60], row=1, col=2)
+fig.update_yaxes(title_text="Price ($ thousands)", showgrid=True, gridwidth=1,
+                  gridcolor="lightgray", range=[0, 35], row=1, col=1)
+fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="lightgray", range=[0, 35], row=1, col=2)
+fig.show()
+```
+
+a. The chip shortage raises production costs and limits how many new cars manufacturers can
+   actually build, so the new car *supply curve shifts left*.
+b. With new cars scarce and often more expensive, used cars become a more attractive substitute, so
+   the *demand curve for used cars shifts right*, more buyers want used cars at every price.
+c. Owners who would normally sell (perhaps to buy a newer car) hold on instead, so fewer used cars
+   are offered for sale at every price, the *supply curve for used cars shifts left*.
+d. Both shifts, demand right and supply left, push the equilibrium *price* of used cars up
+   unambiguously (which is exactly what happened in 2021 and 2022). Equilibrium *quantity* is
+   ambiguous, the rightward demand shift pushes quantity up while the leftward supply shift pushes
+   quantity down, so without knowing the relative size of each shift, we cannot say from the model
+   alone whether more or fewer used cars actually changed hands. In practice, used car sales volume
+   fell even as prices spiked, telling us the supply shift was the dominant force.
+
+</details>
+
+## Problem 5: The Ozempic Effect
+
+A new class of prescription drugs (GLP-1 medications like Ozempic and Wegovy) is approved for
+weight loss, in addition to its original use for diabetes. Demand for these drugs surges rapidly,
+driven by both word of mouth and social media, while manufacturers struggle to build enough
+production capacity to keep up.
+
+a. What happens to the demand curve for these drugs, and why?
+b. In the short run, manufacturing capacity for a complex injectable drug cannot expand quickly.
+   What does that imply about the shape of the short-run supply curve, and what happens to price and
+   quantity as a result?
+c. Patients who need the drug for diabetes (its original approved use) report trouble finding it in
+   stock, even though production levels have not fallen. Using the model, explain how a demand shift
+   alone can create a *shortage* for existing users, without any change in supply.
+d. Over the following two years, manufacturers invest heavily in new factories and production lines,
+   and competing drug makers enter the market with similar products. What happens to the supply
+   curve over this longer time horizon, and what would you expect to happen to price?
+
+<details>
+<summary>Show Answer</summary>
+
+```{python}
+#| echo: false
+#| fig-align: center
+
+import plotly.graph_objects as go
+
+BLUE = "#1f4e79"
+ORANGE = "#c55a11"
+GREEN = "#548235"
+GRAY = "#595959"
+
+Q = list(range(0, 66))
+
+# Original: D0 through (30,100) slope -2
+d0_p = [160 - 2*q for q in Q]
+
+# S_short is steep (near-vertical): slope 50, through (30,100).
+# Restricted to where 0 <= P <= 250 so the line doesn't dominate the chart.
+s_short_q = [q for q in Q if 0 <= 50*q - 1400 <= 250]
+s_short_p = [50*q - 1400 for q in s_short_q]
+
+# After demand shock: D1 through (31,150) slope -2, same S_short
+d1_p = [212 - 2*q for q in Q]
+
+# Long run: S_long is much flatter (slope 5) and shifted well to the right, so it never crosses
+# S_short within the plotted range, representing new capacity available at every price level
+s_long_q = [q for q in Q if 5*q - 160 >= 0]
+s_long_p = [5*q - 160 for q in s_long_q]
+
+fig = go.Figure()
+fig.add_trace(go.Scatter(x=Q, y=d0_p, mode="lines", name="Demand (before)",
+                          line=dict(color=BLUE, width=2, dash="dash")))
+fig.add_trace(go.Scatter(x=Q, y=d1_p, mode="lines", name="Demand (after shock)",
+                          line=dict(color=BLUE, width=3)))
+fig.add_trace(go.Scatter(x=s_short_q, y=s_short_p, mode="lines", name="Supply (short run)",
+                          line=dict(color=ORANGE, width=3)))
+fig.add_trace(go.Scatter(x=s_long_q, y=s_long_p, mode="lines", name="Supply (long run)",
+                          line=dict(color=GREEN, width=3)))
+fig.add_trace(go.Scatter(x=[30], y=[100], mode="markers+text", text=["Before"],
+                          textposition="bottom left", marker=dict(size=10, color="black"),
+                          showlegend=False, hoverinfo="text"))
+fig.add_trace(go.Scatter(x=[31], y=[150], mode="markers+text", text=["Short-run spike"],
+                          textposition="top right", marker=dict(size=10, color=GRAY),
+                          showlegend=False, hoverinfo="text"))
+fig.add_trace(go.Scatter(x=[53], y=[106], mode="markers+text", text=["Long-run"],
+                          textposition="bottom right", marker=dict(size=10, color=GREEN),
+                          showlegend=False, hoverinfo="text"))
+
+# Shortage: hold price at the original $100 level (insurance-negotiated price is sticky).
+# Quantity supplied barely moves (near-vertical short-run supply), quantity demanded jumps to 56.
+fig.add_trace(go.Scatter(x=[30, 56], y=[100, 100], mode="lines+markers",
+                          line=dict(color=GRAY, width=2, dash="dot"),
+                          marker=dict(size=8, color=GRAY), showlegend=False,
+                          hoverinfo="skip"))
+fig.add_annotation(x=43, y=100, yshift=14, text="Shortage at old price", showarrow=False,
+                    font=dict(size=11, color=GRAY))
+fig.add_annotation(x=30, y=100, yshift=-16, text="Qs", showarrow=False, font=dict(size=10))
+fig.add_annotation(x=56, y=100, yshift=-16, text="Qd", showarrow=False, font=dict(size=10))
+
+fig.update_layout(
+    xaxis_title="Quantity", yaxis_title="Price",
+    width=560, height=420, plot_bgcolor="white",
+    legend=dict(x=0.0, y=1.25, orientation="h", font=dict(size=10))
+)
+fig.update_xaxes(showgrid=True, gridwidth=1, gridcolor="lightgray", range=[0, 65])
+fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="lightgray", range=[0, 250])
+fig.show()
+```
+
+a. Demand shifts *right*, a new, large group of potential buyers (people seeking weight loss, not
+   just diabetes management) enters the market, increasing quantity demanded at every price.
+b. In the short run, supply is close to *fixed* (nearly vertical), since building new manufacturing
+   capacity takes years. With demand shifting right against a nearly fixed short-run supply, the
+   *price* rises sharply while *quantity* increases only modestly.
+c. Even though the amount supplied has not decreased, the large rightward shift in demand means
+   quantity demanded now exceeds quantity supplied at the old price. Because there is effectively a
+   price ceiling in practice (insurance-negotiated prices, or simply a price that does not adjust
+   instantly), this excess demand shows up as a *shortage*, existing patients cannot get the drug
+   even though nothing about supply changed for them specifically. On the graph, holding the price
+   at its original $100 level after demand shifts to D1 shows quantity supplied stuck near *30*
+   (short-run supply barely moves) while quantity demanded jumps to *56*, a shortage of *26* units
+   at that price.
+d. As new factories come online and competitors enter, the *supply curve shifts right* over time.
+   With demand still elevated but supply now catching up, we would expect the equilibrium *price to
+   fall* from its earlier peak (and *quantity* to keep rising), which is the standard pattern for
+   markets adjusting to a large demand shock over the longer run.
 
 </details>

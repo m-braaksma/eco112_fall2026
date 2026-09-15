@@ -1,0 +1,14 @@
+---
+title: "Chapter 6: An Introduction to Macroeconomics"
+subtitle: "Useful links and other resources"
+---
+
+## Real Data
+
+- [FRED: Real Gross Domestic Product](https://fred.stlouisfed.org/series/GDPC1)
+- [FRED: Real Gross Domestic Product Per Capita](https://fred.stlouisfed.org/series/A939RX0Q048SBEA)
+- [FRED: Personal Saving Rate](https://fred.stlouisfed.org/series/PSAVERT)
+
+## Instructional Videos
+
+<!-- TODO: add video links for this chapter (Khan Academy, YouTube, etc.) -->

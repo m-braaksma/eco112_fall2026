@@ -1,0 +1,58 @@
+---
+title: "Chapter 6: An Introduction to Macroeconomics"
+subtitle: "Practice Problems"
+---
+
+## Problem 1: Total Growth vs. Per-Capita Growth
+
+A country's real GDP grows from $18.0 trillion to $18.9 trillion over one year. Over that same
+year, the country's population grows from 300 million to 306 million people.
+
+a. What is the percentage growth rate of total real GDP?
+b. What is real GDP per capita in each year?
+c. What is the percentage growth rate of real GDP per capita?
+d. Why is the answer to (c) smaller than the answer to (a)?
+
+<details>
+<summary>Show Answer</summary>
+
+a. Growth rate of total real GDP = ($18.9 trillion minus $18.0 trillion) divided by $18.0 trillion
+   = $0.9 trillion divided by $18.0 trillion = *5.0 percent*.
+b. Real GDP per capita, year 1: $18.0 trillion divided by 300 million = *$60,000*. Year 2: $18.9
+   trillion divided by 306 million = *$61,765* (rounded).
+c. Growth rate of real GDP per capita = ($61,765 minus $60,000) divided by $60,000 = *about 2.9
+   percent*.
+d. Total output grew 5.0 percent, but population also grew (from 300 million to 306 million, a 2.0
+   percent increase). Since that larger output has to be divided among more people, the *increase
+   in living standards per person* is smaller than the increase in total output. This is why
+   economists track GDP *per capita*, not just total GDP, when asking whether people are actually
+   getting better off.
+
+</details>
+
+## Problem 2: Saving, Investment, and Expected Returns
+
+A firm is deciding whether to build a new factory that costs $5 million. The firm forecasts the
+factory would generate $600,000 in additional profit per year.
+
+a. What annual rate of return does the firm expect on this $5 million investment?
+b. If interest rates rise and the firm could instead earn a guaranteed 8 percent per year by simply
+   depositing that $5 million in a bank, should the firm still build the factory? Explain using the
+   idea of expected returns.
+c. Explain, in one or two sentences, why a general rise in interest rates throughout the economy
+   tends to reduce the total amount of economic investment.
+
+<details>
+<summary>Show Answer</summary>
+
+a. Expected rate of return = $600,000 divided by $5,000,000 = *12 percent* per year.
+b. The factory still expected to return 12 percent, comfortably more than the *guaranteed* 8
+   percent from a bank deposit, so the firm should still build it. The factory return does carry
+   more risk than a bank deposit, but as long as the firm believes 12 percent is the fair expected
+   return for that risk, it remains the better choice.
+c. Investment projects only get funded when the expected return on the project beats the return
+   available elsewhere, such as a bank deposit or bond. When interest rates rise economy-wide, the
+   bar an investment project has to clear rises too, so *fewer* projects have an expected return
+   high enough to be worth funding, and total investment falls.
+
+</details>
