@@ -128,7 +128,12 @@
     "href": "lecture/ch06.html",
     "title": "Chapter 6: An Introduction to Macroeconomics",
     "section": "",
-    "text": "Open in full screen"
+    "text": "Open in full screen",
+    "crumbs": [
+      "Topics",
+      "Ch 6: Intro to Macroeconomics",
+      "Slides"
+    ]
   },
   {
     "objectID": "lecture/ch02.html",
@@ -408,21 +413,24 @@
     "href": "lecture/ch06-links.html",
     "title": "Chapter 6: An Introduction to Macroeconomics",
     "section": "",
-    "text": "FRED: Real Gross Domestic Product\nFRED: Real Gross Domestic Product Per Capita\nFRED: Personal Saving Rate"
+    "text": "FRED: Real Gross Domestic Product\nFRED: Real Gross Domestic Product Per Capita\nFRED: Personal Saving Rate",
+    "crumbs": [
+      "Topics",
+      "Ch 6: Intro to Macroeconomics",
+      "Useful Links"
+    ]
   },
   {
     "objectID": "lecture/ch06-links.html#real-data",
     "href": "lecture/ch06-links.html#real-data",
     "title": "Chapter 6: An Introduction to Macroeconomics",
     "section": "",
-    "text": "FRED: Real Gross Domestic Product\nFRED: Real Gross Domestic Product Per Capita\nFRED: Personal Saving Rate"
-  },
-  {
-    "objectID": "lecture/ch06-links.html#instructional-videos",
-    "href": "lecture/ch06-links.html#instructional-videos",
-    "title": "Chapter 6: An Introduction to Macroeconomics",
-    "section": "Instructional Videos",
-    "text": "Instructional Videos"
+    "text": "FRED: Real Gross Domestic Product\nFRED: Real Gross Domestic Product Per Capita\nFRED: Personal Saving Rate",
+    "crumbs": [
+      "Topics",
+      "Ch 6: Intro to Macroeconomics",
+      "Useful Links"
+    ]
   },
   {
     "objectID": "course-printing.html",

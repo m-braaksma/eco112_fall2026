@@ -82,14 +82,14 @@ website:
                 text: Useful Links
               - href: lecture/ch03-practice.qmd
                 text: Practice Problems
-          # - section: "Ch 6: Intro to Macroeconomics"
-          #   contents:
-          #     - href: lecture/ch06.qmd
-          #       text: Slides
-          #     - href: lecture/ch06-links.qmd
-          #       text: Useful Links
-          #     - href: lecture/ch06-practice.qmd
-          #       text: Practice Problems
+          - section: "Ch 6: Intro to Macroeconomics"
+            contents:
+              - href: lecture/ch06.qmd
+                text: Slides
+              - href: lecture/ch06-links.qmd
+                text: Useful Links
+              # - href: lecture/ch06-practice.qmd
+              #   text: Practice Problems
           # - section: "Ch 7: National Income"
           #   contents:
           #     - href: lecture/ch07.qmd

@@ -9,6 +9,4 @@ subtitle: "Useful links and other resources"
 - [FRED: Real Gross Domestic Product Per Capita](https://fred.stlouisfed.org/series/A939RX0Q048SBEA)
 - [FRED: Personal Saving Rate](https://fred.stlouisfed.org/series/PSAVERT)
 
-## Instructional Videos
 
-<!-- TODO: add video links for this chapter (Khan Academy, YouTube, etc.) -->
