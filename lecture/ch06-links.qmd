@@ -9,4 +9,9 @@ subtitle: "Useful links and other resources"
 - [FRED: Real Gross Domestic Product Per Capita](https://fred.stlouisfed.org/series/A939RX0Q048SBEA)
 - [FRED: Personal Saving Rate](https://fred.stlouisfed.org/series/PSAVERT)
 
+## Business Confidence, in Practice
+
+- [Minneapolis Fed: Regional Economic Indicators](www.minneapolisfed.org/region-and-community/regional-economic-indicators)
+    — Example of the kind of monthly business-conditions survey mentioned on the lecture slides, firms in the Ninth District (Minnesota, Montana, North and South Dakota, Wisconsin) report whether conditions improved or worsened, plus their own forecast for the month ahead.
+
 

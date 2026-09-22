@@ -392,35 +392,72 @@
     "href": "lecture/ch06-practice.html",
     "title": "Chapter 6: An Introduction to Macroeconomics",
     "section": "",
-    "text": "A country’s real GDP grows from $18.0 trillion to $18.9 trillion over one year. Over that same year, the country’s population grows from 300 million to 306 million people.\n\nWhat is the percentage growth rate of total real GDP?\nWhat is real GDP per capita in each year?\nWhat is the percentage growth rate of real GDP per capita?\nWhy is the answer to (c) smaller than the answer to (a)?\n\n\n\nShow Answer\n\n\nGrowth rate of total real GDP = ($18.9 trillion minus $18.0 trillion) divided by $18.0 trillion = $0.9 trillion divided by $18.0 trillion = 5.0 percent.\nReal GDP per capita, year 1: $18.0 trillion divided by 300 million = $60,000. Year 2: $18.9 trillion divided by 306 million = $61,765 (rounded).\nGrowth rate of real GDP per capita = ($61,765 minus $60,000) divided by $60,000 = about 2.9 percent.\nTotal output grew 5.0 percent, but population also grew (from 300 million to 306 million, a 2.0 percent increase). Since that larger output has to be divided among more people, the increase in living standards per person is smaller than the increase in total output. This is why economists track GDP per capita, not just total GDP, when asking whether people are actually getting better off."
+    "text": "A town’s population grows from 8,000 to 8,400 in one year. What is the population growth rate?\nA country’s real GDP is $50 million and its population is 25,000. What is real GDP per capita?\nA household saves $500 per month. How much total saving does that household contribute in one year?\nA $10,000 investment is expected to generate $800 per year in profit. What is the expected rate of return?\nA retiree buys 10 shares of an existing company’s stock on the stock market. Does this count as Investment in the economic sense? Why or why not?\nA bakery purchases a new industrial oven to expand production. Does this count as Investment in the economic sense? Why or why not?\nA landlord signs a 12-month apartment lease with tenants at a fixed monthly rent. Is this price sticky or flexible?\nThe price of Bitcoin on a cryptocurrency exchange. Is this price sticky or flexible?",
+    "crumbs": [
+      "Topics",
+      "Ch 6: Intro to Macroeconomics",
+      "Practice Problems"
+    ]
+  },
+  {
+    "objectID": "lecture/ch06-practice.html#warm-up-quick-concept-and-calculation-checks",
+    "href": "lecture/ch06-practice.html#warm-up-quick-concept-and-calculation-checks",
+    "title": "Chapter 6: An Introduction to Macroeconomics",
+    "section": "",
+    "text": "A town’s population grows from 8,000 to 8,400 in one year. What is the population growth rate?\nA country’s real GDP is $50 million and its population is 25,000. What is real GDP per capita?\nA household saves $500 per month. How much total saving does that household contribute in one year?\nA $10,000 investment is expected to generate $800 per year in profit. What is the expected rate of return?\nA retiree buys 10 shares of an existing company’s stock on the stock market. Does this count as Investment in the economic sense? Why or why not?\nA bakery purchases a new industrial oven to expand production. Does this count as Investment in the economic sense? Why or why not?\nA landlord signs a 12-month apartment lease with tenants at a fixed monthly rent. Is this price sticky or flexible?\nThe price of Bitcoin on a cryptocurrency exchange. Is this price sticky or flexible?",
+    "crumbs": [
+      "Topics",
+      "Ch 6: Intro to Macroeconomics",
+      "Practice Problems"
+    ]
   },
   {
     "objectID": "lecture/ch06-practice.html#problem-1-total-growth-vs.-per-capita-growth",
     "href": "lecture/ch06-practice.html#problem-1-total-growth-vs.-per-capita-growth",
     "title": "Chapter 6: An Introduction to Macroeconomics",
-    "section": "",
-    "text": "A country’s real GDP grows from $18.0 trillion to $18.9 trillion over one year. Over that same year, the country’s population grows from 300 million to 306 million people.\n\nWhat is the percentage growth rate of total real GDP?\nWhat is real GDP per capita in each year?\nWhat is the percentage growth rate of real GDP per capita?\nWhy is the answer to (c) smaller than the answer to (a)?\n\n\n\nShow Answer\n\n\nGrowth rate of total real GDP = ($18.9 trillion minus $18.0 trillion) divided by $18.0 trillion = $0.9 trillion divided by $18.0 trillion = 5.0 percent.\nReal GDP per capita, year 1: $18.0 trillion divided by 300 million = $60,000. Year 2: $18.9 trillion divided by 306 million = $61,765 (rounded).\nGrowth rate of real GDP per capita = ($61,765 minus $60,000) divided by $60,000 = about 2.9 percent.\nTotal output grew 5.0 percent, but population also grew (from 300 million to 306 million, a 2.0 percent increase). Since that larger output has to be divided among more people, the increase in living standards per person is smaller than the increase in total output. This is why economists track GDP per capita, not just total GDP, when asking whether people are actually getting better off."
+    "section": "Problem 1: Total Growth vs. Per-Capita Growth",
+    "text": "Problem 1: Total Growth vs. Per-Capita Growth\nA country’s real GDP grows from $18.0 trillion to $18.9 trillion over one year. Over that same year, the country’s population grows from 300 million to 306 million people.\n\nWhat is the percentage growth rate of total real GDP?\nWhat is real GDP per capita in each year?\nWhat is the percentage growth rate of real GDP per capita?\nWhy is the answer to (c) smaller than the answer to (a)?",
+    "crumbs": [
+      "Topics",
+      "Ch 6: Intro to Macroeconomics",
+      "Practice Problems"
+    ]
   },
   {
     "objectID": "lecture/ch06-practice.html#problem-2-saving-investment-and-expected-returns",
     "href": "lecture/ch06-practice.html#problem-2-saving-investment-and-expected-returns",
     "title": "Chapter 6: An Introduction to Macroeconomics",
     "section": "Problem 2: Saving, Investment, and Expected Returns",
-    "text": "Problem 2: Saving, Investment, and Expected Returns\nA firm is deciding whether to build a new factory that costs $5 million. The firm forecasts the factory would generate $600,000 in additional profit per year.\n\nWhat annual rate of return does the firm expect on this $5 million investment?\nIf interest rates rise and the firm could instead earn a guaranteed 8 percent per year by simply depositing that $5 million in a bank, should the firm still build the factory? Explain using the idea of expected returns.\nExplain, in one or two sentences, why a general rise in interest rates throughout the economy tends to reduce the total amount of economic investment.\n\n\n\nShow Answer\n\n\nExpected rate of return = $600,000 divided by $5,000,000 = 12 percent per year.\nThe factory still expected to return 12 percent, comfortably more than the guaranteed 8 percent from a bank deposit, so the firm should still build it. The factory return does carry more risk than a bank deposit, but as long as the firm believes 12 percent is the fair expected return for that risk, it remains the better choice.\nInvestment projects only get funded when the expected return on the project beats the return available elsewhere, such as a bank deposit or bond. When interest rates rise economy-wide, the bar an investment project has to clear rises too, so fewer projects have an expected return high enough to be worth funding, and total investment falls."
+    "text": "Problem 2: Saving, Investment, and Expected Returns\nA firm is deciding whether to build a new factory that costs $5 million. The firm forecasts the factory would generate $600,000 in additional profit per year.\n\nWhat annual rate of return does the firm expect on this $5 million investment?\nIf interest rates rise and the firm could instead earn a guaranteed 8 percent per year by simply depositing that $5 million in a bank, should the firm still build the factory? Explain using the idea of expected returns.\nExplain, in one or two sentences, why a general rise in interest rates throughout the economy tends to reduce the total amount of economic investment.",
+    "crumbs": [
+      "Topics",
+      "Ch 6: Intro to Macroeconomics",
+      "Practice Problems"
+    ]
   },
   {
-    "objectID": "lecture/ch06-practice.html#problem-3-nominal-vs.-real-gdp-with-multiple-goods",
-    "href": "lecture/ch06-practice.html#problem-3-nominal-vs.-real-gdp-with-multiple-goods",
+    "objectID": "lecture/ch06-practice.html#problem-3-when-the-average-isnt-the-typical-household",
+    "href": "lecture/ch06-practice.html#problem-3-when-the-average-isnt-the-typical-household",
     "title": "Chapter 6: An Introduction to Macroeconomics",
-    "section": "Problem 3: Nominal vs. Real GDP with Multiple Goods",
-    "text": "Problem 3: Nominal vs. Real GDP with Multiple Goods\nA small economy produces only two goods, coffee and phone chargers. Prices and quantities in Year 1 (the base year) and Year 2 are:\n\n\n\n\nYear 1 Price\nYear 1 Quantity\nYear 2 Price\nYear 2 Quantity\n\n\n\n\nCoffee\n$2\n100\n$3\n120\n\n\nPhone chargers\n$5\n40\n$6\n45\n\n\n\n\nCompute nominal GDP in Year 1 and in Year 2.\nCompute real GDP in Year 2, using Year 1 as the base year (that is, value Year 2 quantities at Year 1 prices).\nWhat is the nominal GDP growth rate from Year 1 to Year 2? What is the real GDP growth rate?\nThese two growth rates are quite different. What does that difference tell you about what actually happened in this economy?\n\n\n\nShow Answer\n\n\nNominal GDP, Year 1: \\((2 \\times 100) + (5 \\times 40) = 200 + 200 = \\$400\\). Nominal GDP, Year 2: \\((3 \\times 120) + (6 \\times 45) = 360 + 270 = \\$630\\).\nReal GDP, Year 2 (in Year 1 prices): \\((2 \\times 120) + (5 \\times 45) = 240 + 225 = \\$465\\).\nNominal GDP growth: \\((630 - 400)/400 = 57.5\\) percent. Real GDP growth: \\((465 - 400)/400 = 16.25\\) percent.\nNominal GDP growth (57.5 percent) reflects both more output and higher prices for both goods. Real GDP growth (16.25 percent) strips out the price increases by valuing both years’ output at the same, Year 1, prices, so it isolates how much more stuff the economy actually produced. The large gap between the two growth rates tells us that a substantial part of this economy’s nominal growth was simply inflation, not a real increase in output, which is exactly why economists track real GDP rather than nominal GDP when asking whether an economy is actually producing more."
+    "section": "Problem 3: When the Average Isn’t the Typical Household",
+    "text": "Problem 3: When the Average Isn’t the Typical Household\nA small country has exactly 5 households. Their annual incomes in Year 1 and Year 2 are:\n\n\n\nHousehold\nYear 1 Income\nYear 2 Income\n\n\n\n\n1\n$30,000\n$31,000\n\n\n2\n$32,000\n$33,000\n\n\n3\n$35,000\n$36,000\n\n\n4\n$38,000\n$39,000\n\n\n5\n$65,000\n$111,000\n\n\n\n\nCompute the mean (average) household income in Year 1 and in Year 2, and the growth rate of the mean.\nCompute the median household income in Year 1 and in Year 2 (the income of the middle household when incomes are sorted low to high), and the growth rate of the median.\nA news report says “average income in this country grew 25 percent this year.” Is that statement misleading? Why or why not?\nRelate this example back to the GDP per capita versus median household income discussion from the slides. Why might a country with healthy GDP-per-capita growth still have a lot of unhappy citizens?",
+    "crumbs": [
+      "Topics",
+      "Ch 6: Intro to Macroeconomics",
+      "Practice Problems"
+    ]
   },
   {
-    "objectID": "lecture/ch06-practice.html#problem-4-when-the-average-isnt-the-typical-household",
-    "href": "lecture/ch06-practice.html#problem-4-when-the-average-isnt-the-typical-household",
+    "objectID": "lecture/ch06-practice.html#problem-4-the-market-for-loanable-funds",
+    "href": "lecture/ch06-practice.html#problem-4-the-market-for-loanable-funds",
     "title": "Chapter 6: An Introduction to Macroeconomics",
-    "section": "Problem 4: When the Average Isn’t the Typical Household",
-    "text": "Problem 4: When the Average Isn’t the Typical Household\nA small country has exactly 5 households. Their annual incomes in Year 1 and Year 2 are:\n\n\n\nHousehold\nYear 1 Income\nYear 2 Income\n\n\n\n\n1\n$30,000\n$31,000\n\n\n2\n$32,000\n$33,000\n\n\n3\n$35,000\n$36,000\n\n\n4\n$38,000\n$39,000\n\n\n5\n$65,000\n$111,000\n\n\n\n\nCompute the mean (average) household income in Year 1 and in Year 2, and the growth rate of the mean.\nCompute the median household income in Year 1 and in Year 2 (the income of the middle household when incomes are sorted low to high), and the growth rate of the median.\nA news report says “average income in this country grew 25 percent this year.” Is that statement misleading? Why or why not?\nRelate this example back to the GDP per capita versus median household income discussion from the slides. Why might a country with healthy GDP-per-capita growth still have a lot of unhappy citizens?\n\n\n\nShow Answer\n\n\n\n                            \n                                            \n\n\n\nMean, Year 1: \\((30{,}000+32{,}000+35{,}000+38{,}000+65{,}000)/5 = 200{,}000/5 = \\$40{,}000\\). Mean, Year 2: \\((31{,}000+33{,}000+36{,}000+39{,}000+111{,}000)/5 = 250{,}000/5 = \\$50{,}000\\). Growth rate of the mean: \\((50{,}000-40{,}000)/40{,}000 = 25\\) percent.\nMedian, Year 1 (middle of 30, 32, 35, 38, 65): $35,000. Median, Year 2 (middle of 31, 33, 36, 39, 111): $36,000. Growth rate of the median: \\((36{,}000-35{,}000)/35{,}000 \\approx 2.9\\) percent.\nIt is technically true but misleading. The 25 percent figure is entirely driven by Household 5, whose income nearly doubled, while the other four households, four out of five people in this economy, saw incomes rise only about 3 percent. The “average person” implied by the mean does not resemble any actual household here.\nGDP per capita is a mean, just like average income in this example. When growth is concentrated among a relatively small share of the population, GDP per capita can rise substantially even while the typical (median) household’s living standard barely improves. That gap between a healthy aggregate statistic and a stagnant typical experience is exactly the kind of thing that can make official “the economy is growing” headlines feel disconnected from how most people actually feel."
+    "section": "Problem 4: The Market for Loanable Funds",
+    "text": "Problem 4: The Market for Loanable Funds\nChapter 3 introduced supply and demand for goods, like soybeans or textbooks. The same model can describe the market where saving meets investment, called the market for loanable funds. Savers supply funds to this market (depositing money in banks, buying bonds), hoping to earn interest. Borrowers, often firms that want to invest, demand funds from this market, and have to pay interest to get them.\nThe table below shows the (hypothetical) market for loanable funds in a country.\n\n\n\n\n\n\n\n\nInterest Rate\nQuantity of Saving Supplied\nQuantity of Investment Demanded\n\n\n\n\n2%\n$100 billion\n$400 billion\n\n\n3%\n$150 billion\n$350 billion\n\n\n4%\n$200 billion\n$300 billion\n\n\n5%\n$250 billion\n$250 billion\n\n\n6%\n$300 billion\n$200 billion\n\n\n7%\n$350 billion\n$150 billion\n\n\n\n\nWhy does it make sense to treat saving as a supply curve and investment as a demand curve in this market? What plays the role of “price”?\nUsing the table, what is the equilibrium interest rate, and what quantity of funds gets loaned at that rate?\nSuppose the interest rate is temporarily stuck at 3 percent. Is there a shortage or surplus of loanable funds at that rate, and how large? Which direction would you expect the interest rate to move to restore equilibrium?\nUsing what you learned about supply and demand shifts in Chapter 3: if a new government policy encourages people to save more at every interest rate (the saving curve shifts right), what happens to the equilibrium interest rate and the equilibrium quantity of loanable funds?",
+    "crumbs": [
+      "Topics",
+      "Ch 6: Intro to Macroeconomics",
+      "Practice Problems"
+    ]
   },
   {
     "objectID": "lecture/ch06-links.html",
@@ -447,6 +484,18 @@
     ]
   },
   {
+    "objectID": "lecture/ch06-links.html#business-confidence-in-practice",
+    "href": "lecture/ch06-links.html#business-confidence-in-practice",
+    "title": "Chapter 6: An Introduction to Macroeconomics",
+    "section": "Business Confidence, in Practice",
+    "text": "Business Confidence, in Practice\n\nMinneapolis Fed: Regional Economic Indicators — Example of the kind of monthly business-conditions survey mentioned on the lecture slides, firms in the Ninth District (Minnesota, Montana, North and South Dakota, Wisconsin) report whether conditions improved or worsened, plus their own forecast for the month ahead.",
+    "crumbs": [
+      "Topics",
+      "Ch 6: Intro to Macroeconomics",
+      "Useful Links"
+    ]
+  },
+  {
     "objectID": "course-printing.html",
     "href": "course-printing.html",
     "title": "Printing Lecture Slides",
@@ -462,7 +511,18 @@
     "href": "course-support.html",
     "title": "Course support",
     "section": "",
-    "text": "Instructor\n\n\n\n\nName: Matt BraaksmaOffice: Hagfors Center 323 Email: braaksma@augsburg.eduOffice Hours: TTh 3:30-4:30 PM, by appointment only, sign up here. If no appointments are booked by the time class ends, I will not hold office hours that day.",
+    "text": "Name: Matt BraaksmaOffice: Hagfors Center 323 Email: braaksma@augsburg.eduOffice Hours: TTh 3:30-4:30 PM, by appointment only, sign up here. If no appointments are booked by the time class ends, I will not hold office hours that day.",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "course-support.html#campus-resources",
+    "href": "course-support.html#campus-resources",
+    "title": "Course support",
+    "section": "Campus Resources",
+    "text": "Campus Resources\n  Download PDF File\n   \n    Unable to display PDF file. Download instead.",
     "crumbs": [
       "Course information",
       "Support"

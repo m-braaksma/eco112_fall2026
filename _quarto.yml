@@ -88,8 +88,8 @@ website:
                 text: Slides
               - href: lecture/ch06-links.qmd
                 text: Useful Links
-              # - href: lecture/ch06-practice.qmd
-              #   text: Practice Problems
+              - href: lecture/ch06-practice.qmd
+                text: Practice Problems
           # - section: "Ch 7: National Income"
           #   contents:
           #     - href: lecture/ch07.qmd

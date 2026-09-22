@@ -8,6 +8,10 @@ subtitle: "Instructional videos and other resources"
 - [FRED: Unemployment Rate](https://fred.stlouisfed.org/series/UNRATE)
 - [FRED: Consumer Price Index](https://fred.stlouisfed.org/series/CPIAUCSL)
 
+<!-- TODO: add Minneapolis Fed Regional Economic Indicators here
+     (https://www.minneapolisfed.org/region-and-community/regional-economic-indicators)
+     regional CPI and unemployment insurance claims data fit this chapter's content well. -->
+
 ## Instructional Videos
 
 <!-- TODO: add video links for this chapter (Khan Academy, YouTube, etc.) -->

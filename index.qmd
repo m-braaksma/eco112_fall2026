@@ -8,7 +8,7 @@ title: "ECO 112: Principles of Macroeconomics"
 | 1 | Sep 2-4 | [Chapter 1: Choices](lecture/ch01.qmd) | - | • Intro/[Syllabus](course-syllabus.qmd) |
 | 2 | Sep 7-11 | [Chapter 2: Market System](lecture/ch02.qmd) | • Intro/Syllabus Quiz | - |
 | 3 | Sep 14–18 | [Chapter 3: Supply, Demand, Equilibrium](lecture/ch03.qmd) | • Ch1+2 Quiz<br>• Ch1 HW due<br>• Ch2 HW due | - |
-| 4 | Sep 21–25 | Chapter 6: Intro to Macroeconomics | • Ch3 Quiz<br>• Ch3 HW due | - |
+| 4 | Sep 21–25 | [Chapter 6: Intro to Macroeconomics](lecture/ch06.qmd) | • Ch3 Quiz<br>• Ch3 HW due | - |
 | 5 | Sep 28–Oct 2 | Chapter 7: National Income | • Ch6 Quiz<br>• Ch6 HW due | [*Zoom Lecture*](https://www.google.com/url?q=https://augsburg.zoom.us/j/99653626288?pwd%3DqCmwjtH90NbbC2B6LRIVvsJwF4OY2Z.1%26jst%3D2&sa=D&source=calendar&ust=1789928581323551&usg=AOvVaw22tkXzOZ9B9PdMyUuRQYKd) |
 | 6 | Oct 5–9 | Chapter 8: Economic Growth | • Ch7 Quiz<br>• Ch7 HW due | • Ch7 Presentation |
 | 7 | Oct 12–16 | Chapter 9: Business Cycles, Unemployment, Inflation | • Ch8 Quiz<br>• Ch8 HW due | • Ch8 Presentation |
