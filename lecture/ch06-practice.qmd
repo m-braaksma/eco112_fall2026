@@ -193,8 +193,8 @@ c. Suppose the interest rate is temporarily stuck at 3 percent. Is there a short
 d. Using what you learned about supply and demand shifts in Chapter 3: if a new government policy
    encourages people to save more at every interest rate (the saving curve shifts right), what
    happens to the equilibrium interest rate and the equilibrium quantity of loanable funds?
-
-<!-- <details>
+<!-- 
+<details>
 <summary>Show Answer</summary>
 
 ```{python}

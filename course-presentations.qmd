@@ -1,0 +1,14 @@
+---
+title: "Current Events Presentations"
+subtitle: "Guidelines & Rubric"
+---
+
+## Overview
+
+Starting with Chapter 7, small groups lead a short presentation connecting that week's chapter to a real, current economic event. Slides are required, build them in Google Slides in the shared Drive folder below before your presentation slot.
+
+[Open the Presentations Drive folder](https://drive.google.com/drive/folders/15Cq1LCijsRwoQEzRfia2Y9r1-pasU9XG?usp=drive_link){target="_blank"}
+
+Full guidelines, logistics, and the grading rubric are in the document below.
+
+{{< pdf assets/presentation_guidelines_rubric.pdf >}}

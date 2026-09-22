@@ -55,6 +55,8 @@ website:
             text: Support
           - href: course-printing.qmd
             text: Printing
+          - href: course-presentations.qmd
+            text: Presentations
 
       - section: "Topics"
         contents:
