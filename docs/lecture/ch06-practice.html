@@ -78,6 +78,35 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
 <script type="module">import "https://cdn.plot.ly/plotly-3.7.0.min"</script>
 
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <meta property="og:title" content="Chapter 6: An Introduction to Macroeconomics – ECO 112 - Fall 2026">
 <meta property="og:description" content="Practice Problems">
@@ -344,22 +373,21 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
 <li>A landlord signs a 12-month apartment lease with tenants at a fixed monthly rent. Is this price sticky or flexible?</li>
 <li>The price of Bitcoin on a cryptocurrency exchange. Is this price sticky or flexible?</li>
 </ol>
-<!-- <details>
-<summary>Show Answer</summary>
-
-a. $(8{,}400 - 8{,}000)/8{,}000 = 5$ percent.
-b. $\$50{,}000{,}000 / 25{,}000 = \$2{,}000$ per person.
-c. $\$500 \times 12 = \$6{,}000$ per year.
-d. $\$800 / \$10{,}000 = 8$ percent.
-e. *No.* Buying existing shares just transfers ownership of an already-existing asset from one
-   person to another, it does not create any new capital.
-f. *Yes.* A new oven is new capital equipment that expands the firm's ability to produce, exactly
-   what economic Investment means.
-g. *Sticky.* The rent is locked in by a 12-month lease regardless of changing market conditions.
-h. *Flexible.* Cryptocurrency prices trade continuously on an exchange and adjust to new
-   information almost instantly.
-
-</details> -->
+<details>
+<summary>
+Show Answer
+</summary>
+<ol type="a">
+<li><span class="math inline">\((8{,}400 - 8{,}000)/8{,}000 = 5\)</span> percent.</li>
+<li><span class="math inline">\(\$50{,}000{,}000 / 25{,}000 = \$2{,}000\)</span> per person.</li>
+<li><span class="math inline">\(\$500 \times 12 = \$6{,}000\)</span> per year.</li>
+<li><span class="math inline">\(\$800 / \$10{,}000 = 8\)</span> percent.</li>
+<li><em>No.</em> Buying existing shares just transfers ownership of an already-existing asset from one person to another, it does not create any new capital.</li>
+<li><em>Yes.</em> A new oven is new capital equipment that expands the firm’s ability to produce, exactly what economic Investment means.</li>
+<li><em>Sticky.</em> The rent is locked in by a 12-month lease regardless of changing market conditions.</li>
+<li><em>Flexible.</em> Cryptocurrency prices trade continuously on an exchange and adjust to new information almost instantly.</li>
+</ol>
+</details>
 </section>
 <section id="problem-1-total-growth-vs.-per-capita-growth" class="level2">
 <h2 class="anchored" data-anchor-id="problem-1-total-growth-vs.-per-capita-growth">Problem 1: Total Growth vs.&nbsp;Per-Capita Growth</h2>
@@ -370,22 +398,17 @@ h. *Flexible.* Cryptocurrency prices trade continuously on an exchange and adjus
 <li>What is the percentage growth rate of real GDP per capita?</li>
 <li>Why is the answer to (c) smaller than the answer to (a)?</li>
 </ol>
-<!-- <details>
-<summary>Show Answer</summary>
-
-a. Growth rate of total real GDP = ($18.9 trillion minus $18.0 trillion) divided by $18.0 trillion
-   = $0.9 trillion divided by $18.0 trillion = *5.0 percent*.
-b. Real GDP per capita, year 1: $18.0 trillion divided by 300 million = *$60,000*. Year 2: $18.9
-   trillion divided by 306 million = *$61,765* (rounded).
-c. Growth rate of real GDP per capita = ($61,765 minus $60,000) divided by $60,000 = *about 2.9
-   percent*.
-d. Total output grew 5.0 percent, but population also grew (from 300 million to 306 million, a 2.0
-   percent increase). Since that larger output has to be divided among more people, the *increase
-   in living standards per person* is smaller than the increase in total output. This is why
-   economists track GDP *per capita*, not just total GDP, when asking whether people are actually
-   getting better off.
-
-</details> -->
+<details>
+<summary>
+Show Answer
+</summary>
+<ol type="a">
+<li>Growth rate of total real GDP = ($18.9 trillion minus $18.0 trillion) divided by $18.0 trillion = $0.9 trillion divided by $18.0 trillion = <em>5.0 percent</em>.</li>
+<li>Real GDP per capita, year 1: $18.0 trillion divided by 300 million = <em>$60,000</em>. Year 2: $18.9 trillion divided by 306 million = <em>$61,765</em> (rounded).</li>
+<li>Growth rate of real GDP per capita = ($61,765 minus $60,000) divided by $60,000 = <em>about 2.9 percent</em>.</li>
+<li>Total output grew 5.0 percent, but population also grew (from 300 million to 306 million, a 2.0 percent increase). Since that larger output has to be divided among more people, the <em>increase in living standards per person</em> is smaller than the increase in total output. This is why economists track GDP <em>per capita</em>, not just total GDP, when asking whether people are actually getting better off.</li>
+</ol>
+</details>
 </section>
 <section id="problem-2-saving-investment-and-expected-returns" class="level2">
 <h2 class="anchored" data-anchor-id="problem-2-saving-investment-and-expected-returns">Problem 2: Saving, Investment, and Expected Returns</h2>
@@ -395,20 +418,16 @@ d. Total output grew 5.0 percent, but population also grew (from 300 million to 
 <li>If interest rates rise and the firm could instead earn a guaranteed 8 percent per year by simply depositing that $5 million in a bank, should the firm still build the factory? Explain using the idea of expected returns.</li>
 <li>Explain, in one or two sentences, why a general rise in interest rates throughout the economy tends to reduce the total amount of economic investment.</li>
 </ol>
-<!-- <details>
-<summary>Show Answer</summary>
-
-a. Expected rate of return = $600,000 divided by $5,000,000 = *12 percent* per year.
-b. The factory still expected to return 12 percent, comfortably more than the *guaranteed* 8
-   percent from a bank deposit, so the firm should still build it. The factory return does carry
-   more risk than a bank deposit, but as long as the firm believes 12 percent is the fair expected
-   return for that risk, it remains the better choice.
-c. Investment projects only get funded when the expected return on the project beats the return
-   available elsewhere, such as a bank deposit or bond. When interest rates rise economy-wide, the
-   bar an investment project has to clear rises too, so *fewer* projects have an expected return
-   high enough to be worth funding, and total investment falls.
-
-</details> -->
+<details>
+<summary>
+Show Answer
+</summary>
+<ol type="a">
+<li>Expected rate of return = $600,000 divided by $5,000,000 = <em>12 percent</em> per year.</li>
+<li>The factory still expected to return 12 percent, comfortably more than the <em>guaranteed</em> 8 percent from a bank deposit, so the firm should still build it. The factory return does carry more risk than a bank deposit, but as long as the firm believes 12 percent is the fair expected return for that risk, it remains the better choice.</li>
+<li>Investment projects only get funded when the expected return on the project beats the return available elsewhere, such as a bank deposit or bond. When interest rates rise economy-wide, the bar an investment project has to clear rises too, so <em>fewer</em> projects have an expected return high enough to be worth funding, and total investment falls.</li>
+</ol>
+</details>
 </section>
 <section id="problem-3-when-the-average-isnt-the-typical-household" class="level2">
 <h2 class="anchored" data-anchor-id="problem-3-when-the-average-isnt-the-typical-household">Problem 3: When the Average Isn’t the Typical Household</h2>
@@ -455,17 +474,16 @@ c. Investment projects only get funded when the expected return on the project b
 <li>A news report says “average income in this country grew 25 percent this year.” Is that statement misleading? Why or why not?</li>
 <li>Relate this example back to the GDP per capita versus median household income discussion from the slides. Why might a country with healthy GDP-per-capita growth still have a lot of unhappy citizens?</li>
 </ol>
-<!-- <details>
-<summary>Show Answer</summary>
-
-::: {#9a20fd78 .cell execution_count=1}
-
-::: {.cell-output .cell-output-display}
-```{=html}
+<details>
+<summary>
+Show Answer
+</summary>
+<div id="48ec3878" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
 <div style="height:420px; width:640px;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
-        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.7.0.min.js" integrity="sha256-jvTGqxNp8AGWEcvNLVuKr+8j5dGe9Yw51LQkmDH+IYA=" crossorigin="anonymous"></script>                <div id="98aea3a3-6f49-447c-b1f7-102a2285b8e0" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("98aea3a3-6f49-447c-b1f7-102a2285b8e0")) {                    Plotly.newPlot(                        "98aea3a3-6f49-447c-b1f7-102a2285b8e0",                        [{"marker":{"color":"#1f4e79"},"name":"Year 1","x":["HH 1","HH 2","HH 3","HH 4","HH 5"],"y":[30000,32000,35000,38000,65000],"type":"bar"},{"marker":{"color":"#c55a11"},"name":"Year 2","x":["HH 1","HH 2","HH 3","HH 4","HH 5"],"y":[31000,33000,36000,39000,111000],"type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"shapes":[{"line":{"color":"#1f4e79","dash":"dash"},"type":"line","x0":0,"x1":1,"xref":"x domain","y0":40000,"y1":40000,"yref":"y"},{"line":{"color":"#c55a11","dash":"dash"},"type":"line","x0":0,"x1":1,"xref":"x domain","y0":50000,"y1":50000,"yref":"y"}],"annotations":[{"showarrow":false,"text":"Year 1 mean: $40,000","x":0,"xanchor":"left","xref":"x domain","y":40000,"yanchor":"bottom","yref":"y"},{"showarrow":false,"text":"Year 2 mean: $50,000","x":1,"xanchor":"right","xref":"x domain","y":50000,"yanchor":"bottom","yref":"y"}],"legend":{"x":0.4,"y":1.15,"orientation":"h"},"barmode":"group","yaxis":{"title":{"text":"Household income"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray","tickformat":"$,.0f"},"width":640,"height":420,"plot_bgcolor":"white"},                        {"responsive": true}                    ).then(function(){
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.7.0.min.js" integrity="sha256-jvTGqxNp8AGWEcvNLVuKr+8j5dGe9Yw51LQkmDH+IYA=" crossorigin="anonymous"></script>                <div id="33d6266d-eea3-42eb-ae1f-636d356a2ca3" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("33d6266d-eea3-42eb-ae1f-636d356a2ca3")) {                    Plotly.newPlot(                        "33d6266d-eea3-42eb-ae1f-636d356a2ca3",                        [{"marker":{"color":"#1f4e79"},"name":"Year 1","x":["HH 1","HH 2","HH 3","HH 4","HH 5"],"y":[30000,32000,35000,38000,65000],"type":"bar"},{"marker":{"color":"#c55a11"},"name":"Year 2","x":["HH 1","HH 2","HH 3","HH 4","HH 5"],"y":[31000,33000,36000,39000,111000],"type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"shapes":[{"line":{"color":"#1f4e79","dash":"dash"},"type":"line","x0":0,"x1":1,"xref":"x domain","y0":40000,"y1":40000,"yref":"y"},{"line":{"color":"#c55a11","dash":"dash"},"type":"line","x0":0,"x1":1,"xref":"x domain","y0":50000,"y1":50000,"yref":"y"}],"annotations":[{"showarrow":false,"text":"Year 1 mean: $40,000","x":0,"xanchor":"left","xref":"x domain","y":40000,"yanchor":"bottom","yref":"y"},{"showarrow":false,"text":"Year 2 mean: $50,000","x":1,"xanchor":"right","xref":"x domain","y":50000,"yanchor":"bottom","yref":"y"}],"legend":{"x":0.4,"y":1.15,"orientation":"h"},"barmode":"group","yaxis":{"title":{"text":"Household income"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray","tickformat":"$,.0f"},"width":640,"height":420,"plot_bgcolor":"white"},                        {"responsive": true}                    ).then(function(){
                             
-var gd = document.getElementById('98aea3a3-6f49-447c-b1f7-102a2285b8e0');
+var gd = document.getElementById('33d6266d-eea3-42eb-ae1f-636d356a2ca3');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -488,29 +506,15 @@ if (outputEl) {{
 }}
 
                         })                };            </script>        </div>
-```
-:::
-:::
-
-
-a. Mean, Year 1: $(30{,}000+32{,}000+35{,}000+38{,}000+65{,}000)/5 = 200{,}000/5 = \$40{,}000$.
-   Mean, Year 2: $(31{,}000+33{,}000+36{,}000+39{,}000+111{,}000)/5 = 250{,}000/5 = \$50{,}000$.
-   Growth rate of the mean: $(50{,}000-40{,}000)/40{,}000 = 25$ percent.
-b. Median, Year 1 (middle of 30, 32, 35, 38, 65): *$35,000*.
-   Median, Year 2 (middle of 31, 33, 36, 39, 111): *$36,000*.
-   Growth rate of the median: $(36{,}000-35{,}000)/35{,}000 \approx 2.9$ percent.
-c. It is *technically true but misleading*. The 25 percent figure is entirely driven by Household
-   5, whose income nearly doubled, while the other four households, four out of five people in
-   this economy, saw incomes rise only about 3 percent. The "average person" implied by the mean
-   does not resemble any actual household here.
-d. GDP per capita is a mean, just like average income in this example. When growth is
-   concentrated among a relatively small share of the population, GDP per capita can rise
-   substantially even while the typical (median) household's living standard barely improves. That
-   gap between a healthy aggregate statistic and a stagnant typical experience is exactly the kind
-   of thing that can make official "the economy is growing" headlines feel disconnected from how
-   most people actually feel.
-
-</details> -->
+</div>
+</div>
+<ol type="a">
+<li>Mean, Year 1: <span class="math inline">\((30{,}000+32{,}000+35{,}000+38{,}000+65{,}000)/5 = 200{,}000/5 = \$40{,}000\)</span>. Mean, Year 2: <span class="math inline">\((31{,}000+33{,}000+36{,}000+39{,}000+111{,}000)/5 = 250{,}000/5 = \$50{,}000\)</span>. Growth rate of the mean: <span class="math inline">\((50{,}000-40{,}000)/40{,}000 = 25\)</span> percent.</li>
+<li>Median, Year 1 (middle of 30, 32, 35, 38, 65): <em>$35,000</em>. Median, Year 2 (middle of 31, 33, 36, 39, 111): <em>$36,000</em>. Growth rate of the median: <span class="math inline">\((36{,}000-35{,}000)/35{,}000 \approx 2.9\)</span> percent.</li>
+<li>It is <em>technically true but misleading</em>. The 25 percent figure is entirely driven by Household 5, whose income nearly doubled, while the other four households, four out of five people in this economy, saw incomes rise only about 3 percent. The “average person” implied by the mean does not resemble any actual household here.</li>
+<li>GDP per capita is a mean, just like average income in this example. When growth is concentrated among a relatively small share of the population, GDP per capita can rise substantially even while the typical (median) household’s living standard barely improves. That gap between a healthy aggregate statistic and a stagnant typical experience is exactly the kind of thing that can make official “the economy is growing” headlines feel disconnected from how most people actually feel.</li>
+</ol>
+</details>
 </section>
 <section id="problem-4-the-market-for-loanable-funds" class="level2">
 <h2 class="anchored" data-anchor-id="problem-4-the-market-for-loanable-funds">Problem 4: The Market for Loanable Funds</h2>
@@ -566,18 +570,18 @@ d. GDP per capita is a mean, just like average income in this example. When grow
 <li>Why does it make sense to treat saving as a <em>supply</em> curve and investment as a <em>demand</em> curve in this market? What plays the role of “price”?</li>
 <li>Using the table, what is the equilibrium interest rate, and what quantity of funds gets loaned at that rate?</li>
 <li>Suppose the interest rate is temporarily stuck at 3 percent. Is there a shortage or surplus of loanable funds at that rate, and how large? Which direction would you expect the interest rate to move to restore equilibrium?</li>
-<li>Using what you learned about supply and demand shifts in Chapter 3: if a new government policy encourages people to save more at every interest rate (the saving curve shifts right), what happens to the equilibrium interest rate and the equilibrium quantity of loanable funds? <!-- 
+<li>Using what you learned about supply and demand shifts in Chapter 3: if a new government policy encourages people to save more at every interest rate (the saving curve shifts right), what happens to the equilibrium interest rate and the equilibrium quantity of loanable funds?</li>
+</ol>
 <details>
-<summary>Show Answer</summary>
-
-::: {#27cbd937 .cell execution_count=2}
-
-::: {.cell-output .cell-output-display}
-```{=html}
+<summary>
+Show Answer
+</summary>
+<div id="010e9b05" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
 <div style="height:420px; width:560px;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
-        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.7.0.min.js" integrity="sha256-jvTGqxNp8AGWEcvNLVuKr+8j5dGe9Yw51LQkmDH+IYA=" crossorigin="anonymous"></script>                <div id="83379ded-2d8c-4028-8303-e2373a8d653d" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("83379ded-2d8c-4028-8303-e2373a8d653d")) {                    Plotly.newPlot(                        "83379ded-2d8c-4028-8303-e2373a8d653d",                        [{"hovertemplate":"Interest rate: %{y}%\u003cbr\u003eQuantity: $%{x}B\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#1f4e79","width":3},"mode":"lines","name":"Saving (supply of funds)","x":[100,150,200,250,300,350],"y":[2,3,4,5,6,7],"type":"scatter"},{"hovertemplate":"Interest rate: %{y}%\u003cbr\u003eQuantity: $%{x}B\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#c55a11","width":3},"mode":"lines","name":"Investment (demand for funds)","x":[400,350,300,250,200,150],"y":[2,3,4,5,6,7],"type":"scatter"},{"hovertemplate":"Equilibrium\u003cbr\u003eInterest rate: 5%\u003cbr\u003eQuantity: $250B\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"black","size":11},"mode":"markers+text","showlegend":false,"text":["Equilibrium"],"textposition":"bottom right","x":[250],"y":[5],"type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"legend":{"font":{"size":10},"x":0.35,"y":1.18,"orientation":"h"},"xaxis":{"title":{"text":"Quantity of loanable funds ($ billions)"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray"},"yaxis":{"title":{"text":"Interest rate"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray","ticksuffix":"%"},"width":560,"height":420,"plot_bgcolor":"white"},                        {"responsive": true}                    ).then(function(){
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.7.0.min.js" integrity="sha256-jvTGqxNp8AGWEcvNLVuKr+8j5dGe9Yw51LQkmDH+IYA=" crossorigin="anonymous"></script>                <div id="8e3b45ab-88c5-41c2-8f07-cf9481b8e535" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("8e3b45ab-88c5-41c2-8f07-cf9481b8e535")) {                    Plotly.newPlot(                        "8e3b45ab-88c5-41c2-8f07-cf9481b8e535",                        [{"hovertemplate":"Interest rate: %{y}%\u003cbr\u003eQuantity: $%{x}B\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#1f4e79","width":3},"mode":"lines","name":"Saving (supply of funds)","x":[100,150,200,250,300,350],"y":[2,3,4,5,6,7],"type":"scatter"},{"hovertemplate":"Interest rate: %{y}%\u003cbr\u003eQuantity: $%{x}B\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#c55a11","width":3},"mode":"lines","name":"Investment (demand for funds)","x":[400,350,300,250,200,150],"y":[2,3,4,5,6,7],"type":"scatter"},{"hovertemplate":"Equilibrium\u003cbr\u003eInterest rate: 5%\u003cbr\u003eQuantity: $250B\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"black","size":11},"mode":"markers+text","showlegend":false,"text":["Equilibrium"],"textposition":"bottom right","x":[250],"y":[5],"type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"legend":{"font":{"size":10},"x":0.35,"y":1.18,"orientation":"h"},"xaxis":{"title":{"text":"Quantity of loanable funds ($ billions)"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray"},"yaxis":{"title":{"text":"Interest rate"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray","ticksuffix":"%"},"width":560,"height":420,"plot_bgcolor":"white"},                        {"responsive": true}                    ).then(function(){
                             
-var gd = document.getElementById('83379ded-2d8c-4028-8303-e2373a8d653d');
+var gd = document.getElementById('8e3b45ab-88c5-41c2-8f07-cf9481b8e535');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -600,30 +604,15 @@ if (outputEl) {{
 }}
 
                         })                };            </script>        </div>
-```
-:::
-:::
-
-
-a. Savers act like sellers, they supply more funds to the market as the reward for doing so (the
-   interest rate) rises, just like a seller offers more of a good as its price rises. Borrowers act
-   like buyers, they demand fewer funds as the cost of borrowing (the interest rate) rises, just
-   like a buyer demands less of a good as its price rises. The *interest rate* plays the role of
-   price in this market.
-b. Equilibrium interest rate is *5 percent*, where quantity of saving supplied equals quantity of
-   investment demanded, both equal *$250 billion*.
-c. At 3 percent, quantity of saving supplied is $150 billion but quantity of investment demanded is
-   $350 billion. That is a *shortage* of loanable funds of *$200 billion*, borrowers want far more
-   funds than savers are offering at that low rate. Just like a shortage in a goods market, this
-   pushes the interest rate *up* toward the $5$ percent equilibrium, as borrowers compete for the
-   scarce funds available.
-d. This is exactly the same logic as a rightward supply shift in Chapter 3: more funds supplied at
-   every interest rate pushes the equilibrium interest rate *down* and the equilibrium quantity of
-   loanable funds *up*. Cheaper borrowing (a lower interest rate) is also exactly the kind of change
-   that, from the investment decisions slide, would encourage firms to invest more.
-
-</details> --></li>
+</div>
+</div>
+<ol type="a">
+<li>Savers act like sellers, they supply more funds to the market as the reward for doing so (the interest rate) rises, just like a seller offers more of a good as its price rises. Borrowers act like buyers, they demand fewer funds as the cost of borrowing (the interest rate) rises, just like a buyer demands less of a good as its price rises. The <em>interest rate</em> plays the role of price in this market.</li>
+<li>Equilibrium interest rate is <em>5 percent</em>, where quantity of saving supplied equals quantity of investment demanded, both equal <em>$250 billion</em>.</li>
+<li>At 3 percent, quantity of saving supplied is $150 billion but quantity of investment demanded is $350 billion. That is a <em>shortage</em> of loanable funds of <em>$200 billion</em>, borrowers want far more funds than savers are offering at that low rate. Just like a shortage in a goods market, this pushes the interest rate <em>up</em> toward the <span class="math inline">\(5\)</span> percent equilibrium, as borrowers compete for the scarce funds available.</li>
+<li>This is exactly the same logic as a rightward supply shift in Chapter 3: more funds supplied at every interest rate pushes the equilibrium interest rate <em>down</em> and the equilibrium quantity of loanable funds <em>up</em>. Cheaper borrowing (a lower interest rate) is also exactly the kind of change that, from the investment decisions slide, would encourage firms to invest more.</li>
 </ol>
+</details>
 
 
 </section>
