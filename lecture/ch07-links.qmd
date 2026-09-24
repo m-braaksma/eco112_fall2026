@@ -1,0 +1,21 @@
+---
+title: "Chapter 7: Measuring Domestic Output and National Income"
+subtitle: "Useful links and other resources"
+---
+
+## Real Data
+
+- [FRED: Nominal Gross Domestic Product](https://fred.stlouisfed.org/series/GDP)
+- [FRED: Real Gross Domestic Product](https://fred.stlouisfed.org/series/GDPC1)
+- [FRED: GDP Implicit Price Deflator](https://fred.stlouisfed.org/series/GDPDEF)
+- [FRED: Personal Consumption Expenditures](https://fred.stlouisfed.org/series/PCEC)
+- [FRED: Gross Private Domestic Investment](https://fred.stlouisfed.org/series/GPDI)
+- [FRED: Government Consumption Expenditures and Gross Investment](https://fred.stlouisfed.org/series/GCE)
+- [FRED: Net Exports of Goods and Services](https://fred.stlouisfed.org/series/NETEXP)
+- [Bureau of Economic Analysis: Gross Domestic Product](https://www.bea.gov/data/gdp/gross-domestic-product), where the official GDP numbers are produced and released
+
+## Instructional Videos
+
+- [Khan Academy: GDP Expenditures](https://www.khanacademy.org/economics-finance-domain/macroeconomics/macro-economic-indicators-and-the-business-cycle/macro-the-circular-flow-and-gdp/v/income-and-expenditure-views-of-gdp?modal=1)
+- [Khan Academy: Components of GDP](https://www.khanacademy.org/economics-finance-domain/macroeconomics/macro-economic-indicators-and-the-business-cycle/macro-the-circular-flow-and-gdp/v/components-of-gdp?modal=1)
+- [Khan Academy: Nominal vs Real GDP](https://www.khanacademy.org/economics-finance-domain/macroeconomics/macro-economic-indicators-and-the-business-cycle/macro-real-vs-nominal-gdp/v/real-gdp-and-nominal-gdp?modal=1)

@@ -196,6 +196,18 @@
     ]
   },
   {
+    "objectID": "lecture/ch07.html",
+    "href": "lecture/ch07.html",
+    "title": "Chapter 7: Measuring Domestic Output and National Income",
+    "section": "",
+    "text": "Open in full screen",
+    "crumbs": [
+      "Topics",
+      "Ch 7: National Income",
+      "Slides"
+    ]
+  },
+  {
     "objectID": "lecture/ch03.html",
     "href": "lecture/ch03.html",
     "title": "Chapter 3: Supply, Demand, and Market Equilibrium",
@@ -220,63 +232,75 @@
     ]
   },
   {
-    "objectID": "lecture/ch02-links.html",
-    "href": "lecture/ch02-links.html",
-    "title": "Chapter 2: The Market System and the Circular Flow",
+    "objectID": "lecture/ch01-links.html",
+    "href": "lecture/ch01-links.html",
+    "title": "Chapter 1: Limits, Alternatives, and Choices",
     "section": "",
-    "text": "FRED: Personal Consumption Expenditures",
+    "text": "FRED: Unemployment Rate\nFRED: Consumer Price Index\nFRED: Gas Prices",
     "crumbs": [
       "Topics",
-      "Ch 2: Market System",
+      "Ch 1: Choices",
       "Useful Links"
     ]
   },
   {
-    "objectID": "lecture/ch02-links.html#real-data",
-    "href": "lecture/ch02-links.html#real-data",
-    "title": "Chapter 2: The Market System and the Circular Flow",
+    "objectID": "lecture/ch01-links.html#real-data",
+    "href": "lecture/ch01-links.html#real-data",
+    "title": "Chapter 1: Limits, Alternatives, and Choices",
     "section": "",
-    "text": "FRED: Personal Consumption Expenditures",
+    "text": "FRED: Unemployment Rate\nFRED: Consumer Price Index\nFRED: Gas Prices",
     "crumbs": [
       "Topics",
-      "Ch 2: Market System",
+      "Ch 1: Choices",
       "Useful Links"
     ]
   },
   {
-    "objectID": "lecture/ch03-links.html",
-    "href": "lecture/ch03-links.html",
-    "title": "Chapter 3: Supply, Demand, and Market Equilibrium",
-    "section": "",
-    "text": "FRED: Average Price of Eggs, Grade A, Large (a classic supply/demand example)",
-    "crumbs": [
-      "Topics",
-      "Ch 3: Supply, Demand, Equilibrium",
-      "Useful Links"
-    ]
-  },
-  {
-    "objectID": "lecture/ch03-links.html#real-data",
-    "href": "lecture/ch03-links.html#real-data",
-    "title": "Chapter 3: Supply, Demand, and Market Equilibrium",
-    "section": "",
-    "text": "FRED: Average Price of Eggs, Grade A, Large (a classic supply/demand example)",
-    "crumbs": [
-      "Topics",
-      "Ch 3: Supply, Demand, Equilibrium",
-      "Useful Links"
-    ]
-  },
-  {
-    "objectID": "lecture/ch03-links.html#instructional-videos",
-    "href": "lecture/ch03-links.html#instructional-videos",
-    "title": "Chapter 3: Supply, Demand, and Market Equilibrium",
+    "objectID": "lecture/ch01-links.html#instructional-videos",
+    "href": "lecture/ch01-links.html#instructional-videos",
+    "title": "Chapter 1: Limits, Alternatives, and Choices",
     "section": "Instructional Videos",
-    "text": "Instructional Videos\n\nKhan Academy Demand Video\nKhan Academy Supply Video\nKhan Academy Equilibrium Video\nKhan Academy Shifts in Supply Video",
+    "text": "Instructional Videos\n\nHow to find a slope\nKhan Academy: finding the slope of a line\nKhan Academy: production possibilities\nProduction possibilities frontier, part 1\nProduction possibilities frontier, part 2\nProduction possibilities frontier, part 3",
     "crumbs": [
       "Topics",
-      "Ch 3: Supply, Demand, Equilibrium",
+      "Ch 1: Choices",
       "Useful Links"
+    ]
+  },
+  {
+    "objectID": "lecture/ch02-practice.html",
+    "href": "lecture/ch02-practice.html",
+    "title": "Chapter 2: The Market System and the Circular Flow",
+    "section": "",
+    "text": "A firm can produce 100 units of good Y using three different methods, combining labor, land, capital, and entrepreneurial ability. Labor costs $3 per unit, land costs $2 per unit, capital costs $4 per unit, and entrepreneurial ability costs $10 per unit.\n\n\n\nResource\nMethod 1\nMethod 2\nMethod 3\n\n\n\n\nLabor\n6\n10\n4\n\n\nLand\n5\n2\n8\n\n\nCapital\n2\n3\n2\n\n\nEntrepreneurial ability\n1\n1\n1\n\n\n\n\nWhich method is the least costly way to produce 100 units of Y?\nIf Y sells for 90 cents per unit, what is the firm’s economic profit using the least cost method?\nIf the price of land rises from $2 to $4 per unit, does the least cost method change? What is the new economic profit?\n\n\n\nShow Answer\n\nTotal cost of each method:\n\nMethod 1: (6 × $3) + (5 × $2) + (2 × $4) + (1 × $10) = $18 + $10 + $8 + $10 = $46\nMethod 2: (10 × $3) + (2 × $2) + (3 × $4) + (1 × $10) = $30 + $4 + $12 + $10 = $56\nMethod 3: (4 × $3) + (8 × $2) + (2 × $4) + (1 × $10) = $12 + $16 + $8 + $10 = $46\n\n\nMethods 1 and 3 tie at $46, both cheaper than Method 2. Either is a valid least cost choice; assume the firm picks Method 1.\nTotal revenue = 100 × $0.90 = $90. Economic profit = $90 minus $46 = $44.\nRecompute with land at $4 per unit: Method 1 = (6 × $3) + (5 × $4) + (2 × $4) + (1 × $10) = $18\n\n$20 + $8 + $10 = $56. Method 3 = (4 × $3) + (8 × $4) + (2 × $4) + (1 × $10) = $12 + $32 + $8 + $10 = $62. Method 2 = (10 × $3) + (2 × $4) + (3 × $4) + (1 × $10) = $30 + $8 + $12 + $10 = $60. Method 1 is now the cheapest at $56, so the least cost method does not change here, but its cost rose. New economic profit = $90 minus $56 = $34.",
+    "crumbs": [
+      "Topics",
+      "Ch 2: Market System",
+      "Practice Problems"
+    ]
+  },
+  {
+    "objectID": "lecture/ch02-practice.html#problem-1-least-cost-method",
+    "href": "lecture/ch02-practice.html#problem-1-least-cost-method",
+    "title": "Chapter 2: The Market System and the Circular Flow",
+    "section": "",
+    "text": "A firm can produce 100 units of good Y using three different methods, combining labor, land, capital, and entrepreneurial ability. Labor costs $3 per unit, land costs $2 per unit, capital costs $4 per unit, and entrepreneurial ability costs $10 per unit.\n\n\n\nResource\nMethod 1\nMethod 2\nMethod 3\n\n\n\n\nLabor\n6\n10\n4\n\n\nLand\n5\n2\n8\n\n\nCapital\n2\n3\n2\n\n\nEntrepreneurial ability\n1\n1\n1\n\n\n\n\nWhich method is the least costly way to produce 100 units of Y?\nIf Y sells for 90 cents per unit, what is the firm’s economic profit using the least cost method?\nIf the price of land rises from $2 to $4 per unit, does the least cost method change? What is the new economic profit?\n\n\n\nShow Answer\n\nTotal cost of each method:\n\nMethod 1: (6 × $3) + (5 × $2) + (2 × $4) + (1 × $10) = $18 + $10 + $8 + $10 = $46\nMethod 2: (10 × $3) + (2 × $2) + (3 × $4) + (1 × $10) = $30 + $4 + $12 + $10 = $56\nMethod 3: (4 × $3) + (8 × $2) + (2 × $4) + (1 × $10) = $12 + $16 + $8 + $10 = $46\n\n\nMethods 1 and 3 tie at $46, both cheaper than Method 2. Either is a valid least cost choice; assume the firm picks Method 1.\nTotal revenue = 100 × $0.90 = $90. Economic profit = $90 minus $46 = $44.\nRecompute with land at $4 per unit: Method 1 = (6 × $3) + (5 × $4) + (2 × $4) + (1 × $10) = $18\n\n$20 + $8 + $10 = $56. Method 3 = (4 × $3) + (8 × $4) + (2 × $4) + (1 × $10) = $12 + $32 + $8 + $10 = $62. Method 2 = (10 × $3) + (2 × $4) + (3 × $4) + (1 × $10) = $30 + $8 + $12 + $10 = $60. Method 1 is now the cheapest at $56, so the least cost method does not change here, but its cost rose. New economic profit = $90 minus $56 = $34.",
+    "crumbs": [
+      "Topics",
+      "Ch 2: Market System",
+      "Practice Problems"
+    ]
+  },
+  {
+    "objectID": "lecture/ch02-practice.html#problem-2-self-interest-and-competition",
+    "href": "lecture/ch02-practice.html#problem-2-self-interest-and-competition",
+    "title": "Chapter 2: The Market System and the Circular Flow",
+    "section": "Problem 2: Self-Interest and Competition",
+    "text": "Problem 2: Self-Interest and Competition\nA small town has exactly one hardware store. A national chain announces it is opening a second hardware store two blocks away next year.\n\nBefore the new store arrives, what does the existing store’s self-interest push it to do about prices and service quality, given it has no local competitor?\nAfter the new store opens, how does competition change what self-interest pushes the existing store to do?\nExplain, in one or two sentences, why economists say it takes self-interest and competition together to benefit consumers, not self-interest alone.\n\n\n\nShow Answer\n\n\nWith no competitor, the existing store’s self-interest still points toward profit, but nothing forces that profit-seeking to benefit customers. It could charge higher prices or offer weaker service and customers would have nowhere else to go locally.\nOnce a competitor opens nearby, self-interest now requires competing for the same customers. The store has an incentive to lower prices, improve service, or both, or risk losing business to the new entrant.\nSelf-interest alone only guarantees a business tries to maximize its own gain. Competition is what forces that self-interest to serve customers, since a business that ignores customers loses them to a rival. Remove competition and the same self-interested motive can just as easily lead to worse outcomes for consumers.",
+    "crumbs": [
+      "Topics",
+      "Ch 2: Market System",
+      "Practice Problems"
     ]
   },
   {
@@ -364,74 +388,98 @@
     ]
   },
   {
-    "objectID": "lecture/ch02-practice.html",
-    "href": "lecture/ch02-practice.html",
-    "title": "Chapter 2: The Market System and the Circular Flow",
+    "objectID": "lecture/ch03-links.html",
+    "href": "lecture/ch03-links.html",
+    "title": "Chapter 3: Supply, Demand, and Market Equilibrium",
     "section": "",
-    "text": "A firm can produce 100 units of good Y using three different methods, combining labor, land, capital, and entrepreneurial ability. Labor costs $3 per unit, land costs $2 per unit, capital costs $4 per unit, and entrepreneurial ability costs $10 per unit.\n\n\n\nResource\nMethod 1\nMethod 2\nMethod 3\n\n\n\n\nLabor\n6\n10\n4\n\n\nLand\n5\n2\n8\n\n\nCapital\n2\n3\n2\n\n\nEntrepreneurial ability\n1\n1\n1\n\n\n\n\nWhich method is the least costly way to produce 100 units of Y?\nIf Y sells for 90 cents per unit, what is the firm’s economic profit using the least cost method?\nIf the price of land rises from $2 to $4 per unit, does the least cost method change? What is the new economic profit?\n\n\n\nShow Answer\n\nTotal cost of each method:\n\nMethod 1: (6 × $3) + (5 × $2) + (2 × $4) + (1 × $10) = $18 + $10 + $8 + $10 = $46\nMethod 2: (10 × $3) + (2 × $2) + (3 × $4) + (1 × $10) = $30 + $4 + $12 + $10 = $56\nMethod 3: (4 × $3) + (8 × $2) + (2 × $4) + (1 × $10) = $12 + $16 + $8 + $10 = $46\n\n\nMethods 1 and 3 tie at $46, both cheaper than Method 2. Either is a valid least cost choice; assume the firm picks Method 1.\nTotal revenue = 100 × $0.90 = $90. Economic profit = $90 minus $46 = $44.\nRecompute with land at $4 per unit: Method 1 = (6 × $3) + (5 × $4) + (2 × $4) + (1 × $10) = $18\n\n$20 + $8 + $10 = $56. Method 3 = (4 × $3) + (8 × $4) + (2 × $4) + (1 × $10) = $12 + $32 + $8 + $10 = $62. Method 2 = (10 × $3) + (2 × $4) + (3 × $4) + (1 × $10) = $30 + $8 + $12 + $10 = $60. Method 1 is now the cheapest at $56, so the least cost method does not change here, but its cost rose. New economic profit = $90 minus $56 = $34.",
+    "text": "FRED: Average Price of Eggs, Grade A, Large (a classic supply/demand example)",
     "crumbs": [
       "Topics",
-      "Ch 2: Market System",
-      "Practice Problems"
-    ]
-  },
-  {
-    "objectID": "lecture/ch02-practice.html#problem-1-least-cost-method",
-    "href": "lecture/ch02-practice.html#problem-1-least-cost-method",
-    "title": "Chapter 2: The Market System and the Circular Flow",
-    "section": "",
-    "text": "A firm can produce 100 units of good Y using three different methods, combining labor, land, capital, and entrepreneurial ability. Labor costs $3 per unit, land costs $2 per unit, capital costs $4 per unit, and entrepreneurial ability costs $10 per unit.\n\n\n\nResource\nMethod 1\nMethod 2\nMethod 3\n\n\n\n\nLabor\n6\n10\n4\n\n\nLand\n5\n2\n8\n\n\nCapital\n2\n3\n2\n\n\nEntrepreneurial ability\n1\n1\n1\n\n\n\n\nWhich method is the least costly way to produce 100 units of Y?\nIf Y sells for 90 cents per unit, what is the firm’s economic profit using the least cost method?\nIf the price of land rises from $2 to $4 per unit, does the least cost method change? What is the new economic profit?\n\n\n\nShow Answer\n\nTotal cost of each method:\n\nMethod 1: (6 × $3) + (5 × $2) + (2 × $4) + (1 × $10) = $18 + $10 + $8 + $10 = $46\nMethod 2: (10 × $3) + (2 × $2) + (3 × $4) + (1 × $10) = $30 + $4 + $12 + $10 = $56\nMethod 3: (4 × $3) + (8 × $2) + (2 × $4) + (1 × $10) = $12 + $16 + $8 + $10 = $46\n\n\nMethods 1 and 3 tie at $46, both cheaper than Method 2. Either is a valid least cost choice; assume the firm picks Method 1.\nTotal revenue = 100 × $0.90 = $90. Economic profit = $90 minus $46 = $44.\nRecompute with land at $4 per unit: Method 1 = (6 × $3) + (5 × $4) + (2 × $4) + (1 × $10) = $18\n\n$20 + $8 + $10 = $56. Method 3 = (4 × $3) + (8 × $4) + (2 × $4) + (1 × $10) = $12 + $32 + $8 + $10 = $62. Method 2 = (10 × $3) + (2 × $4) + (3 × $4) + (1 × $10) = $30 + $8 + $12 + $10 = $60. Method 1 is now the cheapest at $56, so the least cost method does not change here, but its cost rose. New economic profit = $90 minus $56 = $34.",
-    "crumbs": [
-      "Topics",
-      "Ch 2: Market System",
-      "Practice Problems"
-    ]
-  },
-  {
-    "objectID": "lecture/ch02-practice.html#problem-2-self-interest-and-competition",
-    "href": "lecture/ch02-practice.html#problem-2-self-interest-and-competition",
-    "title": "Chapter 2: The Market System and the Circular Flow",
-    "section": "Problem 2: Self-Interest and Competition",
-    "text": "Problem 2: Self-Interest and Competition\nA small town has exactly one hardware store. A national chain announces it is opening a second hardware store two blocks away next year.\n\nBefore the new store arrives, what does the existing store’s self-interest push it to do about prices and service quality, given it has no local competitor?\nAfter the new store opens, how does competition change what self-interest pushes the existing store to do?\nExplain, in one or two sentences, why economists say it takes self-interest and competition together to benefit consumers, not self-interest alone.\n\n\n\nShow Answer\n\n\nWith no competitor, the existing store’s self-interest still points toward profit, but nothing forces that profit-seeking to benefit customers. It could charge higher prices or offer weaker service and customers would have nowhere else to go locally.\nOnce a competitor opens nearby, self-interest now requires competing for the same customers. The store has an incentive to lower prices, improve service, or both, or risk losing business to the new entrant.\nSelf-interest alone only guarantees a business tries to maximize its own gain. Competition is what forces that self-interest to serve customers, since a business that ignores customers loses them to a rival. Remove competition and the same self-interested motive can just as easily lead to worse outcomes for consumers.",
-    "crumbs": [
-      "Topics",
-      "Ch 2: Market System",
-      "Practice Problems"
-    ]
-  },
-  {
-    "objectID": "lecture/ch01-links.html",
-    "href": "lecture/ch01-links.html",
-    "title": "Chapter 1: Limits, Alternatives, and Choices",
-    "section": "",
-    "text": "FRED: Unemployment Rate\nFRED: Consumer Price Index\nFRED: Gas Prices",
-    "crumbs": [
-      "Topics",
-      "Ch 1: Choices",
+      "Ch 3: Supply, Demand, Equilibrium",
       "Useful Links"
     ]
   },
   {
-    "objectID": "lecture/ch01-links.html#real-data",
-    "href": "lecture/ch01-links.html#real-data",
-    "title": "Chapter 1: Limits, Alternatives, and Choices",
+    "objectID": "lecture/ch03-links.html#real-data",
+    "href": "lecture/ch03-links.html#real-data",
+    "title": "Chapter 3: Supply, Demand, and Market Equilibrium",
     "section": "",
-    "text": "FRED: Unemployment Rate\nFRED: Consumer Price Index\nFRED: Gas Prices",
+    "text": "FRED: Average Price of Eggs, Grade A, Large (a classic supply/demand example)",
     "crumbs": [
       "Topics",
-      "Ch 1: Choices",
+      "Ch 3: Supply, Demand, Equilibrium",
       "Useful Links"
     ]
   },
   {
-    "objectID": "lecture/ch01-links.html#instructional-videos",
-    "href": "lecture/ch01-links.html#instructional-videos",
-    "title": "Chapter 1: Limits, Alternatives, and Choices",
+    "objectID": "lecture/ch03-links.html#instructional-videos",
+    "href": "lecture/ch03-links.html#instructional-videos",
+    "title": "Chapter 3: Supply, Demand, and Market Equilibrium",
     "section": "Instructional Videos",
-    "text": "Instructional Videos\n\nHow to find a slope\nKhan Academy: finding the slope of a line\nKhan Academy: production possibilities\nProduction possibilities frontier, part 1\nProduction possibilities frontier, part 2\nProduction possibilities frontier, part 3",
+    "text": "Instructional Videos\n\nKhan Academy Demand Video\nKhan Academy Supply Video\nKhan Academy Equilibrium Video\nKhan Academy Shifts in Supply Video",
     "crumbs": [
       "Topics",
-      "Ch 1: Choices",
+      "Ch 3: Supply, Demand, Equilibrium",
+      "Useful Links"
+    ]
+  },
+  {
+    "objectID": "lecture/ch02-links.html",
+    "href": "lecture/ch02-links.html",
+    "title": "Chapter 2: The Market System and the Circular Flow",
+    "section": "",
+    "text": "FRED: Personal Consumption Expenditures",
+    "crumbs": [
+      "Topics",
+      "Ch 2: Market System",
+      "Useful Links"
+    ]
+  },
+  {
+    "objectID": "lecture/ch02-links.html#real-data",
+    "href": "lecture/ch02-links.html#real-data",
+    "title": "Chapter 2: The Market System and the Circular Flow",
+    "section": "",
+    "text": "FRED: Personal Consumption Expenditures",
+    "crumbs": [
+      "Topics",
+      "Ch 2: Market System",
+      "Useful Links"
+    ]
+  },
+  {
+    "objectID": "lecture/ch07-links.html",
+    "href": "lecture/ch07-links.html",
+    "title": "Chapter 7: Measuring Domestic Output and National Income",
+    "section": "",
+    "text": "FRED: Nominal Gross Domestic Product\nFRED: Real Gross Domestic Product\nFRED: GDP Implicit Price Deflator\nFRED: Personal Consumption Expenditures\nFRED: Gross Private Domestic Investment\nFRED: Government Consumption Expenditures and Gross Investment\nFRED: Net Exports of Goods and Services\nBureau of Economic Analysis: Gross Domestic Product, where the official GDP numbers are produced and released",
+    "crumbs": [
+      "Topics",
+      "Ch 7: National Income",
+      "Useful Links"
+    ]
+  },
+  {
+    "objectID": "lecture/ch07-links.html#real-data",
+    "href": "lecture/ch07-links.html#real-data",
+    "title": "Chapter 7: Measuring Domestic Output and National Income",
+    "section": "",
+    "text": "FRED: Nominal Gross Domestic Product\nFRED: Real Gross Domestic Product\nFRED: GDP Implicit Price Deflator\nFRED: Personal Consumption Expenditures\nFRED: Gross Private Domestic Investment\nFRED: Government Consumption Expenditures and Gross Investment\nFRED: Net Exports of Goods and Services\nBureau of Economic Analysis: Gross Domestic Product, where the official GDP numbers are produced and released",
+    "crumbs": [
+      "Topics",
+      "Ch 7: National Income",
+      "Useful Links"
+    ]
+  },
+  {
+    "objectID": "lecture/ch07-links.html#instructional-videos",
+    "href": "lecture/ch07-links.html#instructional-videos",
+    "title": "Chapter 7: Measuring Domestic Output and National Income",
+    "section": "Instructional Videos",
+    "text": "Instructional Videos\n\nKhan Academy: GDP Expenditures\nKhan Academy: Components of GDP\nKhan Academy: Nominal vs Real GDP",
+    "crumbs": [
+      "Topics",
+      "Ch 7: National Income",
       "Useful Links"
     ]
   },
@@ -446,6 +494,55 @@
       "Ch 2: Market System",
       "Slides"
     ]
+  },
+  {
+    "objectID": "lecture/ch07-practice.html",
+    "href": "lecture/ch07-practice.html",
+    "title": "Chapter 7: Measuring Domestic Output and National Income",
+    "section": "",
+    "text": "A furniture maker buys $300 worth of lumber and uses it to build a table it sells for $750. How much value did the furniture maker add?\nIs the steel an automaker buys a final good or an intermediate good? What about the finished car a family buys?\nA student resells last year’s textbook to a classmate for $40. Does this sale count in this year’s GDP? Why or why not?\nA government agency mails $800 in food assistance benefits to a family. Does this count as government purchases (G) in GDP? Why or why not?\nFor each purchase, name the GDP component (C, Ig, G, or Xn): (i) a family buys a new washing machine, (ii) a bakery buys a new delivery van, (iii) a city pays a contractor to repave a road, (iv) a foreign customer buys a U.S.-made tractor.\nA country exports $40 billion of goods and services and imports $55 billion. What are its net exports?\nNominal GDP is $2,400 billion and the GDP price index is 120. What is real GDP?\nA neighbor volunteers 10 hours a week at a food bank. Does that work show up in GDP? Why or why not?\n\n\n\nShow Answer\n\n\n\\(\\$750 - \\$300 = \\$450\\) of value added.\nThe steel is an intermediate good (it is used up making something else). The finished car is a final good (bought by its end user).\nNo. The textbook was already counted in GDP in the year it was produced. Resale does not measure new production.\nNo. Food assistance benefits are transfer payments, money moved from one person to another without a good or service being produced in exchange. Government purchases (G) count only spending on newly produced goods and services.\n\nC (a consumer durable good). (ii) Ig (new capital equipment for a business). (iii) G (a government purchase of a service). (iv) Xn (an export, which adds to net exports).\n\n\\(\\$40 - \\$55 = -\\$15\\) billion. Net exports can be negative.\nReal GDP \\(= \\$2{,}400 / (120/100) = \\$2{,}000\\) billion.\nNo. Volunteer work involves no market transaction, so it is not counted, even though it clearly produces something of value."
+  },
+  {
+    "objectID": "lecture/ch07-practice.html#warm-up-quick-concept-and-calculation-checks",
+    "href": "lecture/ch07-practice.html#warm-up-quick-concept-and-calculation-checks",
+    "title": "Chapter 7: Measuring Domestic Output and National Income",
+    "section": "",
+    "text": "A furniture maker buys $300 worth of lumber and uses it to build a table it sells for $750. How much value did the furniture maker add?\nIs the steel an automaker buys a final good or an intermediate good? What about the finished car a family buys?\nA student resells last year’s textbook to a classmate for $40. Does this sale count in this year’s GDP? Why or why not?\nA government agency mails $800 in food assistance benefits to a family. Does this count as government purchases (G) in GDP? Why or why not?\nFor each purchase, name the GDP component (C, Ig, G, or Xn): (i) a family buys a new washing machine, (ii) a bakery buys a new delivery van, (iii) a city pays a contractor to repave a road, (iv) a foreign customer buys a U.S.-made tractor.\nA country exports $40 billion of goods and services and imports $55 billion. What are its net exports?\nNominal GDP is $2,400 billion and the GDP price index is 120. What is real GDP?\nA neighbor volunteers 10 hours a week at a food bank. Does that work show up in GDP? Why or why not?\n\n\n\nShow Answer\n\n\n\\(\\$750 - \\$300 = \\$450\\) of value added.\nThe steel is an intermediate good (it is used up making something else). The finished car is a final good (bought by its end user).\nNo. The textbook was already counted in GDP in the year it was produced. Resale does not measure new production.\nNo. Food assistance benefits are transfer payments, money moved from one person to another without a good or service being produced in exchange. Government purchases (G) count only spending on newly produced goods and services.\n\nC (a consumer durable good). (ii) Ig (new capital equipment for a business). (iii) G (a government purchase of a service). (iv) Xn (an export, which adds to net exports).\n\n\\(\\$40 - \\$55 = -\\$15\\) billion. Net exports can be negative.\nReal GDP \\(= \\$2{,}400 / (120/100) = \\$2{,}000\\) billion.\nNo. Volunteer work involves no market transaction, so it is not counted, even though it clearly produces something of value."
+  },
+  {
+    "objectID": "lecture/ch07-practice.html#problem-1-gdp-by-the-expenditures-approach",
+    "href": "lecture/ch07-practice.html#problem-1-gdp-by-the-expenditures-approach",
+    "title": "Chapter 7: Measuring Domestic Output and National Income",
+    "section": "Problem 1: GDP by the Expenditures Approach",
+    "text": "Problem 1: GDP by the Expenditures Approach\nA small country reports the following figures for one year (in billions of dollars):\n\n\n\nItem\nAmount\n\n\n\n\nPersonal consumption expenditures\n$620\n\n\nGross private domestic investment\n$150\n\n\nGovernment purchases of goods and services\n$210\n\n\nExports\n$95\n\n\nImports\n$120\n\n\nUnemployment benefits and other transfer payments\n$80\n\n\nPurchases of existing stocks and bonds\n$45\n\n\nSales of secondhand goods\n$12\n\n\nDepreciation (consumption of fixed capital)\n$35\n\n\n\n\nWhat are net exports?\nCalculate GDP using the expenditures approach.\nThree of the items in the table should not be included in GDP. Which ones, and why?\nCalculate net domestic product (NDP) and net private domestic investment.\n\n\n\nShow Answer\n\n\nNet exports \\(= \\$95 - \\$120 = -\\$25\\) billion.\nGDP \\(= C + I_g + G + X_n = 620 + 150 + 210 + (-25) = \\$955\\) billion.\nTransfer payments ($80): no good or service is produced in exchange. Purchases of existing stocks and bonds ($45): just a transfer of ownership of existing financial assets, not production. Sales of secondhand goods ($12): those goods were counted in GDP when they were first produced.\nNDP \\(=\\) GDP \\(-\\) depreciation \\(= 955 - 35 = \\$920\\) billion. Net private domestic investment \\(=\\) gross investment \\(-\\) depreciation \\(= 150 - 35 = \\$115\\) billion."
+  },
+  {
+    "objectID": "lecture/ch07-practice.html#problem-2-from-gdp-to-disposable-income",
+    "href": "lecture/ch07-practice.html#problem-2-from-gdp-to-disposable-income",
+    "title": "Chapter 7: Measuring Domestic Output and National Income",
+    "section": "Problem 2: From GDP to Disposable Income",
+    "text": "Problem 2: From GDP to Disposable Income\nAnother economy reports these national income figures (in billions of dollars). Assume the statistical discrepancy and net foreign factor income are both zero.\n\n\n\nItem\nAmount\n\n\n\n\nCompensation of employees\n$560\n\n\nRents\n$20\n\n\nInterest\n$30\n\n\nProprietors’ income\n$70\n\n\nCorporate profits\n$110\n\n\nTaxes on production and imports\n$65\n\n\nDepreciation (consumption of fixed capital)\n$90\n\n\nSocial Security contributions\n$55\n\n\nCorporate income taxes\n$35\n\n\nUndistributed corporate profits\n$40\n\n\nTransfer payments\n$85\n\n\nPersonal taxes\n$60\n\n\n\n\nCalculate national income (NI) by adding up the types of income and taxes on production and imports.\nCalculate GDP and NDP using the income approach.\nCalculate personal income (PI).\nCalculate disposable income (DI).\nWhat share of national income is compensation of employees?\n\n\n\nShow Answer\n\n\n\n                            \n                                            \n\n\n\nNI \\(= 560 + 20 + 30 + 70 + 110 + 65 = \\$855\\) billion.\nGDP \\(=\\) NI \\(+\\) depreciation \\(= 855 + 90 = \\$945\\) billion. NDP \\(=\\) GDP \\(-\\) depreciation \\(= \\$855\\) billion (equal to NI here because the statistical discrepancy and net foreign factor income are zero).\nPI \\(= 855 - 65 - 55 - 35 - 40 + 85 = \\$745\\) billion. Taxes on production and imports, Social Security contributions, corporate income taxes, and undistributed profits are earned but never reach households, so they are subtracted. Transfer payments reach households without being earned by producing anything, so they are added.\nDI \\(= 745 - 60 = \\$685\\) billion. Disposable income is what households actually have available to spend or save.\n\\(560 / 855 \\approx 65.5\\) percent. Wages, salaries, and benefits are by far the largest slice of national income."
+  },
+  {
+    "objectID": "lecture/ch07-practice.html#problem-3-nominal-vs.-real-gdp-with-multiple-goods",
+    "href": "lecture/ch07-practice.html#problem-3-nominal-vs.-real-gdp-with-multiple-goods",
+    "title": "Chapter 7: Measuring Domestic Output and National Income",
+    "section": "Problem 3: Nominal vs. Real GDP with Multiple Goods",
+    "text": "Problem 3: Nominal vs. Real GDP with Multiple Goods\nA small economy produces only two goods, coffee and phone chargers. Prices and quantities in Year 1 (the base year) and Year 2 are:\n\n\n\n\nYear 1 Price\nYear 1 Quantity\nYear 2 Price\nYear 2 Quantity\n\n\n\n\nCoffee\n$2\n100\n$3\n120\n\n\nPhone chargers\n$5\n40\n$6\n45\n\n\n\n\nCompute nominal GDP in Year 1 and in Year 2.\nCompute real GDP in Year 2, using Year 1 as the base year (that is, value Year 2 quantities at Year 1 prices).\nWhat is the nominal GDP growth rate from Year 1 to Year 2? What is the real GDP growth rate?\nThese two growth rates are quite different. What does that difference tell you about what actually happened in this economy?\n\n\n\nShow Answer\n\n\nNominal GDP, Year 1: \\((2 \\times 100) + (5 \\times 40) = 200 + 200 = \\$400\\). Nominal GDP, Year 2: \\((3 \\times 120) + (6 \\times 45) = 360 + 270 = \\$630\\).\nReal GDP, Year 2 (in Year 1 prices): \\((2 \\times 120) + (5 \\times 45) = 240 + 225 = \\$465\\).\nNominal GDP growth: \\((630 - 400)/400 = 57.5\\) percent. Real GDP growth: \\((465 - 400)/400 = 16.25\\) percent.\nNominal GDP growth (57.5 percent) reflects both more output and higher prices for both goods. Real GDP growth (16.25 percent) strips out the price increases by valuing both years’ output at the same, Year 1, prices, so it isolates how much more stuff the economy actually produced. The large gap between the two growth rates tells us that a substantial part of this economy’s nominal growth was simply inflation, not a real increase in output, which is exactly why economists track real GDP rather than nominal GDP when asking whether an economy is actually producing more."
+  },
+  {
+    "objectID": "lecture/ch07-practice.html#problem-4-deflating-nominal-gdp-with-a-price-index",
+    "href": "lecture/ch07-practice.html#problem-4-deflating-nominal-gdp-with-a-price-index",
+    "title": "Chapter 7: Measuring Domestic Output and National Income",
+    "section": "Problem 4: Deflating Nominal GDP with a Price Index",
+    "text": "Problem 4: Deflating Nominal GDP with a Price Index\nAn economy reports nominal GDP and a GDP price index (with 2020 as the base year, so the index equals 100 in 2020):\n\n\n\nYear\nNominal GDP (billions)\nGDP Price Index\n\n\n\n\n2020\n$1,800\n100\n\n\n2022\n$2,160\n108\n\n\n2024\n$2,600\n125\n\n\n\n\nCalculate real GDP for each year (in 2020 dollars).\nCalculate the growth rate of nominal GDP and of real GDP from 2022 to 2024.\nFor 2022 and 2024, are you inflating or deflating nominal GDP to get real GDP? Why?\nBy how much did the overall price level rise from 2022 to 2024? How does that compare with the gap between the two growth rates in part (b)?\n\n\n\nShow Answer\n\n\n\n                            \n                                            \n\n\n\nReal GDP \\(=\\) nominal GDP \\(/ (\\text{index}/100)\\). 2020: \\(1{,}800 / 1.00 = \\$1{,}800\\) billion. 2022: \\(2{,}160 / 1.08 = \\$2{,}000\\) billion. 2024: \\(2{,}600 / 1.25 = \\$2{,}080\\) billion.\nNominal growth, 2022 to 2024: \\((2{,}600 - 2{,}160)/2{,}160 \\approx 20.4\\) percent. Real growth: \\((2{,}080 - 2{,}000)/2{,}000 = 4.0\\) percent.\nDeflating. In both years the price index is above 100 (prices are higher than in the base year), so nominal GDP overstates output and has to be scaled down to get real GDP.\nThe price level rose \\((125 - 108)/108 \\approx 15.7\\) percent. That inflation accounts for most of the gap between 20.4 percent nominal growth and 4.0 percent real growth. Only the 4.0 percent is actual growth in output."
+  },
+  {
+    "objectID": "lecture/ch07-practice.html#problem-5-is-higher-gdp-per-capita-always-better",
+    "href": "lecture/ch07-practice.html#problem-5-is-higher-gdp-per-capita-always-better",
+    "title": "Chapter 7: Measuring Domestic Output and National Income",
+    "section": "Problem 5: Is Higher GDP Per Capita Always Better?",
+    "text": "Problem 5: Is Higher GDP Per Capita Always Better?\nTwo countries have these (hypothetical) figures per person per year:\n\n\n\n\n\n\n\n\n\nCountry A\nCountry B\n\n\n\n\nMeasured GDP per capita\n$50,000\n$46,000\n\n\nEstimated value of unpaid household work (cooking, childcare, home repair)\n$8,000\n$14,000\n\n\nAverage work week\n46 hours\n36 hours\n\n\nPaid vacation\n10 days\n30 days\n\n\n\n\nWhich country has the higher measured GDP per capita?\nAdd the value of unpaid household work to each country’s GDP per capita. Which country is ahead now?\nName two other things in the table, or beyond it, that GDP fails to capture and that might change your view of which country’s residents are better off.\nDespite these shortcomings, why do economists still rely on GDP so heavily?\n\n\n\nShow Answer\n\n\nCountry A: $50,000 versus $46,000 for Country B.\nCountry A: $50,000 \\(+\\) $8,000 \\(=\\) $58,000. Country B: $46,000 \\(+\\) $14,000 \\(=\\) $60,000. Once unpaid work is counted, Country B comes out ahead, the ranking flips.\nLeisure: Country B residents work ten fewer hours each week and get twice as much vacation, and GDP assigns that free time no value at all. Other examples: environmental damage and pollution (production is counted, damage is not subtracted), the underground economy (real output that goes unrecorded), and how evenly the income is distributed (a mean says nothing about the typical household, as in Chapter 6).\nGDP is measured consistently across countries and over time, follows clear rules, and is strongly correlated with many things people care about, like life expectancy and education. It is an imperfect but useful measure of a country’s production, not a complete measure of its well-being."
   },
   {
     "objectID": "lecture/ch06.html",

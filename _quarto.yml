@@ -92,14 +92,14 @@ website:
                 text: Useful Links
               - href: lecture/ch06-practice.qmd
                 text: Practice Problems
-          # - section: "Ch 7: National Income"
-          #   contents:
-          #     - href: lecture/ch07.qmd
-          #       text: Slides
-          #     - href: lecture/ch07-links.qmd
-          #       text: Useful Links
-          #     - href: lecture/ch07-practice.qmd
-          #       text: Practice Problems
+          - section: "Ch 7: National Income"
+            contents:
+              - href: lecture/ch07.qmd
+                text: Slides
+              - href: lecture/ch07-links.qmd
+                text: Useful Links
+              # - href: lecture/ch07-practice.qmd
+              #   text: Practice Problems
           # - section: "Ch 8: Economic Growth"
           #   contents:
           #     - href: lecture/ch08.qmd

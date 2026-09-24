@@ -1,0 +1,287 @@
+---
+title: "Chapter 7: Measuring Domestic Output and National Income"
+subtitle: "Practice Problems"
+---
+
+## Warm-Up: Quick Concept and Calculation Checks
+
+a. A furniture maker buys $300 worth of lumber and uses it to build a table it sells for $750. How
+   much *value* did the furniture maker add?
+b. Is the steel an automaker buys a *final* good or an *intermediate* good? What about the finished
+   car a family buys?
+c. A student resells last year's textbook to a classmate for $40. Does this sale count in this
+   year's GDP? Why or why not?
+d. A government agency mails $800 in food assistance benefits to a family. Does this count as
+   government purchases (G) in GDP? Why or why not?
+e. For each purchase, name the GDP component (C, Ig, G, or Xn): (i) a family buys a new washing
+   machine, (ii) a bakery buys a new delivery van, (iii) a city pays a contractor to repave a
+   road, (iv) a foreign customer buys a U.S.-made tractor.
+f. A country exports $40 billion of goods and services and imports $55 billion. What are its net
+   exports?
+g. Nominal GDP is $2,400 billion and the GDP price index is 120. What is real GDP?
+h. A neighbor volunteers 10 hours a week at a food bank. Does that work show up in GDP? Why or why
+   not?
+
+<details>
+<summary>Show Answer</summary>
+
+a. $\$750 - \$300 = \$450$ of value added.
+b. The steel is an *intermediate* good (it is used up making something else). The finished car is
+   a *final* good (bought by its end user).
+c. *No.* The textbook was already counted in GDP in the year it was produced. Resale does not
+   measure new production.
+d. *No.* Food assistance benefits are *transfer payments*, money moved from one person to another
+   without a good or service being produced in exchange. Government purchases (G) count only
+   spending on newly produced goods and services.
+e. (i) *C* (a consumer durable good). (ii) *Ig* (new capital equipment for a business). (iii) *G*
+   (a government purchase of a service). (iv) *Xn* (an export, which adds to net exports).
+f. $\$40 - \$55 = -\$15$ billion. Net exports can be negative.
+g. Real GDP $= \$2{,}400 / (120/100) = \$2{,}000$ billion.
+h. *No.* Volunteer work involves no market transaction, so it is not counted, even though it
+   clearly produces something of value.
+
+</details>
+
+## Problem 1: GDP by the Expenditures Approach
+
+A small country reports the following figures for one year (in billions of dollars):
+
+| Item | Amount |
+|---|---|
+| Personal consumption expenditures | $620 |
+| Gross private domestic investment | $150 |
+| Government purchases of goods and services | $210 |
+| Exports | $95 |
+| Imports | $120 |
+| Unemployment benefits and other transfer payments | $80 |
+| Purchases of existing stocks and bonds | $45 |
+| Sales of secondhand goods | $12 |
+| Depreciation (consumption of fixed capital) | $35 |
+
+a. What are net exports?
+b. Calculate GDP using the expenditures approach.
+c. Three of the items in the table should *not* be included in GDP. Which ones, and why?
+d. Calculate net domestic product (NDP) and net private domestic investment.
+
+<details>
+<summary>Show Answer</summary>
+
+a. Net exports $= \$95 - \$120 = -\$25$ billion.
+b. GDP $= C + I_g + G + X_n = 620 + 150 + 210 + (-25) = \$955$ billion.
+c. *Transfer payments* ($80): no good or service is produced in exchange. *Purchases of existing
+   stocks and bonds* ($45): just a transfer of ownership of existing financial assets, not
+   production. *Sales of secondhand goods* ($12): those goods were counted in GDP when they were
+   first produced.
+d. NDP $=$ GDP $-$ depreciation $= 955 - 35 = \$920$ billion.
+   Net private domestic investment $=$ gross investment $-$ depreciation $= 150 - 35 = \$115$
+   billion.
+
+</details>
+
+## Problem 2: From GDP to Disposable Income
+
+Another economy reports these national income figures (in billions of dollars). Assume the
+statistical discrepancy and net foreign factor income are both zero.
+
+| Item | Amount |
+|---|---|
+| Compensation of employees | $560 |
+| Rents | $20 |
+| Interest | $30 |
+| Proprietors' income | $70 |
+| Corporate profits | $110 |
+| Taxes on production and imports | $65 |
+| Depreciation (consumption of fixed capital) | $90 |
+| Social Security contributions | $55 |
+| Corporate income taxes | $35 |
+| Undistributed corporate profits | $40 |
+| Transfer payments | $85 |
+| Personal taxes | $60 |
+
+a. Calculate national income (NI) by adding up the types of income and taxes on production and
+   imports.
+b. Calculate GDP and NDP using the income approach.
+c. Calculate personal income (PI).
+d. Calculate disposable income (DI).
+e. What share of national income is compensation of employees?
+
+<details>
+<summary>Show Answer</summary>
+
+```{python}
+#| echo: false
+#| fig-align: center
+
+import plotly.graph_objects as go
+
+BLUE = "#1f4e79"
+GREEN = "#548235"
+RED = "#c00000"
+
+fig = go.Figure(go.Waterfall(
+    x=["National income", "Taxes on production<br>and imports", "Social Security<br>contributions",
+       "Corporate income<br>taxes", "Undistributed<br>profits", "Transfer<br>payments",
+       "Personal income", "Personal<br>taxes", "Disposable income"],
+    measure=["absolute", "relative", "relative", "relative", "relative", "relative", "total",
+             "relative", "total"],
+    y=[855, -65, -55, -35, -40, 85, None, -60, None],
+    connector=dict(line=dict(color="gray")),
+    increasing=dict(marker=dict(color=GREEN)),
+    decreasing=dict(marker=dict(color=RED)),
+    totals=dict(marker=dict(color=BLUE)),
+    hovertemplate="%{x}: $%{y}B<extra></extra>"
+))
+fig.update_layout(
+    yaxis_title="Billions of dollars", width=760, height=420,
+    plot_bgcolor="white", showlegend=False
+)
+fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="lightgray", range=[0, 950])
+fig.show()
+```
+
+a. NI $= 560 + 20 + 30 + 70 + 110 + 65 = \$855$ billion.
+b. GDP $=$ NI $+$ depreciation $= 855 + 90 = \$945$ billion. NDP $=$ GDP $-$ depreciation
+   $= \$855$ billion (equal to NI here because the statistical discrepancy and net foreign factor
+   income are zero).
+c. PI $= 855 - 65 - 55 - 35 - 40 + 85 = \$745$ billion. Taxes on production and imports, Social
+   Security contributions, corporate income taxes, and undistributed profits are earned but never
+   reach households, so they are subtracted. Transfer payments reach households without being
+   earned by producing anything, so they are added.
+d. DI $= 745 - 60 = \$685$ billion. Disposable income is what households actually have available
+   to spend or save.
+e. $560 / 855 \approx 65.5$ percent. Wages, salaries, and benefits are by far the largest slice
+   of national income.
+
+</details>
+
+## Problem 3: Nominal vs. Real GDP with Multiple Goods
+
+A small economy produces only two goods, coffee and phone chargers. Prices and quantities in Year
+1 (the base year) and Year 2 are:
+
+| | Year 1 Price | Year 1 Quantity | Year 2 Price | Year 2 Quantity |
+|---|---|---|---|---|
+| Coffee | $2 | 100 | $3 | 120 |
+| Phone chargers | $5 | 40 | $6 | 45 |
+
+a. Compute nominal GDP in Year 1 and in Year 2.
+b. Compute real GDP in Year 2, using Year 1 as the base year (that is, value Year 2 quantities at
+   Year 1 prices).
+c. What is the nominal GDP growth rate from Year 1 to Year 2? What is the real GDP growth rate?
+d. These two growth rates are quite different. What does that difference tell you about what
+   actually happened in this economy?
+
+<details>
+<summary>Show Answer</summary>
+
+a. Nominal GDP, Year 1: $(2 \times 100) + (5 \times 40) = 200 + 200 = \$400$.
+   Nominal GDP, Year 2: $(3 \times 120) + (6 \times 45) = 360 + 270 = \$630$.
+b. Real GDP, Year 2 (in Year 1 prices): $(2 \times 120) + (5 \times 45) = 240 + 225 = \$465$.
+c. Nominal GDP growth: $(630 - 400)/400 = 57.5$ percent.
+   Real GDP growth: $(465 - 400)/400 = 16.25$ percent.
+d. Nominal GDP growth (57.5 percent) reflects *both* more output *and* higher prices for both
+   goods. Real GDP growth (16.25 percent) strips out the price increases by valuing both years'
+   output at the same, Year 1, prices, so it isolates how much *more stuff* the economy actually
+   produced. The large gap between the two growth rates tells us that a substantial part of this
+   economy's nominal growth was simply inflation, not a real increase in output, which is exactly
+   why economists track real GDP rather than nominal GDP when asking whether an economy is
+   actually producing more.
+
+</details>
+
+## Problem 4: Deflating Nominal GDP with a Price Index
+
+An economy reports nominal GDP and a GDP price index (with 2020 as the base year, so the index
+equals 100 in 2020):
+
+| Year | Nominal GDP (billions) | GDP Price Index |
+|---|---|---|
+| 2020 | $1,800 | 100 |
+| 2022 | $2,160 | 108 |
+| 2024 | $2,600 | 125 |
+
+a. Calculate real GDP for each year (in 2020 dollars).
+b. Calculate the growth rate of nominal GDP and of real GDP from 2022 to 2024.
+c. For 2022 and 2024, are you *inflating* or *deflating* nominal GDP to get real GDP? Why?
+d. By how much did the overall price level rise from 2022 to 2024? How does that compare with the
+   gap between the two growth rates in part (b)?
+
+<details>
+<summary>Show Answer</summary>
+
+```{python}
+#| echo: false
+#| fig-align: center
+
+import plotly.graph_objects as go
+
+BLUE = "#1f4e79"
+ORANGE = "#c55a11"
+
+years = ["2020", "2022", "2024"]
+nominal = [1800, 2160, 2600]
+real = [1800, 2000, 2080]
+
+fig = go.Figure()
+fig.add_trace(go.Bar(x=years, y=nominal, name="Nominal GDP", marker_color=ORANGE,
+                     hovertemplate="%{x} nominal: $%{y}B<extra></extra>"))
+fig.add_trace(go.Bar(x=years, y=real, name="Real GDP (2020 dollars)", marker_color=BLUE,
+                     hovertemplate="%{x} real: $%{y}B<extra></extra>"))
+fig.update_layout(
+    barmode="group", yaxis_title="Billions of dollars",
+    width=600, height=400, plot_bgcolor="white",
+    legend=dict(x=0.25, y=1.15, orientation="h")
+)
+fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="lightgray")
+fig.show()
+```
+
+a. Real GDP $=$ nominal GDP $/ (\text{index}/100)$.
+   2020: $1{,}800 / 1.00 = \$1{,}800$ billion.
+   2022: $2{,}160 / 1.08 = \$2{,}000$ billion.
+   2024: $2{,}600 / 1.25 = \$2{,}080$ billion.
+b. Nominal growth, 2022 to 2024: $(2{,}600 - 2{,}160)/2{,}160 \approx 20.4$ percent.
+   Real growth: $(2{,}080 - 2{,}000)/2{,}000 = 4.0$ percent.
+c. *Deflating.* In both years the price index is above 100 (prices are higher than in the base
+   year), so nominal GDP overstates output and has to be scaled *down* to get real GDP.
+d. The price level rose $(125 - 108)/108 \approx 15.7$ percent. That inflation accounts for most
+   of the gap between 20.4 percent nominal growth and 4.0 percent real growth. Only the 4.0
+   percent is actual growth in output.
+
+</details>
+
+## Problem 5: Is Higher GDP Per Capita Always Better?
+
+Two countries have these (hypothetical) figures per person per year:
+
+| | Country A | Country B |
+|---|---|---|
+| Measured GDP per capita | $50,000 | $46,000 |
+| Estimated value of unpaid household work (cooking, childcare, home repair) | $8,000 | $14,000 |
+| Average work week | 46 hours | 36 hours |
+| Paid vacation | 10 days | 30 days |
+
+a. Which country has the higher *measured* GDP per capita?
+b. Add the value of unpaid household work to each country's GDP per capita. Which country is
+   ahead now?
+c. Name two other things in the table, or beyond it, that GDP fails to capture and that might
+   change your view of which country's residents are better off.
+d. Despite these shortcomings, why do economists still rely on GDP so heavily?
+
+<details>
+<summary>Show Answer</summary>
+
+a. Country A: $50,000 versus $46,000 for Country B.
+b. Country A: $50,000 $+$ $8,000 $=$ $58,000. Country B: $46,000 $+$ $14,000 $=$ $60,000. Once
+   unpaid work is counted, *Country B comes out ahead*, the ranking flips.
+c. *Leisure*: Country B residents work ten fewer hours each week and get twice as much vacation,
+   and GDP assigns that free time no value at all. Other examples: environmental damage and
+   pollution (production is counted, damage is not subtracted), the underground economy (real
+   output that goes unrecorded), and how evenly the income is distributed (a mean says nothing
+   about the typical household, as in Chapter 6).
+d. GDP is measured consistently across countries and over time, follows clear rules, and is
+   strongly correlated with many things people care about, like life expectancy and education. It
+   is an imperfect but useful measure of a country's *production*, not a complete measure of its
+   *well-being*.
+
+</details>
