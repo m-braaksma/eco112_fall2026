@@ -1,0 +1,176 @@
+---
+title: "Chapter 13: Fiscal Policy, Deficits, and Debt"
+subtitle: "Practice Problems"
+---
+
+## Warm-Up: Quick Concept and Calculation Checks
+
+a. To fight a recession, should the government use *expansionary* or *contractionary* fiscal
+   policy? Name two specific tools it could use.
+b. To fight demand-pull inflation, should the government use *expansionary* or *contractionary*
+   fiscal policy?
+c. True or False: automatic stabilizers require Congress to pass new legislation every time the
+   economy changes.
+d. As GDP rises in an expansion, what automatically happens to tax revenue and to transfer
+   payments, without any new laws being passed?
+e. A country's *actual* budget shows a deficit this year, but its *cyclically adjusted* budget is
+   balanced. What does this combination suggest about whether the deficit was caused by fiscal
+   policy choices or by the state of the economy?
+f. What is the difference between *refinancing* the public debt and *retiring* it?
+g. Why might economists consider debt as a *percentage of GDP* more meaningful than the absolute
+   dollar amount of debt?
+
+<details>
+<summary>Show Answer</summary>
+
+a. *Expansionary.* Increase government spending (G), decrease taxes (T), or both.
+b. *Contractionary.* Decrease G, increase T, or both.
+c. *False.* Automatic stabilizers work without any new legislation, that is exactly what makes them
+   "automatic."
+d. Tax revenue *rises automatically* (more income pushes people into higher tax brackets under a
+   progressive system) and transfer payments *fall automatically* (fewer people qualify for
+   unemployment benefits, for example).
+e. It suggests the deficit was caused mainly by the *economy being below full employment*
+   (automatic stabilizers responding to a weak economy), not by a deliberately expansionary fiscal
+   *policy* choice, since at full employment the budget would be balanced under current law.
+f. *Refinancing* means rolling over the debt, selling new bonds to pay off maturing ones. *Retiring*
+   means actually paying the debt off, buying back bonds or letting them mature without replacing
+   them.
+g. Debt as a percentage of GDP accounts for the size of the economy that has to service the debt,
+   a large absolute debt is a much smaller burden for a large, wealthy economy than for a small
+   one, so comparing the percentage is more meaningful across time or across countries.
+
+</details>
+
+## Problem 1: Closing a Recessionary Gap
+
+An economy has a recessionary expenditure gap of $100 billion (aggregate expenditures at
+full-employment GDP fall $100 billion short of what is needed). The MPC in this economy is 0.8.
+
+a. What is the multiplier?
+b. How large an increase in government spending (G) alone would close this gap?
+c. How large a tax cut (T) alone would close this gap? (Recall a tax change's effect is
+   multiplied by MPC first, then by the multiplier.)
+d. Propose one combination of a smaller increase in G together with a tax cut that, added
+   together, would also close the gap exactly.
+
+<details>
+<summary>Show Answer</summary>
+
+a. Multiplier $= 1/(1-0.8) = 5$.
+b. $\Delta G$ needed: $100 / 5 = \$20$ billion.
+c. $\Delta T$ needed: $100 / (5 \times 0.8) = \$25$ billion tax cut.
+d. Many combinations work, for example: a $\$10$ billion increase in G (closes $10 \times 5 = \$50$
+   billion of the gap) plus a $\$12.5$ billion tax cut (closes $12.5 \times 0.8 \times 5 = \$50$
+   billion of the gap), together closing the full $100 billion gap. Any pair of G and T changes
+   that add up to $100 billion in combined AD effect works.
+
+</details>
+
+## Problem 2: The Balanced-Budget Multiplier
+
+The government increases spending by $30 billion and, in the same year, raises taxes by exactly
+$30 billion to keep the budget balanced. The MPC is 0.8.
+
+a. Using the multiplier, what is the effect of the $30 billion increase in G alone on equilibrium
+   GDP?
+b. Using the tax multiplier ($MPC \times$ multiplier), what is the effect of the $30 billion
+   increase in T alone on equilibrium GDP?
+c. Combining (a) and (b), what is the net effect on equilibrium GDP?
+d. Explain in one sentence why an equal-sized increase in G and T does not fully cancel out, even
+   though the government's budget balance does not change at all.
+
+<details>
+<summary>Show Answer</summary>
+
+a. $\Delta GDP$ from G: $30 \times 5 = +\$150$ billion.
+b. $\Delta GDP$ from T: $-30 \times 0.8 \times 5 = -\$120$ billion.
+c. Net effect: $150 - 120 = +\$30$ billion, equilibrium GDP rises by *exactly the size of the
+   balanced budget change itself*. This is the balanced-budget multiplier: it always equals 1.
+d. Every dollar of new government spending enters the economy in full, but a dollar of new taxes
+   only reduces spending by $MPC$ of a dollar (households absorb the rest by saving less), so the
+   spending increase always outweighs the tax increase's contractionary effect.
+
+</details>
+
+## Problem 3: Automatic Stabilizers, Progressive vs. Flat Taxes
+
+Compare two hypothetical tax systems facing the same household, whose income falls from $60,000 to
+$50,000 during a downturn:
+
+- **System A (progressive):** 10 percent on the first $40,000 of income, 25 percent on income
+  above $40,000.
+- **System B (flat):** 18 percent on all income, regardless of amount.
+
+a. Compute this household's tax bill under System A at $60,000 income and at $50,000 income.
+b. Compute the tax bill under System B at both income levels.
+c. Under which system does the tax bill fall by *more* when income drops?
+d. Compute disposable (after-tax) income under each system at both income levels, and the *drop*
+   in disposable income under each. Which system cushions the household's spending power more?
+
+<details>
+<summary>Show Answer</summary>
+
+```{python}
+#| echo: false
+#| fig-align: center
+
+import plotly.graph_objects as go
+
+BLUE = "#1f4e79"
+ORANGE = "#c55a11"
+
+fig = go.Figure()
+fig.add_trace(go.Bar(x=["System A<br>(progressive)", "System B<br>(flat)"],
+                     y=[7500, 8200], marker_color=[BLUE, ORANGE],
+                     text=["Disposable income<br>drop: $7,500", "Disposable income<br>drop: $8,200"],
+                     textposition="outside",
+                     hovertemplate="%{x}: %{text}<extra></extra>"))
+fig.update_layout(yaxis_title="Drop in disposable income ($)", width=560, height=420,
+                  plot_bgcolor="white", showlegend=False)
+fig.update_xaxes(showgrid=False)
+fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="lightgray", range=[0, 9000])
+fig.show()
+```
+
+a. At $60,000: $10\% \times 40{,}000 + 25\% \times 20{,}000 = 4{,}000 + 5{,}000 = \$9{,}000$. At
+   $50,000: $4{,}000 + 25\% \times 10{,}000 = 4{,}000 + 2{,}500 = \$6{,}500$.
+b. At $60,000: $18\% \times 60{,}000 = \$10{,}800$. At $50,000: $18\% \times 50{,}000 = \$9{,}000$.
+c. System A's tax bill falls by $9{,}000 - 6{,}500 = \$2{,}500$. System B's falls by only
+   $10{,}800 - 9{,}000 = \$1{,}800$. The *progressive* system's tax revenue falls by more.
+d. Disposable income, System A: $60{,}000-9{,}000=\$51{,}000$ then $50{,}000-6{,}500=\$43{,}500$,
+   a drop of *\$7,500*. System B: $60{,}000-10{,}800=\$49{,}200$ then $50{,}000-9{,}000=\$41{,}000$,
+   a drop of *\$8,200*. The *progressive* system (A) cushions the household's spending power more,
+   its disposable income falls by less, exactly the automatic-stabilizer effect at work.
+
+</details>
+
+## Problem 4: Accumulating the Public Debt
+
+A small country starts with zero public debt in Year 1. It then runs a deficit of $45 billion in
+Year 2, a surplus of $10 billion in Year 3, and a deficit of $20 billion in Year 4.
+
+a. What is the country's public debt at the end of Year 4?
+b. If this country's real GDP in Year 4 is $550 billion, what is its public debt as a percentage
+   of GDP?
+c. Suppose most of this debt is held by the country's own citizens and financial institutions
+   (internally held) rather than by foreign lenders. Briefly explain why economists generally
+   consider this less burdensome than the same debt held externally.
+d. Name one way that financing this debt could *crowd out* private investment, connecting back to
+   the market for loanable funds from Chapter 6.
+
+<details>
+<summary>Show Answer</summary>
+
+a. Debt accumulates deficits minus surpluses: $45 - 10 + 20 = \$55$ billion.
+b. $55 / 550 \times 100 = 10$ percent of GDP.
+c. When debt is held internally, paying interest or principal mostly just transfers purchasing
+   power from one group of the country's own residents (taxpayers) to another (bondholders), the
+   money stays within the domestic economy. Externally held debt sends that purchasing power
+   abroad instead, which is a real net cost to the country as a whole.
+d. Government borrowing to finance the deficit adds to the demand for loanable funds, which can
+   push up the real interest rate. A higher real interest rate makes fewer private investment
+   projects profitable (recall the investment demand curve from Chapter 10), so some private
+   investment gets "crowded out" by government borrowing.
+
+</details>

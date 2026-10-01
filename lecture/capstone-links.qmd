@@ -1,0 +1,13 @@
+---
+title: "Chapter Capstone: Macro and the Environment"
+subtitle: "Useful links and other resources"
+---
+
+## Real Data
+
+- [FRED: Trade Balance: Goods and Services](https://fred.stlouisfed.org/series/BOPGSTB)
+- [FRED: Crude Oil Prices: West Texas Intermediate (WTI)](https://fred.stlouisfed.org/series/DCOILWTICO)
+
+## Instructional Videos
+
+<!-- TODO: add video links for this chapter (Khan Academy, YouTube, etc.) -->

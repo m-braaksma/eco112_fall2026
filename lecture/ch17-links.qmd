@@ -1,0 +1,14 @@
+---
+title: "Chapter 17: Extending the Analysis of Aggregate Supply"
+subtitle: "Useful links and other resources"
+---
+
+## Real Data
+
+- [FRED: Unemployment Rate](https://fred.stlouisfed.org/series/UNRATE)
+- [FRED: Consumer Price Index for All Urban Consumers](https://fred.stlouisfed.org/series/CPIAUCSL)
+- [FRED: University of Michigan Inflation Expectation](https://fred.stlouisfed.org/series/MICH)
+
+## Instructional Videos
+
+<!-- TODO: add video links for this chapter (Khan Academy, YouTube, etc.) -->

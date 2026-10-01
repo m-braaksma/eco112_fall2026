@@ -1,0 +1,158 @@
+---
+title: "Chapter 10: Basic Macroeconomic Relationships"
+subtitle: "Practice Problems"
+---
+
+## Warm-Up: Quick Concept and Calculation Checks
+
+a. In Year 1, Priya's disposable income is $35,000 and she consumes $32,000. In Year 2, her
+   disposable income rises to $40,000 and she consumes $35,600. What is her MPC out of that
+   $5,000 raise?
+b. Using your answer to (a), what is Priya's MPS out of that raise?
+c. For each situation, say whether it causes a *movement along* the consumption schedule or a
+   *shift* of the whole schedule, and if a shift, which direction: (i) disposable income rises,
+   (ii) a booming stock market makes households feel wealthier, (iii) banks make credit cards
+   easier to get, (iv) real interest rates rise sharply, encouraging more saving.
+d. A firm is considering four possible investment projects with these expected rates of return:
+   Project W, 10 percent; Project X, 8 percent; Project Y, 4 percent; Project Z, 2 percent. If the
+   real interest rate is 5 percent, which projects should the firm undertake?
+e. True or False: investment spending tends to be more stable than consumption spending over the
+   business cycle.
+f. If the MPS rises, does the simple spending multiplier ($1/MPS$) get larger or smaller?
+
+<details>
+<summary>Show Answer</summary>
+
+a. $MPC = \Delta C / \Delta DI = (35{,}600 - 32{,}000)/(40{,}000-35{,}000) = 3{,}600/5{,}000 = 0.72$.
+b. $MPS = 1 - MPC = 1 - 0.72 = 0.28$.
+c. (i) *Movement along* the schedule. (ii) *Shift up* (the wealth effect increases consumption at
+   every income level). (iii) *Shift up* (easier credit supports more consumption at every income
+   level). (iv) *Shift down* in consumption, *shift up* in saving (higher real rates reward saving
+   over spending at every income level).
+d. Undertake any project whose expected return *exceeds* the 5 percent real interest rate:
+   *Project W (10 percent) and Project X (8 percent)*. Projects Y and Z do not clear the 5 percent
+   hurdle.
+e. *False.* Investment is considerably *more* volatile than consumption, since capital purchases
+   can be postponed and profit expectations shift quickly.
+f. *Smaller.* A higher MPS means more of each new dollar of income leaks into saving rather than
+   being re-spent, so each round of the spending chain is smaller and the total multiplied effect
+   is smaller.
+
+</details>
+
+## Problem 1: Investment Demand and the Real Interest Rate
+
+A small city has five local businesses each considering one investment project:
+
+| Business | Project | Expected Rate of Return |
+|---|---|---|
+| Bakery | New oven | 11% |
+| Garage | Second work bay | 8% |
+| Cafe | Outdoor seating | 6% |
+| Bookstore | Storefront renovation | 4% |
+| Gym | New equipment | 2% |
+
+a. If the real interest rate is 5 percent, which projects get undertaken?
+b. Suppose the real interest rate falls to 3 percent. Which additional project(s), if any, now
+   become profitable?
+c. Explain, in your own words, why a falling real interest rate increases the total quantity of
+   investment demanded in an economy.
+d. Name two factors, other than the interest rate, that could shift the entire investment demand
+   curve to the right (more investment demanded at every interest rate).
+
+<details>
+<summary>Show Answer</summary>
+
+```{python}
+#| echo: false
+#| fig-align: center
+
+import plotly.graph_objects as go
+
+BLUE = "#1f4e79"
+
+rate = [2, 4, 6, 8, 11]
+projects = ["Gym", "Bookstore", "Cafe", "Garage", "Bakery"]
+
+fig = go.Figure()
+fig.add_trace(go.Scatter(x=list(range(1, 6)), y=sorted(rate, reverse=True), mode="lines+markers",
+                          line=dict(color=BLUE, width=3), marker=dict(size=10),
+                          text=projects[::-1],
+                          hovertemplate="%{text}<br>Expected return: %{y}%<extra></extra>"))
+fig.add_hline(y=5, line_dash="dash", line_color="gray",
+              annotation_text="Real interest rate: 5%", annotation_position="top right")
+
+fig.update_layout(
+    xaxis_title="Projects, ranked by expected return", yaxis_title="Expected rate of return",
+    width=560, height=400, plot_bgcolor="white", showlegend=False
+)
+fig.update_xaxes(showticklabels=False, showgrid=False)
+fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="lightgray", ticksuffix="%")
+fig.show()
+```
+
+a. At 5 percent: the *Bakery (11%)*, *Garage (8%)*, and *Cafe (6%)* projects clear the hurdle.
+b. At 3 percent: the *Bookstore (4%)* project now also clears the hurdle, joining the other three.
+c. As the real interest rate falls, projects that were previously unprofitable (their expected
+   return was below the cost of borrowing) become profitable, so more investment gets undertaken.
+   This is exactly why the investment demand curve slopes downward.
+d. Any two of: improving technology that raises expected returns, falling costs of acquiring or
+   operating capital, lower business taxes, or more optimistic business expectations about future
+   demand.
+
+</details>
+
+## Problem 2: The Multiplier in Action
+
+A new employer moves to town and immediately spends $80 million building a facility. Suppose the
+MPC in this local economy is 0.6.
+
+a. What is the MPS?
+b. What is the simple spending multiplier?
+c. What is the total eventual change in local income from this initial $80 million in spending?
+d. Show the first four rounds of the spending chain (the initial spending, then each subsequent
+   round of re-spending).
+e. If local residents instead had an MPC of only 0.4, would the total impact on local income be
+   larger or smaller than in part (c)? Explain in one sentence.
+
+<details>
+<summary>Show Answer</summary>
+
+```{python}
+#| echo: false
+#| fig-align: center
+
+import plotly.graph_objects as go
+
+BLUE = "#1f4e79"
+
+mpc = 0.6
+rounds = [80]
+for i in range(5):
+    rounds.append(round(rounds[-1] * mpc, 2))
+
+fig = go.Figure()
+fig.add_trace(go.Bar(
+    x=[f"Round {i+1}" for i in range(len(rounds))], y=rounds,
+    marker_color=BLUE, text=[f"${v}M" for v in rounds], textposition="outside",
+    hovertemplate="%{x}: $%{y}M<extra></extra>"
+))
+fig.update_layout(yaxis_title="Additional spending ($ millions)", width=620, height=420,
+                  plot_bgcolor="white", showlegend=False)
+fig.update_xaxes(showgrid=False)
+fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="lightgray", range=[0, 90])
+fig.show()
+```
+
+a. $MPS = 1 - 0.6 = 0.4$.
+b. Multiplier $= 1/MPS = 1/0.4 = 2.5$.
+c. Total change in income $= \$80\text{M} \times 2.5 = \$200$ million.
+d. Round 1: $80.00$ million (the initial spending). Round 2: $80 \times 0.6 = \$48.00$ million.
+   Round 3: $48.00 \times 0.6 = \$28.80$ million. Round 4: $28.80 \times 0.6 \approx \$17.28$
+   million. Each round is smaller than the last, since some of each round's income leaks into
+   saving rather than being re-spent.
+e. *Smaller.* A lower MPC of 0.4 means a higher MPS of 0.6, a smaller multiplier of $1/0.6 \approx
+   1.67$, and a total impact of only $80 \times 1.67 \approx \$133.3$ million, well below the
+   $\$200$ million in part (c). More of each round leaks into saving instead of being re-spent.
+
+</details>

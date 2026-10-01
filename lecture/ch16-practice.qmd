@@ -1,0 +1,128 @@
+---
+title: "Chapter 16: Financial Economics"
+subtitle: "Practice Problems"
+---
+
+## Warm-Up: Quick Concept and Calculation Checks
+
+a. A city issues bonds to pay for a new bridge. Is this an *economic* investment, a *financial*
+   investment, or both?
+b. A retiree buys 100 shares of an existing company's stock on the stock market. Is this an
+   *economic* investment, a *financial* investment, or both?
+c. Money available *today* is generally worth *more* than the same dollar amount available a year
+   from now. Why?
+d. What is *diversifiable* (idiosyncratic) risk? Can it be reduced by holding many different
+   stocks?
+e. What is *nondiversifiable* (systemic) risk? Can it be reduced by diversifying?
+f. Why do corporate bonds typically pay a higher interest rate than government bonds of similar
+   maturity?
+
+<details>
+<summary>Show Answer</summary>
+
+a. *Economic* investment. The bond issuance finances new capital, an addition to society's capital
+   stock (a new bridge).
+b. *Financial* investment only. The retiree is exchanging money for an existing asset, ownership
+   simply transfers from the seller to the retiree, no new capital is created.
+c. Because money available today can be invested to *earn interest*, growing into a larger amount
+   by the time that future date arrives.
+d. Diversifiable risk is risk specific to one company or asset (a product recall, a lawsuit, a bad
+   quarter). *Yes*, it can be reduced or eliminated by holding many different assets, since bad luck
+   at one company is unlikely to hit all your other holdings at the same time.
+e. Nondiversifiable risk affects the whole market or economy (a recession, a broad market crash).
+   *No*, holding more assets does not protect you from a risk that affects nearly everything at
+   once.
+f. Because corporate bonds carry more *default risk* than government bonds, investors demand a
+   higher rate of return to compensate for the greater chance the corporation cannot repay.
+
+</details>
+
+## Problem 1: Present Value
+
+a. You are promised $1,210 exactly one year from now. If the interest rate is 10 percent, what is
+   the present value of that payment today?
+b. You are instead promised $1,210 exactly *two* years from now, still at a 10 percent interest
+   rate. What is its present value today?
+c. Why is your answer to (b) smaller than your answer to (a), even though both promise the exact
+   same future dollar amount?
+
+<details>
+<summary>Show Answer</summary>
+
+```{python}
+#| echo: false
+#| fig-align: center
+
+import plotly.graph_objects as go
+
+BLUE = "#1f4e79"
+ORANGE = "#c55a11"
+
+fig = go.Figure()
+fig.add_trace(go.Bar(x=["Paid in 1 year", "Paid in 2 years"], y=[1100, 1000],
+                     marker_color=[BLUE, ORANGE],
+                     text=["PV = $1,100", "PV = $1,000"], textposition="outside",
+                     hovertemplate="%{x}: %{text}<extra></extra>"))
+fig.update_layout(yaxis_title="Present value today", width=500, height=380,
+                  plot_bgcolor="white", showlegend=False)
+fig.update_xaxes(showgrid=False)
+fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="lightgray", range=[0, 1300])
+fig.show()
+```
+
+a. $X_0 = X_t/(1+i)^t = 1{,}210/(1.10)^1 = \$1{,}100$.
+b. $X_0 = 1{,}210/(1.10)^2 = 1{,}210/1.21 = \$1{,}000$.
+c. Waiting *longer* for the same future payment means giving up more potential interest earnings
+   along the way, so a payment further in the future is worth *less* today than the same payment
+   arriving sooner.
+
+</details>
+
+## Problem 2: Comparing Two Payment Streams
+
+The interest rate is 8 percent. Compare two hypothetical assets:
+
+- **Asset A** pays a single lump sum of $1,080, exactly one year from now.
+- **Asset B** pays $540 one year from now, *and* $583.20 two years from now.
+
+a. Compute the present value of Asset A.
+b. Compute the present value of each of Asset B's two payments, and their sum.
+c. Should Asset A and Asset B trade at the same price today? Why or why not?
+
+<details>
+<summary>Show Answer</summary>
+
+a. $PV_A = 1{,}080/1.08 = \$1{,}000$.
+b. First payment: $540/1.08 = \$500$. Second payment: $583.20/(1.08)^2 = 583.20/1.1664 = \$500$.
+   Sum: $500 + 500 = \$1{,}000$.
+c. *Yes.* Both assets have the exact same present value, $1,000, even though they pay out
+   different amounts on different schedules. Since investors care about present value, not the raw
+   sum of future dollars, the two assets should be priced identically today.
+
+</details>
+
+## Problem 3: Stock Returns and Bond Risk
+
+a. A share of stock in Meridian Corp costs $60 and pays an annual dividend of $3. What is its
+   (dividend-only) rate of return?
+b. A similar company, Alderbrook Inc., pays the same $3 dividend but its stock costs only $50.
+   What is Alderbrook's rate of return? If both stocks are otherwise equally risky, what would you
+   expect investors to do, and what effect would that have on Alderbrook's stock price?
+c. Rank the following bonds from *lowest* to *highest* expected interest rate, and briefly explain
+   your reasoning: (i) a 2-year U.S. government bond, (ii) a 10-year U.S. government bond, (iii) a
+   10-year corporate bond from a financially shaky company.
+
+<details>
+<summary>Show Answer</summary>
+
+a. Rate of return $= 3/60 = 5$ percent.
+b. Rate of return $= 3/50 = 6$ percent. Since Alderbrook offers a *higher* return for similar risk,
+   investors would sell Meridian stock to buy Alderbrook stock. That buying pressure would push
+   Alderbrook's price *up* (and Meridian's price down), narrowing the gap in returns between the
+   two, similar assets tend toward similar returns.
+c. Lowest to highest: (i) the *2-year U.S. government bond* (lowest risk, shortest wait), then (ii)
+   the *10-year U.S. government bond* (same low default risk, but investors demand more for tying
+   up money longer), then (iii) the *10-year corporate bond from a shaky company* (highest, both
+   long maturity and meaningful default risk).
+
+</details>

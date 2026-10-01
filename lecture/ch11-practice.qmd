@@ -1,0 +1,190 @@
+---
+title: "Chapter 11: The Aggregate Expenditures Model"
+subtitle: "Practice Problems"
+---
+
+## Warm-Up: Quick Concept and Calculation Checks
+
+a. In the aggregate expenditures model, prices are assumed to be sticky in the short run. When
+   total spending changes, does that show up mainly as a change in *real output* or a change in
+   *prices*?
+b. True or False: equilibrium GDP always equals potential (full-employment) GDP.
+c. At a GDP level where planned spending (AE) is *greater* than actual output, what happens to
+   unplanned inventories, and which direction does that push future production?
+d. At a GDP level where planned spending (AE) is *less* than actual output, what happens to
+   unplanned inventories, and which direction does that push future production?
+e. If the MPC in an economy is 0.75, what is the simple multiplier?
+f. A country's aggregate expenditures at full-employment GDP fall $15 billion short of what is
+   needed to reach full-employment GDP. Is this a recessionary or an inflationary expenditure gap?
+
+<details>
+<summary>Show Answer</summary>
+
+a. *Real output.* Because prices are sticky in the short run, changes in spending are absorbed by
+   changes in how much firms produce, not by changing prices.
+b. *False.* Equilibrium GDP is simply where planned spending equals output, it can sit above,
+   below, or exactly at potential GDP.
+c. Unplanned inventories *fall* (firms sell more than they planned to produce), signaling firms to
+   *increase* production, pushing GDP *up* toward equilibrium.
+d. Unplanned inventories *rise* (firms sell less than they planned to produce), signaling firms to
+   *decrease* production, pushing GDP *down* toward equilibrium.
+e. $1/(1-0.75) = 1/0.25 = 4$.
+f. A *recessionary expenditure gap* (spending falls short at full employment, producing a negative
+   GDP gap).
+
+</details>
+
+## Problem 1: Building the AE Schedule and Finding Equilibrium
+
+A simple, private, closed economy (no government, no trade) has the consumption schedule
+$C = 150 + 0.75 \times GDP$ (in billions of dollars), and planned investment is constant at
+$I_g = 50$ billion regardless of the level of GDP.
+
+| Real GDP | Consumption (C) | Investment ($I_g$) | Aggregate Expenditures (AE) |
+|---|---|---|---|
+| 700 | 675 | 50 | ? |
+| 800 | 750 | 50 | ? |
+| 900 | 825 | 50 | ? |
+| 1000 | 900 | 50 | ? |
+
+a. Fill in the Aggregate Expenditures column ($AE = C + I_g$) for each row.
+b. At which GDP level in the table does AE equal GDP? This is equilibrium GDP.
+c. At GDP $=1000$, is AE greater than or less than GDP? What does this imply is happening to
+   unplanned inventories and future production at that GDP level?
+d. What is the MPC implied by this consumption schedule, and what is the multiplier?
+
+<details>
+<summary>Show Answer</summary>
+
+```{python}
+#| echo: false
+#| fig-align: center
+
+import plotly.graph_objects as go
+
+BLUE = "#1f4e79"
+ORANGE = "#c55a11"
+
+gdp = list(range(600, 1050, 10))
+ae = [150 + 0.75*g + 50 for g in gdp]
+
+fig = go.Figure()
+fig.add_trace(go.Scatter(x=gdp, y=gdp, mode="lines", name="45-degree line (AE = GDP)",
+                          line=dict(color="gray", width=2, dash="dash")))
+fig.add_trace(go.Scatter(x=gdp, y=ae, mode="lines", name="AE = C + Ig",
+                          line=dict(color=BLUE, width=3)))
+fig.add_trace(go.Scatter(x=[800], y=[800], mode="markers+text", text=["Equilibrium"],
+                          textposition="bottom right", marker=dict(size=11, color=ORANGE),
+                          showlegend=False))
+fig.update_layout(
+    xaxis_title="Real GDP", yaxis_title="Aggregate expenditures",
+    width=580, height=420, plot_bgcolor="white",
+    legend=dict(x=0.02, y=1.15, orientation="h")
+)
+fig.update_xaxes(showgrid=True, gridwidth=1, gridcolor="lightgray")
+fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="lightgray")
+fig.show()
+```
+
+a. AE at GDP 700: $675+50=725$. At 800: $750+50=800$. At 900: $825+50=875$. At 1000: $900+50=950$.
+b. At $GDP=800$, $AE=800$, so *equilibrium GDP is \$800 billion*.
+c. At $GDP=1000$, $AE=950 < 1000$, spending falls *short* of output. Unplanned inventories *rise*,
+   signaling firms to *cut* production, pulling GDP back down toward 800.
+d. The consumption schedule $C=150+0.75 \times GDP$ has a slope of $0.75$, so $MPC=0.75$, and the
+   multiplier is $1/(1-0.75) = 4$.
+
+</details>
+
+## Problem 2: Adding Government Spending and Taxes
+
+Starting from the private economy in Problem 1 (equilibrium GDP $= \$800$ billion, MPC $=0.75$),
+the government now adds $G = \$50$ billion in purchases.
+
+a. By how much does the AE schedule shift at every GDP level?
+b. Using the multiplier from Problem 1(d), by how much does equilibrium GDP change? What is the
+   new equilibrium GDP?
+c. The government now also imposes a lump-sum tax of $T = \$100$ billion. Since $MPC=0.75$,
+   consumption falls by $MPC \times T = 0.75 \times 100 = \$75$ billion at every GDP level. Using
+   the multiplier, what is the tax's effect on equilibrium GDP by itself?
+d. Combining the effects of $G$ and $T$ from parts (b) and (c), what is the new equilibrium GDP?
+
+<details>
+<summary>Show Answer</summary>
+
+a. AE shifts *up by the full $50 billion* at every GDP level (government purchases add directly to
+   spending).
+b. $\Delta GDP = \text{multiplier} \times \Delta G = 4 \times 50 = \$200$ billion. New equilibrium
+   GDP (with G only) $= 800 + 200 = \$1{,}000$ billion.
+c. The tax reduces AE by $MPC \times T = \$75$ billion at every GDP level. Its effect on
+   equilibrium GDP alone: $-4 \times 75 = -\$300$ billion.
+d. Combining both effects from the original $\$800$ billion baseline: $800 + 200 - 300 = \$700$
+   billion. Even though $G$ and $T$ are different dollar amounts, notice that a tax's effect is
+   always smaller per dollar than spending's effect, since only $MPC \times T$ (not the full $T$)
+   ever leaves the spending stream.
+
+</details>
+
+## Problem 3: Net Exports and a Recessionary Gap
+
+Continuing the same economy from Problem 2 (with both $G=\$50$ billion and $T=\$100$ billion in
+place, equilibrium GDP $=\$700$ billion), the economy now also has net exports of $X_n = \$50$
+billion.
+
+a. By how much does equilibrium GDP change due to net exports? What is the new equilibrium GDP?
+b. Suppose this economy's full-employment (potential) GDP is $\$1{,}100$ billion. Is there a
+   recessionary or an inflationary expenditure gap?
+c. At full-employment GDP ($1{,}100$), aggregate expenditures are only $\$1{,}050$ billion. What is
+   the size of the expenditure gap (the vertical shortfall between AE and the 45-degree line at
+   full employment)?
+d. Using the multiplier, if the government wanted to close this gap entirely, by how much would it
+   need to increase spending?
+
+<details>
+<summary>Show Answer</summary>
+
+```{python}
+#| echo: false
+#| fig-align: center
+
+import plotly.graph_objects as go
+
+BLUE = "#1f4e79"
+ORANGE = "#c55a11"
+RED = "#c00000"
+
+gdp = list(range(650, 1150, 10))
+ae = [75 + 0.75*g + 100 for g in gdp]
+
+fig = go.Figure()
+fig.add_trace(go.Scatter(x=gdp, y=gdp, mode="lines", name="45-degree line (AE = GDP)",
+                          line=dict(color="gray", width=2, dash="dash")))
+fig.add_trace(go.Scatter(x=gdp, y=ae, mode="lines", name="AE (with G, T, and Xn)",
+                          line=dict(color=BLUE, width=3)))
+fig.add_trace(go.Scatter(x=[900], y=[900], mode="markers+text", text=["Equilibrium"],
+                          textposition="bottom right", marker=dict(size=11, color=ORANGE),
+                          showlegend=False))
+fig.add_trace(go.Scatter(x=[1100, 1100], y=[1050, 1100], mode="lines", line=dict(color=RED, width=4),
+                          showlegend=False, hovertemplate="Recessionary gap: $50B<extra></extra>"))
+fig.add_annotation(x=1100, y=1075, text="Gap", showarrow=True, ax=40, ay=0, font=dict(size=11))
+
+fig.update_layout(
+    xaxis_title="Real GDP", yaxis_title="Aggregate expenditures",
+    width=600, height=430, plot_bgcolor="white",
+    legend=dict(x=0.02, y=1.15, orientation="h")
+)
+fig.update_xaxes(showgrid=True, gridwidth=1, gridcolor="lightgray")
+fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="lightgray")
+fig.show()
+```
+
+a. $\Delta GDP = 4 \times 50 = \$200$ billion. New equilibrium GDP $= 700 + 200 = \$900$ billion.
+b. Equilibrium GDP ($900$) is *below* full-employment GDP ($1{,}100$), so this is a *recessionary
+   expenditure gap*.
+c. At $GDP=1{,}100$, $AE=1{,}050$, which is $\$50$ billion *short* of the $1{,}100$ needed. The
+   recessionary expenditure gap is *\$50 billion*.
+d. To close a $\$50$ billion AE shortfall using a multiplier of $4$: it would take a $\$50$ billion
+   increase in spending to shift the whole AE line up by $50$, which raises equilibrium GDP by
+   $4 \times 50 = \$200$ billion, exactly closing the gap from $900$ to the full-employment level of
+   $1{,}100$.
+
+</details>

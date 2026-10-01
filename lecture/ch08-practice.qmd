@@ -1,0 +1,156 @@
+---
+title: "Chapter 8: Economic Growth"
+subtitle: "Practice Problems"
+---
+
+## Warm-Up: Quick Concept and Calculation Checks
+
+a. A country's real GDP per capita grows at 2.5 percent per year. Using the Rule of 70,
+   approximately how many years will it take to double?
+b. A country's real GDP per capita grows at 5 percent per year instead. Approximately how many
+   years will it take to double?
+c. For each, say whether it is a *supply* factor, the *demand* factor, or the *efficiency* factor
+   in economic growth: (i) a country discovers a large new oil field, (ii) total spending in the
+   economy is too low to buy up all the goods the economy is capable of producing, (iii) a factory
+   switches from an outdated, high-cost production method to a modern, lower-cost one.
+d. In a given year, hours worked in an economy grow 0.8 percent and labor productivity (output per
+   hour) grows 2.1 percent. Approximately what is the growth rate of real GDP?
+e. Rank these contributors to U.S. productivity growth from *most* to *least* quantitatively
+   important, according to growth accounting studies: education and training, technological
+   advance, capital per worker (capital deepening), economies of scale and improved resource
+   allocation.
+f. True or False: a positive relationship between a nation's productivity growth rate and its
+   average real hourly wage growth rate exists because competitive labor markets tend to pay
+   workers according to what they produce.
+
+<details>
+<summary>Show Answer</summary>
+
+a. $70 / 2.5 = 28$ years.
+b. $70 / 5 = 14$ years.
+c. (i) *Supply factor* (more natural resources). (ii) *Demand factor* (total spending must be
+   enough to purchase the expanding potential output). (iii) *Efficiency factor* (using resources
+   at their lowest-cost combination, productive efficiency).
+d. Approximately $0.8 + 2.1 = 2.9$ percent (labor input growth plus productivity growth).
+e. Largest to smallest: technological advance, capital per worker, education and training,
+   economies of scale and improved resource allocation.
+f. *True.*
+
+</details>
+
+## Problem 1: Small Growth Differences, Compounded
+
+Country A and Country B both start with real GDP per capita of $8,000. Country A grows at 2
+percent per year. Country B grows at 4 percent per year.
+
+a. Using the Rule of 70, how many years does it take each country to double its GDP per capita?
+b. Estimate each country's real GDP per capita after 35 years by compounding the growth rate year
+   by year.
+c. How many times larger is Country B's GDP per capita than Country A's after 35 years?
+d. Both countries started at the same GDP per capita and neither growth rate sounds dramatic in a
+   single year. What does this problem illustrate about long-run growth?
+
+<details>
+<summary>Show Answer</summary>
+
+```{python}
+#| echo: false
+#| fig-align: center
+
+import plotly.graph_objects as go
+
+BLUE = "#1f4e79"
+ORANGE = "#c55a11"
+
+years = list(range(36))
+a = [8000 * (1.02 ** y) for y in years]
+b = [8000 * (1.04 ** y) for y in years]
+
+fig = go.Figure()
+fig.add_trace(go.Scatter(x=years, y=a, mode="lines", name="Country A (2% growth)",
+                          line=dict(color=BLUE, width=3),
+                          hovertemplate="Year %{x}<br>$%{y:,.0f}<extra></extra>"))
+fig.add_trace(go.Scatter(x=years, y=b, mode="lines", name="Country B (4% growth)",
+                          line=dict(color=ORANGE, width=3),
+                          hovertemplate="Year %{x}<br>$%{y:,.0f}<extra></extra>"))
+fig.update_layout(
+    xaxis_title="Years", yaxis_title="Real GDP per capita",
+    width=600, height=420, plot_bgcolor="white",
+    legend=dict(x=0.02, y=1.15, orientation="h")
+)
+fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="lightgray", tickformat="$,.0f")
+fig.update_xaxes(showgrid=True, gridwidth=1, gridcolor="lightgray")
+fig.show()
+```
+
+a. Country A: $70/2 = 35$ years. Country B: $70/4 = 17.5$ years.
+b. Country A: $8{,}000 \times 1.02^{35} \approx \$16{,}000$. Country B:
+   $8{,}000 \times 1.04^{35} \approx \$31{,}600$.
+c. $31{,}600 / 16{,}000 \approx 2.0$, Country B's GDP per capita is about *twice* Country A's after
+   35 years, even though B's doubling time is only half of A's.
+d. A growth rate that looks small year to year, a gap of just 2 percentage points here, compounds
+   into an enormous difference in living standards over a working lifetime. This is exactly why
+   economists care so much about small, sustained differences in growth rates rather than dismissing
+   them as trivial.
+
+</details>
+
+## Problem 2: Where Does Growth Come From?
+
+An economy's real GDP grew by approximately 3.2 percent over one year. Economists estimate that
+total hours worked in the economy grew by 0.9 percent over the same year.
+
+a. Approximately what was the growth rate of labor productivity (output per hour) that year?
+b. If, instead, hours worked had *fallen* by 0.4 percent while real GDP still grew 3.2 percent,
+   approximately what would labor productivity growth have been?
+c. In part (b), the economy produced more total output with *fewer* hours worked. What does that
+   imply about labor productivity, and why might that be a healthier long-run growth pattern than
+   growth driven mainly by more hours worked?
+
+<details>
+<summary>Show Answer</summary>
+
+a. Real GDP growth is approximately labor input growth plus productivity growth, so
+   $3.2 - 0.9 = 2.3$ percent productivity growth.
+b. $3.2 - (-0.4) = 3.6$ percent productivity growth.
+c. It implies productivity grew *faster* than total output, each hour worked produced
+   substantially more. Growth driven by rising productivity can continue indefinitely as workers
+   and firms find better technology, tools, and methods, while growth driven mainly by working more
+   hours runs into a hard limit, there are only so many hours in a day and so many working-age
+   people. Sustained increases in living standards ultimately depend on productivity growth, not
+   on people simply working more.
+
+</details>
+
+## Problem 3: Is Faster Growth Always Better?
+
+A country is debating a policy that would raise its long-run real GDP growth rate from 2.0 percent
+to 3.0 percent per year, mainly by encouraging more saving, investment in new capital, and faster
+adoption of new technology.
+
+a. Using the Rule of 70, how much sooner would the country's GDP per capita double under the
+   faster growth rate?
+b. Name one real resource cost this faster growth might require *today*, connecting back to the
+   Chapter 6 saving and investment tradeoff.
+c. Suppose the policy succeeds in raising average GDP per capita, but nearly all of the additional
+   growth goes to the top of the income distribution. Connecting back to Chapter 6, why might the
+   *typical* household not feel much better off, even though the national statistics look better?
+d. Name one non-income cost that faster growth might impose that GDP per capita does not capture
+   at all.
+
+<details>
+<summary>Show Answer</summary>
+
+a. Doubling time at 2 percent: $70/2 = 35$ years. At 3 percent: $70/3 \approx 23.3$ years. The
+   faster growth rate would cut the doubling time by roughly 12 years.
+b. More investment in new capital means *less current consumption*, resources devoted to building
+   factories, machines, and infrastructure today are resources not used to produce consumer goods
+   today. That is the same saving-versus-consumption tradeoff from Chapter 6.
+c. GDP per capita is a *mean*. If growth is concentrated among a small share of households, the
+   mean can rise substantially while the *median* household's income barely changes, the same
+   mean-versus-median gap discussed in Chapter 6.
+d. Any reasonable answer describing an externality or nonmarket cost is acceptable, for example:
+   environmental damage from more production, resource depletion, or less leisure time if the
+   faster growth comes from working more rather than working smarter.
+
+</details>

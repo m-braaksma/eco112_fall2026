@@ -1,0 +1,157 @@
+---
+title: "Chapter 12: Aggregate Demand and Aggregate Supply"
+subtitle: "Practice Problems"
+---
+
+## Warm-Up: Quick Concept and Calculation Checks
+
+a. For each scenario, name which of the three reasons the AD curve slopes downward is at work:
+   (i) a higher price level erodes the purchasing power of household savings accounts, so people
+   spend less; (ii) a higher price level makes domestic goods pricier than foreign alternatives,
+   reducing exports; (iii) a higher price level increases the demand for money, pushing up interest
+   rates and discouraging interest-sensitive investment.
+b. Is the short-run aggregate supply curve (SRAS) upward sloping or vertical? What about the
+   long-run aggregate supply curve (LRAS)?
+c. Which curve, SRAS or LRAS, reflects the idea that input prices (especially wages) are sticky
+   and have not yet adjusted?
+d. A new technology raises productivity across the whole economy. Does this shift AS right or
+   left?
+e. A key imported input suddenly becomes much more expensive. Does this shift AS right or left?
+f. True or False: an increase in AD moves the price level and real GDP in the *same* direction,
+   while a decrease in AS (a leftward shift) also raises the price level but *lowers* real GDP.
+
+<details>
+<summary>Show Answer</summary>
+
+a. (i) The *real-balances effect*. (ii) The *foreign purchases effect*. (iii) The *interest-rate
+   effect*.
+b. SRAS is *upward sloping*. LRAS is *vertical*, at the economy's potential (full-employment)
+   level of real GDP.
+c. *SRAS.* Because input prices have not yet adjusted, a higher output price level raises firms'
+   profit margins and encourages more production in the short run.
+d. *Right.* Higher productivity lets firms produce more at every price level.
+e. *Left.* Higher input costs reduce firms' profit margins, so they produce less at every price
+   level.
+f. *True.* This is exactly the contrast between demand-pull inflation (AD shifts, price level and
+   GDP move together) and cost-push inflation (AS shifts, price level and GDP move in opposite
+   directions).
+
+</details>
+
+## Problem 1: Sizing an AD Shift with the Multiplier
+
+A country's MPC is 0.8. A wave of business optimism leads firms to increase planned investment
+spending by $45 billion at every price level.
+
+a. What is the multiplier?
+b. By how much does this initial change in investment ultimately shift the AD curve (measured in
+   real GDP at a given price level)?
+c. Name one other component of aggregate demand (besides investment) that could shift AD the same
+   way, and briefly explain why.
+d. If MPC had instead been 0.5, would the same $45 billion increase in investment shift AD by
+   *more* or *less* than in part (b)? Explain in one sentence.
+
+<details>
+<summary>Show Answer</summary>
+
+```{python}
+#| echo: false
+#| fig-align: center
+
+import plotly.graph_objects as go
+
+BLUE = "#1f4e79"
+ORANGE = "#c55a11"
+
+fig = go.Figure()
+fig.add_trace(go.Bar(x=["MPC = 0.8", "MPC = 0.5"], y=[225, 90], marker_color=[BLUE, ORANGE],
+                     text=["$225B shift", "$90B shift"], textposition="outside",
+                     hovertemplate="%{x}: %{text}<extra></extra>"))
+fig.update_layout(yaxis_title="Shift in AD (real GDP, $ billions)", width=520, height=400,
+                  plot_bgcolor="white", showlegend=False)
+fig.update_xaxes(showgrid=False)
+fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="lightgray", range=[0, 260])
+fig.show()
+```
+
+a. Multiplier $= 1/(1-0.8) = 1/0.2 = 5$.
+b. $\Delta AD = 45 \times 5 = \$225$ billion.
+c. Any of: an increase in government purchases, a tax cut (which raises consumption), or a rise
+   in net exports, all of these add to spending at every price level and get multiplied the same
+   way investment does.
+d. *Less.* With MPC $=0.5$, the multiplier is only $1/(1-0.5)=2$, so the same $45 billion initial
+   change would shift AD by only $45 \times 2 = \$90$ billion, less than half of part (b)'s
+   $225 billion.
+
+</details>
+
+## Problem 2: Demand-Pull vs. Cost-Push Inflation
+
+For each event below, determine whether it causes *demand-pull* or *cost-push* inflation, and
+predict what happens to real GDP alongside the price level.
+
+a. Consumer confidence surges and households sharply increase spending at every price level.
+b. A major hurricane disrupts oil refineries, sharply raising energy costs for nearly every firm
+   in the economy.
+c. The government significantly increases spending on infrastructure projects.
+d. A new tax is imposed on a key raw material used throughout manufacturing.
+
+<details>
+<summary>Show Answer</summary>
+
+```{python}
+#| echo: false
+#| fig-align: center
+
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+
+BLUE = "#1f4e79"
+ORANGE = "#c55a11"
+GREEN = "#548235"
+
+gdp = list(range(0, 21))
+ad0 = [20 - g for g in gdp]
+ad1 = [24 - g for g in gdp]
+sras0 = [g for g in gdp]
+sras1 = [g + 3 for g in gdp]
+
+fig = make_subplots(rows=1, cols=2, subplot_titles=("Demand-Pull (AD shifts right)",
+                                                     "Cost-Push (AS shifts left)"))
+fig.add_trace(go.Scatter(x=ad0, y=gdp, mode="lines", line=dict(color=BLUE, width=2, dash="dot"),
+                          showlegend=False), row=1, col=1)
+fig.add_trace(go.Scatter(x=ad1, y=gdp, mode="lines", line=dict(color=BLUE, width=3),
+                          showlegend=False), row=1, col=1)
+fig.add_trace(go.Scatter(x=sras0, y=gdp, mode="lines", line=dict(color=ORANGE, width=3),
+                          showlegend=False), row=1, col=1)
+fig.add_trace(go.Scatter(x=[10], y=[10], mode="markers", marker=dict(size=9, color="black"),
+                          showlegend=False), row=1, col=1)
+fig.add_trace(go.Scatter(x=[12], y=[12], mode="markers", marker=dict(size=9, color=GREEN),
+                          showlegend=False), row=1, col=1)
+
+fig.add_trace(go.Scatter(x=ad0, y=gdp, mode="lines", line=dict(color=BLUE, width=3),
+                          showlegend=False), row=1, col=2)
+fig.add_trace(go.Scatter(x=sras0, y=gdp, mode="lines", line=dict(color=ORANGE, width=2, dash="dot"),
+                          showlegend=False), row=1, col=2)
+fig.add_trace(go.Scatter(x=sras1, y=gdp, mode="lines", line=dict(color=ORANGE, width=3),
+                          showlegend=False), row=1, col=2)
+fig.add_trace(go.Scatter(x=[10], y=[10], mode="markers", marker=dict(size=9, color="black"),
+                          showlegend=False), row=1, col=2)
+fig.add_trace(go.Scatter(x=[8.5], y=[11.5], mode="markers", marker=dict(size=9, color=GREEN),
+                          showlegend=False), row=1, col=2)
+
+fig.update_xaxes(title_text="Real GDP", row=1, col=1)
+fig.update_xaxes(title_text="Real GDP", row=1, col=2)
+fig.update_yaxes(title_text="Price level", row=1, col=1)
+fig.update_layout(width=760, height=400, plot_bgcolor="white")
+fig.show()
+```
+
+a. *Demand-pull.* Consumer spending directly increases AD, shifting it right, price level *rises*
+   and real GDP *rises* together (left panel).
+b. *Cost-push.* Higher energy costs raise production costs economy-wide, shifting SRAS left, price
+   level *rises* but real GDP *falls* (right panel), this combination is *stagflation*.
+c. *Demand-pull.* Government purchases directly add to AD.
+d. *Cost-push.* A tax on a widely used input raises production costs, shifting SRAS left.
+
+</details>

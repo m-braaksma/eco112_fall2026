@@ -1,0 +1,168 @@
+---
+title: "Chapter 14: Money, the Federal Reserve, and Interest Rates"
+subtitle: "Practice Problems"
+---
+
+## Warm-Up: Quick Concept and Calculation Checks
+
+a. For each situation, name which function of money is being described: (i) using dollars to
+   compare the price of a laptop to the price of a used car; (ii) accepting a paycheck knowing you
+   can spend it on groceries next week; (iii) using cash to buy a cup of coffee.
+b. Is a checking account balance part of M1, part of M2 (but not M1), or neither?
+c. Is a savings account balance part of M1, part of M2 (but not M1), or neither?
+d. What backs the value of a U.S. dollar today? Is it gold, or something else?
+e. Why is the U.S. banking system called a *fractional reserve* system?
+f. If bond prices rise, do interest rates (yields) rise or fall?
+g. Inflation runs at 7 percent per year. Using the Rule of 70, about how many years until a
+   dollar's purchasing power is cut in half?
+
+<details>
+<summary>Show Answer</summary>
+
+a. (i) *Unit of account*. (ii) *Store of value*. (iii) *Medium of exchange*.
+b. *Part of M1* (checkable deposits are counted directly in M1).
+c. *Part of M2, but not M1* (savings deposits are a "near-money" added in M2, not counted in the
+   more liquid M1).
+d. Not gold, today's dollar is *fiat money*, backed by public acceptability and the government's
+   guarantee, not by a commodity.
+e. Because banks hold only a *fraction* of deposits as reserves and lend out the rest, rather than
+   keeping every dollar on hand.
+f. *Fall.* Bond prices and interest rates (yields) move inversely.
+g. $70 / 7 = 10$ years.
+
+</details>
+
+## Problem 1: Money Market Equilibrium
+
+An economy's nominal GDP is $1,800 billion, and transactions demand for money equals $0.20 \times$
+nominal GDP. Asset demand for money follows the schedule $600 - 40r$ (in billions), where $r$ is
+the interest rate in percent. The money supply is fixed at $840 billion.
+
+a. What is transactions demand for money?
+b. Write total money demand as a function of the interest rate $r$.
+c. Find the equilibrium interest rate.
+d. Nominal GDP rises to $2,400 billion. Find the new transactions demand and the new equilibrium
+   interest rate. Does the equilibrium *quantity* of money change? Why or why not?
+
+<details>
+<summary>Show Answer</summary>
+
+```{python}
+#| echo: false
+#| fig-align: center
+
+import plotly.graph_objects as go
+
+BLUE = "#1f4e79"
+ORANGE = "#c55a11"
+GREEN = "#548235"
+
+r = list(range(0, 13))
+md0 = [360 + 600 - 40*x for x in r]
+md1 = [480 + 600 - 40*x for x in r]
+
+fig = go.Figure()
+fig.add_trace(go.Scatter(x=md0, y=r, mode="lines", name="Money demand (GDP = 1,800)",
+                          line=dict(color=BLUE, width=2, dash="dot")))
+fig.add_trace(go.Scatter(x=md1, y=r, mode="lines", name="Money demand (GDP = 2,400)",
+                          line=dict(color=BLUE, width=3)))
+fig.add_trace(go.Scatter(x=[840, 840], y=[0, 12], mode="lines", name="Money supply (fixed)",
+                          line=dict(color=ORANGE, width=3)))
+fig.add_trace(go.Scatter(x=[840], y=[3], mode="markers", marker=dict(size=10, color="black"),
+                          showlegend=False))
+fig.add_trace(go.Scatter(x=[840], y=[6], mode="markers", marker=dict(size=10, color=GREEN),
+                          showlegend=False))
+fig.update_layout(
+    xaxis_title="Quantity of money", yaxis_title="Interest rate (percent)",
+    width=580, height=420, plot_bgcolor="white",
+    legend=dict(x=0.02, y=1.2, orientation="h", font=dict(size=10))
+)
+fig.update_xaxes(showgrid=True, gridwidth=1, gridcolor="lightgray")
+fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="lightgray")
+fig.show()
+```
+
+a. Transactions demand $= 0.20 \times 1{,}800 = \$360$ billion.
+b. Total money demand $= 360 + (600 - 40r) = 960 - 40r$.
+c. Set demand equal to supply: $960 - 40r = 840 \Rightarrow 40r = 120 \Rightarrow r = 3$ percent.
+d. New transactions demand $= 0.20 \times 2{,}400 = \$480$ billion. New equilibrium:
+   $1{,}080 - 40r = 840 \Rightarrow r = 6$ percent. The equilibrium *quantity* of money does *not*
+   change, it stays at $840 billion, because the money supply curve is vertical (fixed by the Fed),
+   so the entire adjustment to higher money demand happens through a *higher interest rate*, not a
+   larger quantity of money.
+
+</details>
+
+## Problem 2: Bond Prices and Yields
+
+A particular bond has no fixed maturity date and pays a fixed $600 per year forever (a perpetuity).
+
+a. If the bond currently sells for $6,000, what yield (interest rate) does it offer a buyer?
+b. If the bond's price rises to $7,500, what is the new yield?
+c. If the bond's price rises further to $10,000, what is the yield?
+d. As the bond's price rose from $6,000 to $10,000, what happened to its yield? Explain briefly why
+   this makes sense using the relationship between a bond's fixed payment and its price.
+
+<details>
+<summary>Show Answer</summary>
+
+```{python}
+#| echo: false
+#| fig-align: center
+
+import plotly.graph_objects as go
+
+BLUE = "#1f4e79"
+
+prices = [6000, 7500, 10000]
+yields_ = [10, 8, 6]
+
+fig = go.Figure()
+fig.add_trace(go.Scatter(x=prices, y=yields_, mode="lines+markers", line=dict(color=BLUE, width=3),
+                          marker=dict(size=10),
+                          hovertemplate="Price $%{x}: yield %{y}%<extra></extra>"))
+fig.update_layout(
+    xaxis_title="Bond price", yaxis_title="Yield (percent)",
+    width=520, height=380, plot_bgcolor="white", showlegend=False
+)
+fig.update_xaxes(showgrid=True, gridwidth=1, gridcolor="lightgray", tickformat="$,.0f")
+fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="lightgray")
+fig.show()
+```
+
+a. Yield $= 600/6{,}000 = 0.10 = 10$ percent.
+b. Yield $= 600/7{,}500 = 0.08 = 8$ percent.
+c. Yield $= 600/10{,}000 = 0.06 = 6$ percent.
+d. The yield *fell* from 10 percent to 6 percent as the price rose. Because the bond's future
+   payment is *fixed* at $600 regardless of price, paying more today for that same fixed payment
+   means earning a *smaller* return on your money, which is exactly why bond prices and interest
+   rates move inversely.
+
+</details>
+
+## Problem 3: How New Loans Expand the Money Supply
+
+A local bank currently holds $500,000 in checkable deposits. A business takes out a new $80,000
+loan from the bank, and the bank deposits the loan amount directly into the business's checking
+account at that same bank.
+
+a. Immediately after the loan is made, what happens to total checkable deposits at the bank?
+b. Explain, in your own words, why making a loan *creates* new money rather than simply moving
+   existing money from one place to another.
+c. Suppose instead that borrowers across the economy pay down $50,000 more in existing loans than
+   new loans are issued this month. What happens to checkable deposits, and therefore the money
+   supply, as a result?
+
+<details>
+<summary>Show Answer</summary>
+
+a. Checkable deposits rise from $500,000 to $580,000 ($500,000 $+$ $80,000).
+b. The loan does not come out of an existing depositor's account, it is genuinely *new* purchasing
+   power created by the bank, backed by the borrower's promise to repay. The business now has an
+   extra $80,000 in its checking account that did not exist as spendable money before the loan was
+   made, this is how the banking system expands the money supply beyond the paper currency
+   originally deposited.
+c. Checkable deposits, and the money supply, *shrink* by the net $50,000, since more loans were
+   retired than newly created. This is the same expansion process running in reverse.
+
+</details>

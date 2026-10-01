@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="ch08_files/libs/clipboard/clipboard.min.js"></script>
+<script src="ch08_files/libs/quarto-html/tabby.min.js"></script>
+<script src="ch08_files/libs/quarto-html/popper.min.js"></script>
+<script src="ch08_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="ch08_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="ch08_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="ch08_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.26">
+
+  <title>Chapter 8: Economic Growth</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="ch08_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="ch08_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="ch08_files/libs/revealjs/dist/theme/quarto-47ef377ee77cdf85c61adfa0b07e2c12.css">
+  <link href="ch08_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="ch08_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="ch08_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="ch08_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+  
+  <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+  <script>
+  window.PlotlyConfig = {MathJaxConfig: 'local'};
+  if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
+  </script>
+  <script type="module">import "https://cdn.plot.ly/plotly-3.7.0.min"</script>
+
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title"><p>Chapter 8: Economic Growth</p></h1>
+  <p class="subtitle"></p><div class="line-block">ECO 112 Principles of Macroeconomics</div><p></p>
+
+<div class="quarto-title-authors">
+</div>
+
+</section>
+<section id="todays-roadmap" class="slide level2">
+<h2>Today’s Roadmap</h2>
+<h3 id="key-concepts">Key Concepts</h3>
+<ul>
+<li>What economic growth is, and the Rule of 70 for doubling time</li>
+<li>Why small differences in growth rates compound into huge differences over decades</li>
+<li>The history of modern economic growth, and the institutions that support it</li>
+<li>The four supply factors, the demand factor, and the efficiency factor</li>
+<li>Growth accounting: decomposing real GDP growth into hours worked and productivity</li>
+<li>Why labor productivity, not more hours, drives most long-run growth</li>
+<li>The close link between productivity growth and real wage growth</li>
+<li>The benefits and costs of growth, and whether faster growth is always better</li>
+</ul>
+
+<img data-src="https://images.unsplash.com/photo-1609970105047-d0cbe314122d?q=80&amp;w=1170&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
+<section>
+<section id="why-economic-growth-matters" class="title-slide slide level1 center">
+<h1>Why Economic Growth Matters</h1>
+
+</section>
+<section id="from-chapters-6-and-7-to-growth" class="slide level2">
+<h2>From Chapters 6 and 7 to Growth</h2>
+<div style="font-size: 1.2em;">
+<p>Chapter 6 introduced growth in real GDP and real GDP per capita. Chapter 7 showed exactly how real GDP is measured. This chapter asks a bigger question: what makes an economy’s output grow <em>year after year</em>, decade after decade?</p>
+<p><strong>Economic growth</strong> is an increase in a nation’s potential output over time, most often measured as the percentage increase in real GDP or real GDP per capita.</p>
+<ul>
+<li>A rising real GDP per capita means a rising standard of living for the typical person.</li>
+<li>Even a small, sustained difference in the annual growth rate reshapes a country’s future entirely, which is the first idea this chapter builds.</li>
+</ul>
+</div>
+</section>
+<section id="the-rule-of-70" class="slide level2">
+<h2>The Rule of 70</h2>
+<div style="font-size: 1.2em;">
+<p>A handy shortcut for translating a growth rate into something more intuitive, how long it takes an economy to double in size:</p>
+<p><span class="math display">\[
+\text{Years to double} = \frac{70}{\text{Annual percent growth rate}}
+\]</span></p>
+<ul>
+<li>A faster growth rate means a <em>shorter</em> doubling time.</li>
+<li>This rule works for any growing quantity: GDP, GDP per capita, population, an investment account, anything that grows at a roughly constant percentage rate.</li>
+</ul>
+</div>
+</section>
+<section id="example-using-the-rule-of-70" class="slide level2">
+<h2>Example: Using the Rule of 70</h2>
+<div style="font-size: 1.2em;">
+<p>Country Z’s real GDP per capita grows at <strong>2.5 percent</strong> per year. Country Y’s real GDP per capita grows at <strong>7 percent</strong> per year.</p>
+<ol type="1">
+<li>About how many years will it take Country Z’s per-capita output to double?</li>
+<li>About how many years will it take Country Y’s per-capita output to double?</li>
+<li>Which country’s typical resident sees their living standard double sooner, and by roughly how many years?</li>
+</ol>
+</div>
+</section>
+<section id="solution-using-the-rule-of-70" class="slide level2">
+<h2>Solution: Using the Rule of 70</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div id="ac936209" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<div style="height:420px; width:520px;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.7.0.min.js" integrity="sha256-jvTGqxNp8AGWEcvNLVuKr+8j5dGe9Yw51LQkmDH+IYA=" crossorigin="anonymous"></script>                <div id="ba41d19e-a281-4a18-afcc-5b2708d2fbea" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("ba41d19e-a281-4a18-afcc-5b2708d2fbea")) {                    Plotly.newPlot(                        "ba41d19e-a281-4a18-afcc-5b2708d2fbea",                        [{"hovertemplate":"%{x}\u003cbr\u003eDoubling time: %{y} years\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":["#1f4e79","#548235"]},"text":["28 years","10 years"],"textposition":"outside","x":["Zenith (2.5%\u002fyr)","Yorba (7%\u002fyr)"],"y":[28,10],"type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"yaxis":{"title":{"text":"Years to double"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray","range":[0,34]},"width":520,"height":420,"plot_bgcolor":"white","showlegend":false,"xaxis":{"showgrid":false}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('ba41d19e-a281-4a18-afcc-5b2708d2fbea');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+</div>
+</div><div class="column" style="width:45%;">
+<ul>
+<li>Zenith: <span class="math inline">\(70 / 2.5 = 28\)</span> years</li>
+<li>Yorba: <span class="math inline">\(70 / 7 = 10\)</span> years</li>
+</ul>
+<div class="fragment">
+<ul>
+<li>Yorba doubles about <em>18 years sooner</em> than Zenith.</li>
+<li><em>A growth rate that looks only a few points higher on paper can mean an entire extra generation’s worth of head start.</em></li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="harder-problem-rule-of-70" class="slide level2">
+<h2>Harder Problem: Rule of 70</h2>
+<div style="font-size: 1.2em;">
+<p>Two more countries, worked in reverse:</p>
+<ul>
+<li>Country Meridia’s real GDP per capita has <em>doubled</em> in about the last <strong>14 years</strong>.</li>
+<li>Country Larkspur’s real GDP per capita has <em>doubled</em> in about the last <strong>35 years</strong>.</li>
+</ul>
+<p>Both countries started at <strong>$10,000</strong> real GDP per capita.</p>
+<ol type="1">
+<li>About what annual growth rate has each country been sustaining?</li>
+<li>If each country keeps growing at that same rate, roughly how many times does its per-capita GDP double over the next <strong>70 years</strong>?</li>
+<li>Starting from $10,000, roughly what would each country’s per-capita GDP be after those 70 years?</li>
+</ol>
+</div>
+</section>
+<section id="review-rule-of-70" class="slide level2">
+<h2>Review: Rule of 70</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div id="ab3b6357" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div style="height:440px; width:540px;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.7.0.min.js" integrity="sha256-jvTGqxNp8AGWEcvNLVuKr+8j5dGe9Yw51LQkmDH+IYA=" crossorigin="anonymous"></script>                <div id="63482e3a-1cec-4c44-bac7-d893855bfd57" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("63482e3a-1cec-4c44-bac7-d893855bfd57")) {                    Plotly.newPlot(                        "63482e3a-1cec-4c44-bac7-d893855bfd57",                        [{"hovertemplate":"%{x}\u003cbr\u003eProjected per-capita GDP: $%{y:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":["#548235","#1f4e79"]},"text":["$320,000","$40,000"],"textposition":"outside","x":["Meridia","Larkspur"],"y":[320000,40000],"type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"yaxis":{"title":{"text":"Per-capita GDP after 70 years"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray","range":[0,360000]},"width":540,"height":440,"plot_bgcolor":"white","showlegend":false,"xaxis":{"showgrid":false}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('63482e3a-1cec-4c44-bac7-d893855bfd57');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+</div>
+</div><div class="column" style="width:45%;">
+<ul>
+<li>Meridia’s growth rate: <span class="math inline">\(70/14 = 5\%\)</span> per year</li>
+<li>Larkspur’s growth rate: <span class="math inline">\(70/35 = 2\%\)</span> per year</li>
+</ul>
+<div class="fragment">
+<ul>
+<li>Doublings in 70 years: Meridia <span class="math inline">\(70/14 = 5\)</span>; Larkspur <span class="math inline">\(70/35 = 2\)</span></li>
+<li>Meridia: <span class="math inline">\(10{,}000 \times 2^5 = \$320{,}000\)</span></li>
+<li>Larkspur: <span class="math inline">\(10{,}000 \times 2^2 = \$40{,}000\)</span></li>
+</ul>
+</div>
+<div class="fragment">
+<p><em>A growth rate only 3 percentage points higher compounds into an eightfold difference in outcomes after 70 years.</em></p>
+</div>
+</div></div>
+</section>
+<section id="why-small-growth-differences-compound" class="slide level2">
+<h2>Why Small Growth Differences Compound</h2>
+<div style="font-size: 1.2em;">
+<p>Growth rates compound, they apply to an ever-larger base each year, not to the original starting value. That is why a gap of just a couple of percentage points can matter enormously over a long enough time horizon.</p>
+<p><span class="math display">\[
+\text{Value after } n \text{ years} = \text{Starting value} \times (1 + g)^n
+\]</span></p>
+<p><em>This is the same compounding math behind interest on savings, just applied to an entire economy’s output instead of a bank account.</em></p>
+</div>
+</section>
+<section id="example-two-growth-rates-over-50-years" class="slide level2">
+<h2>Example: Two Growth Rates Over 50 Years</h2>
+<div style="font-size: 1.2em;">
+<p>Two hypothetical economies each start with real GDP of <strong>$1 trillion</strong>.</p>
+<ul>
+<li>Economy Low grows at <strong>2 percent</strong> per year.</li>
+<li>Economy High grows at <strong>4 percent</strong> per year.</li>
+</ul>
+<ol type="1">
+<li>Using <span class="math inline">\((1+g)^{n}\)</span>, what is each economy’s real GDP after <strong>50 years</strong>?</li>
+<li>How many times larger is Economy High than Economy Low after 50 years?</li>
+</ol>
+</div>
+</section>
+<section id="solution-two-growth-rates-over-50-years" class="slide level2">
+<h2>Solution: Two Growth Rates Over 50 Years</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div id="4e27f2f5" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<div style="height:440px; width:560px;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.7.0.min.js" integrity="sha256-jvTGqxNp8AGWEcvNLVuKr+8j5dGe9Yw51LQkmDH+IYA=" crossorigin="anonymous"></script>                <div id="e343503a-de61-4570-8e02-a7b389a2d3f3" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("e343503a-de61-4570-8e02-a7b389a2d3f3")) {                    Plotly.newPlot(                        "e343503a-de61-4570-8e02-a7b389a2d3f3",                        [{"hovertemplate":"%{x}\u003cbr\u003eReal GDP after 50 years: $%{y:.2f} trillion\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":["#1f4e79","#548235"]},"text":["$2.69T","$7.11T"],"textposition":"outside","x":["Economy Low (2%\u002fyr)","Economy High (4%\u002fyr)"],"y":[2.6916,7.1067],"type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"yaxis":{"title":{"text":"Real GDP after 50 years (trillions)"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray","range":[0,8.2]},"width":560,"height":440,"plot_bgcolor":"white","showlegend":false,"xaxis":{"showgrid":false}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('e343503a-de61-4570-8e02-a7b389a2d3f3');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+</div>
+</div><div class="column" style="width:45%;">
+<ul>
+<li>Economy Low: <span class="math inline">\(1 \times (1.02)^{50} \approx \$2.69\)</span> trillion</li>
+<li>Economy High: <span class="math inline">\(1 \times (1.04)^{50} \approx \$7.11\)</span> trillion</li>
+</ul>
+<div class="fragment">
+<ul>
+<li>Economy High ends up roughly <span class="math inline">\(7.11 / 2.69 \approx 2.6\)</span> times larger, even though its growth rate is only <em>twice</em> Economy Low’s, not 2.6 times.</li>
+<li><em>Doubling the growth rate more than doubles the long-run outcome, because compounding works on an ever-growing base.</em></li>
+</ul>
+</div>
+</div></div>
+</section></section>
+<section>
+<section id="the-history-of-modern-economic-growth" class="title-slide slide level1 center">
+<h1>The History of Modern Economic Growth</h1>
+
+</section>
+<section id="growth-is-a-recent-phenomenon" class="slide level2">
+<h2>Growth Is a Recent Phenomenon</h2>
+<div style="font-size: 1.2em;">
+<p>Sustained <strong>modern economic growth</strong>, output per person rising generation after generation, is historically very recent.</p>
+<ul>
+<li>For most of human history, output per person changed very little across centuries. A person’s living standard at the end of their life looked much like their grandparents’.</li>
+<li>Roughly starting with the <strong>Industrial Revolution</strong> (illustrative timeframe: the late 1700s and 1800s), output per person began rising steadily and has kept rising, in fits and starts, ever since.</li>
+</ul>
+<p><em>The steady, generation-over-generation growth we now think of as normal is the historical exception, not the rule.</em></p>
+</div>
+
+<img data-src="https://images.unsplash.com/photo-1633966096912-e80152227692?q=80&amp;w=1170&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
+<section id="the-industrial-revolution-and-the-growth-takeoff" class="slide level2">
+<h2>The Industrial Revolution and the Growth Takeoff</h2>
+<div id="f2793c77" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div style="height:440px; width:780px;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.7.0.min.js" integrity="sha256-jvTGqxNp8AGWEcvNLVuKr+8j5dGe9Yw51LQkmDH+IYA=" crossorigin="anonymous"></script>                <div id="256f7b6d-cb2c-4d74-aa92-f132edef4167" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("256f7b6d-cb2c-4d74-aa92-f132edef4167")) {                    Plotly.newPlot(                        "256f7b6d-cb2c-4d74-aa92-f132edef4167",                        [{"hovertemplate":"Year %{x}\u003cbr\u003eIllustrative output per person index: %{y}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#1f4e79","width":3},"marker":{"color":"#1f4e79","size":7},"mode":"lines+markers","x":[1000,1300,1600,1750,1800,1850,1900,1950,2000,2020],"y":[100,105,110,120,150,220,400,750,1600,2400],"type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"shapes":[{"line":{"color":"#c55a11","dash":"dash"},"type":"line","x0":1760,"x1":1760,"xref":"x","y0":0,"y1":1,"yref":"y domain"}],"annotations":[{"showarrow":false,"text":"Industrial Revolution begins (illustrative)","x":1760,"xanchor":"right","xref":"x","y":1,"yanchor":"top","yref":"y domain"}],"xaxis":{"title":{"text":"Year"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray"},"yaxis":{"title":{"text":"Illustrative output per person (index)"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray"},"width":780,"height":440,"plot_bgcolor":"white","showlegend":false},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('256f7b6d-cb2c-4d74-aa92-f132edef4167');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+</div>
+<div style="font-size: 1.05em;">
+<p><em>This chart uses illustrative, stylized numbers to show the shape of the story, a long, nearly flat line followed by a sharp takeoff, not precise historical estimates.</em></p>
+</div>
+</section>
+<section id="institutional-foundations-of-growth" class="slide level2">
+<h2>Institutional Foundations of Growth</h2>
+<div style="font-size: 1.2em;">
+<p>Why did sustained growth take off when and where it did? Economists point to <strong>institutions</strong>, the rules and organizations that structure economic life, as a major part of the answer. A partial, illustrative list:</p>
+<ul>
+<li>Strong <strong>property rights</strong> and the <strong>rule of law</strong></li>
+<li><strong>Patents and copyrights</strong> that reward innovation</li>
+<li>Efficient <strong>financial institutions</strong> that channel saving into investment</li>
+<li><strong>Free and competitive markets</strong></li>
+<li><strong>Specialization</strong> and <strong>free trade</strong></li>
+</ul>
+</div>
+
+<img data-src="https://images.unsplash.com/photo-1625516581237-3d9d0a31538c?q=80&amp;w=2044&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
+<section id="property-rights-patents-and-copyrights" class="slide level2">
+<h2>Property Rights, Patents, and Copyrights</h2>
+<div class="columns">
+<div class="column">
+<div style="font-size: 1.2em;">
+<ul>
+<li><strong>Property rights</strong>: legal protection of the right to own, use, and sell resources and products. If a business owner cannot trust that profits and property will not simply be seized, they have little reason to invest, build, or innovate.</li>
+<li>The <strong>rule of law</strong>: laws applied predictably and fairly, including to the government itself, so that contracts and property rights are actually enforceable.</li>
+<li><strong>Patents and copyrights</strong>: temporary legal monopolies granted to inventors and creators. Without them, a competitor could simply copy a costly new invention, so innovators would have little incentive to invest the time and money to create it in the first place.</li>
+</ul>
+</div>
+</div><div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://images.unsplash.com/photo-1727522974614-b592018e49e1?q=80&amp;w=1326&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="financial-institutions-and-the-loanable-funds-market" class="slide level2">
+<h2>Financial Institutions and the Loanable Funds Market</h2>
+<div style="font-size: 1.2em;">
+<p>Recall from Chapter 6: growth requires investment in new capital, and investment requires savings to actually reach the businesses that want to build it.</p>
+<ul>
+<li>Efficient <strong>financial institutions</strong>, banks, stock markets, bond markets, are the plumbing that channels household saving into business investment.</li>
+<li>This is exactly the <strong>market for loanable funds</strong> from Chapter 6: savers supply funds, borrowers demand funds, and a well-functioning financial system matches them at a market interest rate.</li>
+<li>Where financial institutions are weak or untrustworthy, saving has nowhere productive to go, and growth suffers even where saving <em>rates</em> are high.</li>
+</ul>
+</div>
+
+<img data-src="https://images.unsplash.com/photo-1648275913341-7973ae7bc9b3?q=80&amp;w=1974&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
+<section id="specialization-trade-and-the-ppf" class="slide level2">
+<h2>Specialization, Trade, and the PPF</h2>
+<div style="font-size: 1.2em;">
+<p>Recall the <strong>production possibilities frontier (PPF)</strong> and <strong>opportunity cost</strong> from Chapter 1.</p>
+<ul>
+<li>When individuals, firms, or countries <strong>specialize</strong> in what they produce comparatively efficiently and then trade, total output rises, without any new resources or technology at all.</li>
+<li><strong>Free trade</strong> extends this idea across borders: a country imports what it would otherwise produce at high opportunity cost, and exports what it produces at low opportunity cost.</li>
+<li><em>Specialization and trade are, in effect, a way of getting the economy closer to (and even beyond, in per-person terms) what a single closed economy’s own PPF could deliver on its own.</em></li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="the-sources-of-growth-supply-demand-and-efficiency" class="title-slide slide level1 center">
+<h1>The Sources of Growth: Supply, Demand, and Efficiency</h1>
+
+</section>
+<section id="potential-output-and-the-four-supply-factors" class="slide level2">
+<h2>Potential Output and the Four Supply Factors</h2>
+<div style="font-size: 1.15em;">
+<p>An economy’s <strong>potential output</strong> is the maximum sustainable output it can produce with its current resources and technology. Four <strong>supply factors</strong> increase potential output:</p>
+<ol type="1">
+<li>An increase in the <em>quantity or quality</em> of <strong>natural resources</strong></li>
+<li>An increase in the <em>quantity or quality</em> of <strong>human resources</strong> (a larger labor force, more education and training)</li>
+<li>An increase in the supply of <strong>capital goods</strong> (physical capital: machines, buildings, infrastructure)</li>
+<li>Improvements in <strong>technology</strong>, better ways of combining resources to produce output</li>
+</ol>
+</div>
+</section>
+<section id="the-demand-factor" class="slide level2">
+<h2>The Demand Factor</h2>
+<div style="font-size: 1.2em;">
+<p>Supply factors only make growth <em>possible</em>. The economy also needs the <strong>demand factor</strong>: enough total spending to actually purchase the expanding potential output.</p>
+<ul>
+<li>If potential output rises but total spending does not keep pace, factories, workers, and machines sit idle instead of producing at capacity.</li>
+<li><em>Growth requires both the ability to produce more and buyers willing and able to buy what is produced.</em></li>
+</ul>
+</div>
+</section>
+<section id="the-efficiency-factor" class="slide level2">
+<h2>The Efficiency Factor</h2>
+<div style="font-size: 1.2em;">
+<p>Even with enough supply and enough demand, an economy still needs the <strong>efficiency factor</strong>: resources must actually be used well.</p>
+<ul>
+<li><strong>Allocative efficiency</strong>: resources are directed toward producing the specific mix of goods and services society values most.</li>
+<li><strong>Productive efficiency</strong>: each good is produced using the least-costly combination of resources, and at the lowest possible per-unit cost.</li>
+</ul>
+<p><em>An economy can have more resources and enough spending, and still fail to reach its full potential if resources are misallocated or wasted.</em></p>
+</div>
+</section>
+<section id="visualizing-growth-an-outward-shifting-ppf" class="slide level2">
+<h2>Visualizing Growth: An Outward-Shifting PPF</h2>
+<div id="982465a0" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div style="height:460px; width:680px;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.7.0.min.js" integrity="sha256-jvTGqxNp8AGWEcvNLVuKr+8j5dGe9Yw51LQkmDH+IYA=" crossorigin="anonymous"></script>                <div id="4b74e75d-7493-4a69-bf6a-ad051b9b0a6f" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("4b74e75d-7493-4a69-bf6a-ad051b9b0a6f")) {                    Plotly.newPlot(                        "4b74e75d-7493-4a69-bf6a-ad051b9b0a6f",                        [{"hovertemplate":"Original PPF\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#1f4e79","width":3},"mode":"lines","name":"Original PPF","x":{"dtype":"f8","bdata":"AAAAAAAAWUBD5VHFMf9YQH0FkiLH\u002fFhAxtaeP8D4WEAMQ+heHfNYQABga93e61hA6XCsMgXjWEDZMq\u002fwkNhYQKFz7cOCzFhAS\u002fRLc9u+WECrlw3gm69YQPLdxAXFnlhAJa5D+leMWECNbontVXhYQERtrynAYlhAHprTEphLWEBTkwEn3zJYQGIGGv6WGFhAxGa4ScH8V0Ae\u002fBbVX99XQMRJ8YR0wFdActFkVwGgV0A+M9BjCH5XQOCssNqLWldAkPp9BY41V0DLm4RGEQ9XQGJ+vhgY51ZAbxKqD6W9VkDKyR\u002fXupJWQLcFJjNcZlZAqHXD\u002f4s4VkAH6s8wTQlWQBKew9Gi2FVA5fuEBZCmVUD03TQGGHNVQE1R+SQ+PlVAEdzGyQUIVUCgSyhzctBUQCkOBbaHl1RAPRtmPUldVEBTbznKuiFUQAYeFDPg5FNAHv\u002fyY72mU0Bq+vldVmdTQK32MTevJlNAvm9FGszkUkBZuDtGsaFSQPHrMg5jXVJAFZUY2eUXUkAHDWEhPtFRQBqZvXRwiVFAwErRc4FAUUD1puTRdfZQQBwamFRSq1BAKT2V0xtfUEBH8T441xFQQBSuwPoSh09A\u002fEy1XW\u002foTkB\u002f2qPSzUdOQD9wsbM4pU1ANVs1e7oATUCaPQzDXVpMQKMo6UMtsktAk7mk1DMIS0BQRYppfFxKQEseoxMSr0lA\u002fv\u002f\u002f\u002f\u002f\u002f\u002fSEA7rAB3UU9IQKvFmdsRnUdA\u002fPOYqkzpRkB0Xed5DTRGQGWCyvdffUVAnoYj6k\u002fFREB19awt6QtEQMEMN7U3UUNAm5viiEeVQkBEgVrFJNhBQFnZC5vbGUFA9uFcTXhaQEDFUcVjDjQ\u002fQD4ZK18psT1AeT0JfFosPEDk6A\u002fJuqU6QHHl43JjHTlAvUZ\u002fwm2TN0CzQJAb8wc2QKtF1voMezRA0YZ99NTsMkBF8niyZF0xQKOTteWrmS9AldtXDIV2LEAp7oObiFEpQHt4KHTqKiZAjLkfkt4CI0AYuqsRMrMfQGuh2\u002f+bXhlAWpnJX2MIE0AvF9N64WEJQLUHsOOyYvk\u002fy8\u002fPr5uT+zw="},"y":{"dtype":"f8","bdata":"AAAAAAAAAACzB7DjsmL5PzsX03rhYQlAZ5nJX2MIE0Blodv\u002fm14ZQBm6qxEysx9Akbkfkt4CI0B2eCh06iomQCfug5uIUSlAlttXDIV2LECnk7Xlq5kvQEPyeLJkXTFA0YZ99NTsMkCsRdb6DHs0QLZAkBvzBzZAvEZ\u002fwm2TN0Bx5eNyYx05QOToD8m6pTpAej0JfFosPEA9GStfKbE9QMNRxWMOND9A9+FcTXhaQEBX2Qub2xlBQEOBWsUk2EFAnJviiEeVQkDDDDe1N1FDQHT1rC3pC0RAnoYj6k\u002fFREBmgsr3X31FQHVd53kNNEZA\u002fPOYqkzpRkCrxZnbEZ1HQDysAHdRT0hAAAAAAAAASUBJHqMTEq9JQFFFiml8XEpAkbmk1DMIS0CjKOlDLbJLQJo9DMNdWkxANVs1e7oATUA9cLGzOKVNQIDao9LNR05A+ky1XW\u002foTkAUrsD6EodPQEbxPjjXEVBAKT2V0xtfUEAcGphUUqtQQPWm5NF19lBAwErRc4FAUUAamb10cIlRQAcNYSE+0VFAFZUY2eUXUkDx6zIOY11SQFm4O0axoVJAvm9FGszkUkCt9jE3ryZTQGr6+V1WZ1NAHv\u002fyY72mU0AGHhQz4ORTQFJvOcq6IVRAPRtmPUldVEApDgW2h5dUQKFLKHNy0FRAEdzGyQUIVUBNUfkkPj5VQPPdNAYYc1VA5vuEBZCmVUASnsPRothVQAfqzzBNCVZAqHXD\u002f4s4VkC4BSYzXGZWQMvJH9e6klZAbxKqD6W9VkBifr4YGOdWQMybhEYRD1dAkfp9BY41V0DfrLDai1pXQD0z0GMIfldActFkVwGgV0DESfGEdMBXQB78FtVf31dAxGa4ScH8V0BiBhr+lhhYQFOTASffMlhAHprTEphLWEBEba8pwGJYQI1uie1VeFhAJa5D+leMWEDy3cQFxZ5YQKyXDeCbr1hAS\u002fRLc9u+WEChc+3DgsxYQNkyr\u002fCQ2FhA6XCsMgXjWEAAYGvd3utYQAxD6F4d81hAxtaeP8D4WEB9BZIix\u002fxYQEPlUcUx\u002f1hAAAAAAAAAWUA="},"type":"scatter"},{"hovertemplate":"New PPF, after supply factors increase\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#c55a11","dash":"dash","width":3},"mode":"lines","name":"New PPF (supply factors)","x":{"dtype":"f8","bdata":"AAAAAABAX0CTXqY2\u002fj5fQN2GNuv4O19AeIyGT\u002fA2X0DQU6K25C9fQAA4xpTWJl9AJI1Xf8YbX0CP\u002f9ostQ5fQIrQ6HSj\u002f15AXfEeUJLuXkCW\u002fRDYgtteQG4VNkd2xl5ArpnU+G2vXkAxyutoa5ZeQJVIGzRwe15ApoCIF35eXkAo+MHwlj9eQPuHoL28Hl5AdYAmnPH7XUAlu1zKN9ddQDWcLaaRsF1AzgU+rQGIXUANQMR8il1dQBfYXNEuMV1ANHndhvECXUC+wiWY1dJcQPod7h7eoFxAC5eUUw5tXEA9vOeMaTdcQCWH7z\u002fz\u002f1tAEVO0\u002f67GW0CJ5AN9oItbQJeFNIbLTltA3jrmBjQQW0BxFcIH3s9aQKClN67NjVpAFpM4PAdKWkCJXvIPjwRaQLRRhqNpvVlADKK\u002fjJt0WUAoy8d8KSpZQIcl2T8Y3lhA5b7vvGyQWEAFeXj1K0FYQFh0\u002fgRb8FdArcvWIP+dV0BwpsqXHUpXQO2mv9G79FZAW7peT9+dVkBJULmpjUVWQGH\u002f7JHM61VAcJ3F0KGQVUCy0F1GEzRVQKMgvukm1lRAc4x6yOJ2VECYrU4GTRZUQMxsuNxrtFNAHVCRmkVRU0CPaKaj4OxSQCfmTnBDh1JAAVkBjXQgUkCApueZerhRQGa5cUpcT1FA\u002fPPmZCDlUEBSa\u002fbBzXlQQO\u002fyRUxrDVBA\u002fv\u002f\u002f\u002f\u002f8\u002fT0BJ18DUJWNOQBY3gFJWhE1A+zA\u002f1Z+jTEDRNGHYEMFLQP4ivfW33EpARmis5KP2SUDSMhh54w5JQPLPhKKFJUhAgkIba5k6R0CVIbH2LU5GQK\u002fPzoFSYEVAdBq0YBZxREAbU1v+iIBDQMfvetu5jkJAbMaFjbibQUCP8am9lKdAQM3enE+8ZD9AbRgfM0l4PUDgUHTi74k7QBbXiznQmTlAhuicMQqoN0DXLhffvbQ1QEZ8kW8LwDNAPem2JxPKMUCz6WTC6qUvQJmWMhGltStA8KenNpbDJ0BPVAtL\u002f88jQMaJ0v9Cth9AsP+7N3zKF0D63IfZWboPQKIJnJxfu\u002f8\u002f3+HhTUE8AT0="},"y":{"dtype":"f8","bdata":"AAAAAAAAAACgCZycX7v\u002fPwrdh9lZug9Awf+7N3zKF0C+idL\u002fQrYfQFBUC0v\u002fzyNA9aenNpbDJ0CTljIRpbUrQLHpZMLqpS9APum2JxPKMUBJfJFvC8AzQNQuF9+9tDVAhuicMQqoN0AX14s50Jk5QORQdOLviTtAaxgfM0l4PUDN3pxPvGQ\u002fQI\u002fxqb2Up0BAbcaFjbibQUDG73rbuY5CQBpTW\u002f6IgENAdRq0YBZxRECtz86BUmBFQJQhsfYtTkZAg0Iba5k6R0D0z4SihSVIQNEyGHnjDklARmis5KP2SUD\u002fIr31t9xKQNI0YdgQwUtA+jA\u002f1Z+jTEAWN4BSVoRNQErXwNQlY05AAAAAAABAT0Du8kVMaw1QQFNr9sHNeVBA+\u002fPmZCDlUEBmuXFKXE9RQICm55l6uFFAAVkBjXQgUkAm5k5wQ4dSQJBopqPg7FJAHFCRmkVRU0DMbLjca7RTQJetTgZNFlRAdIx6yOJ2VECjIL7pJtZUQLLQXUYTNFVAcJ3F0KGQVUBh\u002f+yRzOtVQElQuamNRVZAW7peT9+dVkDtpr\u002fRu\u002fRWQG+mypcdSldArcvWIP+dV0BYdP4EW\u002fBXQAV5ePUrQVhA5b7vvGyQWECHJdk\u002fGN5YQCfLx3wpKllADKK\u002fjJt0WUC0UYajab1ZQIpe8g+PBFpAFZM4PAdKWkCgpTeuzY1aQHAVwgfez1pA3zrmBjQQW0CXhTSGy05bQInkA32gi1tAEVO0\u002f67GW0Amh+8\u002f8\u002f9bQD6854xpN1xAC5eUUw5tXED6He4e3qBcQL\u002fCJZjV0lxANXndhvECXUAW2FzRLjFdQAxAxHyKXV1AzgU+rQGIXUA1nC2mkbBdQCW7XMo3111AdYAmnPH7XUD7h6C9vB5eQCj4wfCWP15ApoCIF35eXkCVSBs0cHteQDHK62hrll5ArpnU+G2vXkBuFTZHdsZeQJf9ENiC215AXfEeUJLuXkCK0Oh0o\u002f9eQI\u002f\u002f2iy1Dl9AJI1Xf8YbX0AAOMaU1iZfQNBTorbkL19AeIyGT\u002fA2X0Ddhjbr+DtfQJNepjb+Pl9AAAAAAABAX0A="},"type":"scatter"},{"hovertemplate":"Actual output: (80, 80), inside the new PPF\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#c00000","size":13},"mode":"markers","name":"Actual output","x":[80],"y":[80],"type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"annotations":[{"ax":40,"ay":-40,"showarrow":true,"text":"Demand and efficiency\u003cbr\u003efactors determine whether\u003cbr\u003ethe economy reaches the new curve","x":95,"y":95}],"legend":{"x":0.02,"y":0.1},"xaxis":{"title":{"text":"Consumer goods"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray","range":[0,135]},"yaxis":{"title":{"text":"Capital goods"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray","range":[0,135]},"width":680,"height":460,"plot_bgcolor":"white"},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('4b74e75d-7493-4a69-bf6a-ad051b9b0a6f');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+</div>
+<div style="font-size: 1.05em;">
+<p>The four supply factors shift the whole PPF outward. Whether the economy actually reaches a point <em>on</em> the new curve depends on the demand and efficiency factors.</p>
+</div>
+</section>
+<section id="example-supply-factors-and-the-ppf" class="slide level2">
+<h2>Example: Supply Factors and the PPF</h2>
+<div style="font-size: 1.2em;">
+<p>An economy’s PPF currently runs from a maximum of <strong>100 units</strong> of capital goods to a maximum of <strong>100 units</strong> of consumer goods (a bowed-out curve between the two extremes).</p>
+<p>Supply factors, more workers, more capital, better technology, expand the maximum along <em>each</em> axis by <strong>25 percent</strong>.</p>
+<p>The economy actually produces <strong>80 units</strong> of capital goods and <strong>80 units</strong> of consumer goods.</p>
+<ol type="1">
+<li>What is the new maximum along each axis?</li>
+<li>Is the economy’s actual production point inside, on, or outside the new PPF?</li>
+<li>If it is not on the new PPF, which two factors could explain the gap?</li>
+</ol>
+</div>
+</section>
+<section id="solution-supply-factors-and-the-ppf" class="slide level2">
+<h2>Solution: Supply Factors and the PPF</h2>
+<div style="font-size: 1.2em;">
+<ul>
+<li>New maximum along each axis: <span class="math inline">\(100 \times 1.25 = 125\)</span> units.</li>
+<li>Distance of the actual production point, <span class="math inline">\((80, 80)\)</span>, from the origin: <span class="math inline">\(\sqrt{80^2 + 80^2} \approx 113.1\)</span>, compared with a new-PPF distance of <span class="math inline">\(125\)</span> along the diagonal.</li>
+</ul>
+<div class="fragment">
+<ul>
+<li>Because <span class="math inline">\(113.1 &lt; 125\)</span>, the economy is producing <em>inside</em> its new PPF, not on it.</li>
+<li>The <strong>demand factor</strong> may be insufficient (not enough total spending to buy all the newly possible output), or the <strong>efficiency factor</strong> may be lacking (resources misallocated or not used at lowest cost). <em>Having more resources is not enough on its own, an economy still has to spend enough and use its resources well to actually reach its new potential.</em></li>
+</ul>
+</div>
+</div>
+</section></section>
+<section>
+<section id="growth-accounting" class="title-slide slide level1 center">
+<h1>Growth Accounting</h1>
+
+</section>
+<section id="decomposing-real-gdp-growth" class="slide level2">
+<h2>Decomposing Real GDP Growth</h2>
+<div style="font-size: 1.2em;">
+<p><strong>Growth accounting</strong> breaks real GDP growth down into two pieces that, approximately, add together:</p>
+<p><span class="math display">\[
+\text{Growth in real GDP} \approx \text{Growth in hours worked} + \text{Growth in labor productivity}
+\]</span></p>
+<ul>
+<li><strong>Hours worked</strong>: the total number of hours supplied by the labor force.</li>
+<li><strong>Labor productivity</strong>: real output per hour of work.</li>
+</ul>
+<p><em>This lets us ask a sharper question than “did GDP grow?”: did it grow because people worked more hours, or because each hour of work produced more?</em></p>
+</div>
+</section>
+<section id="example-hours-worked-and-productivity" class="slide level2">
+<h2>Example: Hours Worked and Productivity</h2>
+<div style="font-size: 1.2em;">
+<p>In a given year, total hours worked in the economy grow by <strong>1.5 percent</strong>, and labor productivity (output per hour) grows by <strong>2.0 percent</strong>.</p>
+<ol type="1">
+<li>Using growth accounting, approximately what is the growth rate of real GDP?</li>
+<li>Which piece, hours or productivity, contributed more to growth this year?</li>
+</ol>
+</div>
+</section>
+<section id="solution-hours-worked-and-productivity" class="slide level2">
+<h2>Solution: Hours Worked and Productivity</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div id="2eebddcc" class="cell" data-execution_count="6">
+<div class="cell-output cell-output-display">
+<div style="height:430px; width:540px;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.7.0.min.js" integrity="sha256-jvTGqxNp8AGWEcvNLVuKr+8j5dGe9Yw51LQkmDH+IYA=" crossorigin="anonymous"></script>                <div id="2796ec78-993f-4d1a-82dd-8f292468ffc7" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("2796ec78-993f-4d1a-82dd-8f292468ffc7")) {                    Plotly.newPlot(                        "2796ec78-993f-4d1a-82dd-8f292468ffc7",                        [{"hovertemplate":"%{x}: %{y}%\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":["#1f4e79","#c55a11","#548235"]},"text":["1.5%","2.0%","3.5%"],"textposition":"outside","x":["Hours worked","Productivity","Real GDP\u003cbr\u003e(approx.)"],"y":[1.5,2.0,3.5],"type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"yaxis":{"title":{"text":"Growth rate (percent)"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray","range":[0,4.3]},"width":540,"height":430,"plot_bgcolor":"white","showlegend":false,"xaxis":{"showgrid":false}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('2796ec78-993f-4d1a-82dd-8f292468ffc7');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+</div>
+</div><div class="column" style="width:45%;">
+<ul>
+<li>Real GDP growth <span class="math inline">\(\approx 1.5\% + 2.0\% = 3.5\%\)</span></li>
+</ul>
+<div class="fragment">
+<ul>
+<li>Productivity contributed more, 2.0 percentage points versus 1.5.</li>
+<li><em>This matches the long-run pattern in the United States: most growth in output per capita has come from rising labor productivity, not from people simply working more hours.</em></li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="harder-problem-growth-accounting" class="slide level2">
+<h2>Harder Problem: Growth Accounting</h2>
+<div style="font-size: 1.2em;">
+<p>Last year, a country’s real GDP grew by <strong>4.2 percent</strong>, while total hours worked grew by only <strong>1.0 percent</strong>.</p>
+<ol type="1">
+<li>Approximately what was the growth rate of labor productivity last year?</li>
+<li>Suppose next year hours worked are projected to <em>fall</em> by <strong>0.5 percent</strong> (an aging population working somewhat less), but productivity growth holds steady at the rate you found in part 1. Approximately what real GDP growth would you forecast for next year?</li>
+</ol>
+</div>
+</section>
+<section id="review-growth-accounting" class="slide level2">
+<h2>Review: Growth Accounting</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div id="d19a9b02" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-display">
+<div style="height:440px; width:680px;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.7.0.min.js" integrity="sha256-jvTGqxNp8AGWEcvNLVuKr+8j5dGe9Yw51LQkmDH+IYA=" crossorigin="anonymous"></script>                <div id="5d2d7931-06fe-4c0a-aebb-9288eb7b11ba" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("5d2d7931-06fe-4c0a-aebb-9288eb7b11ba")) {                    Plotly.newPlot(                        "5d2d7931-06fe-4c0a-aebb-9288eb7b11ba",                        [{"hovertemplate":"%{x}: %{y}%\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":["#1f4e79","#c55a11","#548235","#c00000","#c55a11","#548235"]},"text":["1.0%","3.2%","4.2%","-0.5%","3.2%","2.7%"],"textposition":"outside","x":["Hours\u003cbr\u003e(this year)","Productivity\u003cbr\u003e(this year)","GDP\u003cbr\u003e(this year)","Hours\u003cbr\u003e(next year)","Productivity\u003cbr\u003e(next year)","GDP\u003cbr\u003e(next year, forecast)"],"y":[1.0,3.2,4.2,-0.5,3.2,2.7],"type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"yaxis":{"title":{"text":"Growth rate (percent)"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray","range":[-1.5,5.2]},"width":680,"height":440,"plot_bgcolor":"white","showlegend":false,"xaxis":{"showgrid":false}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('5d2d7931-06fe-4c0a-aebb-9288eb7b11ba');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+</div>
+</div><div class="column" style="width:45%;">
+<ul>
+<li>Productivity growth: <span class="math inline">\(4.2\% - 1.0\% = 3.2\%\)</span></li>
+</ul>
+<div class="fragment">
+<ul>
+<li>Next year’s forecast: <span class="math inline">\(3.2\% + (-0.5\%) = 2.7\%\)</span></li>
+<li><em>Even with hours worked shrinking, steady productivity growth can still deliver solid real GDP growth, this is exactly why productivity is considered the more important long-run driver.</em></li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="sources-of-productivity-growth" class="slide level2">
+<h2>Sources of Productivity Growth</h2>
+<div style="font-size: 1.15em;">
+<p>Economists rank the sources of long-run productivity growth in the United States roughly as follows, largest contributor first:</p>
+<ol type="1">
+<li><strong>Technological advance</strong>: new methods, products, and processes, often the single largest source.</li>
+<li><strong>Quantity of capital per worker</strong> (capital deepening): giving each worker more and better machines and tools to work with.</li>
+<li><strong>Education and training of the workforce</strong> (human capital, recall Chapter 6): a more skilled workforce produces more per hour.</li>
+<li><strong>Economies of scale and improved resource allocation</strong>: bigger, better-organized markets let resources move to their most productive uses.</li>
+</ol>
+</div>
+</section>
+<section id="real-data-labor-productivity" class="slide level2">
+<h2>Real Data: Labor Productivity</h2>
+<h3 id="series-ophnfb">Series OPHNFB</h3>
+<div class="columns">
+<div class="column" style="width:70%;">
+<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1Zabu&amp;width=670&amp;height=475" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowtransparency="true" loading="lazy">
+</iframe>
+</div><div class="column" style="width:30%;">
+<div class="r-stack">
+<div class="fragment current-visible">
+<ol type="1">
+<li>What is the overall trend in this index over the full period shown?</li>
+</ol>
+</div>
+<div class="fragment current-visible">
+<p><em>Answer:</em> it trends upward over the long run, each hour of work produces more output today than it did decades ago.</p>
+</div>
+<div class="fragment current-visible">
+<ol start="2" type="1">
+<li>Does the index rise at a perfectly constant rate every quarter, or does the pace vary?</li>
+</ol>
+</div>
+<div class="fragment current-visible">
+<p><em>Answer:</em> the pace varies noticeably, productivity growth speeds up in some periods and slows or even dips in others.</p>
+</div>
+<div class="fragment current-visible">
+<ol start="3" type="1">
+<li>Based on growth accounting, if this index were flat for several years while the labor force kept growing, what would that imply about the source of any real GDP growth during that time?</li>
+</ol>
+</div>
+<div class="fragment current-visible">
+<p><em>Answer:</em> it would mean growth was coming almost entirely from more hours worked rather than from productivity, which tends to produce slower, less durable gains in output per person.</p>
+</div>
+</div>
+</div></div>
+</section></section>
+<section>
+<section id="productivity-growth-and-real-wages" class="title-slide slide level1 center">
+<h1>Productivity Growth and Real Wages</h1>
+
+</section>
+<section id="the-productivity-wage-link" class="slide level2">
+<h2>The Productivity-Wage Link</h2>
+<div style="font-size: 1.2em;">
+<p>Over the long run, a nation’s <strong>labor productivity growth rate</strong> and its <strong>average real hourly wage growth rate</strong> tend to track each other closely, roughly one-to-one.</p>
+<ul>
+<li>In a <strong>competitive labor market</strong>, firms compete for workers, and a worker’s pay tends to reflect the value of what that worker produces.</li>
+<li>If workers become more productive, firms competing for their labor bid wages up to roughly match. If productivity stalls, real wage growth tends to stall too.</li>
+</ul>
+<p><em>This is why raising productivity, not just raising wages directly, is the durable path to a higher standard of living.</em></p>
+</div>
+</section>
+<section id="example-productivity-and-wage-growth-over-a-decade" class="slide level2">
+<h2>Example: Productivity and Wage Growth Over a Decade</h2>
+<div style="font-size: 1.2em;">
+<p>Suppose average labor productivity grows at <strong>2.2 percent</strong> per year, and real hourly wages grow at <strong>2.1 percent</strong> per year, both sustained over a <strong>10-year</strong> period.</p>
+<ol type="1">
+<li>Using <span class="math inline">\((1+g)^{n}\)</span>, what is the cumulative percentage growth in productivity over the decade?</li>
+<li>What is the cumulative percentage growth in real wages over the decade?</li>
+<li>How closely do the two cumulative figures track each other?</li>
+</ol>
+</div>
+</section>
+<section id="solution-productivity-and-wage-growth-over-a-decade" class="slide level2">
+<h2>Solution: Productivity and Wage Growth Over a Decade</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div id="17e41527" class="cell" data-execution_count="8">
+<div class="cell-output cell-output-display">
+<div style="height:430px; width:540px;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.7.0.min.js" integrity="sha256-jvTGqxNp8AGWEcvNLVuKr+8j5dGe9Yw51LQkmDH+IYA=" crossorigin="anonymous"></script>                <div id="db362d7f-0896-4c1d-9f8a-a9b5c4055e9f" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("db362d7f-0896-4c1d-9f8a-a9b5c4055e9f")) {                    Plotly.newPlot(                        "db362d7f-0896-4c1d-9f8a-a9b5c4055e9f",                        [{"hovertemplate":"%{x}\u003cbr\u003eCumulative growth over 10 years: %{y}%\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":["#1f4e79","#c55a11"]},"text":["24.3%","23.1%"],"textposition":"outside","x":["Productivity\u003cbr\u003e(2.2%\u002fyr)","Real wages\u003cbr\u003e(2.1%\u002fyr)"],"y":[24.3,23.1],"type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"yaxis":{"title":{"text":"Cumulative growth over 10 years (percent)"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray","range":[0,28]},"width":540,"height":430,"plot_bgcolor":"white","showlegend":false,"xaxis":{"showgrid":false}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('db362d7f-0896-4c1d-9f8a-a9b5c4055e9f');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+</div>
+</div><div class="column" style="width:45%;">
+<ul>
+<li>Productivity: <span class="math inline">\((1.022)^{10} \approx 1.243\)</span>, or about <span class="math inline">\(24.3\%\)</span> cumulative growth</li>
+<li>Real wages: <span class="math inline">\((1.021)^{10} \approx 1.231\)</span>, or about <span class="math inline">\(23.1\%\)</span> cumulative growth</li>
+</ul>
+<div class="fragment">
+<ul>
+<li>The two cumulative figures are within about <em>1 percentage point</em> of each other after a full decade.</li>
+<li><em>This is the roughly one-to-one relationship in action: workers captured almost the full benefit of their own rising productivity as higher real pay.</em></li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="a-note-on-immigration-and-per-capita-growth" class="slide level2">
+<h2>A Note on Immigration and Per-Capita Growth</h2>
+<div style="font-size: 1.15em;">
+<p>Immigration’s effect on <em>per-capita</em> growth is more ambiguous, and more debated, than it might first appear.</p>
+<ul>
+<li>Immigration expands the <strong>labor force</strong> (more hours worked, more potential output).</li>
+<li>Immigration also expands <strong>total demand</strong> (more people buying goods and services).</li>
+</ul>
+<p><em>Because immigration shifts both supply and demand at once, its net effect on the per-capita growth rate is not simply positive or negative, it depends on the specifics, and economists continue to debate the size and even the direction of the effect in different contexts.</em></p>
+</div>
+</section></section>
+<section>
+<section id="benefits-and-costs-of-economic-growth" class="title-slide slide level1 center">
+<h1>Benefits and Costs of Economic Growth</h1>
+
+</section>
+<section id="benefits-of-growth" class="slide level2">
+<h2>Benefits of Growth</h2>
+<div style="font-size: 1.2em;">
+<ul>
+<li><strong>Rising living standards</strong>: more goods and services available per person, on average.</li>
+<li><strong>More resources for a societal safety net</strong>: a larger economy can support more generous programs for those who need help, without necessarily raising tax <em>rates</em>.</li>
+<li><strong>More resources for public goods</strong>: infrastructure, research, education.</li>
+<li><strong>More resources to address problems</strong>, including environmental ones: a richer society can afford to invest more in cleanup and cleaner technology.</li>
+</ul>
+</div>
+</section>
+<section id="costs-and-critiques-of-growth" class="slide level2">
+<h2>Costs and Critiques of Growth</h2>
+<div style="font-size: 1.2em;">
+<ul>
+<li><strong>Environmental and resource costs</strong>: growth that relies on burning through natural resources or polluting can degrade the environment growth is supposed to help us afford to fix.</li>
+<li><strong>Growth does not guarantee even distribution</strong>: recall the mean-versus-median discussion from Chapter 6. Rising <em>average</em> output per person is fully consistent with most of the gains flowing to a relatively small share of the population.</li>
+<li><strong>Growth involves tradeoffs</strong>: recall Chapter 6’s saving-and-investment discussion. Building more capital goods today, the investment that fuels future growth, means giving up some consumption <em>today</em>. Faster growth tomorrow is not free.</li>
+</ul>
+</div>
+</section>
+<section id="real-data-real-gdp-per-capita-a-longer-look" class="slide level2">
+<h2>Real Data: Real GDP Per Capita, a Longer Look</h2>
+<h3 id="series-a939rx0q048sbea">Series A939RX0Q048SBEA</h3>
+<div class="columns">
+<div class="column" style="width:70%;">
+<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1ZabN&amp;width=670&amp;height=475" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowtransparency="true" loading="lazy">
+</iframe>
+</div><div class="column" style="width:30%;">
+<div class="r-stack">
+<div class="fragment current-visible">
+<ol type="1">
+<li>Chapter 6 introduced this series. Looking at more history now, does the long-run trend look closer to steady compounding or to a straight line?</li>
+</ol>
+</div>
+<div class="fragment current-visible">
+<p><em>Answer:</em> closer to steady compounding, the line curves upward over the long run rather than rising by the same dollar amount every year, consistent with a roughly constant percentage growth rate.</p>
+</div>
+<div class="fragment current-visible">
+<ol start="2" type="1">
+<li>Do you see any extended flat or declining stretches? What might explain one?</li>
+</ol>
+</div>
+<div class="fragment current-visible">
+<p><em>Answer:</em> yes, recessions and major shocks produce flat or declining stretches, but the long-run trend resumes climbing afterward.</p>
+</div>
+<div class="fragment current-visible">
+<ol start="3" type="1">
+<li>Based on this chapter’s Rule of 70, roughly how many years would it take real GDP per capita to double at an illustrative 2 percent annual growth rate?</li>
+</ol>
+</div>
+<div class="fragment current-visible">
+<p><em>Answer:</em> about 35 years, <span class="math inline">\(70/2 = 35\)</span>.</p>
+</div>
+</div>
+</div></div>
+</section>
+<section id="wrap-up" class="slide level2">
+<h2>Wrap Up</h2>
+<div style="font-size: 1.15em;">
+<ul>
+<li><strong>Economic growth</strong> is the sustained rise in real GDP or real GDP per capita. The <strong>Rule of 70</strong> (<span class="math inline">\(70 /\)</span> growth rate) turns a growth rate into a doubling time, and small rate differences compound into huge gaps over decades.</li>
+<li>Sustained modern growth is historically recent, and rests on institutions: property rights, patents, financial institutions, competitive markets, and specialization and trade.</li>
+<li>Four <strong>supply factors</strong> (natural resources, human resources, capital, technology) shift potential output outward, but the <strong>demand factor</strong> and <strong>efficiency factor</strong> determine whether the economy actually gets there.</li>
+<li><strong>Growth accounting</strong>: real GDP growth <span class="math inline">\(\approx\)</span> growth in hours worked <span class="math inline">\(+\)</span> growth in labor productivity. Productivity, led by technological advance and capital deepening, drives most long-run growth.</li>
+<li>Productivity growth and real wage growth move roughly one-to-one in competitive labor markets.</li>
+<li>Growth brings real benefits, but also real costs and tradeoffs, and does not guarantee an even distribution of gains.</li>
+</ul>
+</div>
+<div style="font-size: 1.1em; padding-top: 0.3em;">
+<p><em>Looking ahead:</em> this chapter studied the long-run growth trend. Chapter 9 studies the business cycle, the short-run ups and downs in output and employment that occur around that long-run trend.</p>
+</div>
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="ch08_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="ch08_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="ch08_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="ch08_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="ch08_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="ch08_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="ch08_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="ch08_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="ch08_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="ch08_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': true,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

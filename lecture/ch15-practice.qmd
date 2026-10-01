@@ -1,0 +1,144 @@
+---
+title: "Chapter 15: Monetary Policy, GDP, and the Price Level"
+subtitle: "Practice Problems"
+---
+
+## Warm-Up: Quick Concept and Calculation Checks
+
+a. To fight a recession, should the Fed use *expansionary* or *contractionary* monetary policy?
+   What happens to interest rates under that policy?
+b. Name the Fed's key policymaking committee that sets the federal funds rate target.
+c. If the Fed wants to *lower* interest rates through open market operations, does it buy or sell
+   government bonds? (Recall bond prices and interest rates from Chapter 14.)
+d. What is *forward guidance*, and how can it affect the economy even before the Fed changes any
+   rate?
+e. When are quantitative easing (QE) and quantitative tightening (QT) typically used, compared to
+   ordinary open market operations?
+f. True or False: monetary policy is equally effective at fighting inflation and at pulling an
+   economy out of a severe recession.
+g. Why does the Fed target roughly 2 percent inflation rather than 0 percent?
+
+<details>
+<summary>Show Answer</summary>
+
+a. *Expansionary.* Interest rates *fall*.
+b. The *Federal Open Market Committee (FOMC)*.
+c. It *buys* bonds. Buying bonds bids up bond prices, and since bond prices and interest rates move
+   inversely, this pushes interest rates down.
+d. Forward guidance is the Fed communicating its outlook and future policy intentions. If the Fed
+   is credible, businesses and investors adjust their spending and investment plans immediately
+   based on what the Fed says it intends to do, even before any rate actually changes.
+e. QE and QT are typically used when short-term rates are already very low (near the zero lower
+   bound) and the Fed wants to influence *longer-term* rates directly, ordinary open market
+   operations mainly target short-term rates.
+f. *False.* Monetary policy is relatively reliable at slowing an overheating economy, but less
+   reliable at pulling an economy out of a severe recession (cyclical asymmetry and the liquidity
+   trap).
+g. A little inflation lets *real* wages adjust downward even when nominal wages are sticky and
+   rarely get cut outright, this helps labor markets adjust more smoothly than a 0 percent target
+   would.
+
+</details>
+
+## Problem 1: Movement Along vs. a Shift in Investment Demand
+
+For each event, determine whether it causes a *movement along* the investment demand curve or a
+*shift* of the entire curve, and explain why.
+
+a. The Fed actually cuts the federal funds rate target by half a percentage point this week.
+b. The Fed chair gives a speech strongly signaling that rate cuts are likely in the coming months,
+   with no rate change happening yet.
+c. A new technology lowers the cost of building factories across the economy.
+d. Long-term interest rates fall because the Fed begins a new round of quantitative easing.
+
+<details>
+<summary>Show Answer</summary>
+
+a. *Movement along* the curve. An actual change in the interest rate moves firms along their
+   existing investment demand curve to a new quantity of investment.
+b. *Shift* of the entire curve (to the right, more investment demanded at every interest rate). No
+   rate has actually changed yet, businesses are adjusting their plans purely because of the
+   credible signal about the future.
+c. *Shift* of the entire curve (to the right). Lower costs make more projects profitable at every
+   interest rate, this is a change in a non-interest determinant of investment.
+d. *Movement along* the curve. Even though QE is an unusual tool, it works by actually changing the
+   interest rate (here, a longer-term rate), so it still produces a movement along the existing
+   investment demand curve, not a shift of it.
+
+</details>
+
+## Problem 2: Tracing the Monetary Policy Transmission Chain
+
+The Fed cuts its target interest rate. As a result, businesses find an additional $30 billion in
+investment projects newly profitable at the lower rate. The economy's MPC is 0.75.
+
+a. What chapter's tool explains why a lower interest rate increases the quantity of investment
+   demanded?
+b. What is the multiplier?
+c. Using the multiplier, by how much does this initial $30 billion increase in investment
+   ultimately shift AD (in real GDP terms)?
+d. In the AD-AS model, what happens to the equilibrium price level and equilibrium real GDP as a
+   result of this AD shift, assuming the economy is not already at potential GDP?
+
+<details>
+<summary>Show Answer</summary>
+
+```{python}
+#| echo: false
+#| fig-align: center
+
+import plotly.graph_objects as go
+
+BLUE = "#1f4e79"
+ORANGE = "#c55a11"
+
+fig = go.Figure()
+fig.add_trace(go.Bar(x=["Initial rise in<br>investment", "Total shift in AD<br>(after multiplier)"],
+                     y=[30, 120], marker_color=[BLUE, ORANGE],
+                     text=["$30B", "$120B"], textposition="outside",
+                     hovertemplate="%{x}: %{text}<extra></extra>"))
+fig.update_layout(yaxis_title="Billions of dollars", width=520, height=400,
+                  plot_bgcolor="white", showlegend=False)
+fig.update_xaxes(showgrid=False)
+fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="lightgray", range=[0, 140])
+fig.show()
+```
+
+a. The *investment demand curve* (Chapter 10): a lower real interest rate makes more investment
+   projects profitable, increasing the quantity of investment demanded.
+b. Multiplier $= 1/(1-0.75) = 4$.
+c. $\Delta AD = 30 \times 4 = \$120$ billion.
+d. Since AD shifts right along the upward-sloping SRAS curve (Chapter 12), the equilibrium *price
+   level rises* and equilibrium *real GDP rises*, this is exactly the chain: Fed action to
+   Chapter 10's investment demand to Chapter 10/11's multiplier to Chapter 12's AD-AS equilibrium.
+
+</details>
+
+## Problem 3: Cyclical Asymmetry and the Liquidity Trap
+
+a. During a period of strong demand-pull inflation, the Fed raises interest rates sharply, and
+   borrowing and spending slow noticeably within a few months. Does this illustrate the Fed's tools
+   working *reliably* or *unreliably*?
+b. During a severe recession, the Fed cuts its target rate all the way to nearly zero, but
+   businesses remain too uncertain about the future to borrow, and banks remain too cautious to
+   lend freely. What is this situation called?
+c. In the situation from part (b), what other policy tool (from a previous chapter) might
+   policymakers need to rely on instead?
+d. Explain in one or two sentences why lower interest rates might fail to stimulate borrowing and
+   lending during a severe downturn, even though the same tool works well to cool an overheating
+   economy.
+
+<details>
+<summary>Show Answer</summary>
+
+a. *Reliably.* This illustrates the "slowing an expansion" side of cyclical asymmetry, where
+   monetary policy tends to work well.
+b. A *liquidity trap*.
+c. *Fiscal policy* (Chapter 13), using government spending and taxes to directly boost aggregate
+   demand when monetary policy alone cannot.
+d. Lower rates only stimulate borrowing and lending if businesses are confident enough to invest and
+   banks are confident enough to lend. During a severe downturn, uncertainty about the future can
+   make both sides unwilling to act even at very low rates, breaking the normal chain from lower
+   rates to more investment spending.
+
+</details>

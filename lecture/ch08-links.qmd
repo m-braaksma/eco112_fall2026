@@ -1,0 +1,16 @@
+---
+title: "Chapter 8: Economic Growth"
+subtitle: "Useful links and other resources"
+---
+
+## Real Data
+
+- [FRED: Real Gross Domestic Product Per Capita](https://fred.stlouisfed.org/series/A939RX0Q048SBEA), the long-run per-capita growth trend
+- [FRED: Nonfarm Business Sector Labor Productivity](https://fred.stlouisfed.org/series/OPHNFB), output per hour worked
+
+## Instructional Videos
+
+<!-- TODO: add video links for this chapter (Khan Academy, YouTube, etc.). A previous draft of
+     this page had a WSJ unemployment video here, but that topic belongs in Chapter 9, and the
+     link could not be re-verified (wsj.com is not fetchable from this tool), so it was removed
+     rather than carried over unverified. -->

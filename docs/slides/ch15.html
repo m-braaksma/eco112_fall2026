@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="ch15_files/libs/clipboard/clipboard.min.js"></script>
+<script src="ch15_files/libs/quarto-html/tabby.min.js"></script>
+<script src="ch15_files/libs/quarto-html/popper.min.js"></script>
+<script src="ch15_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="ch15_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="ch15_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="ch15_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.26">
+
+  <title>Chapter 15: Monetary Policy, GDP, and the Price Level</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="ch15_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="ch15_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="ch15_files/libs/revealjs/dist/theme/quarto-47ef377ee77cdf85c61adfa0b07e2c12.css">
+  <link href="ch15_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="ch15_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="ch15_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="ch15_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+  
+  <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+  <script>
+  window.PlotlyConfig = {MathJaxConfig: 'local'};
+  if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
+  </script>
+  <script type="module">import "https://cdn.plot.ly/plotly-3.7.0.min"</script>
+
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title"><p>Chapter 15: Monetary Policy, GDP, and the Price Level</p></h1>
+  <p class="subtitle"></p><div class="line-block">ECO 112 Principles of Macroeconomics</div><p></p>
+
+<div class="quarto-title-authors">
+</div>
+
+</section>
+<section id="todays-roadmap" class="slide level2">
+<h2>Today’s Roadmap</h2>
+<h3 id="key-concepts">Key Concepts</h3>
+<ul>
+<li>Quick recap of the money market from Chapter 14, then how the Fed actively <em>uses</em> its tools</li>
+<li>The Fed’s modern policy toolkit: the federal funds rate target, open market operations, interest on reserve balances, and the discount rate</li>
+<li>Forward guidance: shaping expectations without changing any rate yet</li>
+<li>Quantitative easing (QE) and quantitative tightening (QT) at the zero lower bound</li>
+<li>The full transmission mechanism: interest rates to investment to AD to real GDP and the price level</li>
+<li>Why the Fed targets roughly 2 percent inflation instead of zero</li>
+<li>Cyclical asymmetry and the liquidity trap, and why fiscal policy sometimes has to help</li>
+</ul>
+<!-- IMAGE PLACEHOLDER: Federal Reserve building or FOMC meeting room -->
+</section>
+<section>
+<section id="recap-the-money-market-and-the-feds-toolkit" class="title-slide slide level1 center">
+<h1>Recap: The Money Market and the Fed’s Toolkit</h1>
+
+</section>
+<section id="recap-the-money-market-chapter-14" class="slide level2">
+<h2>Recap: The Money Market (Chapter 14)</h2>
+<div style="font-size: 1.15em;">
+<p>Chapter 14 built the <strong>money market</strong>: the demand for money slopes down (people hold less money at a higher interest rate, since holding money means giving up interest), and the money supply is set by the Fed. The two together determine the market interest rate.</p>
+</div>
+<div id="0e2b1696" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<div style="height:420px; width:650px;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.7.0.min.js" integrity="sha256-jvTGqxNp8AGWEcvNLVuKr+8j5dGe9Yw51LQkmDH+IYA=" crossorigin="anonymous"></script>                <div id="984bab4b-19a2-4ebd-a89c-4d767c6423bb" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("984bab4b-19a2-4ebd-a89c-4d767c6423bb")) {                    Plotly.newPlot(                        "984bab4b-19a2-4ebd-a89c-4d767c6423bb",                        [{"hovertemplate":"Quantity %{x}: rate %{y}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#1f4e79","width":3},"mode":"lines","name":"Money demand (Md)","x":[2,3,4,5,6,7,8,9],"y":[9,8,7,6,5,4,3,2],"type":"scatter"},{"hovertemplate":"Fixed quantity: 6\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#c55a11","width":3},"mode":"lines","name":"Money supply (Ms)","x":[6,6],"y":[1,9],"type":"scatter"},{"hovertemplate":"Equilibrium interest rate: i*\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#548235","size":14,"symbol":"star"},"mode":"markers","name":"Equilibrium","x":[6],"y":[5],"type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"annotations":[{"ax":40,"ay":-30,"showarrow":true,"text":"i*","x":6,"y":5}],"legend":{"x":0.02,"y":1.18,"orientation":"h"},"xaxis":{"title":{"text":"Quantity of money"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray","showticklabels":false},"yaxis":{"title":{"text":"Interest rate"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray","showticklabels":false},"width":650,"height":420,"plot_bgcolor":"white"},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('984bab4b-19a2-4ebd-a89c-4d767c6423bb');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+</div>
+<div style="font-size: 1.1em;">
+<p><em>This chapter is not about deriving that equilibrium again. It is about what the Fed actually does to move it, and what happens next.</em></p>
+</div>
+</section>
+<section id="connecting-back-the-fomc-chapter-14" class="slide level2">
+<h2>Connecting Back: The FOMC (Chapter 14)</h2>
+<div style="font-size: 1.2em;">
+<p>Chapter 14 introduced the <strong>Federal Open Market Committee (FOMC)</strong>, the group inside the Fed that meets regularly to set monetary policy.</p>
+<ul>
+<li>The FOMC does not set a single interest rate directly. It sets a <em>target range</em> for one specific, extremely important rate: the <strong>federal funds rate</strong>.</li>
+<li>Everything in this chapter is about the tools the FOMC uses to hit that target, and what happens to the rest of the economy once it does.</li>
+</ul>
+<p><em>Chapter 14 was about what money and the Fed are. This chapter is about the Fed in action.</em></p>
+</div>
+</section></section>
+<section>
+<section id="the-feds-modern-policy-toolkit" class="title-slide slide level1 center">
+<h1>The Fed’s Modern Policy Toolkit</h1>
+
+</section>
+<section id="tool-1-the-federal-funds-rate-target" class="slide level2">
+<h2>Tool 1: The Federal Funds Rate Target</h2>
+<div style="font-size: 1.2em;">
+<p>The <strong>federal funds rate</strong> is the interest rate banks charge <em>each other</em> for overnight loans of reserves.</p>
+<ul>
+<li>Banks occasionally end the day with more reserves than required, or fewer. They lend to and borrow from each other overnight to cover shortfalls.</li>
+<li>The FOMC announces a <strong>target range</strong> for this rate (for example, “4.25 to 4.50 percent”) at each meeting.</li>
+<li>This is the headline number reported after every FOMC meeting, and it anchors most other short-term interest rates in the economy.</li>
+</ul>
+<p><em>The rest of this section is about how the Fed actually gets the market rate to land inside that target range.</em></p>
+</div>
+</section>
+<section id="tool-2-open-market-operations" class="slide level2">
+<h2>Tool 2: Open Market Operations</h2>
+<div style="font-size: 1.2em;">
+<p><strong>Open market operations (OMO)</strong> are the Fed’s primary day-to-day tool: buying and selling government bonds in the open market to influence the quantity of bank reserves.</p>
+<ul>
+<li>The Fed <em>buys</em> government bonds: this pays sellers with new reserves, increasing the supply of reserves banks have available to lend to each other, pushing the federal funds rate <em>down</em>.</li>
+<li>The Fed <em>sells</em> government bonds: this pulls reserves out of the banking system, pushing the federal funds rate <em>up</em>.</li>
+</ul>
+<p><em>Open market operations are how the Fed nudges the actual market rate toward its announced target.</em></p>
+</div>
+</section>
+<section id="recap-bond-prices-and-interest-rates-chapter-14" class="slide level2">
+<h2>Recap: Bond Prices and Interest Rates (Chapter 14)</h2>
+<div style="font-size: 1.2em;">
+<p>Chapter 14 established the <em>inverse</em> relationship between bond prices and interest rates, and it is exactly what makes open market operations work.</p>
+<ul>
+<li>When the Fed <em>buys</em> bonds, it increases demand for them, so bond prices <em>rise</em>, and the interest rate on those bonds <em>falls</em>.</li>
+<li>When the Fed <em>sells</em> bonds, it increases supply in the market, so bond prices <em>fall</em>, and the interest rate <em>rises</em>.</li>
+</ul>
+<p><em>Same relationship from Chapter 14, now put to work as a policy tool rather than just a fact about bonds.</em></p>
+</div>
+</section>
+<section id="example-which-way-should-the-fed-trade" class="slide level2">
+<h2>Example: Which Way Should the Fed Trade?</h2>
+<div style="font-size: 1.2em;">
+<p>The FOMC wants to <em>lower</em> the federal funds rate target from 4.5 percent to 4.0 percent to support a weakening economy.</p>
+<ol type="1">
+<li>Should the Fed <em>buy</em> or <em>sell</em> government bonds to accomplish this?</li>
+<li>What happens to bond prices as a result?</li>
+<li>What happens to bank reserves as a result?</li>
+</ol>
+</div>
+</section>
+<section id="solution-which-way-should-the-fed-trade" class="slide level2">
+<h2>Solution: Which Way Should the Fed Trade?</h2>
+<div style="font-size: 1.2em;">
+<ol type="1">
+<li>The Fed should <em>buy</em> government bonds.</li>
+</ol>
+</div>
+<div class="fragment">
+<div style="font-size: 1.2em;">
+<ol start="2" type="1">
+<li>Buying bonds increases demand for them, so bond prices <em>rise</em>.</li>
+</ol>
+</div>
+</div>
+<div class="fragment">
+<div style="font-size: 1.2em;">
+<ol start="3" type="1">
+<li>Paying for those bonds injects new reserves into the banking system, increasing the supply of reserves available for banks to lend overnight, which pushes the federal funds rate <em>down</em> toward the new, lower target.</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="tool-3-interest-on-reserve-balances" class="slide level2">
+<h2>Tool 3: Interest on Reserve Balances</h2>
+<div style="font-size: 1.2em;">
+<p><strong>Interest on reserve balances (IORB)</strong> is an <em>administered</em> rate: the interest rate the Fed itself pays banks on the reserves they hold at the Fed.</p>
+<ul>
+<li>If market rates started drifting <em>below</em> IORB, banks would rather just leave reserves parked at the Fed earning IORB than lend them out cheaply overnight, which pulls the market rate back <em>up</em>.</li>
+<li>IORB effectively acts as a floor that helps keep the federal funds rate inside the FOMC’s target range, without the Fed needing to trade bonds every single day.</li>
+</ul>
+<p><em>Unlike open market operations, this rate is simply set by the Fed, not moved by buying or selling anything.</em></p>
+</div>
+</section>
+<section id="tool-4-the-discount-rate" class="slide level2">
+<h2>Tool 4: The Discount Rate</h2>
+<div style="font-size: 1.2em;">
+<p>The <strong>discount rate</strong> is the interest rate the Fed charges banks for direct, short-term loans from the Fed itself, through what is called the <em>discount window</em>.</p>
+<ul>
+<li>This is a backup source of funds for a bank that cannot find an overnight loan from another bank at a reasonable rate.</li>
+<li>The discount rate is normally set <em>above</em> the federal funds rate target, so borrowing directly from the Fed is a last resort, not a first choice.</li>
+</ul>
+<p><em>Together, these four tools, the funds rate target, open market operations, IORB, and the discount rate, are how the Fed manages short-term interest rates day to day.</em></p>
+</div>
+</section>
+<section id="real-data-the-federal-funds-rate" class="slide level2">
+<h2>Real Data: The Federal Funds Rate</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<!-- FRED EMBED PLACEHOLDER: series FEDFUNDS, Federal Funds Effective Rate, percent, monthly -->
+</div><div class="column" style="width:30%;">
+<div class="r-stack">
+<div class="fragment current-visible">
+<ol type="1">
+<li>Around a recession, which direction would you expect this rate to move, and why?</li>
+</ol>
+</div>
+<div class="fragment current-visible">
+<p><em>Answer:</em> down, the Fed typically cuts its target to encourage borrowing and spending during a downturn, using open market operations (bond purchases) to push the effective rate toward the lower target.</p>
+</div>
+<div class="fragment current-visible">
+<ol start="2" type="1">
+<li>Why is this called the <em>effective</em> rate rather than just “the Fed’s rate”?</li>
+</ol>
+</div>
+<div class="fragment current-visible">
+<p><em>Answer:</em> the FOMC sets a target range, not a single number; the effective rate is the actual average rate banks pay each other, which the Fed’s tools keep inside that range.</p>
+</div>
+<div class="fragment current-visible">
+<ol start="3" type="1">
+<li>What would a long period where this rate barely moves at all suggest about the Fed’s stance?</li>
+</ol>
+</div>
+<div class="fragment current-visible">
+<p><em>Answer:</em> a relatively neutral or “wait and see” stance, the Fed is not actively trying to speed up or slow down borrowing and spending through this tool for now.</p>
+</div>
+</div>
+</div></div>
+</section></section>
+<section>
+<section id="forward-guidance" class="title-slide slide level1 center">
+<h1>Forward Guidance</h1>
+
+</section>
+<section id="what-is-forward-guidance" class="slide level2">
+<h2>What Is Forward Guidance?</h2>
+<div style="font-size: 1.2em;">
+<p><strong>Forward guidance</strong> is the Fed communicating its outlook and its likely <em>future</em> policy path, without changing any rate today.</p>
+<ul>
+<li>Examples: a statement that rates are “likely to fall over the coming quarters,” or that the Fed expects to “remain patient” before its next move.</li>
+<li>No bond has been bought or sold yet, no target has moved yet. All that has changed is what the Fed has <em>said</em> about what it plans to do.</li>
+</ul>
+<p><em>If the market believes the Fed, that belief alone can move behavior, before any actual rate change happens.</em></p>
+</div>
+</section>
+<section id="why-forward-guidance-works" class="slide level2">
+<h2>Why Forward Guidance Works</h2>
+<div style="font-size: 1.2em;">
+<p>Forward guidance works because of <em>credibility</em> and <em>expectations</em>.</p>
+<ul>
+<li>If businesses and investors trust that the Fed will follow through, they do not wait for the actual rate change to act. They adjust spending and investment plans <em>immediately</em>, based on what the Fed says it intends to do.</li>
+<li>A credible signal of future rate cuts makes borrowing look cheaper <em>soon</em>, so firms may start planning new investment projects now, anticipating better financing conditions ahead.</li>
+</ul>
+<p><em>This is a distinct channel from the tools already covered: no bonds traded, no reserves moved, just expectations doing the work.</em></p>
+</div>
+</section>
+<section id="example-which-is-it" class="slide level2">
+<h2>Example: Which Is It?</h2>
+<div style="font-size: 1.2em;">
+<p>Recall the <strong>investment demand curve</strong> from Chapter 10: it plots planned investment against the current interest rate, sloping down.</p>
+<p>For each event below, is it (a) a <em>movement along</em> the investment demand curve, or (b) a <em>shift</em> of the entire investment demand curve?</p>
+<ol type="1">
+<li>The Fed actually cuts the federal funds rate target this week, and firms respond by borrowing more at the new, lower rate.</li>
+<li>The Fed issues a statement strongly signaling it expects to cut rates significantly over the next year, and firms increase planned investment at <em>today’s</em> interest rate, anticipating cheaper financing ahead.</li>
+</ol>
+</div>
+</section>
+<section id="solution-which-is-it" class="slide level2">
+<h2>Solution: Which Is It?</h2>
+<div style="font-size: 1.2em;">
+<ol type="1">
+<li>A <em>movement along</em> the investment demand curve. The interest rate itself actually changed, so investment responds by sliding along the existing curve to a new point.</li>
+</ol>
+</div>
+<div class="fragment">
+<div style="font-size: 1.2em;">
+<ol start="2" type="1">
+<li>A <em>shift</em> of the investment demand curve. Today’s interest rate has not changed at all, only expectations about the future have. More investment happens at every current interest rate, so the whole curve shifts right.</li>
+</ol>
+</div>
+</div>
+<div class="fragment">
+<div style="font-size: 1.2em;">
+<p><em>The distinction is whether an actual rate change happened (movement along) or only a credible signal about the future did (a shift).</em></p>
+</div>
+</div>
+</section></section>
+<section>
+<section id="quantitative-easing-and-quantitative-tightening" class="title-slide slide level1 center">
+<h1>Quantitative Easing and Quantitative Tightening</h1>
+
+</section>
+<section id="the-zero-lower-bound-problem" class="slide level2">
+<h2>The Zero Lower Bound Problem</h2>
+<div style="font-size: 1.2em;">
+<p>Ordinary open market operations mainly target <em>short-term</em> rates, like the federal funds rate. But what happens when short-term rates are already pushed down close to zero, the so-called <strong>zero lower bound</strong>, and the economy still needs more support?</p>
+<ul>
+<li>The Fed cannot cut the federal funds rate much further below zero.</li>
+<li>Businesses and households also borrow at <em>longer-term</em> rates (a 10-year mortgage, a 20-year corporate bond), which ordinary short-term operations only influence indirectly.</li>
+</ul>
+<p><em>This is the situation that quantitative easing was designed to address.</em></p>
+</div>
+</section>
+<section id="quantitative-easing-qe" class="slide level2">
+<h2>Quantitative Easing (QE)</h2>
+<div style="font-size: 1.2em;">
+<p><strong>Quantitative easing (QE)</strong> is the Fed buying <em>longer-term</em> government bonds (and sometimes other securities) in large quantities, directly targeting <em>long-term</em> interest rates rather than the short-term federal funds rate.</p>
+<ul>
+<li>Buying long-term bonds pushes their prices up and their yields (interest rates) <em>down</em>, the same bond price/interest rate logic from Chapter 14, just applied further out on the maturity spectrum.</li>
+<li>The goal is extra stimulus: cheaper long-term borrowing for mortgages, business expansion, and other long-horizon spending, used when the usual short-term tool has little room left to work.</li>
+</ul>
+</div>
+</section>
+<section id="quantitative-tightening-qt" class="slide level2">
+<h2>Quantitative Tightening (QT)</h2>
+<div style="font-size: 1.2em;">
+<p><strong>Quantitative tightening (QT)</strong> is the reverse: the Fed lets its long-term bond holdings run off as they mature, or actively sells them.</p>
+<ul>
+<li>Reducing the Fed’s demand for long-term bonds tends to push their prices <em>down</em> and their yields <em>up</em>.</li>
+<li>QT is used to <em>withdraw</em> some of the earlier stimulus once it is no longer needed, tightening financial conditions.</li>
+</ul>
+<p><em>QE pushes long-term rates down for extra stimulus. QT lets long-term rates drift back up.</em></p>
+</div>
+</section>
+<section id="qeqt-vs.-ordinary-open-market-operations" class="slide level2">
+<h2>QE/QT vs.&nbsp;Ordinary Open Market Operations</h2>
+<div style="font-size: 1.15em;">
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Ordinary open market operations</th>
+<th>QE / QT</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target</td>
+<td>Short-term rates (federal funds rate)</td>
+<td>Long-term rates directly</td>
+</tr>
+<tr class="even">
+<td>Typical use</td>
+<td>Routine, every meeting</td>
+<td>Only near the zero lower bound, or unwinding it</td>
+</tr>
+<tr class="odd">
+<td>Securities</td>
+<td>Mostly short-term Treasury securities</td>
+<td>Longer-term bonds, in large volume</td>
+</tr>
+</tbody>
+</table>
+<p><em>Same underlying mechanism, buying and selling bonds to move their price and yield, aimed at a different part of the interest rate spectrum.</em></p>
+</div>
+</section>
+<section id="real-data-the-10-year-treasury-rate" class="slide level2">
+<h2>Real Data: The 10-Year Treasury Rate</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<!-- FRED EMBED PLACEHOLDER: series DGS10, 10-Year Treasury Constant Maturity Rate, percent, daily -->
+</div><div class="column" style="width:30%;">
+<div class="r-stack">
+<div class="fragment current-visible">
+<ol type="1">
+<li>Does this long-term rate always move in lockstep with the federal funds rate?</li>
+</ol>
+</div>
+<div class="fragment current-visible">
+<p><em>Answer:</em> not exactly, long-term rates also reflect expectations about future inflation and growth, which is part of why the Fed sometimes uses QE and QT to influence this rate more directly.</p>
+</div>
+<div class="fragment current-visible">
+<ol start="2" type="1">
+<li>If the Fed announces a large QE program, what would you expect to happen to this series?</li>
+</ol>
+</div>
+<div class="fragment current-visible">
+<p><em>Answer:</em> it would tend to fall, since the Fed’s large-scale bond buying pushes long-term bond prices up and yields down.</p>
+</div>
+<div class="fragment current-visible">
+<ol start="3" type="1">
+<li>Why might a homebuyer with a 30-year mortgage care more about this series than about the federal funds rate itself?</li>
+</ol>
+</div>
+<div class="fragment current-visible">
+<p><em>Answer:</em> long-term borrowing costs like mortgage rates track long-term yields such as this one more closely than they track the short-term federal funds rate.</p>
+</div>
+</div>
+</div></div>
+</section></section>
+<section>
+<section id="from-interest-rates-to-real-gdp-the-transmission-mechanism" class="title-slide slide level1 center">
+<h1>From Interest Rates to Real GDP: The Transmission Mechanism</h1>
+
+</section>
+<section id="connecting-back-investment-demand-and-the-multiplier-chapters-10-11" class="slide level2">
+<h2>Connecting Back: Investment Demand and the Multiplier (Chapters 10-11)</h2>
+<div style="font-size: 1.2em;">
+<p>Two tools from earlier chapters are exactly what turns a Fed interest rate move into a change in real GDP:</p>
+<ul>
+<li>The <strong>investment demand curve</strong> (Chapter 10): a lower interest rate makes more investment projects profitable, so planned investment rises.</li>
+<li>The <strong>multiplier</strong> (Chapters 10-11): an initial change in spending gets re-spent through the economy, producing a <em>larger</em> final change in equilibrium GDP. Multiplier <span class="math inline">\(= 1/\text{MPS} = 1/(1 - \text{MPC})\)</span>.</li>
+</ul>
+<p><em>A rate change does not just affect investment once. It ripples through the whole economy via the multiplier.</em></p>
+</div>
+</section>
+<section id="connecting-back-adas-chapter-12" class="slide level2">
+<h2>Connecting Back: AD/AS (Chapter 12)</h2>
+<div style="font-size: 1.2em;">
+<p>Chapter 12 built the full <strong>AD/AS model</strong>: aggregate demand slopes down, short-run aggregate supply slopes up, and their intersection sets both equilibrium real GDP and the price level.</p>
+<ul>
+<li>A rise in investment spending, amplified by the multiplier, shifts the <em>entire</em> aggregate demand curve, not just one point on it.</li>
+<li>Where AD settles against AS determines both how much real GDP changes <em>and</em> how much the price level changes.</li>
+</ul>
+<p><em>This is the last link in the chain: interest rates change investment, investment (times the multiplier) shifts AD, and AD/AS determines the final effect on GDP and prices.</em></p>
+</div>
+</section>
+<section id="the-full-chain-expansionary-monetary-policy" class="slide level2">
+<h2>The Full Chain: Expansionary Monetary Policy</h2>
+<div style="font-size: 1.15em;">
+<ol type="1">
+<li>The Fed lowers its federal funds rate target (using open market operations, and possibly forward guidance or QE).</li>
+<li>Lower interest rates raise planned investment spending, a movement along the investment demand curve (Chapter 10).</li>
+<li>That initial rise in spending is re-spent through the economy, multiplied (Chapters 10-11).</li>
+<li>The larger total increase in spending shifts aggregate demand to the <em>right</em> (Chapter 12).</li>
+<li>Equilibrium real GDP rises, and the price level rises somewhat too, depending on how close the economy already is to full employment.</li>
+</ol>
+<p><em>Contractionary monetary policy runs this exact same chain in reverse.</em></p>
+</div>
+</section>
+<section id="example-tracing-an-expansionary-policy" class="slide level2">
+<h2>Example: Tracing an Expansionary Policy</h2>
+<div style="font-size: 1.2em;">
+<p>The Fed cuts its federal funds rate target. As a result, businesses increase planned investment spending by $25 billion (illustrative). The economy’s MPC is <span class="math inline">\(0.75\)</span>.</p>
+<ol type="1">
+<li>Compute the spending multiplier.</li>
+<li>Using the multiplier, find the total shift in aggregate demand, measured in additional real GDP.</li>
+<li>Which chapter’s model determines how much of that shift shows up as higher real GDP versus a higher price level?</li>
+</ol>
+</div>
+</section>
+<section id="solution-tracing-an-expansionary-policy" class="slide level2">
+<h2>Solution: Tracing an Expansionary Policy</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div id="b81936a1" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div style="height:460px; width:620px;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.7.0.min.js" integrity="sha256-jvTGqxNp8AGWEcvNLVuKr+8j5dGe9Yw51LQkmDH+IYA=" crossorigin="anonymous"></script>                <div id="9003eb37-5948-4453-973a-9d441f523d04" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("9003eb37-5948-4453-973a-9d441f523d04")) {                    Plotly.newPlot(                        "9003eb37-5948-4453-973a-9d441f523d04",                        [{"hovertemplate":"Output %{x}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#548235","width":3},"mode":"lines","name":"Short-run AS","x":[0,1,2,3,4,5,6,7,8,9,10,11],"y":[1.0,1.8,2.6,3.4000000000000004,4.2,5.0,5.800000000000001,6.6000000000000005,7.4,8.2,9.0,9.8],"type":"scatter"},{"hovertemplate":"Output %{x}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#9dc3e6","dash":"dot","width":2},"mode":"lines","name":"AD (before)","x":[0,1,2,3,4,5,6,7,8,9,10,11],"y":[10,9,8,7,6,5,4,3,2,1,0,-1],"type":"scatter"},{"hovertemplate":"Output %{x}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#1f4e79","width":3},"mode":"lines","name":"AD (after rate cut)","x":[0,1,2,3,4,5,6,7,8,9,10,11],"y":[11.5,10.5,9.5,8.5,7.5,6.5,5.5,4.5,3.5,2.5,1.5,0.5],"type":"scatter"},{"hovertemplate":"Old equilibrium\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#9dc3e6","size":12,"symbol":"circle"},"mode":"markers","name":"Old equilibrium","x":[5],"y":[5],"type":"scatter"},{"hovertemplate":"New equilibrium: GDP and price level both rise\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#548235","size":14,"symbol":"star"},"mode":"markers","name":"New equilibrium","x":[5.8],"y":[5.6],"type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"legend":{"font":{"size":9},"x":0.02,"y":1.28,"orientation":"h"},"xaxis":{"title":{"text":"Real GDP"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray","showticklabels":false},"yaxis":{"title":{"text":"Price level"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray","showticklabels":false},"width":620,"height":460,"plot_bgcolor":"white"},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('9003eb37-5948-4453-973a-9d441f523d04');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+</div>
+</div><div class="column" style="width:45%;">
+<div style="font-size: 1.1em;">
+<ol type="1">
+<li>Multiplier <span class="math inline">\(= 1/(1 - 0.75) = 1/0.25 = 4\)</span>.</li>
+</ol>
+<div class="fragment">
+<ol start="2" type="1">
+<li>AD shift <span class="math inline">\(= 25 \times 4 = 100\)</span>. Aggregate demand shifts right by an amount equal to $100 billion in real GDP terms.</li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="3" type="1">
+<li>Chapter 12’s AD/AS model: along the upward-sloping short-run AS curve, part of this shift raises real GDP and part raises the price level, exactly how much of each depends on how steep AS is at that point.</li>
+</ol>
+</div>
+</div>
+</div></div>
+</section>
+<section id="harder-problem-tracing-a-contractionary-policy" class="slide level2">
+<h2>Harder Problem: Tracing a Contractionary Policy</h2>
+<div style="font-size: 1.2em;">
+<p>The economy is overheating, so the Fed <em>raises</em> its federal funds rate target. As a result, businesses cut planned investment spending by $15 billion (illustrative). The economy’s MPC is <span class="math inline">\(0.8\)</span>.</p>
+<ol type="1">
+<li>Compute the spending multiplier for this economy.</li>
+<li>Using the multiplier, find the total shift in aggregate demand, measured in real GDP.</li>
+<li>Which direction does aggregate demand shift, and what happens to equilibrium real GDP and the price level?</li>
+</ol>
+<p>Work through this with a partner or in a small group before checking the next slide.</p>
+</div>
+</section>
+<section id="review-tracing-a-contractionary-policy" class="slide level2">
+<h2>Review: Tracing a Contractionary Policy</h2>
+<div style="font-size: 1.2em;">
+<ol type="1">
+<li>Multiplier <span class="math inline">\(= 1/(1 - 0.8) = 1/0.2 = 5\)</span>.</li>
+</ol>
+</div>
+<div class="fragment">
+<div style="font-size: 1.2em;">
+<ol start="2" type="1">
+<li>AD shift <span class="math inline">\(= 15 \times 5 = 75\)</span>. Aggregate demand shifts by an amount equal to $75 billion in real GDP terms.</li>
+</ol>
+</div>
+</div>
+<div class="fragment">
+<div style="font-size: 1.2em;">
+<ol start="3" type="1">
+<li>Aggregate demand shifts <em>left</em> (investment fell). Equilibrium real GDP falls, and upward pressure on the price level eases, exactly what a contractionary policy is meant to do when the economy is overheating.</li>
+</ol>
+</div>
+</div>
+</section></section>
+<section>
+<section id="why-target-2-percent-inflation-not-zero" class="title-slide slide level1 center">
+<h1>Why Target 2 Percent Inflation, Not Zero?</h1>
+
+</section>
+<section id="connecting-back-nominal-vs.-real-income-chapter-9" class="slide level2">
+<h2>Connecting Back: Nominal vs.&nbsp;Real Income (Chapter 9)</h2>
+<div style="font-size: 1.2em;">
+<p>Chapter 9 distinguished <strong>nominal income</strong> (dollar amount, unadjusted) from <strong>real income</strong> (adjusted for inflation, actual purchasing power).</p>
+<ul>
+<li>A worker’s <em>real</em> wage can fall even if their <em>nominal</em> wage stays exactly the same, as long as prices rise around them.</li>
+<li>This distinction turns out to matter a great deal for how the Fed thinks about its inflation target.</li>
+</ul>
+</div>
+</section>
+<section id="greasing-the-wheels-of-the-labor-market" class="slide level2">
+<h2>Greasing the Wheels of the Labor Market</h2>
+<div style="font-size: 1.2em;">
+<p>The Fed targets inflation of roughly <em>2 percent</em> per year, not zero, in part because of how labor markets actually work.</p>
+<ul>
+<li>Cutting a worker’s <em>nominal</em> wage is extremely difficult in practice: it feels unfair, hurts morale, and workers strongly resist it, even when economic conditions call for a real wage cut.</li>
+<li>With a small, steady, positive inflation rate, a firm can simply hold nominal wages <em>flat</em> and let inflation quietly erode the real wage over time, achieving the needed real adjustment without ever cutting anyone’s paycheck number.</li>
+<li>Economists call this <strong>“greasing the wheels”</strong> of the labor market: a little inflation lets real wages adjust downward <em>gradually</em>, when zero inflation would require nominal wage cuts that rarely happen smoothly.</li>
+</ul>
+<p><em>A target of exactly zero would remove this flexibility entirely.</em></p>
+</div>
+</section>
+<section id="discussion-zero-inflation-vs.-low-positive-inflation" class="slide level2">
+<h2>Discussion: Zero Inflation vs.&nbsp;Low Positive Inflation</h2>
+<div style="font-size: 1.2em;">
+<ol type="1">
+<li>Why might a firm find it easier to simply not give a raise this year than to announce an outright pay cut, even if the economic effect on the worker’s real income is similar?</li>
+<li>If the Fed instead targeted zero percent inflation, what would you predict happens to <em>unemployment</em> during a downturn, given how sticky nominal wages tend to be?</li>
+</ol>
+<p><em>A small, stable, positive inflation rate is a deliberate policy choice, not an accident or a failure to hit “the real target” of zero.</em></p>
+</div>
+</section></section>
+<section>
+<section id="the-limits-of-monetary-policy" class="title-slide slide level1 center">
+<h1>The Limits of Monetary Policy</h1>
+
+</section>
+<section id="cyclical-asymmetry" class="slide level2">
+<h2>Cyclical Asymmetry</h2>
+<div style="font-size: 1.2em;">
+<p>Monetary policy is not equally reliable in both directions, economists call this <strong>cyclical asymmetry</strong>.</p>
+<ul>
+<li><em>Slowing</em> an overheating economy tends to work well: raising interest rates reliably discourages borrowing and spending, cooling demand-pull inflation.</li>
+<li><em>Reviving</em> a severely depressed economy is much less reliable: even when the Fed pushes interest rates very low, businesses may be too uncertain about the future to borrow, and banks may be too cautious to lend, regardless of how cheap credit has become.</li>
+</ul>
+<p><em>The brake works better than the accelerator.</em></p>
+</div>
+</section>
+<section id="the-liquidity-trap" class="slide level2">
+<h2>The Liquidity Trap</h2>
+<div style="font-size: 1.2em;">
+<p>A <strong>liquidity trap</strong> is a situation where interest rates are already very low, but further cuts fail to stimulate more borrowing and lending.</p>
+<ul>
+<li>Businesses hold back on investment even at rock-bottom rates, because they are worried about weak future demand, not about the cost of borrowing.</li>
+<li>Banks hold back on lending even with ample reserves, because they are worried about the safety of the loans, not about their own funding costs.</li>
+<li>In this situation, additional rate cuts (or even QE) have little further traction, the tool has essentially run out of room to work.</li>
+</ul>
+<p><em>This is precisely the situation quantitative easing was designed for, but even QE has limits once expectations and confidence are the real constraint.</em></p>
+</div>
+</section>
+<section id="connecting-back-monetary-vs.-fiscal-policy-chapter-13" class="slide level2">
+<h2>Connecting Back: Monetary vs.&nbsp;Fiscal Policy (Chapter 13)</h2>
+<div style="font-size: 1.2em;">
+<p>Chapter 13 covered <strong>fiscal policy</strong>: Congress and the President changing government spending (G) and taxes (T) to shift AD directly.</p>
+<ul>
+<li>Monetary policy works through interest rates and the <em>Fed</em>, an independent body that can act relatively quickly, without needing new legislation.</li>
+<li>Fiscal policy works through G and T and <em>Congress</em>, subject to the recognition, administrative, and operational lags covered in Chapter 13.</li>
+<li>In a liquidity trap, monetary policy loses much of its traction, exactly the situation where fiscal policy, despite its slower legislative process, may be needed to shift AD directly through government spending or tax changes.</li>
+</ul>
+<p><em>Two different levers, and each one tends to be strongest exactly where the other is weakest.</em></p>
+</div>
+</section>
+<section id="looking-ahead-chapters-16-17" class="slide level2">
+<h2>Looking Ahead: Chapters 16-17</h2>
+<div style="font-size: 1.2em;">
+<ul>
+<li><strong>Chapter 16</strong> looks more closely at financial markets: how stocks and bonds are priced, and the idea of present value, tools that help explain how markets react to Fed announcements.</li>
+<li><strong>Chapter 17</strong> studies how the economy self-corrects over the long run, introducing the <strong>Phillips curve</strong> and the relationship between inflation and unemployment over time.</li>
+</ul>
+<p><em>Monetary policy shifts AD in the short run. These next chapters look at the markets that price those expectations, and at what happens once the economy has had time to fully adjust.</em></p>
+</div>
+</section>
+<section id="wrap-up" class="slide level2">
+<h2>Wrap Up</h2>
+<div style="font-size: 1.1em;">
+<ul>
+<li>The Fed’s modern toolkit: the <em>federal funds rate target</em>, <em>open market operations</em> (buying/selling bonds moves reserves and short-term rates), <em>interest on reserve balances</em>, and the <em>discount rate</em>.</li>
+<li><em>Forward guidance</em> shifts expectations, and can shift the investment demand curve, without any actual rate change; that is what distinguishes it from a movement along the curve.</li>
+<li><em>Quantitative easing</em> targets long-term rates directly when short-term rates are near the zero lower bound; <em>quantitative tightening</em> reverses it.</li>
+<li>The transmission chain: a Fed rate change moves investment (Ch. 10), gets multiplied (Ch. 10-11), shifts AD (Ch. 12), and changes both real GDP and the price level.</li>
+<li>The Fed targets roughly 2 percent inflation, not zero, partly to let real wages adjust downward <em>gradually</em> even when nominal wages are sticky (Ch. 9).</li>
+<li>Monetary policy is more reliable at <em>slowing</em> an overheating economy than at pulling one out of a severe recession; a <em>liquidity trap</em> is one reason fiscal policy (Ch. 13) sometimes has to help.</li>
+</ul>
+</div>
+<div style="font-size: 1.1em; padding-top: 0.3em;">
+<p><em>Looking ahead:</em> Chapter 16 covers financial markets and present value, and Chapter 17 introduces the Phillips curve and long-run self-correction.</p>
+</div>
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="ch15_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="ch15_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="ch15_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="ch15_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="ch15_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="ch15_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="ch15_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="ch15_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="ch15_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="ch15_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': true,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

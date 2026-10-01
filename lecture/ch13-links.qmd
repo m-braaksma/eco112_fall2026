@@ -1,0 +1,13 @@
+---
+title: "Chapter 13: Fiscal Policy, Deficits, and Debt"
+subtitle: "Useful links and other resources"
+---
+
+## Real Data
+
+- [FRED: Federal Debt: Total Public Debt](https://fred.stlouisfed.org/series/GFDEBTN)
+- [FRED: Federal Debt: Total Public Debt as Percent of GDP](https://fred.stlouisfed.org/series/GFDEGDQ188S)
+
+## Instructional Videos
+
+<!-- TODO: add video links for this chapter (Khan Academy, YouTube, etc.) -->

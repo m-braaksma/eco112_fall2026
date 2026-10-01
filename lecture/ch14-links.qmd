@@ -1,0 +1,13 @@
+---
+title: "Chapter 14: Money, the Federal Reserve, and Interest Rates"
+subtitle: "Useful links and other resources"
+---
+
+## Real Data
+
+- [FRED: M1 Money Stock](https://fred.stlouisfed.org/series/M1SL)
+- [FRED: M2 Money Stock](https://fred.stlouisfed.org/series/M2SL)
+
+## Instructional Videos
+
+<!-- TODO: add video links for this chapter (Khan Academy, YouTube, etc.) -->

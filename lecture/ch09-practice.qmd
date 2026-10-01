@@ -1,0 +1,181 @@
+---
+title: "Chapter 9: Business Cycles, Unemployment, and Inflation"
+subtitle: "Practice Problems"
+---
+
+## Warm-Up: Quick Concept and Calculation Checks
+
+a. In a small town, 142 people are employed and 8 are actively looking for work but do not have a
+   job. What is the size of the labor force?
+b. Using the town from part (a), what is the unemployment rate?
+c. For each person, say whether they are counted as *unemployed*, *employed*, or *not in the labor
+   force*: (i) a retiree who is not looking for work, (ii) a college student working 10 hours a
+   week at a campus job, (iii) a laid-off worker who has stopped looking for a job entirely.
+d. For each situation, name the *type* of unemployment (frictional, structural, cyclical, or
+   seasonal): (i) a ski instructor is out of work every summer, (ii) a recession sharply reduces
+   orders at a factory and workers are laid off, (iii) a recent graduate spends three weeks
+   interviewing before accepting a job offer, (iv) a coal miner's skills no longer match the jobs
+   available after coal plants close in the region.
+e. The Consumer Price Index rises from 210.0 to 218.5 over one year. What is the inflation rate?
+f. The nominal interest rate on a loan is 6 percent, and inflation is 3.5 percent. What is the
+   approximate real interest rate?
+g. True or False: full employment means the unemployment rate is zero percent.
+
+<details>
+<summary>Show Answer</summary>
+
+a. $142 + 8 = 150$ people.
+b. $8 / 150 \approx 5.3$ percent.
+c. (i) *Not in the labor force* (not looking for work). (ii) *Employed* (has a job, even
+   part-time). (iii) *Not in the labor force* (a discouraged worker who stopped looking is no
+   longer counted as unemployed).
+d. (i) *Seasonal*. (ii) *Cyclical*. (iii) *Frictional*. (iv) *Structural*.
+e. $(218.5 - 210.0)/210.0 \approx 4.0$ percent.
+f. $6 - 3.5 = 2.5$ percent.
+g. *False.* Full employment means cyclical unemployment is zero, but frictional and structural
+   unemployment (the *natural rate*) are still present even in a healthy economy.
+
+</details>
+
+## Problem 1: The Labor Force and the Unemployment Rate
+
+A regional economy has a working-age population of 500,000 people. Of these, 60,000 are retired,
+full-time students, or otherwise not looking for work. Of the people who remain, 405,000 currently
+have jobs.
+
+a. How many people are in the labor force?
+b. How many people are unemployed?
+c. What is the unemployment rate?
+d. What is the labor force participation rate (labor force divided by the working-age population)?
+e. Suppose 5,000 unemployed workers become discouraged and stop looking for work altogether, with
+   no other changes. What happens to the labor force, the unemployment rate, and the labor force
+   participation rate?
+
+<details>
+<summary>Show Answer</summary>
+
+a. Labor force $= 500{,}000 - 60{,}000 = 440{,}000$.
+b. Unemployed $= 440{,}000 - 405{,}000 = 35{,}000$.
+c. Unemployment rate $= 35{,}000 / 440{,}000 \approx 8.0$ percent.
+d. Participation rate $= 440{,}000 / 500{,}000 = 88.0$ percent.
+e. The labor force *shrinks* to $435{,}000$ (those 5,000 people are no longer counted as looking
+   for work). Unemployed falls to $30{,}000$, so the unemployment rate becomes
+   $30{,}000/435{,}000 \approx 6.9$ percent, it *falls*, even though nobody found a job. The
+   participation rate falls to $435{,}000/500{,}000 = 87.0$ percent. This is a classic case where
+   a falling unemployment rate does not necessarily mean the job market improved.
+
+</details>
+
+## Problem 2: Tracking Inflation with the CPI
+
+The table below shows a country's Consumer Price Index over three years (base period CPI $=100$).
+
+| Year | CPI |
+|---|---|
+| 1 | 204.0 |
+| 2 | 211.0 |
+| 3 | 219.0 |
+
+a. What was the inflation rate from Year 1 to Year 2?
+b. What was the inflation rate from Year 2 to Year 3?
+c. A worker's nominal wage was $22.00 per hour in Year 1 and rose to $22.75 in Year 2. Did the
+   worker's *real* wage rise or fall from Year 1 to Year 2? (Compare the wage's percent growth to
+   the inflation rate you found in part (a).)
+d. If the CPI had instead *fallen* from 204.0 to 200.0 over a year, what would we call that
+   situation, and what would it mean for the purchasing power of a dollar?
+
+<details>
+<summary>Show Answer</summary>
+
+```{python}
+#| echo: false
+#| fig-align: center
+
+import plotly.graph_objects as go
+
+BLUE = "#1f4e79"
+
+years = ["Year 1", "Year 2", "Year 3"]
+cpi = [204.0, 211.0, 219.0]
+
+fig = go.Figure()
+fig.add_trace(go.Scatter(x=years, y=cpi, mode="lines+markers", line=dict(color=BLUE, width=3),
+                          marker=dict(size=10),
+                          hovertemplate="%{x}: CPI %{y}<extra></extra>"))
+fig.update_layout(
+    yaxis_title="Consumer Price Index", width=520, height=380,
+    plot_bgcolor="white", showlegend=False
+)
+fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="lightgray", range=[195, 225])
+fig.show()
+```
+
+a. $(211.0 - 204.0)/204.0 \approx 3.4$ percent.
+b. $(219.0 - 211.0)/211.0 \approx 3.8$ percent.
+c. The wage grew $(22.75 - 22.00)/22.00 \approx 3.4$ percent, almost exactly matching the 3.4
+   percent inflation rate from part (a). The worker's *real* wage stayed roughly *flat*, the raise
+   kept pace with inflation but did not get the worker ahead.
+d. That would be *deflation*, a general decline in the price level. A dollar would buy *more* than
+   before, its purchasing power would rise.
+
+</details>
+
+## Problem 3: Who Wins and Who Loses from Inflation?
+
+Inflation over one year turns out to be 6 percent, higher than almost anyone expected.
+
+a. A retiree lives on a pension fixed at $2,400 per month in nominal dollars. What happens to the
+   *real* value of that pension over the year?
+b. A homeowner has a 30-year mortgage with a fixed interest rate of 4 percent, borrowed before the
+   inflation surprise. Are they better off or worse off because of the unexpectedly high inflation?
+   Why?
+c. A worker's employer raises her nominal salary from $58,000 to $60,500 for the year. Is her real
+   income rising or falling? By approximately how much?
+d. Based on (a) through (c), state in one sentence who tends to gain and who tends to lose from
+   unanticipated inflation.
+
+<details>
+<summary>Show Answer</summary>
+
+a. The pension stays fixed in nominal dollars, but prices rose 6 percent, so its *real* purchasing
+   power *falls* by roughly 6 percent.
+b. *Better off.* They are repaying a fixed 4 percent rate with dollars that are now worth less
+   than expected, unanticipated inflation transfers real value from lenders to borrowers with
+   fixed-rate debt.
+c. Nominal salary grew $(60{,}500-58{,}000)/58{,}000 \approx 4.3$ percent, which is *less* than the
+   6 percent inflation rate, so her *real* income *falls* by roughly $4.3 - 6 = -1.7$ percent.
+d. *Losers* tend to be people with fixed nominal incomes and savers or lenders holding fixed-rate
+   debt; *winners* tend to be borrowers repaying fixed-rate debt with money that is now worth less.
+
+</details>
+
+## Problem 4: Business Cycle Phases and the Cost of Inflation
+
+a. Put these four phases of the business cycle in order, starting from a business cycle peak:
+   trough, expansion, peak, recession.
+b. During a recession, which industry would you expect to see a *larger* drop in sales: a grocery
+   store, or a company that manufactures new cars? Explain using the idea of postponable spending.
+c. A country's inflation rate accelerates from a modest 3 percent to over 200 percent per year
+   (hyperinflation). Name two ways this could damage the economy's total output, beyond simply
+   making goods more expensive.
+d. Explain briefly why even a low, stable, fully anticipated inflation rate (say, 2 percent) still
+   imposes some real cost on an economy, rather than being completely harmless.
+
+<details>
+<summary>Show Answer</summary>
+
+a. Peak, recession, trough, expansion, and then back toward a new peak.
+b. The *car manufacturer*. Cars are a durable good, and durable-good purchases can be *postponed*,
+   a household can keep driving its current car for another year or two if money is tight. Grocery
+   spending on food is much harder to postpone, so it holds up better in a downturn.
+c. Any two reasonable answers, for example: people rush to spend money immediately before it loses
+   more value, which disrupts normal saving and planning; businesses struggle to set prices and
+   sign contracts when prices change by the day or hour; normal exchange breaks down as money stops
+   functioning as a reliable store of value, all of which can cause total output to fall sharply.
+d. Even fully anticipated inflation imposes *menu costs* (the real resources businesses spend
+   updating posted prices, menus, and contracts) and *shoe-leather costs* (the time and effort
+   people spend trying to avoid holding cash that is losing value, such as more frequent trips to
+   the bank). These are real resources used up simply coping with inflation rather than producing
+   goods and services.
+
+</details>

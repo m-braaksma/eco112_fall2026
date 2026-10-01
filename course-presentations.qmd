@@ -3,7 +3,7 @@ title: "Current Events Presentations"
 subtitle: "Guidelines & Rubric"
 ---
 
-## Overview
+### Overview
 
 Starting with Chapter 7, small groups lead a short presentation connecting that week's chapter to a real, current economic event. Slides are required, build them in Google Slides in the shared Drive folder below before your presentation slot.
 

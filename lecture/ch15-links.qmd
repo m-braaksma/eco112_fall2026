@@ -1,0 +1,14 @@
+---
+title: "Chapter 15: Monetary Policy, GDP, and the Price Level"
+subtitle: "Useful links and other resources"
+---
+
+## Real Data
+
+- [FRED: Federal Funds Effective Rate](https://fred.stlouisfed.org/series/FEDFUNDS)
+- [FRED: 10-Year Treasury Constant Maturity Rate](https://fred.stlouisfed.org/series/DGS10)
+- [FRED Blog: Overnight Reverse Repurchase Agreements: Short-Term Parking for Reserves](https://fredblog.stlouisfed.org/2021/08/overnight-reverse-repurchase-agreements-short-term-parking-for-reserves/)
+
+## Instructional Videos
+
+<!-- TODO: add video links for this chapter (Khan Academy, YouTube, etc.) -->

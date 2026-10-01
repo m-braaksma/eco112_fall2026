@@ -1,0 +1,182 @@
+---
+title: "Chapter 17: Extending the Analysis of Aggregate Supply"
+subtitle: "Practice Problems"
+---
+
+## Warm-Up: Quick Concept and Calculation Checks
+
+a. If real GDP is temporarily *above* potential GDP, what eventually happens to nominal wages, and
+   which direction does SRAS shift as a result?
+b. If real GDP is temporarily *below* potential GDP, what eventually happens to nominal wages
+   (even though this happens slowly), and which direction does SRAS shift as a result?
+c. On the short-run Phillips curve, is the relationship between unemployment and inflation
+   positive or negative?
+d. Is the long-run Phillips curve upward sloping, downward sloping, or vertical? At what
+   unemployment rate does it sit?
+e. If unemployment is temporarily below the natural rate and inflation is rising, is this a
+   short-run or a long-run Phillips curve situation?
+f. Why does the short-run unemployment-inflation tradeoff eventually disappear as expected
+   inflation catches up to actual inflation?
+
+<details>
+<summary>Show Answer</summary>
+
+a. Nominal wages eventually *rise* (firms compete for workers in a tight labor market), which
+   shifts SRAS *left*.
+b. Nominal wages eventually *fall*, though slowly since wages are sticky downward, which shifts
+   SRAS *right*.
+c. *Negative* (inverse): lower unemployment tends to come with higher inflation, and vice versa.
+d. *Vertical*, at the *natural rate of unemployment*.
+e. *Short-run*. The long run is defined by the economy having fully adjusted back to the natural
+   rate of unemployment, regardless of the inflation rate.
+f. Once expected inflation rises to match actual inflation, the short-run Phillips curve itself
+   shifts, and the temporary tradeoff vanishes, unemployment drifts back toward the natural rate
+   even if inflation remains elevated.
+
+</details>
+
+## Problem 1: Self-Correction After an Inflationary Gap
+
+An economy's potential GDP is 400 (illustrative units). AD is fixed at $AD(P) = 600 - 4(P-90)$.
+The original short-run supply curve is $SRAS_0(P) = 400 + 4(P-90)$.
+
+a. Find the short-run equilibrium price level and real GDP where $AD(P) = SRAS_0(P)$.
+b. Is this equilibrium's real GDP above, below, or equal to potential GDP? What is this gap
+   called?
+c. Over time, self-correction shifts the supply curve to $SRAS_1(P) = 200 + 4(P-90)$. Find the new
+   equilibrium where $AD(P) = SRAS_1(P)$.
+d. Compare the new equilibrium's real GDP to potential GDP. What happened to the price level
+   between the two equilibria?
+
+<details>
+<summary>Show Answer</summary>
+
+```{python}
+#| echo: false
+#| fig-align: center
+
+import plotly.graph_objects as go
+
+BLUE = "#1f4e79"
+ORANGE = "#c55a11"
+GREEN = "#548235"
+RED = "#c00000"
+
+P = list(range(85, 145, 5))
+AD = [600 - 4*(p-90) for p in P]
+SRAS0 = [400 + 4*(p-90) for p in P]
+SRAS1 = [200 + 4*(p-90) for p in P]
+
+fig = go.Figure()
+fig.add_trace(go.Scatter(x=AD, y=P, mode="lines", name="AD", line=dict(color=BLUE, width=3)))
+fig.add_trace(go.Scatter(x=SRAS0, y=P, mode="lines", name="SRAS (original)",
+                          line=dict(color=ORANGE, width=2, dash="dot")))
+fig.add_trace(go.Scatter(x=SRAS1, y=P, mode="lines", name="SRAS (after self-correction)",
+                          line=dict(color=ORANGE, width=3)))
+fig.add_trace(go.Scatter(x=[400, 400], y=[85, 145], mode="lines", name="LRAS (potential = 400)",
+                          line=dict(color=GREEN, width=2, dash="dash")))
+fig.add_trace(go.Scatter(x=[500], y=[115], mode="markers", marker=dict(size=12, color="black"),
+                          showlegend=False))
+fig.add_trace(go.Scatter(x=[400], y=[140], mode="markers", marker=dict(size=12, color=RED),
+                          showlegend=False))
+fig.update_layout(xaxis_title="Real GDP", yaxis_title="Price level",
+                  width=620, height=440, plot_bgcolor="white",
+                  legend=dict(x=0.02, y=1.25, orientation="h", font=dict(size=9)))
+fig.update_xaxes(showgrid=True, gridwidth=1, gridcolor="lightgray")
+fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="lightgray")
+fig.show()
+```
+
+a. Setting $600-4(P-90)=400+4(P-90)$: $200=8(P-90) \Rightarrow P-90=25 \Rightarrow P=115$. Real GDP
+   $= 400+4(25)=500$.
+b. Real GDP (500) is *above* potential GDP (400). This is an *inflationary gap*.
+c. Setting $600-4(P-90)=200+4(P-90)$: $400=8(P-90) \Rightarrow P-90=50 \Rightarrow P=140$. Real GDP
+   $=200+4(50)=400$.
+d. The new equilibrium's real GDP (400) now exactly *equals* potential GDP, the economy has fully
+   self-corrected. The price level *rose*, from 115 to 140, and settled permanently higher, exactly
+   the pattern predicted: an inflationary gap closes through rising nominal wages, shrinking SRAS,
+   and a higher long-run price level, not through any change in long-run output.
+
+</details>
+
+## Problem 2: Reading the Short-Run Phillips Curve
+
+A short-run Phillips curve is given by the relationship: inflation rate $= 10 - u$, where $u$ is
+the unemployment rate (in percent). The natural rate of unemployment in this economy is 5 percent.
+
+a. What is the inflation rate when unemployment is 4 percent?
+b. What is the inflation rate when unemployment is 8 percent?
+c. What is the inflation rate when unemployment is exactly at the natural rate (5 percent)?
+d. Explain why this same short-run Phillips curve is really just another way of drawing the
+   demand-pull side of the AD/AS model from Chapter 12.
+
+<details>
+<summary>Show Answer</summary>
+
+```{python}
+#| echo: false
+#| fig-align: center
+
+import plotly.graph_objects as go
+
+BLUE = "#1f4e79"
+
+u = list(range(2, 11))
+inflation = [10 - x for x in u]
+
+fig = go.Figure()
+fig.add_trace(go.Scatter(x=u, y=inflation, mode="lines", line=dict(color=BLUE, width=3),
+                          hovertemplate="Unemployment %{x}%<br>Inflation %{y}%<extra></extra>"))
+fig.add_trace(go.Scatter(x=[5], y=[5], mode="markers", marker=dict(size=11, color="black"),
+                          showlegend=False))
+fig.update_layout(xaxis_title="Unemployment rate (percent)", yaxis_title="Inflation rate (percent)",
+                  width=520, height=380, plot_bgcolor="white", showlegend=False)
+fig.update_xaxes(showgrid=True, gridwidth=1, gridcolor="lightgray")
+fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="lightgray")
+fig.show()
+```
+
+a. Inflation $= 10 - 4 = 6$ percent.
+b. Inflation $= 10 - 8 = 2$ percent.
+c. Inflation $= 10 - 5 = 5$ percent.
+d. Higher AD (demand-pull inflation) both raises the price level *and* raises real GDP, which
+   means more hiring and *lower* unemployment. The same underlying demand-pull story that raises
+   the price level and real GDP together in the AD/AS model also raises inflation while lowering
+   unemployment, just plotted on different axes.
+
+</details>
+
+## Problem 3: When Expected Inflation Rises
+
+A short-run Phillips curve is $\pi = \pi^e - (u - 5)$, where $\pi$ is actual inflation, $u$ is the
+unemployment rate (in percent), $\pi^e$ is expected inflation, and 5 percent is the natural rate of
+unemployment.
+
+a. If expected inflation $\pi^e = 3$ percent, what is actual inflation when unemployment is exactly
+   at the natural rate (5 percent)?
+b. Still with $\pi^e = 3$ percent, suppose the economy overheats and unemployment falls to 3
+   percent. What is actual inflation now?
+c. Now suppose expected inflation has risen to $\pi^e = 6$ percent (people have come to expect more
+   inflation, based on recent experience), with unemployment still at 3 percent. What is actual
+   inflation?
+d. Compare your answers to (b) and (c). What happened to the short-run Phillips curve itself as
+   expected inflation rose? At the natural rate of unemployment, does actual inflation ever differ
+   from expected inflation in this model?
+
+<details>
+<summary>Show Answer</summary>
+
+a. $\pi = 3 - (5-5) = 3 - 0 = 3$ percent. At the natural rate, the $(u-5)$ term is zero, so actual
+   inflation simply equals expected inflation.
+b. $\pi = 3 - (3-5) = 3 + 2 = 5$ percent. With unemployment *below* the natural rate, actual
+   inflation runs *above* expected inflation, the short-run tradeoff at work.
+c. $\pi = 6 - (3-5) = 6 + 2 = 8$ percent.
+d. Comparing (b) and (c), at the *same* unemployment rate (3 percent), actual inflation rose from 5
+   to 8 percent, exactly the 3 percentage point rise in expected inflation. The entire short-run
+   Phillips curve *shifted up* by that amount. And at the natural rate of unemployment specifically,
+   actual inflation always exactly equals expected inflation, whatever that happens to be, there is
+   no stable, exploitable tradeoff there: unemployment cannot be held permanently below the natural
+   rate just by tolerating ever-higher inflation, once expectations catch up, only inflation ends up
+   permanently higher, not unemployment permanently lower.
+
+</details>

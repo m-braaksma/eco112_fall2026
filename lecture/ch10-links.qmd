@@ -1,0 +1,14 @@
+---
+title: "Chapter 10: Basic Macroeconomic Relationships"
+subtitle: "Useful links and other resources"
+---
+
+## Real Data
+
+- [FRED: Personal Consumption Expenditures](https://fred.stlouisfed.org/series/PCE)
+- [FRED: Personal Saving Rate](https://fred.stlouisfed.org/series/PSAVERT)
+- [FRED: Gross Private Domestic Investment](https://fred.stlouisfed.org/series/GPDI), to see how much more volatile investment is than consumption
+
+## Instructional Videos
+
+<!-- TODO: add video links for this chapter (Khan Academy, YouTube, etc.) -->

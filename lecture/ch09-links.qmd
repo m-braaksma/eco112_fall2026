@@ -1,0 +1,18 @@
+---
+title: "Chapter 9: Business Cycles, Unemployment, and Inflation"
+subtitle: "Useful links and other resources"
+---
+
+## Real Data
+
+- [FRED: Unemployment Rate](https://fred.stlouisfed.org/series/UNRATE)
+- [FRED: Labor Force Participation Rate](https://fred.stlouisfed.org/series/CIVPART)
+- [FRED: Consumer Price Index for All Urban Consumers](https://fred.stlouisfed.org/series/CPIAUCSL)
+- [Minneapolis Fed: Regional Economic Indicators](https://www.minneapolisfed.org/region-and-community/regional-economic-indicators), regional CPI and unemployment insurance claims data
+
+## Instructional Videos
+
+<!-- TODO: add video links for this chapter (Khan Academy, YouTube, etc.). There was previously
+     an unverified WSJ unemployment video sitting in the Chapter 8 links stub; that topic fits
+     here instead, but the link could not be re-verified (wsj.com is not fetchable from this
+     tool). If you have that link handy, double-check it still works before adding it here. -->

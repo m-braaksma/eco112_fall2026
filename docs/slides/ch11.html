@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="ch11_files/libs/clipboard/clipboard.min.js"></script>
+<script src="ch11_files/libs/quarto-html/tabby.min.js"></script>
+<script src="ch11_files/libs/quarto-html/popper.min.js"></script>
+<script src="ch11_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="ch11_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="ch11_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="ch11_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.26">
+
+  <title>Chapter 11: The Aggregate Expenditures Model</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="ch11_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="ch11_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="ch11_files/libs/revealjs/dist/theme/quarto-47ef377ee77cdf85c61adfa0b07e2c12.css">
+  <link href="ch11_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="ch11_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="ch11_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="ch11_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+  
+  <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+  <script>
+  window.PlotlyConfig = {MathJaxConfig: 'local'};
+  if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
+  </script>
+  <script type="module">import "https://cdn.plot.ly/plotly-3.7.0.min"</script>
+
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title"><p>Chapter 11: The Aggregate Expenditures Model</p></h1>
+  <p class="subtitle"></p><div class="line-block">ECO 112 Principles of Macroeconomics</div><p></p>
+
+<div class="quarto-title-authors">
+</div>
+
+</section>
+<section id="todays-roadmap" class="slide level2">
+<h2>Today’s Roadmap</h2>
+<h3 id="key-concepts">Key Concepts</h3>
+<ul>
+<li>Why this model assumes <em>sticky</em> prices, and the difference between Say’s Law and Keynes’s view</li>
+<li>Building the aggregate expenditures (AE) schedule: AE = C + Ig for a simple private economy</li>
+<li>The investment schedule (planned investment versus real GDP) versus the investment demand curve (planned investment versus the interest rate)</li>
+<li>Equilibrium GDP: where the AE schedule crosses the 45-degree line</li>
+<li>Unplanned inventory changes as the signal that pulls GDP back to equilibrium</li>
+<li>Adding government purchases (G) and taxes (T) to the model</li>
+<li>Adding net exports (Xn) to get the full, open-economy AE model</li>
+<li>Recessionary and inflationary expenditure gaps, and a preview of fiscal policy</li>
+</ul>
+<!-- IMAGE PLACEHOLDER: a simple line graph or spreadsheet suggesting a spending/output model -->
+</section>
+<section>
+<section id="from-sticky-prices-to-a-spending-driven-model" class="title-slide slide level1 center">
+<h1>From Sticky Prices to a Spending-Driven Model</h1>
+
+</section>
+<section id="connecting-back-sticky-prices-chapter-6" class="slide level2">
+<h2>Connecting Back: Sticky Prices (Chapter 6)</h2>
+<div style="font-size: 1.2em;">
+<p>Chapter 6 introduced <strong>sticky prices</strong>: in the short run, many prices and especially wages do not adjust quickly when spending changes.</p>
+<ul>
+<li>If prices <em>were</em> perfectly flexible, a drop in spending would just show up as lower prices, with output and employment barely affected.</li>
+<li>Because prices are <em>sticky</em> in the short run, a drop in spending instead shows up mostly as lower <em>real output</em> and job losses.</li>
+</ul>
+<p><em>The aggregate expenditures (AE) model in this chapter takes short-run price stickiness as its starting assumption. It asks: if prices are fixed, what determines the level of real GDP?</em></p>
+</div>
+</section>
+<section id="connecting-back-the-business-cycle-chapter-9" class="slide level2">
+<h2>Connecting Back: The Business Cycle (Chapter 9)</h2>
+<div style="font-size: 1.2em;">
+<p>Chapter 9 described <em>that</em> real GDP moves up and down around its long-run trend, the business cycle.</p>
+<p>This chapter explains <em>why</em>: total spending in the economy is not automatically the right amount to keep output at its potential level. When spending falls short, GDP falls. When spending overshoots, GDP is pulled above what it can sustain.</p>
+<p><em>The AE model is the mechanism behind the bumps in the business cycle chart.</em></p>
+</div>
+</section>
+<section id="says-law-the-classical-view" class="slide level2">
+<h2>Say’s Law: The Classical View</h2>
+<div style="font-size: 1.2em;">
+<p>Classical economists before the 1930s largely accepted <strong>Say’s Law</strong>: <em>“supply creates its own demand.”</em></p>
+<ul>
+<li>The act of producing goods and services generates exactly enough income to buy everything produced.</li>
+<li>On this view, the economy is always at, or quickly returns to, full-employment output.</li>
+<li>Widespread, prolonged unemployment should not be possible.</li>
+</ul>
+</div>
+</section>
+<section id="keyness-challenge" class="slide level2">
+<h2>Keynes’s Challenge</h2>
+<div style="font-size: 1.2em;">
+<p>John Maynard Keynes, writing during the Great Depression, challenged Say’s Law directly.</p>
+<ul>
+<li>Income earned from production does <em>not</em> have to all be spent. Some is saved, and saving does not automatically turn into spending by someone else.</li>
+<li>If total planned spending falls short of what is needed to buy full-employment output, firms will not produce that much. They cut back.</li>
+<li><strong>The economy can settle into an equilibrium below full employment, and stay there, with no automatic force pushing it back up.</strong></li>
+</ul>
+<p><em>This is the motivating question for the whole chapter: what determines the economy’s equilibrium level of output, and why might that level fall short of (or exceed) what the economy is capable of producing?</em></p>
+</div>
+</section></section>
+<section>
+<section id="building-the-aggregate-expenditures-schedule" class="title-slide slide level1 center">
+<h1>Building the Aggregate Expenditures Schedule</h1>
+
+</section>
+<section id="recap-tools-from-chapter-10" class="slide level2">
+<h2>Recap: Tools from Chapter 10</h2>
+<div style="font-size: 1.15em;">
+<p>Chapter 10 built two tools this chapter now puts to work:</p>
+<ul>
+<li>The <strong>consumption schedule</strong>: how consumption spending rises as real GDP (income) rises, with the slope given by the <strong>MPC</strong> (marginal propensity to consume).</li>
+<li>The <strong>multiplier</strong>: a one-time change in spending gets <em>re-spent</em> through the economy, so a change in spending produces a <em>larger</em> final change in equilibrium GDP. With no government or taxes, multiplier <span class="math inline">\(= 1/\text{MPS}\)</span>.</li>
+</ul>
+<p>This chapter uses both tools to build a full model of how equilibrium GDP is determined. We will not re-derive them here, just use them.</p>
+</div>
+</section>
+<section id="a-simple-model-piece-by-piece" class="slide level2">
+<h2>A Simple Model, Piece by Piece</h2>
+<div style="font-size: 1.2em;">
+<p>We start with the simplest possible case and add realism step by step:</p>
+<ol type="1">
+<li>A <strong>private, closed economy</strong>: just households and businesses, no government, no trade.</li>
+<li>Add <strong>government</strong> purchases and taxes.</li>
+<li>Add the <strong>rest of the world</strong> through net exports.</li>
+</ol>
+<p>At each stage, <strong>aggregate expenditures (AE)</strong> is the total amount that all sectors of the economy <em>plan</em> to spend at each level of real GDP.</p>
+</div>
+</section>
+<section id="the-investment-schedule-vs.-the-investment-demand-curve" class="slide level2">
+<h2>The Investment Schedule vs.&nbsp;the Investment Demand Curve</h2>
+<div style="font-size: 1.2em;">
+<p>Chapter 10 introduced the <strong>investment demand curve</strong>: it relates planned investment to the <em>real interest rate</em>. A lower interest rate makes more investment projects profitable, so investment rises.</p>
+<p>The <strong>investment schedule</strong> used in this chapter is different: it relates planned investment to the <em>level of real GDP</em>. In this simple model, we assume planned investment (<span class="math inline">\(I_g\)</span>) is roughly <strong>constant</strong>, independent of the current level of GDP, since businesses base investment decisions mainly on interest rates and profit expectations, not on today’s GDP.</p>
+<p><em>Same variable, two different graphs, don’t mix them up.</em></p>
+</div>
+</section>
+<section id="the-ae-schedule-ae-c-ig" class="slide level2">
+<h2>The AE Schedule: AE = C + Ig</h2>
+<div style="font-size: 1.2em;">
+<p>In the private, closed economy, <strong>aggregate expenditures</strong> is the sum of two components:</p>
+<p><span class="math display">\[
+AE = C + I_g
+\]</span></p>
+<ul>
+<li><span class="math inline">\(C\)</span>: consumption spending, which rises with real GDP according to the consumption schedule (MPC).</li>
+<li><span class="math inline">\(I_g\)</span>: planned gross private domestic investment, assumed constant at each level of GDP.</li>
+</ul>
+<p>Adding a constant <span class="math inline">\(I_g\)</span> to the consumption schedule shifts it upward by the amount of <span class="math inline">\(I_g\)</span> at every GDP level, this becomes the <strong>AE schedule</strong>.</p>
+</div>
+</section>
+<section id="example-building-the-ae-schedule" class="slide level2">
+<h2>Example: Building the AE Schedule</h2>
+<div style="font-size: 1.2em;">
+<p>In this private closed economy, the marginal propensity to consume is <span class="math inline">\(0.8\)</span>. Consumption at each GDP level is given below, and planned investment is a constant <span class="math inline">\(I_g = 40\)</span> at every level of GDP.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Real GDP</th>
+<th>Consumption (C)</th>
+<th>Planned investment (<span class="math inline">\(I_g\)</span>)</th>
+<th>AE = C + <span class="math inline">\(I_g\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>400</td>
+<td>380</td>
+<td>40</td>
+<td>?</td>
+</tr>
+<tr class="even">
+<td>450</td>
+<td>420</td>
+<td>40</td>
+<td>?</td>
+</tr>
+<tr class="odd">
+<td>500</td>
+<td>460</td>
+<td>40</td>
+<td>?</td>
+</tr>
+<tr class="even">
+<td>550</td>
+<td>500</td>
+<td>40</td>
+<td>?</td>
+</tr>
+<tr class="odd">
+<td>600</td>
+<td>540</td>
+<td>40</td>
+<td>?</td>
+</tr>
+<tr class="even">
+<td>650</td>
+<td>580</td>
+<td>40</td>
+<td>?</td>
+</tr>
+<tr class="odd">
+<td>700</td>
+<td>620</td>
+<td>40</td>
+<td>?</td>
+</tr>
+</tbody>
+</table>
+<p>Fill in the AE column for each row.</p>
+</div>
+</section>
+<section id="solution-building-the-ae-schedule" class="slide level2">
+<h2>Solution: Building the AE Schedule</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Real GDP</th>
+<th>C</th>
+<th><span class="math inline">\(I_g\)</span></th>
+<th>AE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>400</td>
+<td>380</td>
+<td>40</td>
+<td>420</td>
+</tr>
+<tr class="even">
+<td>450</td>
+<td>420</td>
+<td>40</td>
+<td>460</td>
+</tr>
+<tr class="odd">
+<td>500</td>
+<td>460</td>
+<td>40</td>
+<td>500</td>
+</tr>
+<tr class="even">
+<td>550</td>
+<td>500</td>
+<td>40</td>
+<td>540</td>
+</tr>
+<tr class="odd">
+<td>600</td>
+<td>540</td>
+<td>40</td>
+<td>580</td>
+</tr>
+<tr class="even">
+<td>650</td>
+<td>580</td>
+<td>40</td>
+<td>620</td>
+</tr>
+<tr class="odd">
+<td>700</td>
+<td>620</td>
+<td>40</td>
+<td>660</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:50%;">
+<div style="font-size: 1.15em;">
+<p>Add <span class="math inline">\(I_g = 40\)</span> to consumption at every row. The AE schedule rises by MPC <span class="math inline">\(= 0.8\)</span> for each 50-unit increase in GDP, just like the consumption schedule, only shifted up by 40.</p>
+<p><em>Notice one row where AE happens to equal GDP exactly. Keep that in mind, it matters in the next section.</em></p>
+</div>
+</div></div>
+</section></section>
+<section>
+<section id="equilibrium-gdp" class="title-slide slide level1 center">
+<h1>Equilibrium GDP</h1>
+
+</section>
+<section id="where-planned-spending-meets-output" class="slide level2">
+<h2>Where Planned Spending Meets Output</h2>
+<div style="font-size: 1.2em;">
+<p><strong>Equilibrium GDP</strong> is the level of real GDP at which aggregate expenditures exactly equals real GDP:</p>
+<p><span class="math display">\[
+AE = \text{Real GDP}
+\]</span></p>
+<p>At this point, what everyone in the economy <em>plans</em> to spend exactly matches what the economy <em>produces</em>. There is no pressure pushing output up or down.</p>
+<p>Graphically, equilibrium is where the AE schedule crosses the <strong>45-degree line</strong>, the set of all points where spending equals output.</p>
+</div>
+</section>
+<section id="graphing-equilibrium" class="slide level2">
+<h2>Graphing Equilibrium</h2>
+<div id="575c0c80" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<div style="height:460px; width:700px;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.7.0.min.js" integrity="sha256-jvTGqxNp8AGWEcvNLVuKr+8j5dGe9Yw51LQkmDH+IYA=" crossorigin="anonymous"></script>                <div id="a10f0e92-ab3a-4b25-94d6-82655c7cacfe" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("a10f0e92-ab3a-4b25-94d6-82655c7cacfe")) {                    Plotly.newPlot(                        "a10f0e92-ab3a-4b25-94d6-82655c7cacfe",                        [{"hovertemplate":"AE = GDP: %{x}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"gray","dash":"dash","width":2},"mode":"lines","name":"45-degree line (AE = GDP)","x":[350,720],"y":[350,720],"type":"scatter"},{"hovertemplate":"GDP %{x}: AE %{y}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#1f4e79","width":3},"marker":{"size":8},"mode":"lines+markers","name":"AE = C + Ig","x":[400,450,500,550,600,650,700],"y":[420,460,500,540,580,620,660],"type":"scatter"},{"hovertemplate":"Equilibrium GDP = 500\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#548235","size":14,"symbol":"star"},"mode":"markers","name":"Equilibrium","x":[500],"y":[500],"type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"annotations":[{"ax":40,"ay":-40,"showarrow":true,"text":"Equilibrium GDP = 500","x":500,"y":500}],"legend":{"x":0.02,"y":1.15,"orientation":"h"},"xaxis":{"title":{"text":"Real GDP"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray"},"yaxis":{"title":{"text":"Aggregate expenditures"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray"},"width":700,"height":460,"plot_bgcolor":"white"},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('a10f0e92-ab3a-4b25-94d6-82655c7cacfe');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+</div>
+</section>
+<section id="off-equilibrium-unplanned-inventories" class="slide level2">
+<h2>Off Equilibrium: Unplanned Inventories</h2>
+<div style="font-size: 1.2em;">
+<p>Away from equilibrium, businesses are surprised by how much they actually sell, and inventories adjust <em>unintentionally</em>.</p>
+<ul>
+<li><strong>Above equilibrium GDP</strong>: AE falls <em>short</em> of GDP. Firms produce more than people plan to buy, so unsold goods pile up as <strong>unplanned inventory increases</strong>. Firms respond by <em>cutting production</em>, pulling GDP back down.</li>
+<li><strong>Below equilibrium GDP</strong>: AE <em>exceeds</em> GDP. Buyers purchase more than firms planned to produce, so inventories are drawn down, <strong>unplanned inventory decreases</strong> (negative). Firms respond by <em>raising production</em>, pulling GDP back up.</li>
+</ul>
+<p><em>Unplanned inventory changes are the signal that pulls the economy toward equilibrium.</em></p>
+</div>
+</section>
+<section id="example-finding-equilibrium-and-reading-inventories" class="slide level2">
+<h2>Example: Finding Equilibrium and Reading Inventories</h2>
+<div style="font-size: 1.2em;">
+<p>Using the AE schedule built earlier (MPC <span class="math inline">\(= 0.8\)</span>, <span class="math inline">\(I_g = 40\)</span>):</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Real GDP</th>
+<th>AE = C + <span class="math inline">\(I_g\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>400</td>
+<td>420</td>
+</tr>
+<tr class="even">
+<td>450</td>
+<td>460</td>
+</tr>
+<tr class="odd">
+<td>500</td>
+<td>500</td>
+</tr>
+<tr class="even">
+<td>550</td>
+<td>540</td>
+</tr>
+<tr class="odd">
+<td>600</td>
+<td>580</td>
+</tr>
+<tr class="even">
+<td>650</td>
+<td>620</td>
+</tr>
+<tr class="odd">
+<td>700</td>
+<td>660</td>
+</tr>
+</tbody>
+</table>
+<ol type="1">
+<li>Which GDP level is the equilibrium?</li>
+<li>At GDP <span class="math inline">\(= 600\)</span>, what happens to unplanned inventories, and which way does production move?</li>
+<li>At GDP <span class="math inline">\(= 450\)</span>, what happens to unplanned inventories, and which way does production move?</li>
+</ol>
+</div>
+</section>
+<section id="solution-finding-equilibrium-and-reading-inventories" class="slide level2">
+<h2>Solution: Finding Equilibrium and Reading Inventories</h2>
+<div style="font-size: 1.2em;">
+<ol type="1">
+<li>Equilibrium is at <strong>GDP <span class="math inline">\(= 500\)</span></strong>, since AE $= 500 = $ GDP there.</li>
+</ol>
+</div>
+<div class="fragment">
+<div style="font-size: 1.2em;">
+<ol start="2" type="1">
+<li>At GDP <span class="math inline">\(= 600\)</span>: AE <span class="math inline">\(= 580 &lt; 600\)</span>. Spending falls short of output by 20, so unplanned inventories <em>rise</em>. Firms cut production, pulling GDP back down toward 500.</li>
+</ol>
+</div>
+</div>
+<div class="fragment">
+<div style="font-size: 1.2em;">
+<ol start="3" type="1">
+<li>At GDP <span class="math inline">\(= 450\)</span>: AE <span class="math inline">\(= 460 &gt; 450\)</span>. Spending exceeds output by 10, so unplanned inventories <em>fall</em> (become negative). Firms raise production, pulling GDP back up toward 500.</li>
+</ol>
+</div>
+</div>
+</section></section>
+<section>
+<section id="adding-government-to-the-model" class="title-slide slide level1 center">
+<h1>Adding Government to the Model</h1>
+
+</section>
+<section id="government-purchases-shift-ae-up" class="slide level2">
+<h2>Government Purchases Shift AE Up</h2>
+<div style="font-size: 1.2em;">
+<p>Adding government purchases (<span class="math inline">\(G\)</span>), assumed constant at every level of GDP, extends the model:</p>
+<p><span class="math display">\[
+AE = C + I_g + G
+\]</span></p>
+<p>Adding <span class="math inline">\(G\)</span> shifts the entire AE schedule <em>upward</em> by the amount of <span class="math inline">\(G\)</span>. Because of the multiplier from Chapter 10, equilibrium GDP rises by <em>more</em> than <span class="math inline">\(G\)</span> itself, government spending gets re-spent and re-spent through the economy just like any other injection.</p>
+</div>
+</section>
+<section id="example-adding-government-purchases" class="slide level2">
+<h2>Example: Adding Government Purchases</h2>
+<div style="font-size: 1.2em;">
+<p>Continuing the same economy (MPC <span class="math inline">\(= 0.8\)</span>, <span class="math inline">\(I_g = 40\)</span>), suppose the government now adds <span class="math inline">\(G = 40\)</span> in purchases at every GDP level.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Real GDP</th>
+<th>C</th>
+<th><span class="math inline">\(I_g\)</span></th>
+<th><span class="math inline">\(G\)</span></th>
+<th>AE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>500</td>
+<td>460</td>
+<td>40</td>
+<td>40</td>
+<td>?</td>
+</tr>
+<tr class="even">
+<td>600</td>
+<td>540</td>
+<td>40</td>
+<td>40</td>
+<td>?</td>
+</tr>
+<tr class="odd">
+<td>650</td>
+<td>580</td>
+<td>40</td>
+<td>40</td>
+<td>?</td>
+</tr>
+<tr class="even">
+<td>700</td>
+<td>620</td>
+<td>40</td>
+<td>40</td>
+<td>?</td>
+</tr>
+<tr class="odd">
+<td>750</td>
+<td>660</td>
+<td>40</td>
+<td>40</td>
+<td>?</td>
+</tr>
+</tbody>
+</table>
+<ol type="1">
+<li>Fill in the new AE column.</li>
+<li>What is the new equilibrium GDP?</li>
+<li>Using the multiplier (<span class="math inline">\(1/\text{MPS}\)</span>), check your answer: by how much should a <span class="math inline">\(\Delta G = 40\)</span> change equilibrium GDP from the old equilibrium of 500?</li>
+</ol>
+</div>
+</section>
+<section id="solution-adding-government-purchases" class="slide level2">
+<h2>Solution: Adding Government Purchases</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div id="ca0a09c1" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div style="height:460px; width:620px;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.7.0.min.js" integrity="sha256-jvTGqxNp8AGWEcvNLVuKr+8j5dGe9Yw51LQkmDH+IYA=" crossorigin="anonymous"></script>                <div id="404065c9-0ef0-4b11-aa8c-a14d6f398d77" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("404065c9-0ef0-4b11-aa8c-a14d6f398d77")) {                    Plotly.newPlot(                        "404065c9-0ef0-4b11-aa8c-a14d6f398d77",                        [{"hovertemplate":"AE = GDP\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"gray","dash":"dash","width":2},"mode":"lines","name":"45-degree line","x":[380,770],"y":[380,770],"type":"scatter"},{"hovertemplate":"GDP %{x}: AE %{y}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#9dc3e6","dash":"dot","width":2},"mode":"lines","name":"AE = C + Ig (no G)","x":[400,450,500,550,600,650,700,750],"y":[420,460,500,540,580,620,660,700],"type":"scatter"},{"hovertemplate":"GDP %{x}: AE %{y}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#c55a11","width":3},"marker":{"size":7},"mode":"lines+markers","name":"AE = C + Ig + G","x":[400,450,500,550,600,650,700,750],"y":[460,500,540,580,620,660,700,740],"type":"scatter"},{"hovertemplate":"Equilibrium GDP = 700\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#548235","size":14,"symbol":"star"},"mode":"markers","name":"New equilibrium","x":[700],"y":[700],"type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"legend":{"font":{"size":10},"x":0.02,"y":1.22,"orientation":"h"},"xaxis":{"title":{"text":"Real GDP"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray"},"yaxis":{"title":{"text":"Aggregate expenditures"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray"},"width":620,"height":460,"plot_bgcolor":"white"},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('404065c9-0ef0-4b11-aa8c-a14d6f398d77');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+</div>
+</div><div class="column" style="width:45%;">
+<div style="font-size: 1.1em;">
+<p>New equilibrium is at <strong>GDP <span class="math inline">\(= 700\)</span></strong>, where AE <span class="math inline">\(= 700\)</span>.</p>
+<div class="fragment">
+<p>Multiplier check: multiplier <span class="math inline">\(= 1/0.2 = 5\)</span>. <span class="math inline">\(\Delta G = 40 \times 5 = 200\)</span>. Old equilibrium <span class="math inline">\(500 + 200 = 700\)</span>. <em>Matches exactly.</em></p>
+</div>
+</div>
+</div></div>
+</section>
+<section id="taxes-reduce-disposable-income" class="slide level2">
+<h2>Taxes Reduce Disposable Income</h2>
+<div style="font-size: 1.2em;">
+<p>Now add a lump-sum <strong>tax</strong> (<span class="math inline">\(T\)</span>). Taxes reduce <strong>disposable income</strong> (income after taxes), and consumption depends on disposable income, not on GDP directly.</p>
+<ul>
+<li>A tax increase of <span class="math inline">\(\Delta T\)</span> reduces consumption at <em>every</em> level of GDP, but not by the full amount of the tax. It falls by <span class="math inline">\(\text{MPC} \times \Delta T\)</span>, since households also reduce saving somewhat, not just spending.</li>
+<li>This shifts the AE schedule <em>down</em>, by less than the tax itself, and lowers equilibrium GDP.</li>
+<li>A tax <em>cut</em> works the same way in reverse: it raises consumption by <span class="math inline">\(\text{MPC} \times \Delta T\)</span> at each GDP level, shifting AE up and raising equilibrium GDP.</li>
+</ul>
+</div>
+</section>
+<section id="example-adding-a-tax" class="slide level2">
+<h2>Example: Adding a Tax</h2>
+<div style="font-size: 1.2em;">
+<p>Continuing the economy above (MPC <span class="math inline">\(= 0.8\)</span>, <span class="math inline">\(I_g = 40\)</span>, <span class="math inline">\(G = 40\)</span>, old equilibrium GDP <span class="math inline">\(= 700\)</span>), the government now also imposes a lump-sum tax of <span class="math inline">\(T = 50\)</span>.</p>
+<ol type="1">
+<li>By how much does consumption fall at each level of GDP?</li>
+<li>Write the new AE at GDP <span class="math inline">\(= 500\)</span>: recall <span class="math inline">\(C = 460\)</span> and AE (with G, before the tax) <span class="math inline">\(= 540\)</span> at that GDP level.</li>
+<li>Where do you expect the new equilibrium GDP to land? Work with a partner or in a small group before checking the next slide.</li>
+</ol>
+</div>
+</section>
+<section id="solution-adding-a-tax" class="slide level2">
+<h2>Solution: Adding a Tax</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Real GDP</th>
+<th>C (after tax)</th>
+<th><span class="math inline">\(I_g\)</span></th>
+<th><span class="math inline">\(G\)</span></th>
+<th>AE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>400</td>
+<td>340</td>
+<td>40</td>
+<td>40</td>
+<td>420</td>
+</tr>
+<tr class="even">
+<td>450</td>
+<td>380</td>
+<td>40</td>
+<td>40</td>
+<td>460</td>
+</tr>
+<tr class="odd">
+<td>500</td>
+<td>420</td>
+<td>40</td>
+<td>40</td>
+<td>500</td>
+</tr>
+<tr class="even">
+<td>550</td>
+<td>460</td>
+<td>40</td>
+<td>40</td>
+<td>540</td>
+</tr>
+<tr class="odd">
+<td>600</td>
+<td>500</td>
+<td>40</td>
+<td>40</td>
+<td>580</td>
+</tr>
+<tr class="even">
+<td>650</td>
+<td>540</td>
+<td>40</td>
+<td>40</td>
+<td>620</td>
+</tr>
+<tr class="odd">
+<td>700</td>
+<td>580</td>
+<td>40</td>
+<td>40</td>
+<td>660</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:50%;">
+<div style="font-size: 1.1em;">
+<p>Consumption falls by <span class="math inline">\(\text{MPC} \times T = 0.8 \times 50 = 40\)</span> at every GDP level.</p>
+<div class="fragment">
+<p>New equilibrium is back at <strong>GDP <span class="math inline">\(= 500\)</span></strong>, since AE <span class="math inline">\(= 500\)</span> there.</p>
+</div>
+<div class="fragment">
+<p><em>Interesting result:</em> <span class="math inline">\(G = 40\)</span> alone would have raised equilibrium GDP by 200 (to 700). <span class="math inline">\(T = 50\)</span> alone would have lowered it by <span class="math inline">\(\text{MPC} \times T \times \text{multiplier} = 40 \times 5 = 200\)</span>. Together, they roughly cancel out, back to the original equilibrium of 500.</p>
+</div>
+</div>
+</div></div>
+</section></section>
+<section>
+<section id="the-open-economy-and-net-exports" class="title-slide slide level1 center">
+<h1>The Open Economy and Net Exports</h1>
+
+</section>
+<section id="adding-net-exports" class="slide level2">
+<h2>Adding Net Exports</h2>
+<div style="font-size: 1.2em;">
+<p>A full, open economy also trades with the rest of the world. <strong>Net exports</strong> (<span class="math inline">\(X_n\)</span>) equal exports minus imports:</p>
+<p><span class="math display">\[
+AE = C + I_g + G + X_n
+\]</span></p>
+<ul>
+<li>A <em>rise</em> in net exports shifts AE up and, through the multiplier, raises equilibrium GDP.</li>
+<li>A <em>fall</em> in net exports shifts AE down and lowers equilibrium GDP.</li>
+</ul>
+<p><span class="math inline">\(X_n\)</span> can be positive (net selling to the rest of the world) or negative (net buying).</p>
+</div>
+</section>
+<section id="example-a-rise-in-net-exports" class="slide level2">
+<h2>Example: A Rise in Net Exports</h2>
+<div style="font-size: 1.2em;">
+<p>Continuing the economy with <span class="math inline">\(G = 40\)</span> and <span class="math inline">\(T = 50\)</span> (equilibrium GDP <span class="math inline">\(= 500\)</span>), suppose net exports are now <span class="math inline">\(X_n = +20\)</span>.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Real GDP</th>
+<th>C (after tax)</th>
+<th><span class="math inline">\(I_g\)</span></th>
+<th><span class="math inline">\(G\)</span></th>
+<th><span class="math inline">\(X_n\)</span></th>
+<th>AE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>500</td>
+<td>420</td>
+<td>40</td>
+<td>40</td>
+<td>20</td>
+<td>?</td>
+</tr>
+<tr class="even">
+<td>550</td>
+<td>460</td>
+<td>40</td>
+<td>40</td>
+<td>20</td>
+<td>?</td>
+</tr>
+<tr class="odd">
+<td>600</td>
+<td>500</td>
+<td>40</td>
+<td>40</td>
+<td>20</td>
+<td>?</td>
+</tr>
+<tr class="even">
+<td>650</td>
+<td>540</td>
+<td>40</td>
+<td>40</td>
+<td>20</td>
+<td>?</td>
+</tr>
+</tbody>
+</table>
+<ol type="1">
+<li>Fill in the AE column.</li>
+<li>What is the new equilibrium GDP?</li>
+<li>Check your answer with the multiplier: <span class="math inline">\(\Delta X_n = 20\)</span>, multiplier <span class="math inline">\(= 5\)</span>.</li>
+</ol>
+</div>
+</section>
+<section id="solution-a-rise-in-net-exports" class="slide level2">
+<h2>Solution: A Rise in Net Exports</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div id="a7730b8b" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<div style="height:460px; width:620px;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.7.0.min.js" integrity="sha256-jvTGqxNp8AGWEcvNLVuKr+8j5dGe9Yw51LQkmDH+IYA=" crossorigin="anonymous"></script>                <div id="2dfe055e-c7dd-4697-999f-f75db5f29d17" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("2dfe055e-c7dd-4697-999f-f75db5f29d17")) {                    Plotly.newPlot(                        "2dfe055e-c7dd-4697-999f-f75db5f29d17",                        [{"hovertemplate":"AE = GDP\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"gray","dash":"dash","width":2},"mode":"lines","name":"45-degree line","x":[380,770],"y":[380,770],"type":"scatter"},{"hovertemplate":"GDP %{x}: AE %{y}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#9dc3e6","dash":"dot","width":2},"mode":"lines","name":"AE = C + Ig + G","x":[400,450,500,550,600,650,700,750],"y":[420,460,500,540,580,620,660,700],"type":"scatter"},{"hovertemplate":"GDP %{x}: AE %{y}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#548235","width":3},"marker":{"size":7},"mode":"lines+markers","name":"AE = C + Ig + G + Xn (+20)","x":[400,450,500,550,600,650,700,750],"y":[440,480,520,560,600,640,680,720],"type":"scatter"},{"hovertemplate":"Equilibrium GDP = 600\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#548235","size":14,"symbol":"star"},"mode":"markers","name":"New equilibrium","x":[600],"y":[600],"type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"legend":{"font":{"size":10},"x":0.02,"y":1.25,"orientation":"h"},"xaxis":{"title":{"text":"Real GDP"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray"},"yaxis":{"title":{"text":"Aggregate expenditures"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray"},"width":620,"height":460,"plot_bgcolor":"white"},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('2dfe055e-c7dd-4697-999f-f75db5f29d17');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+</div>
+</div><div class="column" style="width:45%;">
+<div style="font-size: 1.1em;">
+<p>New equilibrium is at <strong>GDP <span class="math inline">\(= 600\)</span></strong>, where AE <span class="math inline">\(= 600\)</span>.</p>
+<div class="fragment">
+<p>Multiplier check: <span class="math inline">\(\Delta X_n = 20 \times 5 = 100\)</span>. Old equilibrium <span class="math inline">\(500 + 100 = 600\)</span>. <em>Matches.</em></p>
+</div>
+</div>
+</div></div>
+</section>
+<section id="international-linkages" class="slide level2">
+<h2>International Linkages</h2>
+<div style="font-size: 1.2em;">
+<p>Net exports connect economies to one another. If a major trading partner enters a <em>recession</em>, its demand for our exports falls.</p>
+<ul>
+<li>Lower foreign demand means lower <span class="math inline">\(X_n\)</span> for us.</li>
+<li>A fall in <span class="math inline">\(X_n\)</span> shifts our AE schedule down and lowers <em>our</em> equilibrium GDP, even though the recession started somewhere else.</li>
+</ul>
+<p><em>This is one reason a downturn in one country’s economy can spread to its trading partners.</em> One brief note: using tariffs to try to boost net exports tends to fail in practice, because trading partners typically retaliate with tariffs of their own, offsetting the intended gain.</p>
+</div>
+</section>
+<section id="example-a-fall-in-net-exports" class="slide level2">
+<h2>Example: A Fall in Net Exports</h2>
+<div style="font-size: 1.2em;">
+<p>Suppose instead that a recession abroad causes net exports to <em>fall</em> to <span class="math inline">\(X_n = -20\)</span> (still with <span class="math inline">\(G = 40\)</span>, <span class="math inline">\(T = 50\)</span>, starting from the original private-economy equilibrium of 500).</p>
+<ol type="1">
+<li>By how much does the AE schedule shift compared to the <span class="math inline">\(X_n = +20\)</span> case?</li>
+<li>Using the multiplier, where do you expect the new equilibrium GDP to land?</li>
+</ol>
+<p>Work through this with a partner before checking the solution.</p>
+</div>
+</section>
+<section id="solution-a-fall-in-net-exports" class="slide level2">
+<h2>Solution: A Fall in Net Exports</h2>
+<div style="font-size: 1.2em;">
+<p>Going from <span class="math inline">\(X_n = +20\)</span> to <span class="math inline">\(X_n = -20\)</span> is a swing of <span class="math inline">\(\Delta X_n = -40\)</span>.</p>
+<div class="fragment">
+<p><span class="math inline">\(\Delta X_n \times \text{multiplier} = -40 \times 5 = -200\)</span>. Starting from the <span class="math inline">\(X_n = +20\)</span> equilibrium of GDP <span class="math inline">\(= 600\)</span>: <span class="math inline">\(600 - 200 = 400\)</span>.</p>
+</div>
+<div class="fragment">
+<p><strong>New equilibrium GDP <span class="math inline">\(= 400\)</span>.</strong> A swing in net exports, driven entirely by conditions abroad, moved our equilibrium GDP by 200, illustrating how tightly linked economies are through trade.</p>
+</div>
+</div>
+</section>
+<section id="real-data-real-gdp" class="slide level2">
+<h2>Real Data: Real GDP</h2>
+<h3 id="series-gdpc1">Series GDPC1</h3>
+<div class="columns">
+<div class="column" style="width:70%;">
+<!-- FRED EMBED PLACEHOLDER: series GDPC1, Real Gross Domestic Product, chained dollars, seasonally adjusted annual rate, quarterly -->
+</div><div class="column" style="width:30%;">
+<div class="r-stack">
+<div class="fragment current-visible">
+<ol type="1">
+<li>Around recessions, does real GDP fall sharply or gradually?</li>
+</ol>
+</div>
+<div class="fragment current-visible">
+<p><em>Answer:</em> it varies, but sharp downturns like 2020 show how quickly a large drop in spending can pull equilibrium GDP down when prices are sticky in the short run.</p>
+</div>
+<div class="fragment current-visible">
+<ol start="2" type="1">
+<li>Through the lens of this chapter’s model, what does a dip in this line represent?</li>
+</ol>
+</div>
+<div class="fragment current-visible">
+<p><em>Answer:</em> a period where the economy’s equilibrium GDP, where AE meets the 45-degree line, has shifted down, likely from falling consumption, investment, government purchases, or net exports.</p>
+</div>
+<div class="fragment current-visible">
+<ol start="3" type="1">
+<li>Does this chart tell us whether the price level was also falling during a downturn?</li>
+</ol>
+</div>
+<div class="fragment current-visible">
+<p><em>Answer:</em> not by itself, this AE model assumes prices are sticky in the short run, so it treats these swings as changes in output rather than price. Chapter 12 relaxes that assumption.</p>
+</div>
+</div>
+</div></div>
+</section></section>
+<section>
+<section id="expenditure-gaps" class="title-slide slide level1 center">
+<h1>Expenditure Gaps</h1>
+
+</section>
+<section id="equilibrium-gdp-vs.-full-employment-gdp" class="slide level2">
+<h2>Equilibrium GDP vs.&nbsp;Full-Employment GDP</h2>
+<div style="font-size: 1.2em;">
+<p>Equilibrium GDP (where AE crosses the 45-degree line) does not have to equal <strong>full-employment GDP</strong> (also called <strong>potential GDP</strong>), the level the economy could produce if all resources were fully employed.</p>
+<p>These are two <em>separate</em> reference points on the same graph, and in this fixed-price model, nothing automatically forces them together.</p>
+</div>
+</section>
+<section id="the-recessionary-expenditure-gap" class="slide level2">
+<h2>The Recessionary Expenditure Gap</h2>
+<div style="font-size: 1.2em;">
+<p>A <strong>recessionary expenditure gap</strong> occurs when aggregate expenditures at full-employment GDP fall <em>short</em> of the amount needed to actually buy up full-employment output.</p>
+<ul>
+<li>Equilibrium GDP settles <em>below</em> potential GDP, a negative GDP gap.</li>
+<li>The size of the gap is measured as the vertical distance between the AE line and the 45-degree line, <em>at the full-employment GDP level</em>.</li>
+<li>Because of the multiplier, closing this gap requires <em>less</em> new spending than the size of the output shortfall itself: $ = $ the increase in equilibrium GDP needed.</li>
+</ul>
+</div>
+</section>
+<section id="example-a-recessionary-gap" class="slide level2">
+<h2>Example: A Recessionary Gap</h2>
+<div style="font-size: 1.2em;">
+<p>Continuing the open economy with <span class="math inline">\(X_n = +20\)</span> (AE <span class="math inline">\(= C + I_g + G + X_n\)</span>, equilibrium GDP <span class="math inline">\(= 600\)</span>), suppose this economy’s full-employment GDP is <span class="math inline">\(750\)</span>.</p>
+<p>Using the AE schedule: at GDP <span class="math inline">\(= 750\)</span>, <span class="math inline">\(C = 620\)</span>, <span class="math inline">\(I_g = 40\)</span>, <span class="math inline">\(G = 40\)</span>, <span class="math inline">\(X_n = 20\)</span>.</p>
+<ol type="1">
+<li>Compute AE at GDP <span class="math inline">\(= 750\)</span>.</li>
+<li>What is the size of the recessionary expenditure gap?</li>
+<li>Using the multiplier of 5, how much would AE need to rise (at every GDP level) to move equilibrium GDP all the way to 750?</li>
+</ol>
+</div>
+</section>
+<section id="solution-a-recessionary-gap" class="slide level2">
+<h2>Solution: A Recessionary Gap</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div id="d953106d" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div style="height:460px; width:620px;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.7.0.min.js" integrity="sha256-jvTGqxNp8AGWEcvNLVuKr+8j5dGe9Yw51LQkmDH+IYA=" crossorigin="anonymous"></script>                <div id="e6784104-eb4d-4dda-a098-939e5da0debe" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("e6784104-eb4d-4dda-a098-939e5da0debe")) {                    Plotly.newPlot(                        "e6784104-eb4d-4dda-a098-939e5da0debe",                        [{"hovertemplate":"AE = GDP\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"gray","dash":"dash","width":2},"mode":"lines","name":"45-degree line","x":[380,770],"y":[380,770],"type":"scatter"},{"hovertemplate":"GDP %{x}: AE %{y}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#1f4e79","width":3},"marker":{"size":7},"mode":"lines+markers","name":"AE = C + Ig + G + Xn","x":[400,450,500,550,600,650,700,750],"y":[440,480,520,560,600,640,680,720],"type":"scatter"},{"hovertemplate":"Equilibrium GDP\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#548235","size":13,"symbol":"star"},"mode":"markers","name":"Equilibrium GDP = 600","x":[600],"y":[600],"type":"scatter"},{"hovertemplate":"Gap at full employment\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#c00000","width":4},"mode":"lines","name":"Recessionary gap = 30","x":[750,750],"y":[720,750],"type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"shapes":[{"line":{"color":"gray","dash":"dot","width":1},"type":"line","x0":750,"x1":750,"xref":"x","y0":0,"y1":1,"yref":"y domain"}],"annotations":[{"ax":50,"ay":0,"showarrow":true,"text":"Gap = 30","x":750,"y":735},{"showarrow":false,"text":"Full-employment GDP = 750","x":750,"y":380}],"legend":{"font":{"size":9},"x":0.02,"y":1.25,"orientation":"h"},"xaxis":{"title":{"text":"Real GDP"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray"},"yaxis":{"title":{"text":"Aggregate expenditures"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray"},"width":620,"height":460,"plot_bgcolor":"white"},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('e6784104-eb4d-4dda-a098-939e5da0debe');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+</div>
+</div><div class="column" style="width:45%;">
+<div style="font-size: 1.05em;">
+<p>AE at GDP <span class="math inline">\(= 750\)</span>: <span class="math inline">\(620 + 40 + 40 + 20 = 720\)</span>.</p>
+<div class="fragment">
+<p>Recessionary gap: <span class="math inline">\(750 - 720 = 30\)</span>.</p>
+</div>
+<div class="fragment">
+<p>Required AE increase: <span class="math inline">\(30 \times 5 = 150\)</span>. Equilibrium GDP would rise from <span class="math inline">\(600\)</span> to <span class="math inline">\(600 + 150 = 750\)</span>, exactly closing the gap.</p>
+</div>
+</div>
+</div></div>
+</section>
+<section id="the-inflationary-expenditure-gap" class="slide level2">
+<h2>The Inflationary Expenditure Gap</h2>
+<div style="font-size: 1.2em;">
+<p>The mirror-image case: an <strong>inflationary expenditure gap</strong> occurs when aggregate expenditures at full-employment GDP <em>exceed</em> the amount needed to buy up full-employment output.</p>
+<ul>
+<li>Spending is trying to pull the economy <em>above</em> full-employment output.</li>
+<li>In this simple fixed-price model, that extra spending cannot actually raise <em>real</em> output any further, resources are already fully employed.</li>
+<li>Instead, once prices are no longer sticky, this excess spending shows up as <em>inflationary pressure</em> rather than more real output.</li>
+</ul>
+<p><em>Treat this as a discussion point rather than a full second graph: the AE model’s fixed-price assumption is exactly what breaks down when spending tries to push past full employment.</em></p>
+</div>
+</section>
+<section id="discussion-gaps-and-fiscal-policy" class="slide level2">
+<h2>Discussion: Gaps and Fiscal Policy</h2>
+<div style="font-size: 1.2em;">
+<ol type="1">
+<li>If an economy has a recessionary gap, what general <em>direction</em> would government policy need to push AE to close it?</li>
+<li>If an economy has an inflationary gap, what general direction would policy need to push AE instead?</li>
+</ol>
+<p><em>This chapter shows that expenditure gaps exist and how big they are. Chapter 13 covers the specific fiscal policy tools, changes in government spending and taxes, that policymakers can use to try to close them.</em></p>
+</div>
+</section>
+<section id="looking-ahead-chapter-12" class="slide level2">
+<h2>Looking Ahead: Chapter 12</h2>
+<div style="font-size: 1.2em;">
+<p>This entire chapter assumed <strong>fixed prices</strong>, a useful simplification for isolating how spending determines output in the short run.</p>
+<ul>
+<li>Chapter 12 drops that assumption and builds the full <strong>Aggregate Demand and Aggregate Supply (AD-AS) model</strong>, which allows the price level itself to change.</li>
+<li>Everything learned here about AE, the multiplier, and expenditure gaps becomes the foundation for understanding <em>why</em> the aggregate demand curve shifts.</li>
+</ul>
+</div>
+</section>
+<section id="wrap-up" class="slide level2">
+<h2>Wrap Up</h2>
+<div style="font-size: 1.1em;">
+<ul>
+<li>The AE model assumes <em>sticky</em> prices, so changes in spending move real output rather than prices, in the short run. Keynes challenged Say’s Law by arguing spending is not guaranteed to buy up full-employment output.</li>
+<li>In a private closed economy, <span class="math inline">\(AE = C + I_g\)</span>. <strong>Equilibrium GDP</strong> occurs where AE crosses the 45-degree line, where planned spending equals output.</li>
+<li>Above equilibrium, unplanned inventories build up and firms cut production. Below equilibrium, inventories are drawn down and firms raise production.</li>
+<li>Adding <span class="math inline">\(G\)</span> shifts AE up and raises equilibrium GDP through the multiplier; a tax shifts AE down by <span class="math inline">\(\text{MPC} \times T\)</span>, less than the tax itself.</li>
+<li>Adding net exports gives the full model, <span class="math inline">\(AE = C + I_g + G + X_n\)</span>, linking our equilibrium GDP to conditions abroad.</li>
+<li>A <strong>recessionary gap</strong> pulls equilibrium GDP below full-employment GDP; an <strong>inflationary gap</strong> pulls spending above what full-employment output can absorb.</li>
+</ul>
+</div>
+<div style="font-size: 1.1em; padding-top: 0.3em;">
+<p><em>Looking ahead:</em> Chapter 12 lets the price level move with the AD-AS model, and Chapter 13 covers the fiscal policy tools that can help close the expenditure gaps introduced here.</p>
+</div>
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="ch11_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="ch11_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="ch11_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="ch11_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="ch11_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="ch11_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="ch11_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="ch11_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="ch11_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="ch11_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': true,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

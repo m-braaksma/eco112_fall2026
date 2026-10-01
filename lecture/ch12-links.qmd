@@ -1,0 +1,14 @@
+---
+title: "Chapter 12: Aggregate Demand and Aggregate Supply"
+subtitle: "Useful links and other resources"
+---
+
+## Real Data
+
+- [FRED: Real Gross Domestic Product](https://fred.stlouisfed.org/series/GDPC1)
+- [FRED: GDP Implicit Price Deflator](https://fred.stlouisfed.org/series/GDPDEF), the price level for the AD/AS model
+- [FRED: Consumer Price Index](https://fred.stlouisfed.org/series/CPIAUCSL)
+
+## Instructional Videos
+
+<!-- TODO: add video links for this chapter (Khan Academy, YouTube, etc.) -->
