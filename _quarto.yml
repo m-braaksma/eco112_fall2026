@@ -106,8 +106,8 @@ website:
                 text: Slides
               - href: lecture/ch08-links.qmd
                 text: Useful Links
-              # - href: lecture/ch08-practice.qmd
-              #   text: Practice Problems
+              - href: lecture/ch08-practice.qmd
+                text: Practice Problems
           # - section: "Ch 9: Business Cycles, Unemployment, Inflation"
           #   contents:
           #     - href: lecture/ch09.qmd
