@@ -10,6 +10,10 @@ subtitle: "Useful links and other resources"
 - [FRED: Consumer Price Index for All Urban Consumers](https://fred.stlouisfed.org/series/CPIAUCSL)
 - [Minneapolis Fed: Regional Economic Indicators](https://www.minneapolisfed.org/region-and-community/regional-economic-indicators), regional CPI and unemployment insurance claims data
 
+## News
+
+- [Wikipedia: Zimbabwean one hundred trillion dollar note](https://en.wikipedia.org/wiki/Zimbabwean_one_hundred_trillion_dollar_note), background on the banknote and the 2007-2009 hyperinflation referenced in the lecture
+
 ## Instructional Videos
 
 <!-- TODO: add video links for this chapter (Khan Academy, YouTube, etc.). There was previously

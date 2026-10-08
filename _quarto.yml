@@ -108,12 +108,12 @@ website:
                 text: Useful Links
               - href: lecture/ch08-practice.qmd
                 text: Practice Problems
-          # - section: "Ch 9: Business Cycles, Unemployment, Inflation"
-          #   contents:
-          #     - href: lecture/ch09.qmd
-          #       text: Slides
-          #     - href: lecture/ch09-links.qmd
-          #       text: Useful Links
+          - section: "Ch 9: Business Cycles, Unemployment, Inflation"
+            contents:
+              - href: lecture/ch09.qmd
+                text: Slides
+              - href: lecture/ch09-links.qmd
+                text: Useful Links
           #     # - href: lecture/ch09-practice.qmd
           #     #   text: Practice Problems
           # - section: "Ch 10: Basic Macroeconomic Relationships"

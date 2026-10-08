@@ -268,99 +268,123 @@
     ]
   },
   {
-    "objectID": "lecture/ch08-practice.html",
-    "href": "lecture/ch08-practice.html",
-    "title": "Chapter 8: Economic Growth",
+    "objectID": "lecture/ch02-links.html",
+    "href": "lecture/ch02-links.html",
+    "title": "Chapter 2: The Market System and the Circular Flow",
     "section": "",
-    "text": "A country’s real GDP per capita grows at 2.5 percent per year. Using the Rule of 70, approximately how many years will it take to double?\nA country’s real GDP per capita grows at 5 percent per year instead. Approximately how many years will it take to double?\nFor each, say whether it is a supply factor, the demand factor, or the efficiency factor in economic growth: (i) a country discovers a large new oil field, (ii) total spending in the economy is too low to buy up all the goods the economy is capable of producing, (iii) a factory switches from an outdated, high-cost production method to a modern, lower-cost one.\nIn a given year, hours worked in an economy grow 0.8 percent and labor productivity (output per hour) grows 2.1 percent. Approximately what is the growth rate of real GDP?\nRank these contributors to U.S. productivity growth from most to least quantitatively important, according to growth accounting studies: education and training, technological advance, capital per worker (capital deepening), economies of scale and improved resource allocation.\nTrue or False: a positive relationship between a nation’s productivity growth rate and its average real hourly wage growth rate exists because competitive labor markets tend to pay workers according to what they produce.\n\n\n\nShow Answer\n\n\n\\(70 / 2.5 = 28\\) years.\n\\(70 / 5 = 14\\) years.\n\nSupply factor (more natural resources). (ii) Demand factor (total spending must be enough to purchase the expanding potential output). (iii) Efficiency factor (using resources at their lowest-cost combination, productive efficiency).\n\nApproximately \\(0.8 + 2.1 = 2.9\\) percent (labor input growth plus productivity growth).\nLargest to smallest: technological advance, capital per worker, education and training, economies of scale and improved resource allocation.\nTrue.",
+    "text": "FRED: Personal Consumption Expenditures",
     "crumbs": [
       "Topics",
-      "Ch 8: Economic Growth",
-      "Practice Problems"
-    ]
-  },
-  {
-    "objectID": "lecture/ch08-practice.html#warm-up-quick-concept-and-calculation-checks",
-    "href": "lecture/ch08-practice.html#warm-up-quick-concept-and-calculation-checks",
-    "title": "Chapter 8: Economic Growth",
-    "section": "",
-    "text": "A country’s real GDP per capita grows at 2.5 percent per year. Using the Rule of 70, approximately how many years will it take to double?\nA country’s real GDP per capita grows at 5 percent per year instead. Approximately how many years will it take to double?\nFor each, say whether it is a supply factor, the demand factor, or the efficiency factor in economic growth: (i) a country discovers a large new oil field, (ii) total spending in the economy is too low to buy up all the goods the economy is capable of producing, (iii) a factory switches from an outdated, high-cost production method to a modern, lower-cost one.\nIn a given year, hours worked in an economy grow 0.8 percent and labor productivity (output per hour) grows 2.1 percent. Approximately what is the growth rate of real GDP?\nRank these contributors to U.S. productivity growth from most to least quantitatively important, according to growth accounting studies: education and training, technological advance, capital per worker (capital deepening), economies of scale and improved resource allocation.\nTrue or False: a positive relationship between a nation’s productivity growth rate and its average real hourly wage growth rate exists because competitive labor markets tend to pay workers according to what they produce.\n\n\n\nShow Answer\n\n\n\\(70 / 2.5 = 28\\) years.\n\\(70 / 5 = 14\\) years.\n\nSupply factor (more natural resources). (ii) Demand factor (total spending must be enough to purchase the expanding potential output). (iii) Efficiency factor (using resources at their lowest-cost combination, productive efficiency).\n\nApproximately \\(0.8 + 2.1 = 2.9\\) percent (labor input growth plus productivity growth).\nLargest to smallest: technological advance, capital per worker, education and training, economies of scale and improved resource allocation.\nTrue.",
-    "crumbs": [
-      "Topics",
-      "Ch 8: Economic Growth",
-      "Practice Problems"
-    ]
-  },
-  {
-    "objectID": "lecture/ch08-practice.html#problem-1-small-growth-differences-compounded",
-    "href": "lecture/ch08-practice.html#problem-1-small-growth-differences-compounded",
-    "title": "Chapter 8: Economic Growth",
-    "section": "Problem 1: Small Growth Differences, Compounded",
-    "text": "Problem 1: Small Growth Differences, Compounded\nCountry A and Country B both start with real GDP per capita of $8,000. Country A grows at 2 percent per year. Country B grows at 4 percent per year.\n\nUsing the Rule of 70, how many years does it take each country to double its GDP per capita?\nEstimate each country’s real GDP per capita after 35 years by compounding the growth rate year by year.\nHow many times larger is Country B’s GDP per capita than Country A’s after 35 years?\nBoth countries started at the same GDP per capita and neither growth rate sounds dramatic in a single year. What does this problem illustrate about long-run growth?\n\n\n\nShow Answer\n\n\n\n                            \n                                            \n\n\n\nCountry A: \\(70/2 = 35\\) years. Country B: \\(70/4 = 17.5\\) years.\nCountry A: \\(8{,}000 \\times 1.02^{35} \\approx \\$16{,}000\\). Country B: \\(8{,}000 \\times 1.04^{35} \\approx \\$31{,}600\\).\n\\(31{,}600 / 16{,}000 \\approx 2.0\\), Country B’s GDP per capita is about twice Country A’s after 35 years, even though B’s doubling time is only half of A’s.\nA growth rate that looks small year to year, a gap of just 2 percentage points here, compounds into an enormous difference in living standards over a working lifetime. This is exactly why economists care so much about small, sustained differences in growth rates rather than dismissing them as trivial.",
-    "crumbs": [
-      "Topics",
-      "Ch 8: Economic Growth",
-      "Practice Problems"
-    ]
-  },
-  {
-    "objectID": "lecture/ch08-practice.html#problem-2-where-does-growth-come-from",
-    "href": "lecture/ch08-practice.html#problem-2-where-does-growth-come-from",
-    "title": "Chapter 8: Economic Growth",
-    "section": "Problem 2: Where Does Growth Come From?",
-    "text": "Problem 2: Where Does Growth Come From?\nAn economy’s real GDP grew by approximately 3.2 percent over one year. Economists estimate that total hours worked in the economy grew by 0.9 percent over the same year.\n\nApproximately what was the growth rate of labor productivity (output per hour) that year?\nIf, instead, hours worked had fallen by 0.4 percent while real GDP still grew 3.2 percent, approximately what would labor productivity growth have been?\nIn part (b), the economy produced more total output with fewer hours worked. What does that imply about labor productivity, and why might that be a healthier long-run growth pattern than growth driven mainly by more hours worked?\n\n\n\nShow Answer\n\n\nReal GDP growth is approximately labor input growth plus productivity growth, so \\(3.2 - 0.9 = 2.3\\) percent productivity growth.\n\\(3.2 - (-0.4) = 3.6\\) percent productivity growth.\nIt implies productivity grew faster than total output, each hour worked produced substantially more. Growth driven by rising productivity can continue indefinitely as workers and firms find better technology, tools, and methods, while growth driven mainly by working more hours runs into a hard limit, there are only so many hours in a day and so many working-age people. Sustained increases in living standards ultimately depend on productivity growth, not on people simply working more.",
-    "crumbs": [
-      "Topics",
-      "Ch 8: Economic Growth",
-      "Practice Problems"
-    ]
-  },
-  {
-    "objectID": "lecture/ch08-practice.html#problem-3-is-faster-growth-always-better",
-    "href": "lecture/ch08-practice.html#problem-3-is-faster-growth-always-better",
-    "title": "Chapter 8: Economic Growth",
-    "section": "Problem 3: Is Faster Growth Always Better?",
-    "text": "Problem 3: Is Faster Growth Always Better?\nA country is debating a policy that would raise its long-run real GDP growth rate from 2.0 percent to 3.0 percent per year, mainly by encouraging more saving, investment in new capital, and faster adoption of new technology.\n\nUsing the Rule of 70, how much sooner would the country’s GDP per capita double under the faster growth rate?\nName one real resource cost this faster growth might require today, connecting back to the Chapter 6 saving and investment tradeoff.\nSuppose the policy succeeds in raising average GDP per capita, but nearly all of the additional growth goes to the top of the income distribution. Connecting back to Chapter 6, why might the typical household not feel much better off, even though the national statistics look better?\nName one non-income cost that faster growth might impose that GDP per capita does not capture at all.\n\n\n\nShow Answer\n\n\nDoubling time at 2 percent: \\(70/2 = 35\\) years. At 3 percent: \\(70/3 \\approx 23.3\\) years. The faster growth rate would cut the doubling time by roughly 12 years.\nMore investment in new capital means less current consumption, resources devoted to building factories, machines, and infrastructure today are resources not used to produce consumer goods today. That is the same saving-versus-consumption tradeoff from Chapter 6.\nGDP per capita is a mean. If growth is concentrated among a small share of households, the mean can rise substantially while the median household’s income barely changes, the same mean-versus-median gap discussed in Chapter 6.\nAny reasonable answer describing an externality or nonmarket cost is acceptable, for example: environmental damage from more production, resource depletion, or less leisure time if the faster growth comes from working more rather than working smarter.",
-    "crumbs": [
-      "Topics",
-      "Ch 8: Economic Growth",
-      "Practice Problems"
-    ]
-  },
-  {
-    "objectID": "lecture/ch08-links.html",
-    "href": "lecture/ch08-links.html",
-    "title": "Chapter 8: Economic Growth",
-    "section": "",
-    "text": "FRED: Real Gross Domestic Product Per Capita, the long-run per-capita growth trend\nFRED: Nonfarm Business Sector Labor Productivity, output per hour worked",
-    "crumbs": [
-      "Topics",
-      "Ch 8: Economic Growth",
+      "Ch 2: Market System",
       "Useful Links"
     ]
   },
   {
-    "objectID": "lecture/ch08-links.html#real-data",
-    "href": "lecture/ch08-links.html#real-data",
-    "title": "Chapter 8: Economic Growth",
+    "objectID": "lecture/ch02-links.html#real-data",
+    "href": "lecture/ch02-links.html#real-data",
+    "title": "Chapter 2: The Market System and the Circular Flow",
     "section": "",
-    "text": "FRED: Real Gross Domestic Product Per Capita, the long-run per-capita growth trend\nFRED: Nonfarm Business Sector Labor Productivity, output per hour worked",
+    "text": "FRED: Personal Consumption Expenditures",
     "crumbs": [
       "Topics",
-      "Ch 8: Economic Growth",
+      "Ch 2: Market System",
       "Useful Links"
     ]
   },
   {
-    "objectID": "lecture/ch08-links.html#instructional-videos",
-    "href": "lecture/ch08-links.html#instructional-videos",
-    "title": "Chapter 8: Economic Growth",
+    "objectID": "lecture/ch02-practice.html",
+    "href": "lecture/ch02-practice.html",
+    "title": "Chapter 2: The Market System and the Circular Flow",
+    "section": "",
+    "text": "A firm can produce 100 units of good Y using three different methods, combining labor, land, capital, and entrepreneurial ability. Labor costs $3 per unit, land costs $2 per unit, capital costs $4 per unit, and entrepreneurial ability costs $10 per unit.\n\n\n\nResource\nMethod 1\nMethod 2\nMethod 3\n\n\n\n\nLabor\n6\n10\n4\n\n\nLand\n5\n2\n8\n\n\nCapital\n2\n3\n2\n\n\nEntrepreneurial ability\n1\n1\n1\n\n\n\n\nWhich method is the least costly way to produce 100 units of Y?\nIf Y sells for 90 cents per unit, what is the firm’s economic profit using the least cost method?\nIf the price of land rises from $2 to $4 per unit, does the least cost method change? What is the new economic profit?\n\n\n\nShow Answer\n\nTotal cost of each method:\n\nMethod 1: (6 × $3) + (5 × $2) + (2 × $4) + (1 × $10) = $18 + $10 + $8 + $10 = $46\nMethod 2: (10 × $3) + (2 × $2) + (3 × $4) + (1 × $10) = $30 + $4 + $12 + $10 = $56\nMethod 3: (4 × $3) + (8 × $2) + (2 × $4) + (1 × $10) = $12 + $16 + $8 + $10 = $46\n\n\nMethods 1 and 3 tie at $46, both cheaper than Method 2. Either is a valid least cost choice; assume the firm picks Method 1.\nTotal revenue = 100 × $0.90 = $90. Economic profit = $90 minus $46 = $44.\nRecompute with land at $4 per unit: Method 1 = (6 × $3) + (5 × $4) + (2 × $4) + (1 × $10) = $18\n\n$20 + $8 + $10 = $56. Method 3 = (4 × $3) + (8 × $4) + (2 × $4) + (1 × $10) = $12 + $32 + $8 + $10 = $62. Method 2 = (10 × $3) + (2 × $4) + (3 × $4) + (1 × $10) = $30 + $8 + $12 + $10 = $60. Method 1 is now the cheapest at $56, so the least cost method does not change here, but its cost rose. New economic profit = $90 minus $56 = $34.",
+    "crumbs": [
+      "Topics",
+      "Ch 2: Market System",
+      "Practice Problems"
+    ]
+  },
+  {
+    "objectID": "lecture/ch02-practice.html#problem-1-least-cost-method",
+    "href": "lecture/ch02-practice.html#problem-1-least-cost-method",
+    "title": "Chapter 2: The Market System and the Circular Flow",
+    "section": "",
+    "text": "A firm can produce 100 units of good Y using three different methods, combining labor, land, capital, and entrepreneurial ability. Labor costs $3 per unit, land costs $2 per unit, capital costs $4 per unit, and entrepreneurial ability costs $10 per unit.\n\n\n\nResource\nMethod 1\nMethod 2\nMethod 3\n\n\n\n\nLabor\n6\n10\n4\n\n\nLand\n5\n2\n8\n\n\nCapital\n2\n3\n2\n\n\nEntrepreneurial ability\n1\n1\n1\n\n\n\n\nWhich method is the least costly way to produce 100 units of Y?\nIf Y sells for 90 cents per unit, what is the firm’s economic profit using the least cost method?\nIf the price of land rises from $2 to $4 per unit, does the least cost method change? What is the new economic profit?\n\n\n\nShow Answer\n\nTotal cost of each method:\n\nMethod 1: (6 × $3) + (5 × $2) + (2 × $4) + (1 × $10) = $18 + $10 + $8 + $10 = $46\nMethod 2: (10 × $3) + (2 × $2) + (3 × $4) + (1 × $10) = $30 + $4 + $12 + $10 = $56\nMethod 3: (4 × $3) + (8 × $2) + (2 × $4) + (1 × $10) = $12 + $16 + $8 + $10 = $46\n\n\nMethods 1 and 3 tie at $46, both cheaper than Method 2. Either is a valid least cost choice; assume the firm picks Method 1.\nTotal revenue = 100 × $0.90 = $90. Economic profit = $90 minus $46 = $44.\nRecompute with land at $4 per unit: Method 1 = (6 × $3) + (5 × $4) + (2 × $4) + (1 × $10) = $18\n\n$20 + $8 + $10 = $56. Method 3 = (4 × $3) + (8 × $4) + (2 × $4) + (1 × $10) = $12 + $32 + $8 + $10 = $62. Method 2 = (10 × $3) + (2 × $4) + (3 × $4) + (1 × $10) = $30 + $8 + $12 + $10 = $60. Method 1 is now the cheapest at $56, so the least cost method does not change here, but its cost rose. New economic profit = $90 minus $56 = $34.",
+    "crumbs": [
+      "Topics",
+      "Ch 2: Market System",
+      "Practice Problems"
+    ]
+  },
+  {
+    "objectID": "lecture/ch02-practice.html#problem-2-self-interest-and-competition",
+    "href": "lecture/ch02-practice.html#problem-2-self-interest-and-competition",
+    "title": "Chapter 2: The Market System and the Circular Flow",
+    "section": "Problem 2: Self-Interest and Competition",
+    "text": "Problem 2: Self-Interest and Competition\nA small town has exactly one hardware store. A national chain announces it is opening a second hardware store two blocks away next year.\n\nBefore the new store arrives, what does the existing store’s self-interest push it to do about prices and service quality, given it has no local competitor?\nAfter the new store opens, how does competition change what self-interest pushes the existing store to do?\nExplain, in one or two sentences, why economists say it takes self-interest and competition together to benefit consumers, not self-interest alone.\n\n\n\nShow Answer\n\n\nWith no competitor, the existing store’s self-interest still points toward profit, but nothing forces that profit-seeking to benefit customers. It could charge higher prices or offer weaker service and customers would have nowhere else to go locally.\nOnce a competitor opens nearby, self-interest now requires competing for the same customers. The store has an incentive to lower prices, improve service, or both, or risk losing business to the new entrant.\nSelf-interest alone only guarantees a business tries to maximize its own gain. Competition is what forces that self-interest to serve customers, since a business that ignores customers loses them to a rival. Remove competition and the same self-interested motive can just as easily lead to worse outcomes for consumers.",
+    "crumbs": [
+      "Topics",
+      "Ch 2: Market System",
+      "Practice Problems"
+    ]
+  },
+  {
+    "objectID": "lecture/ch03-links.html",
+    "href": "lecture/ch03-links.html",
+    "title": "Chapter 3: Supply, Demand, and Market Equilibrium",
+    "section": "",
+    "text": "FRED: Average Price of Eggs, Grade A, Large (a classic supply/demand example)",
+    "crumbs": [
+      "Topics",
+      "Ch 3: Supply, Demand, Equilibrium",
+      "Useful Links"
+    ]
+  },
+  {
+    "objectID": "lecture/ch03-links.html#real-data",
+    "href": "lecture/ch03-links.html#real-data",
+    "title": "Chapter 3: Supply, Demand, and Market Equilibrium",
+    "section": "",
+    "text": "FRED: Average Price of Eggs, Grade A, Large (a classic supply/demand example)",
+    "crumbs": [
+      "Topics",
+      "Ch 3: Supply, Demand, Equilibrium",
+      "Useful Links"
+    ]
+  },
+  {
+    "objectID": "lecture/ch03-links.html#instructional-videos",
+    "href": "lecture/ch03-links.html#instructional-videos",
+    "title": "Chapter 3: Supply, Demand, and Market Equilibrium",
     "section": "Instructional Videos",
-    "text": "Instructional Videos",
+    "text": "Instructional Videos\n\nKhan Academy Demand Video\nKhan Academy Supply Video\nKhan Academy Equilibrium Video\nKhan Academy Shifts in Supply Video",
+    "crumbs": [
+      "Topics",
+      "Ch 3: Supply, Demand, Equilibrium",
+      "Useful Links"
+    ]
+  },
+  {
+    "objectID": "lecture/ch09.html",
+    "href": "lecture/ch09.html",
+    "title": "Chapter 9: Business Cycles, Unemployment, and Inflation",
+    "section": "",
+    "text": "Open in full screen",
+    "crumbs": [
+      "Topics",
+      "Ch 9: Business Cycles, Unemployment, Inflation",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "lecture/ch08.html",
+    "href": "lecture/ch08.html",
+    "title": "Chapter 8: Economic Growth",
+    "section": "",
+    "text": "Open in full screen",
     "crumbs": [
       "Topics",
       "Ch 8: Economic Growth",
-      "Useful Links"
+      "Slides"
     ]
   },
   {
@@ -448,110 +472,146 @@
     ]
   },
   {
-    "objectID": "lecture/ch08.html",
-    "href": "lecture/ch08.html",
+    "objectID": "lecture/ch08-links.html",
+    "href": "lecture/ch08-links.html",
     "title": "Chapter 8: Economic Growth",
     "section": "",
-    "text": "Open in full screen",
+    "text": "FRED: Real Gross Domestic Product Per Capita, the long-run per-capita growth trend\nFRED: Nonfarm Business Sector Labor Productivity, output per hour worked",
     "crumbs": [
       "Topics",
       "Ch 8: Economic Growth",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "lecture/ch03-links.html",
-    "href": "lecture/ch03-links.html",
-    "title": "Chapter 3: Supply, Demand, and Market Equilibrium",
-    "section": "",
-    "text": "FRED: Average Price of Eggs, Grade A, Large (a classic supply/demand example)",
-    "crumbs": [
-      "Topics",
-      "Ch 3: Supply, Demand, Equilibrium",
       "Useful Links"
     ]
   },
   {
-    "objectID": "lecture/ch03-links.html#real-data",
-    "href": "lecture/ch03-links.html#real-data",
-    "title": "Chapter 3: Supply, Demand, and Market Equilibrium",
+    "objectID": "lecture/ch08-links.html#real-data",
+    "href": "lecture/ch08-links.html#real-data",
+    "title": "Chapter 8: Economic Growth",
     "section": "",
-    "text": "FRED: Average Price of Eggs, Grade A, Large (a classic supply/demand example)",
+    "text": "FRED: Real Gross Domestic Product Per Capita, the long-run per-capita growth trend\nFRED: Nonfarm Business Sector Labor Productivity, output per hour worked",
     "crumbs": [
       "Topics",
-      "Ch 3: Supply, Demand, Equilibrium",
+      "Ch 8: Economic Growth",
       "Useful Links"
     ]
   },
   {
-    "objectID": "lecture/ch03-links.html#instructional-videos",
-    "href": "lecture/ch03-links.html#instructional-videos",
-    "title": "Chapter 3: Supply, Demand, and Market Equilibrium",
+    "objectID": "lecture/ch08-links.html#instructional-videos",
+    "href": "lecture/ch08-links.html#instructional-videos",
+    "title": "Chapter 8: Economic Growth",
     "section": "Instructional Videos",
-    "text": "Instructional Videos\n\nKhan Academy Demand Video\nKhan Academy Supply Video\nKhan Academy Equilibrium Video\nKhan Academy Shifts in Supply Video",
+    "text": "Instructional Videos",
     "crumbs": [
       "Topics",
-      "Ch 3: Supply, Demand, Equilibrium",
+      "Ch 8: Economic Growth",
       "Useful Links"
     ]
   },
   {
-    "objectID": "lecture/ch02-practice.html",
-    "href": "lecture/ch02-practice.html",
-    "title": "Chapter 2: The Market System and the Circular Flow",
+    "objectID": "lecture/ch08-practice.html",
+    "href": "lecture/ch08-practice.html",
+    "title": "Chapter 8: Economic Growth",
     "section": "",
-    "text": "A firm can produce 100 units of good Y using three different methods, combining labor, land, capital, and entrepreneurial ability. Labor costs $3 per unit, land costs $2 per unit, capital costs $4 per unit, and entrepreneurial ability costs $10 per unit.\n\n\n\nResource\nMethod 1\nMethod 2\nMethod 3\n\n\n\n\nLabor\n6\n10\n4\n\n\nLand\n5\n2\n8\n\n\nCapital\n2\n3\n2\n\n\nEntrepreneurial ability\n1\n1\n1\n\n\n\n\nWhich method is the least costly way to produce 100 units of Y?\nIf Y sells for 90 cents per unit, what is the firm’s economic profit using the least cost method?\nIf the price of land rises from $2 to $4 per unit, does the least cost method change? What is the new economic profit?\n\n\n\nShow Answer\n\nTotal cost of each method:\n\nMethod 1: (6 × $3) + (5 × $2) + (2 × $4) + (1 × $10) = $18 + $10 + $8 + $10 = $46\nMethod 2: (10 × $3) + (2 × $2) + (3 × $4) + (1 × $10) = $30 + $4 + $12 + $10 = $56\nMethod 3: (4 × $3) + (8 × $2) + (2 × $4) + (1 × $10) = $12 + $16 + $8 + $10 = $46\n\n\nMethods 1 and 3 tie at $46, both cheaper than Method 2. Either is a valid least cost choice; assume the firm picks Method 1.\nTotal revenue = 100 × $0.90 = $90. Economic profit = $90 minus $46 = $44.\nRecompute with land at $4 per unit: Method 1 = (6 × $3) + (5 × $4) + (2 × $4) + (1 × $10) = $18\n\n$20 + $8 + $10 = $56. Method 3 = (4 × $3) + (8 × $4) + (2 × $4) + (1 × $10) = $12 + $32 + $8 + $10 = $62. Method 2 = (10 × $3) + (2 × $4) + (3 × $4) + (1 × $10) = $30 + $8 + $12 + $10 = $60. Method 1 is now the cheapest at $56, so the least cost method does not change here, but its cost rose. New economic profit = $90 minus $56 = $34.",
+    "text": "A country’s real GDP per capita grows at 2.5 percent per year. Using the Rule of 70, approximately how many years will it take to double?\nA country’s real GDP per capita grows at 5 percent per year instead. Approximately how many years will it take to double?\nFor each, say whether it is a supply factor, the demand factor, or the efficiency factor in economic growth: (i) a country discovers a large new oil field, (ii) total spending in the economy is too low to buy up all the goods the economy is capable of producing, (iii) a factory switches from an outdated, high-cost production method to a modern, lower-cost one.\nIn a given year, hours worked in an economy grow 0.8 percent and labor productivity (output per hour) grows 2.1 percent. Approximately what is the growth rate of real GDP?\nRank these contributors to U.S. productivity growth from most to least quantitatively important, according to growth accounting studies: education and training, technological advance, capital per worker (capital deepening), economies of scale and improved resource allocation.\nTrue or False: a positive relationship between a nation’s productivity growth rate and its average real hourly wage growth rate exists because competitive labor markets tend to pay workers according to what they produce.\n\n\n\nShow Answer\n\n\n\\(70 / 2.5 = 28\\) years.\n\\(70 / 5 = 14\\) years.\n\nSupply factor (more natural resources). (ii) Demand factor (total spending must be enough to purchase the expanding potential output). (iii) Efficiency factor (using resources at their lowest-cost combination, productive efficiency).\n\nApproximately \\(0.8 + 2.1 = 2.9\\) percent (labor input growth plus productivity growth).\nLargest to smallest: technological advance, capital per worker, education and training, economies of scale and improved resource allocation.\nTrue.",
     "crumbs": [
       "Topics",
-      "Ch 2: Market System",
+      "Ch 8: Economic Growth",
       "Practice Problems"
     ]
   },
   {
-    "objectID": "lecture/ch02-practice.html#problem-1-least-cost-method",
-    "href": "lecture/ch02-practice.html#problem-1-least-cost-method",
-    "title": "Chapter 2: The Market System and the Circular Flow",
+    "objectID": "lecture/ch08-practice.html#warm-up-quick-concept-and-calculation-checks",
+    "href": "lecture/ch08-practice.html#warm-up-quick-concept-and-calculation-checks",
+    "title": "Chapter 8: Economic Growth",
     "section": "",
-    "text": "A firm can produce 100 units of good Y using three different methods, combining labor, land, capital, and entrepreneurial ability. Labor costs $3 per unit, land costs $2 per unit, capital costs $4 per unit, and entrepreneurial ability costs $10 per unit.\n\n\n\nResource\nMethod 1\nMethod 2\nMethod 3\n\n\n\n\nLabor\n6\n10\n4\n\n\nLand\n5\n2\n8\n\n\nCapital\n2\n3\n2\n\n\nEntrepreneurial ability\n1\n1\n1\n\n\n\n\nWhich method is the least costly way to produce 100 units of Y?\nIf Y sells for 90 cents per unit, what is the firm’s economic profit using the least cost method?\nIf the price of land rises from $2 to $4 per unit, does the least cost method change? What is the new economic profit?\n\n\n\nShow Answer\n\nTotal cost of each method:\n\nMethod 1: (6 × $3) + (5 × $2) + (2 × $4) + (1 × $10) = $18 + $10 + $8 + $10 = $46\nMethod 2: (10 × $3) + (2 × $2) + (3 × $4) + (1 × $10) = $30 + $4 + $12 + $10 = $56\nMethod 3: (4 × $3) + (8 × $2) + (2 × $4) + (1 × $10) = $12 + $16 + $8 + $10 = $46\n\n\nMethods 1 and 3 tie at $46, both cheaper than Method 2. Either is a valid least cost choice; assume the firm picks Method 1.\nTotal revenue = 100 × $0.90 = $90. Economic profit = $90 minus $46 = $44.\nRecompute with land at $4 per unit: Method 1 = (6 × $3) + (5 × $4) + (2 × $4) + (1 × $10) = $18\n\n$20 + $8 + $10 = $56. Method 3 = (4 × $3) + (8 × $4) + (2 × $4) + (1 × $10) = $12 + $32 + $8 + $10 = $62. Method 2 = (10 × $3) + (2 × $4) + (3 × $4) + (1 × $10) = $30 + $8 + $12 + $10 = $60. Method 1 is now the cheapest at $56, so the least cost method does not change here, but its cost rose. New economic profit = $90 minus $56 = $34.",
+    "text": "A country’s real GDP per capita grows at 2.5 percent per year. Using the Rule of 70, approximately how many years will it take to double?\nA country’s real GDP per capita grows at 5 percent per year instead. Approximately how many years will it take to double?\nFor each, say whether it is a supply factor, the demand factor, or the efficiency factor in economic growth: (i) a country discovers a large new oil field, (ii) total spending in the economy is too low to buy up all the goods the economy is capable of producing, (iii) a factory switches from an outdated, high-cost production method to a modern, lower-cost one.\nIn a given year, hours worked in an economy grow 0.8 percent and labor productivity (output per hour) grows 2.1 percent. Approximately what is the growth rate of real GDP?\nRank these contributors to U.S. productivity growth from most to least quantitatively important, according to growth accounting studies: education and training, technological advance, capital per worker (capital deepening), economies of scale and improved resource allocation.\nTrue or False: a positive relationship between a nation’s productivity growth rate and its average real hourly wage growth rate exists because competitive labor markets tend to pay workers according to what they produce.\n\n\n\nShow Answer\n\n\n\\(70 / 2.5 = 28\\) years.\n\\(70 / 5 = 14\\) years.\n\nSupply factor (more natural resources). (ii) Demand factor (total spending must be enough to purchase the expanding potential output). (iii) Efficiency factor (using resources at their lowest-cost combination, productive efficiency).\n\nApproximately \\(0.8 + 2.1 = 2.9\\) percent (labor input growth plus productivity growth).\nLargest to smallest: technological advance, capital per worker, education and training, economies of scale and improved resource allocation.\nTrue.",
     "crumbs": [
       "Topics",
-      "Ch 2: Market System",
+      "Ch 8: Economic Growth",
       "Practice Problems"
     ]
   },
   {
-    "objectID": "lecture/ch02-practice.html#problem-2-self-interest-and-competition",
-    "href": "lecture/ch02-practice.html#problem-2-self-interest-and-competition",
-    "title": "Chapter 2: The Market System and the Circular Flow",
-    "section": "Problem 2: Self-Interest and Competition",
-    "text": "Problem 2: Self-Interest and Competition\nA small town has exactly one hardware store. A national chain announces it is opening a second hardware store two blocks away next year.\n\nBefore the new store arrives, what does the existing store’s self-interest push it to do about prices and service quality, given it has no local competitor?\nAfter the new store opens, how does competition change what self-interest pushes the existing store to do?\nExplain, in one or two sentences, why economists say it takes self-interest and competition together to benefit consumers, not self-interest alone.\n\n\n\nShow Answer\n\n\nWith no competitor, the existing store’s self-interest still points toward profit, but nothing forces that profit-seeking to benefit customers. It could charge higher prices or offer weaker service and customers would have nowhere else to go locally.\nOnce a competitor opens nearby, self-interest now requires competing for the same customers. The store has an incentive to lower prices, improve service, or both, or risk losing business to the new entrant.\nSelf-interest alone only guarantees a business tries to maximize its own gain. Competition is what forces that self-interest to serve customers, since a business that ignores customers loses them to a rival. Remove competition and the same self-interested motive can just as easily lead to worse outcomes for consumers.",
+    "objectID": "lecture/ch08-practice.html#problem-1-small-growth-differences-compounded",
+    "href": "lecture/ch08-practice.html#problem-1-small-growth-differences-compounded",
+    "title": "Chapter 8: Economic Growth",
+    "section": "Problem 1: Small Growth Differences, Compounded",
+    "text": "Problem 1: Small Growth Differences, Compounded\nCountry A and Country B both start with real GDP per capita of $8,000. Country A grows at 2 percent per year. Country B grows at 4 percent per year.\n\nUsing the Rule of 70, how many years does it take each country to double its GDP per capita?\nEstimate each country’s real GDP per capita after 35 years by compounding the growth rate year by year.\nHow many times larger is Country B’s GDP per capita than Country A’s after 35 years?\nBoth countries started at the same GDP per capita and neither growth rate sounds dramatic in a single year. What does this problem illustrate about long-run growth?\n\n\n\nShow Answer\n\n\n\n                            \n                                            \n\n\n\nCountry A: \\(70/2 = 35\\) years. Country B: \\(70/4 = 17.5\\) years.\nCountry A: \\(8{,}000 \\times 1.02^{35} \\approx \\$16{,}000\\). Country B: \\(8{,}000 \\times 1.04^{35} \\approx \\$31{,}600\\).\n\\(31{,}600 / 16{,}000 \\approx 2.0\\), Country B’s GDP per capita is about twice Country A’s after 35 years, even though B’s doubling time is only half of A’s.\nA growth rate that looks small year to year, a gap of just 2 percentage points here, compounds into an enormous difference in living standards over a working lifetime. This is exactly why economists care so much about small, sustained differences in growth rates rather than dismissing them as trivial.",
     "crumbs": [
       "Topics",
-      "Ch 2: Market System",
+      "Ch 8: Economic Growth",
       "Practice Problems"
     ]
   },
   {
-    "objectID": "lecture/ch02-links.html",
-    "href": "lecture/ch02-links.html",
-    "title": "Chapter 2: The Market System and the Circular Flow",
-    "section": "",
-    "text": "FRED: Personal Consumption Expenditures",
+    "objectID": "lecture/ch08-practice.html#problem-2-where-does-growth-come-from",
+    "href": "lecture/ch08-practice.html#problem-2-where-does-growth-come-from",
+    "title": "Chapter 8: Economic Growth",
+    "section": "Problem 2: Where Does Growth Come From?",
+    "text": "Problem 2: Where Does Growth Come From?\nAn economy’s real GDP grew by approximately 3.2 percent over one year. Economists estimate that total hours worked in the economy grew by 0.9 percent over the same year.\n\nApproximately what was the growth rate of labor productivity (output per hour) that year?\nIf, instead, hours worked had fallen by 0.4 percent while real GDP still grew 3.2 percent, approximately what would labor productivity growth have been?\nIn part (b), the economy produced more total output with fewer hours worked. What does that imply about labor productivity, and why might that be a healthier long-run growth pattern than growth driven mainly by more hours worked?\n\n\n\nShow Answer\n\n\nReal GDP growth is approximately labor input growth plus productivity growth, so \\(3.2 - 0.9 = 2.3\\) percent productivity growth.\n\\(3.2 - (-0.4) = 3.6\\) percent productivity growth.\nIt implies productivity grew faster than total output, each hour worked produced substantially more. Growth driven by rising productivity can continue indefinitely as workers and firms find better technology, tools, and methods, while growth driven mainly by working more hours runs into a hard limit, there are only so many hours in a day and so many working-age people. Sustained increases in living standards ultimately depend on productivity growth, not on people simply working more.",
     "crumbs": [
       "Topics",
-      "Ch 2: Market System",
+      "Ch 8: Economic Growth",
+      "Practice Problems"
+    ]
+  },
+  {
+    "objectID": "lecture/ch08-practice.html#problem-3-is-faster-growth-always-better",
+    "href": "lecture/ch08-practice.html#problem-3-is-faster-growth-always-better",
+    "title": "Chapter 8: Economic Growth",
+    "section": "Problem 3: Is Faster Growth Always Better?",
+    "text": "Problem 3: Is Faster Growth Always Better?\nA country is debating a policy that would raise its long-run real GDP growth rate from 2.0 percent to 3.0 percent per year, mainly by encouraging more saving, investment in new capital, and faster adoption of new technology.\n\nUsing the Rule of 70, how much sooner would the country’s GDP per capita double under the faster growth rate?\nName one real resource cost this faster growth might require today, connecting back to the Chapter 6 saving and investment tradeoff.\nSuppose the policy succeeds in raising average GDP per capita, but nearly all of the additional growth goes to the top of the income distribution. Connecting back to Chapter 6, why might the typical household not feel much better off, even though the national statistics look better?\nName one non-income cost that faster growth might impose that GDP per capita does not capture at all.\n\n\n\nShow Answer\n\n\nDoubling time at 2 percent: \\(70/2 = 35\\) years. At 3 percent: \\(70/3 \\approx 23.3\\) years. The faster growth rate would cut the doubling time by roughly 12 years.\nMore investment in new capital means less current consumption, resources devoted to building factories, machines, and infrastructure today are resources not used to produce consumer goods today. That is the same saving-versus-consumption tradeoff from Chapter 6.\nGDP per capita is a mean. If growth is concentrated among a small share of households, the mean can rise substantially while the median household’s income barely changes, the same mean-versus-median gap discussed in Chapter 6.\nAny reasonable answer describing an externality or nonmarket cost is acceptable, for example: environmental damage from more production, resource depletion, or less leisure time if the faster growth comes from working more rather than working smarter.",
+    "crumbs": [
+      "Topics",
+      "Ch 8: Economic Growth",
+      "Practice Problems"
+    ]
+  },
+  {
+    "objectID": "lecture/ch09-links.html",
+    "href": "lecture/ch09-links.html",
+    "title": "Chapter 9: Business Cycles, Unemployment, and Inflation",
+    "section": "",
+    "text": "FRED: Unemployment Rate\nFRED: Labor Force Participation Rate\nFRED: Consumer Price Index for All Urban Consumers\nMinneapolis Fed: Regional Economic Indicators, regional CPI and unemployment insurance claims data",
+    "crumbs": [
+      "Topics",
+      "Ch 9: Business Cycles, Unemployment, Inflation",
       "Useful Links"
     ]
   },
   {
-    "objectID": "lecture/ch02-links.html#real-data",
-    "href": "lecture/ch02-links.html#real-data",
-    "title": "Chapter 2: The Market System and the Circular Flow",
+    "objectID": "lecture/ch09-links.html#real-data",
+    "href": "lecture/ch09-links.html#real-data",
+    "title": "Chapter 9: Business Cycles, Unemployment, and Inflation",
     "section": "",
-    "text": "FRED: Personal Consumption Expenditures",
+    "text": "FRED: Unemployment Rate\nFRED: Labor Force Participation Rate\nFRED: Consumer Price Index for All Urban Consumers\nMinneapolis Fed: Regional Economic Indicators, regional CPI and unemployment insurance claims data",
     "crumbs": [
       "Topics",
-      "Ch 2: Market System",
+      "Ch 9: Business Cycles, Unemployment, Inflation",
+      "Useful Links"
+    ]
+  },
+  {
+    "objectID": "lecture/ch09-links.html#news",
+    "href": "lecture/ch09-links.html#news",
+    "title": "Chapter 9: Business Cycles, Unemployment, and Inflation",
+    "section": "News",
+    "text": "News\n\nWikipedia: Zimbabwean one hundred trillion dollar note, background on the banknote and the 2007-2009 hyperinflation referenced in the lecture",
+    "crumbs": [
+      "Topics",
+      "Ch 9: Business Cycles, Unemployment, Inflation",
+      "Useful Links"
+    ]
+  },
+  {
+    "objectID": "lecture/ch09-links.html#instructional-videos",
+    "href": "lecture/ch09-links.html#instructional-videos",
+    "title": "Chapter 9: Business Cycles, Unemployment, and Inflation",
+    "section": "Instructional Videos",
+    "text": "Instructional Videos",
+    "crumbs": [
+      "Topics",
+      "Ch 9: Business Cycles, Unemployment, Inflation",
       "Useful Links"
     ]
   },
