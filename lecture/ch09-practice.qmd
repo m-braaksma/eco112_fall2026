@@ -156,8 +156,8 @@ a. Put these four phases of the business cycle in order, starting from a busines
 b. During a recession, which industry would you expect to see a *larger* drop in sales: a grocery
    store, or a company that manufactures new cars? Explain using the idea of postponable spending.
 c. A country's inflation rate accelerates from a modest 3 percent to over 200 percent per year
-   (hyperinflation). Name two ways this could damage the economy's total output, beyond simply
-   making goods more expensive.
+   (hyperinflation). What are some ways this could damage the economy's total output, beyond simply
+   making goods more expensive?
 d. Explain briefly why even a low, stable, fully anticipated inflation rate (say, 2 percent) still
    imposes some real cost on an economy, rather than being completely harmless.
 
@@ -168,7 +168,7 @@ a. Peak, recession, trough, expansion, and then back toward a new peak.
 b. The *car manufacturer*. Cars are a durable good, and durable-good purchases can be *postponed*,
    a household can keep driving its current car for another year or two if money is tight. Grocery
    spending on food is much harder to postpone, so it holds up better in a downturn.
-c. Any two reasonable answers, for example: people rush to spend money immediately before it loses
+c. Many possible answers: people rush to spend money immediately before it loses
    more value, which disrupts normal saving and planning; businesses struggle to set prices and
    sign contracts when prices change by the day or hour; normal exchange breaks down as money stops
    functioning as a reliable store of value, all of which can cause total output to fall sharply.

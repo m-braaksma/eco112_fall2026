@@ -1,0 +1,90 @@
+---
+title: "Exam 1 Study Guide"
+subtitle: "Chapters 1, 2, 3, 6, 7, 8, 9"
+---
+
+## Exam Format
+
+- **75 minutes**, closed-book.
+- You may bring **one side of one handwritten 8.5x11 note sheet**. No photocopies, no printouts, no typed sheets, handwritten only.
+- **Multiple choice** questions, plus a set of **multi-part problems** that build from easier to harder within each problem. Show your work on problems for partial credit.
+- Bring a pencil and calculator. **No phones.**
+
+This page is a checklist of topics, organized by chapter, not a list of exam questions. Use it to find your weak spots before you review your notes, slides, quizzes, and Connect homework.
+
+## Chapter 1: Choices
+
+- Opportunity cost: what it means, and why scarcity is what creates it.
+- The economic perspective: purposeful behavior, utility, marginal thinking.
+- **Positive vs. normative** economic statements, know the difference and be able to identify each.
+- Reading a **budget line**: slope, intercepts, attainable vs. unattainable combinations.
+- The **factors of production**: land, labor, capital, entrepreneurial ability.
+- The **MB = MC rule**: why a rational decision-maker keeps going until marginal benefit equals marginal cost.
+- The **production possibilities frontier (PPF)**: attainable vs. unattainable points, points inside the curve (unemployed/underused resources) vs. on the curve (efficient).
+- The **law of increasing opportunity cost**: why the PPF bows outward, and why opportunity cost rises as you produce more of one good.
+- How economic growth, unemployment, and trade each show up on a PPF diagram.
+
+## Chapter 2: The Market System
+
+- How every economy must answer the same three questions (what, how, and for whom to produce), and the two broad ways economies answer them (markets vs. command).
+- Why self-interest, operating through prices and profit, coordinates a market economy rather than wrecking it (the "invisible hand").
+- Profit as a signal: how rising or falling profit redirects resources toward what consumers want.
+- The **least-cost production method**: how to compute the cost of different input combinations, and how a firm's choice of method changes when relative input prices change.
+- The **circular flow model**: resource market vs. product market, and who is a buyer/seller in each.
+- Creative destruction and how a market system accommodates change over time.
+
+## Chapter 3: Supply, Demand, and Equilibrium
+
+- The law of demand and the law of supply, and why each curve has the slope it does.
+- **Movement along** a curve vs. a **shift in** the curve, know which determinants cause which.
+- The determinants that shift demand (income, prices of related goods, tastes, expectations, number of buyers) and supply (input prices, technology, number of sellers, expectations, taxes/subsidies).
+- Finding equilibrium price and quantity, both graphically and **algebraically** by setting $Q_d = Q_s$.
+- Shortages and surpluses: what happens away from equilibrium, and what a price **ceiling** or **floor** does to the market.
+- Predicting how equilibrium price and quantity change when demand shifts, supply shifts, or both.
+
+## Chapter 6: Intro to Macroeconomics
+
+- Why macroeconomists focus on a few key summary statistics (GDP, unemployment, inflation) instead of tracking every market.
+- Total output growth vs. growth **per capita**, and why the distinction matters.
+- The tradeoff between consumption today and consumption in the future, and how saving channels into investment (the loanable funds idea).
+- Two different meanings of "investment": the economist's definition (new capital goods) vs. the everyday/financial meaning (buying stock).
+- Human capital as a form of investment.
+- **Price stickiness**: why some prices adjust quickly and others adjust slowly, and why this distinction matters for the short run vs. the long run.
+
+## Chapter 7: National Income
+
+- Why we measure the whole economy with statistics like GDP.
+- The definition of **GDP**: final goods and services, market value, produced within a country's borders in a given period.
+- **Final goods vs. intermediate goods**, and why counting intermediate goods separately would cause **multiple counting** (use **value added** instead).
+- What GDP **excludes** (e.g., secondhand sales, purely financial transactions, nonmarket activity).
+- The **expenditure approach**: $\text{GDP} = C + I_g + G + X_n$. Know what's in each component (including gross vs. net investment, and net exports as exports minus imports).
+- The **income approach**: GDP can also be built up from the income side (compensation of employees, rents, interest, profits, plus adjustments), and it totals the same GDP as the expenditure approach.
+- **Nominal GDP vs. real GDP**, and why real GDP is the more reliable measure for comparing output over time.
+- The **GDP price index (deflator)** and how to use it to convert nominal GDP into real GDP (deflating).
+- Shortcomings of GDP as a measure of well-being (nonmarket activity, leisure, the underground economy, distribution).
+
+## Chapter 8: Economic Growth
+
+- How economic growth is measured, and why small differences in the growth rate compound into large differences over time.
+- The **Rule of 70**: estimating how many years it takes a growing variable to double.
+- The institutional foundations of growth (property rights, patents/copyrights, financial institutions, free trade).
+- The **four supply factors**, the **demand factor**, and the **efficiency factor** behind growth, and how each shows up as a shift of the PPF.
+- **Growth accounting**: decomposing real GDP growth into growth in hours worked plus growth in labor productivity.
+- The link between productivity growth and real wage growth.
+- Benefits and costs/critiques of economic growth.
+
+## Chapter 9: Business Cycles, Unemployment, and Inflation
+
+- The **four phases of the business cycle**: peak, recession, trough, expansion, know what each one means, not just the general idea of ups and downs.
+- Why business cycles are irregular, not predictable on a fixed schedule.
+- Why durable goods industries feel a downturn more than nondurable goods and services.
+- Who counts as unemployed (vs. employed vs. not in the labor force), and how to compute the **unemployment rate**.
+- The **four types of unemployment** (frictional, structural, cyclical, seasonal), and what "full employment" actually means.
+- The **CPI** and how to compute the **inflation rate** from two CPI values.
+- The **Fisher relationship**: real interest rate = nominal interest rate minus inflation.
+- Nominal income vs. real income, and who wins/who loses from *unanticipated* inflation.
+- Costs of inflation even when fully anticipated (menu costs, shoe-leather costs), and what makes hyperinflation different from ordinary inflation.
+
+## How to Use This List
+
+For each bullet above, you should be able to: (1) define the term in your own words, (2) explain *why* it matters or how it connects to the bigger picture, and (3) work through a numerical example if the topic involves a formula or calculation. If any bullet feels unfamiliar, go back to that chapter's slides, your Connect homework, and the relevant quiz before the exam.

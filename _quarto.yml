@@ -57,6 +57,10 @@ website:
             text: Printing
           - href: course-presentations.qmd
             text: Presentations
+          - href: exam1-study-guide.qmd
+            text: Exam 1 Study Guide
+          - href: course-study-abroad.qmd
+            text: Study Abroad
 
       - section: "Topics"
         contents:
@@ -114,14 +118,14 @@ website:
                 text: Slides
               - href: lecture/ch09-links.qmd
                 text: Useful Links
-          #     # - href: lecture/ch09-practice.qmd
-          #     #   text: Practice Problems
-          # - section: "Ch 10: Basic Macroeconomic Relationships"
-          #   contents:
-          #     - href: lecture/ch10.qmd
-          #       text: Slides
-          #     - href: lecture/ch10-links.qmd
-          #       text: Useful Links
+              - href: lecture/ch09-practice.qmd
+                text: Practice Problems
+          - section: "Ch 10: Basic Macroeconomic Relationships"
+            contents:
+              - href: lecture/ch10.qmd
+                text: Slides
+              - href: lecture/ch10-links.qmd
+                text: Useful Links
           #     # - href: lecture/ch10-practice.qmd
           #     #   text: Practice Problems
           # - section: "Ch 11: Aggregate Expenditure Model"
