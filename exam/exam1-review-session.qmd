@@ -1,0 +1,822 @@
+---
+title: "Exam 1 Review Session"
+subtitle: "Chapters 1, 2, 3, 6, 7, 8, 9"
+---
+
+Click "Generate New Numbers" in any section for a fresh version of that problem, work it out on
+paper, then click "Show solution" to check your answer. You can regenerate and retry as many
+times as you want. Topics are in the same order as the [Study Guide](exam1-study-guide.qmd).
+
+```{ojs}
+//| echo: false
+randInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min
+```
+
+## Chapter 1: The Budget Line, the PPF, and Factors of Production
+
+```{ojs}
+//| echo: false
+viewof seedBL = Inputs.button("Generate New Numbers", {value: 0, reduce: x => x + 1})
+```
+
+```{ojs}
+//| echo: false
+paramsBL = {
+  seedBL;
+  const Px = randInt(4, 12);
+  const Py = randInt(4, 12);
+  const maxX = randInt(10, 30);
+  const I = Px * maxX;
+  const maxY = Math.round((I / Py) * 10) / 10;
+  const slope = Math.round((-Px / Py) * 100) / 100;
+  const xTest = randInt(2, maxX - 1);
+  const yTest = randInt(2, Math.max(Math.round(maxY) - 1, 2));
+  const costTest = Px * xTest + Py * yTest;
+  return { Px, Py, maxX, I, maxY, slope, xTest, yTest, costTest };
+}
+```
+
+```{ojs}
+//| echo: false
+md`A consumer has $${paramsBL.I} to spend on two goods: X (price $${paramsBL.Px} each) and Y
+(price $${paramsBL.Py} each).
+
+**a)** If the consumer spends everything on X, how many units of X can they buy?
+
+<details><summary>Show solution</summary>
+
+$${paramsBL.I} / $${paramsBL.Px} = ${paramsBL.maxX} units of X.
+
+</details>
+
+**b)** If the consumer spends everything on Y instead, how many units of Y can they buy?
+
+<details><summary>Show solution</summary>
+
+$${paramsBL.I} / $${paramsBL.Py} ≈ ${paramsBL.maxY} units of Y.
+
+</details>
+
+**c)** What is the slope of this consumer's budget line, and what does it represent
+economically?
+
+<details><summary>Show solution</summary>
+
+Slope = −Px/Py = −${paramsBL.Px}/${paramsBL.Py} ≈ ${paramsBL.slope}. It represents the
+rate at which the consumer must give up Y to get one more unit of X, the opportunity cost of X
+in terms of Y, given these prices.
+
+</details>
+
+**d)** Can this consumer afford ${paramsBL.xTest} units of X and ${paramsBL.yTest} units of Y at
+the same time?
+
+<details><summary>Show solution</summary>
+
+Cost = ${paramsBL.Px}(${paramsBL.xTest}) + ${paramsBL.Py}(${paramsBL.yTest}) =
+$${paramsBL.costTest}. ${
+  paramsBL.costTest < paramsBL.I
+    ? `Since this is less than $${paramsBL.I}, the bundle is **attainable**, with money left over.`
+    : paramsBL.costTest === paramsBL.I
+      ? `Since this equals exactly $${paramsBL.I}, the bundle sits **exactly on the budget line**.`
+      : `Since this exceeds $${paramsBL.I}, the bundle is **unattainable**.`
+}
+
+</details>`
+```
+
+```{ojs}
+//| echo: false
+viewof seedPPF = Inputs.button("Generate New Numbers", {value: 0, reduce: x => x + 1})
+```
+
+```{ojs}
+//| echo: false
+paramsPPF = {
+  seedPPF;
+  const step = randInt(4, 10);
+  const c1 = randInt(1, 4);
+  const c2 = c1 + randInt(1, 4);
+  const B0 = randInt(30, 60);
+  const B1 = B0 - c1;
+  const B2 = B1 - c2;
+  return { step, c1, c2, B0, B1, B2 };
+}
+```
+
+```{ojs}
+//| echo: false
+md`A country can produce Tents or Canoes. Its PPF passes through these points:
+
+| Point | Tents | Canoes |
+|---|---:|---:|
+| A | 0 | ${paramsPPF.B0} |
+| B | ${paramsPPF.step} | ${paramsPPF.B1} |
+| C | ${paramsPPF.step * 2} | ${paramsPPF.B2} |
+
+**a)** Moving from point A to point B, how many Canoes does the country give up in order to make
+${paramsPPF.step} more Tents?
+
+<details><summary>Show solution</summary>
+
+${paramsPPF.B0} − ${paramsPPF.B1} = ${paramsPPF.c1} Canoes.
+
+</details>
+
+**b)** Moving from point B to point C, how many Canoes does the country give up this time?
+
+<details><summary>Show solution</summary>
+
+${paramsPPF.B1} − ${paramsPPF.B2} = ${paramsPPF.c2} Canoes.
+
+</details>
+
+**c)** Your answers to (a) and (b) aren't the same. What's going on, economically, and what is
+this pattern called?
+
+<details><summary>Show solution</summary>
+
+The cost per step rises (${paramsPPF.c1} Canoes, then ${paramsPPF.c2} Canoes). This is the law
+of increasing opportunity cost: resources aren't equally well suited to producing both goods, so
+as more resources shift toward Tents, the ones reassigned are progressively less suited to Tents
+(and more suited to Canoes), raising the cost of each additional Tent.
+
+</details>
+
+**d)** A new fishing-net material is invented that only helps build Canoes, it does nothing for
+Tent-making. Describe what happens to this country's PPF.
+
+<details><summary>Show solution</summary>
+
+The Canoe-axis intercept rises (more Canoes possible if all resources go to Canoes). The
+Tent-axis intercept is unchanged, since the new material doesn't touch Tent production. The PPF
+pivots outward, anchored at the Tent-axis endpoint.
+
+</details>
+
+**e)** Now instead, imagine a general improvement, better transportation, say, that helps the
+country produce *both* Tents and Canoes more efficiently. How would the resulting shift in the
+PPF look different from part (d)?
+
+<details><summary>Show solution</summary>
+
+Both axis intercepts would rise together: the entire curve shifts outward, rather than pivoting
+from one fixed point. This is the more typical picture of general economic growth, more of
+*everything* is attainable, not just more of one good.
+
+</details>`
+```
+
+```{ojs}
+//| echo: false
+viewof seedFOP = Inputs.button("Generate New Numbers", {value: 0, reduce: x => x + 1})
+```
+
+```{ojs}
+//| echo: false
+paramsFOP = {
+  seedFOP;
+  const pool = [
+    { item: "A delivery truck", cat: "Capital" },
+    { item: "A factory assembly line", cat: "Capital" },
+    { item: "An accountant's work hours", cat: "Labor" },
+    { item: "A plot of farmland", cat: "Land" },
+    { item: "An oil deposit", cat: "Land" },
+    { item: "An entrepreneur's willingness to risk her savings on a new business", cat: "Entrepreneurial ability" },
+    { item: "A barista's shift at a coffee shop", cat: "Labor" },
+    { item: "A shipping container", cat: "Capital" },
+    { item: "A fishing lake", cat: "Land" },
+    { item: "A founder's decision to combine resources into a new company", cat: "Entrepreneurial ability" },
+    { item: "A software engineer's coding skills", cat: "Labor" },
+    { item: "A patch of forest used for lumber", cat: "Land" },
+    { item: "A 3D printer on a factory floor", cat: "Capital" }
+  ];
+  const chosen = [];
+  const used = new Set();
+  while (chosen.length < 4) {
+    const idx = randInt(0, pool.length - 1);
+    if (!used.has(idx)) {
+      used.add(idx);
+      chosen.push(pool[idx]);
+    }
+  }
+  return { chosen };
+}
+```
+
+```{ojs}
+//| echo: false
+md`**Factors of production.** Classify each item below as Land, Labor, Capital, or
+Entrepreneurial Ability:
+
+${paramsFOP.chosen.map((x, i) => `${i + 1}. ${x.item}`).join("\n")}
+
+<details><summary>Show solution</summary>
+
+${paramsFOP.chosen.map((x, i) => `${i + 1}. ${x.item}, **${x.cat}**`).join("\n")}
+
+</details>`
+```
+
+## Chapter 2: Self-Interest and the Least-Cost Production Method
+
+```{ojs}
+//| echo: false
+viewof seedSI = Inputs.button("Generate New Numbers", {value: 0, reduce: x => x + 1})
+```
+
+```{ojs}
+//| echo: false
+paramsSI = {
+  seedSI;
+  const goods = ["bubble tea shops", "electric scooter rentals", "artisanal candle makers", "home espresso machines", "pickleball equipment", "meal-kit subscription services"];
+  const good = goods[randInt(0, goods.length - 1)];
+  const rising = randInt(0, 1) === 0;
+  return { good, rising };
+}
+```
+
+```{ojs}
+//| echo: false
+md`Profits among ${paramsSI.good} have been **${paramsSI.rising ? "rising sharply" : "falling sharply"}** over the past year.
+
+**a)** According to the market system's profit signal, what does this tell us about how
+consumers value this good relative to what it costs to produce?
+
+<details><summary>Show solution</summary>
+
+${paramsSI.rising
+  ? `Rising profit signals that consumers value this good **more** than it currently costs to produce, a signal pulling more resources into the industry.`
+  : `Falling profit signals that consumers value this good **less**, relative to its cost, than other uses for those same resources, a signal pushing resources out of the industry.`
+}
+
+</details>
+
+**b)** What would you expect to happen to the number of firms in this industry over the next few
+years? Why does *self-interest*, rather than a government directive, drive this outcome?
+
+<details><summary>Show solution</summary>
+
+${paramsSI.rising
+  ? `More firms should **enter**, drawn in by the profit opportunity, which expands supply. No one has to order this to happen, firms pursuing their own self-interest respond directly to the price and profit signal.`
+  : `Firms should **exit** or scale back, redirecting their resources toward more profitable uses. Again, this happens through self-interest responding to the signal, not because anyone planned it centrally.`
+}
+
+</details>`
+```
+
+```{ojs}
+//| echo: false
+viewof seedLC = Inputs.button("Generate New Numbers", {value: 0, reduce: x => x + 1})
+```
+
+```{ojs}
+//| echo: false
+paramsLC = {
+  seedLC;
+  const w1 = randInt(2, 4);
+  const m1 = randInt(4, 7);
+  const w2 = randInt(6, 9);
+  const m2 = randInt(1, 3);
+  const wageLow = randInt(15, 25);
+  const rental = randInt(30, 45);
+  const wageHigh = wageLow + randInt(10, 20);
+  const cost1Low = w1 * wageLow + m1 * rental;
+  const cost2Low = w2 * wageLow + m2 * rental;
+  const cost1High = w1 * wageHigh + m1 * rental;
+  const cost2High = w2 * wageHigh + m2 * rental;
+  const cheapLow = cost1Low < cost2Low ? "Method 1" : "Method 2";
+  const cheapHigh = cost1High < cost2High ? "Method 1" : "Method 2";
+  return { w1, m1, w2, m2, wageLow, rental, wageHigh, cost1Low, cost2Low, cost1High, cost2High, cheapLow, cheapHigh };
+}
+```
+
+```{ojs}
+//| echo: false
+md`A firm can build its product with **Method 1** (${paramsLC.w1} workers and ${paramsLC.m1}
+machines) or **Method 2** (${paramsLC.w2} workers and ${paramsLC.m2} machines).
+
+**a)** Workers cost $${paramsLC.wageLow} per day and machines rent for
+$${paramsLC.rental} per day. Which method costs the firm less overall?
+
+<details><summary>Show solution</summary>
+
+Method 1 = ${paramsLC.w1}(${paramsLC.wageLow}) + ${paramsLC.m1}(${paramsLC.rental}) =
+$${paramsLC.cost1Low}. Method 2 = ${paramsLC.w2}(${paramsLC.wageLow}) +
+${paramsLC.m2}(${paramsLC.rental}) = $${paramsLC.cost2Low}. **${paramsLC.cheapLow}** is
+cheaper.
+
+</details>
+
+**b)** Workers get a raise, now costing $${paramsLC.wageHigh} per day (machine rental is
+unchanged). Recheck both methods. Does the cheaper option change, and why would that make sense
+given which method uses more workers?
+
+<details><summary>Show solution</summary>
+
+Method 1 = ${paramsLC.w1}(${paramsLC.wageHigh}) + ${paramsLC.m1}(${paramsLC.rental}) =
+$${paramsLC.cost1High}. Method 2 = ${paramsLC.w2}(${paramsLC.wageHigh}) +
+${paramsLC.m2}(${paramsLC.rental}) = $${paramsLC.cost2High}. **${paramsLC.cheapHigh}** is now
+cheaper. Method 2 relies on more workers, so as wages rise relative to machine rental, the more
+capital-intensive Method 1 becomes relatively more attractive.
+
+</details>`
+```
+
+## Chapter 3: Supply and Demand
+
+```{ojs}
+//| echo: false
+md`**Warm-up.** In your own words: why does the law of demand say quantity demanded falls as
+price rises? What does the demand curve's downward slope represent?
+
+<details><summary>Show solution</summary>
+
+As a good's price rises, it becomes more expensive relative to substitutes, and buyers'
+purchasing power effectively shrinks, so they buy less of it (and more of cheaper alternatives).
+The downward-sloping demand curve is a picture of this: price and quantity demanded move in
+opposite directions, holding everything else about the market fixed.
+
+</details>`
+```
+
+```{ojs}
+//| echo: false
+viewof seedSD = Inputs.button("Generate New Numbers", {value: 0, reduce: x => x + 1})
+```
+
+```{ojs}
+//| echo: false
+paramsSD = {
+  seedSD;
+  const Pstar = randInt(8, 40);
+  const Qstar = randInt(60, 180);
+  const b = randInt(2, 6);
+  const d = randInt(2, 6);
+  const a = Qstar + b * Pstar;
+  const c = Qstar - d * Pstar;
+  const testOffset = randInt(2, 8);
+  const testBelow = randInt(0, 1) === 0;
+  const testP = testBelow ? Pstar - testOffset : Pstar + testOffset;
+  const QdTest = a - b * testP;
+  const QsTest = c + d * testP;
+  const k = randInt(2, 6);
+  const cNew = c - (b + d) * k;
+  const PnewS = Pstar + k;
+  const QnewS = Qstar - b * k;
+  const j = randInt(2, 6);
+  const aNew = a + (b + d) * j;
+  const PnewD = Pstar + j;
+  const QnewD = Qstar + d * j;
+  const floorOffset = randInt(3, 8);
+  const floorP = Pstar + floorOffset;
+  const QdFloor = a - b * floorP;
+  const QsFloor = c + d * floorP;
+  return { Pstar, Qstar, a, b, c, d, testP, QdTest, QsTest, cNew, PnewS, QnewS, aNew, PnewD, QnewD, floorP, QdFloor, QsFloor };
+}
+```
+
+```{ojs}
+//| echo: false
+md`A market has:
+
+Qd = ${paramsSD.a} − ${paramsSD.b}P
+
+Qs = ${paramsSD.c} + ${paramsSD.d}P
+
+**a)** Find the price and quantity where this market clears, where quantity demanded equals
+quantity supplied.
+
+<details><summary>Show solution</summary>
+
+Setting Qd = Qs: ${paramsSD.a} − ${paramsSD.b}P = ${paramsSD.c} + ${paramsSD.d}P, so P =
+$${paramsSD.Pstar} and Q = ${paramsSD.Qstar}.
+
+</details>
+
+**b)** If the price were instead stuck at $${paramsSD.testP}, how much would buyers want to
+buy and how much would sellers want to sell? Would this leave a shortage or a surplus, and how
+big?
+
+<details><summary>Show solution</summary>
+
+Qd = ${paramsSD.QdTest}, Qs = ${paramsSD.QsTest}. ${
+  paramsSD.QsTest > paramsSD.QdTest
+    ? `Sellers want to sell more than buyers want to buy, a **surplus** of ${paramsSD.QsTest - paramsSD.QdTest} units.`
+    : `Buyers want to buy more than sellers want to sell, a **shortage** of ${paramsSD.QdTest - paramsSD.QsTest} units.`
+}
+
+</details>
+
+**c)** Production costs rise, changing the supply relationship to Qs = ${paramsSD.cNew} +
+${paramsSD.d}P (demand is unaffected). Find the new market-clearing price and quantity. Has the
+supply curve shifted, or has the market just moved along it? What about demand?
+
+<details><summary>Show solution</summary>
+
+New equilibrium: P = $${paramsSD.PnewS}, Q = ${paramsSD.QnewS}. The cost increase changes
+the supply relationship itself, a **shift of the supply curve**. Demand never changed, only the
+price did, so that's a **movement along** the demand curve.
+
+</details>
+
+**d)** Starting over from the *original* supply curve, suppose buyer demand instead changes to
+Qd = ${paramsSD.aNew} − ${paramsSD.b}P. Find the new market-clearing price and quantity. Which
+curve shifted, and which one just saw a movement along it this time?
+
+<details><summary>Show solution</summary>
+
+New equilibrium: P = $${paramsSD.PnewD}, Q = ${paramsSD.QnewD}. This time it's a **shift
+of the demand curve**, while supply is unchanged, so that's a **movement along** the supply
+curve.
+
+</details>
+
+**e)** Instead of a cost change, suppose the government sets a *price floor* at
+$${paramsSD.floorP} (above the original equilibrium price), using the *original* supply and
+demand curves. How much would be demanded and how much would be supplied at that price? Is there
+a shortage or a surplus?
+
+<details><summary>Show solution</summary>
+
+Qd = ${paramsSD.QdFloor}, Qs = ${paramsSD.QsFloor}. Since Qs > Qd, there's a
+**surplus** of ${paramsSD.QsFloor - paramsSD.QdFloor} units. This is exactly why price floors
+(like a minimum wage) tend to create surpluses, unsold goods, or unemployed workers, rather than
+shortages.
+
+</details>`
+```
+
+## Chapter 6: Loanable Funds
+
+```{ojs}
+//| echo: false
+viewof seedLF = Inputs.button("Generate New Numbers", {value: 0, reduce: x => x + 1})
+```
+
+```{ojs}
+//| echo: false
+paramsLF = {
+  seedLF;
+  const Rstar = randInt(2, 8);
+  const isBelow = randInt(0, 1) === 0;
+  const heldR = isBelow ? Rstar - randInt(1, 3) : Rstar + randInt(1, 3);
+  return { Rstar, heldR, isBelow };
+}
+```
+
+```{ojs}
+//| echo: false
+md`The market for loanable funds clears at a real interest rate of ${paramsLF.Rstar} percent.
+Suppose a regulation instead pins the rate at ${paramsLF.heldR} percent.
+
+**a)** Is the regulated rate above or below where the market would naturally settle?
+
+<details><summary>Show solution</summary>
+
+${paramsLF.heldR} percent is **${paramsLF.isBelow ? "below" : "above"}** the market-clearing
+rate of ${paramsLF.Rstar} percent.
+
+</details>
+
+**b)** At ${paramsLF.heldR} percent, do savers and borrowers end up with a shortage or a surplus
+of funds? If the regulation were lifted, which way would the rate move?
+
+<details><summary>Show solution</summary>
+
+${paramsLF.isBelow
+  ? "Below equilibrium, borrowers want more funds than savers are offering, a **shortage**. Freed up, the rate would **rise** back toward equilibrium."
+  : "Above equilibrium, savers are offering more funds than borrowers want, a **surplus**. Freed up, the rate would **fall** back toward equilibrium."
+}
+
+</details>`
+```
+
+```{ojs}
+//| echo: false
+viewof seedINV = Inputs.button("Generate New Numbers", {value: 0, reduce: x => x + 1})
+```
+
+```{ojs}
+//| echo: false
+paramsINV = {
+  seedINV;
+  const pool = [
+    { item: "A company builds a new factory", cat: "Economic investment" },
+    { item: "An investor buys existing shares of a company's stock on the stock market", cat: "Not economic investment" },
+    { item: "A bakery purchases a new industrial oven", cat: "Economic investment" },
+    { item: "A family buys a previously-owned house", cat: "Not economic investment" },
+    { item: "A city builds a new bridge", cat: "Economic investment" },
+    { item: "A retiree buys government bonds", cat: "Not economic investment" },
+    { item: "A farmer buys a brand-new tractor", cat: "Economic investment" },
+    { item: "A trader buys cryptocurrency", cat: "Not economic investment" },
+    { item: "A software company buys new servers", cat: "Economic investment" },
+    { item: "A collector buys a rare trading card hoping it appreciates in value", cat: "Not economic investment" }
+  ];
+  const chosen = [];
+  const used = new Set();
+  while (chosen.length < 3) {
+    const idx = randInt(0, pool.length - 1);
+    if (!used.has(idx)) {
+      used.add(idx);
+      chosen.push(pool[idx]);
+    }
+  }
+  return { chosen };
+}
+```
+
+```{ojs}
+//| echo: false
+md`**The economist's "investment" vs. the everyday meaning.** For each scenario below, say
+whether it counts as *economic investment* (spending on new capital goods) or not (just a
+transfer of an asset that already exists):
+
+${paramsINV.chosen.map((x, i) => `${i + 1}. ${x.item}`).join("\n")}
+
+<details><summary>Show solution</summary>
+
+${paramsINV.chosen.map((x, i) => `${i + 1}. ${x.item}, **${x.cat}**`).join("\n")}
+
+</details>`
+```
+
+## Chapter 7: GDP, Real GDP, and Per Capita
+
+```{ojs}
+//| echo: false
+viewof seedGDP = Inputs.button("Generate New Numbers", {value: 0, reduce: x => x + 1})
+```
+
+```{ojs}
+//| echo: false
+paramsGDP = {
+  seedGDP;
+  const C = randInt(60, 120) * 10;
+  const Ig = randInt(10, 25) * 10;
+  const G = randInt(15, 30) * 10;
+  const X = randInt(6, 15) * 10;
+  const M = randInt(8, 18) * 10;
+  const Xn = X - M;
+  const nominal = C + Ig + G + Xn;
+  const indexOptions = [100, 102, 104, 105, 108, 110, 120];
+  const index = indexOptions[randInt(0, indexOptions.length - 1)];
+  const real = Math.round((nominal / (index / 100)) * 100) / 100;
+  const population = randInt(20, 60);
+  const perCapita = Math.round((real / population) * 1000) / 1000;
+  return { C, Ig, G, X, M, Xn, nominal, index, real, population, perCapita };
+}
+```
+
+```{ojs}
+//| echo: false
+md`This year, a country's spending adds up to: C = $${paramsGDP.C}B, Ig =
+$${paramsGDP.Ig}B, G = $${paramsGDP.G}B, exports of $${paramsGDP.X}B, and imports of
+$${paramsGDP.M}B. The GDP price index is ${paramsGDP.index} (base year = 100), and the
+population is ${paramsGDP.population} million.
+
+**a)** Find net exports, then use the expenditure approach to find nominal GDP.
+
+<details><summary>Show solution</summary>
+
+Net exports = ${paramsGDP.X} − ${paramsGDP.M} = $${paramsGDP.Xn}B. Nominal GDP =
+${paramsGDP.C} + ${paramsGDP.Ig} + ${paramsGDP.G} + (${paramsGDP.Xn}) =
+$${paramsGDP.nominal}B.
+
+</details>
+
+**b)** Strip out the effect of rising prices to find real GDP.
+
+<details><summary>Show solution</summary>
+
+Real GDP = ${paramsGDP.nominal} / (${paramsGDP.index}/100) ≈ $${paramsGDP.real}B.
+
+</details>
+
+**c)** Spread that real output across the population. What's real GDP per person?
+
+<details><summary>Show solution</summary>
+
+Real GDP per capita = ${paramsGDP.real}/${paramsGDP.population} ≈
+$${paramsGDP.perCapita} thousand per person.
+
+</details>
+
+**d)** Next year, total real GDP doesn't change at all, but the population grows. What happens
+to real GDP per capita, and why?
+
+<details><summary>Show solution</summary>
+
+It **falls**: the same total output now has to stretch across more people. This is exactly why
+total growth and per-capita growth can tell different stories.
+
+</details>`
+```
+
+## Chapter 8: The Rule of 70
+
+```{ojs}
+//| echo: false
+viewof seedR70 = Inputs.button("Generate New Numbers", {value: 0, reduce: x => x + 1})
+```
+
+```{ojs}
+//| echo: false
+paramsR70 = {
+  seedR70;
+  const rateA = randInt(10, 50) / 10;
+  const rateB = randInt(10, 50) / 10;
+  const yearsA = Math.round((70 / rateA) * 10) / 10;
+  const yearsB = Math.round((70 / rateB) * 10) / 10;
+  return { rateA, rateB, yearsA, yearsB };
+}
+```
+
+```{ojs}
+//| echo: false
+md`**a)** If a country's income per person grows at ${paramsR70.rateA} percent every year,
+roughly how long until it doubles? (Use the Rule of 70 shortcut.)
+
+<details><summary>Show solution</summary>
+
+70 / ${paramsR70.rateA} ≈ ${paramsR70.yearsA} years.
+
+</details>
+
+**b)** A neighboring country grows more slowly, at just ${paramsR70.rateB} percent a year.
+Roughly how long for its income per person to double?
+
+<details><summary>Show solution</summary>
+
+70 / ${paramsR70.rateB} ≈ ${paramsR70.yearsB} years.
+
+</details>`
+```
+
+```{ojs}
+//| echo: false
+viewof seedGA = Inputs.button("Generate New Numbers", {value: 0, reduce: x => x + 1})
+```
+
+```{ojs}
+//| echo: false
+paramsGA = {
+  seedGA;
+  const hours = Math.round(randInt(-10, 20)) / 10;
+  const productivity = Math.round(randInt(5, 35)) / 10;
+  const growth = Math.round((hours + productivity) * 100) / 100;
+  return { hours, productivity, growth };
+}
+```
+
+```{ojs}
+//| echo: false
+md`**Growth accounting.** In a given year, total hours worked in an economy change by
+${paramsGA.hours} percent, and labor productivity (output per hour) grows by
+${paramsGA.productivity} percent.
+
+**a)** Approximately what is the growth rate of real GDP this year?
+
+<details><summary>Show solution</summary>
+
+Real GDP growth ≈ growth in hours worked + growth in productivity =
+${paramsGA.hours} + ${paramsGA.productivity} = ${paramsGA.growth} percent.
+
+</details>
+
+**b)** ${paramsGA.hours < 0
+  ? `Hours worked actually *fell* here. What does that tell you about what's really driving this economy's growth?`
+  : `Suppose hours worked had instead been exactly zero, with productivity growth unchanged. Would real GDP growth be higher, lower, or the same as what you found in part (a)?`
+}
+
+<details><summary>Show solution</summary>
+
+${paramsGA.hours < 0
+  ? `Since hours worked actually fell, hours are *subtracting* from growth, not adding to it. Any real GDP growth here is coming entirely from rising productivity (output per hour), and then some, just to offset the drop in hours.`
+  : `It would be **${paramsGA.hours > 0 ? "lower" : "the same"}**, since hours worked contributed ${paramsGA.hours} percentage points to the growth rate found in part (a).`
+}
+
+</details>`
+```
+
+## Chapter 9: Unemployment and Inflation
+
+### Unemployment
+
+```{ojs}
+//| echo: false
+viewof seedUE = Inputs.button("Generate New Numbers", {value: 0, reduce: x => x + 1})
+```
+
+```{ojs}
+//| echo: false
+paramsUE = {
+  seedUE;
+  const employed = randInt(40, 70) * 1000;
+  const unemployed = randInt(2, 6) * 1000;
+  const notInLF = randInt(15, 30) * 1000;
+  const laborForce = employed + unemployed;
+  const population = laborForce + notInLF;
+  const urRate = Math.round((unemployed / laborForce) * 10000) / 100;
+  const lfpr = Math.round((laborForce / population) * 10000) / 100;
+  return { employed, unemployed, notInLF, laborForce, population, urRate, lfpr };
+}
+```
+
+```{ojs}
+//| echo: false
+md`A region has ${paramsUE.population.toLocaleString()} adults: ${paramsUE.employed.toLocaleString()}
+have jobs, ${paramsUE.unemployed.toLocaleString()} don't have a job but are actively looking, and
+${paramsUE.notInLF.toLocaleString()} are retired, in school, or otherwise not looking for work.
+
+**a)** How many of these adults actually count as part of the labor force?
+
+<details><summary>Show solution</summary>
+
+Labor force = ${paramsUE.employed.toLocaleString()} + ${paramsUE.unemployed.toLocaleString()} =
+${paramsUE.laborForce.toLocaleString()}.
+
+</details>
+
+**b)** What share of the labor force is unemployed?
+
+<details><summary>Show solution</summary>
+
+Unemployment rate = ${paramsUE.unemployed.toLocaleString()}/${paramsUE.laborForce.toLocaleString()}
+≈ ${paramsUE.urRate} percent.
+
+</details>
+
+**c)** What share of all adults is in the labor force at all?
+
+<details><summary>Show solution</summary>
+
+Participation rate = ${paramsUE.laborForce.toLocaleString()}/${paramsUE.population.toLocaleString()}
+≈ ${paramsUE.lfpr} percent.
+
+</details>
+
+**d)** Suppose a batch of people who weren't in the labor force get hired directly into jobs,
+without ever spending time "unemployed" first. What happens to the unemployment rate and the
+participation rate? Why?
+
+<details><summary>Show solution</summary>
+
+Both the employed count and the labor force **rise**, while the unemployed count never changes,
+so the unemployment rate **falls** and the participation rate **rises**, even though not one
+unemployed person actually found a job.
+
+</details>`
+```
+
+### Inflation
+
+```{ojs}
+//| echo: false
+viewof seedINF = Inputs.button("Generate New Numbers", {value: 0, reduce: x => x + 1})
+```
+
+```{ojs}
+//| echo: false
+paramsINF = {
+  seedINF;
+  const CPI1 = [150, 200, 250][randInt(0, 2)];
+  const rate = [2, 4, 6, 8, 10][randInt(0, 4)];
+  const CPI2 = Math.round(CPI1 * (100 + rate) / 100);
+  const inflationRate = Math.round(((CPI2 - CPI1) / CPI1) * 10000) / 100;
+  const nominalRate = randInt(3, 12);
+  const realRate = Math.round((nominalRate - inflationRate) * 100) / 100;
+  return { CPI1, CPI2, inflationRate, nominalRate, realRate };
+}
+```
+
+```{ojs}
+//| echo: false
+md`The CPI rises from ${paramsINF.CPI1} to ${paramsINF.CPI2} over the year.
+
+**a)** What was the inflation rate this year?
+
+<details><summary>Show solution</summary>
+
+Inflation rate = (${paramsINF.CPI2} − ${paramsINF.CPI1})/${paramsINF.CPI1} × 100 ≈
+${paramsINF.inflationRate} percent.
+
+</details>
+
+**b)** A saver's account pays a nominal interest rate of ${paramsINF.nominalRate} percent this
+same year. Using the inflation rate from part (a), what's the real interest rate? Did this
+saver's purchasing power rise or fall?
+
+<details><summary>Show solution</summary>
+
+Real interest rate = ${paramsINF.nominalRate} − ${paramsINF.inflationRate} ≈
+${paramsINF.realRate} percent. ${
+  paramsINF.realRate > 0
+    ? "Since the real rate is positive, the saver's purchasing power **rose**."
+    : paramsINF.realRate < 0
+      ? "Since the real rate is negative, the saver's purchasing power **fell**, even though the account balance grew in dollar terms."
+      : "The real rate is exactly zero, the saver's purchasing power stayed **unchanged**."
+}
+
+</details>`
+```

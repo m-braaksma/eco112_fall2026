@@ -57,8 +57,6 @@ website:
             text: Printing
           - href: course-presentations.qmd
             text: Presentations
-          - href: exam1-study-guide.qmd
-            text: Exam 1 Study Guide
           - href: course-study-abroad.qmd
             text: Study Abroad
 
@@ -120,6 +118,12 @@ website:
                 text: Useful Links
               - href: lecture/ch09-practice.qmd
                 text: Practice Problems
+          - section: "Exam 1"
+            contents:
+              - href: exam/exam1-study-guide.qmd
+                text: Study Guide
+              - href: exam/exam1-review-session.qmd
+                text: Review Session
           - section: "Ch 10: Basic Macroeconomic Relationships"
             contents:
               - href: lecture/ch10.qmd

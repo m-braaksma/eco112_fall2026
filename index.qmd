@@ -12,7 +12,7 @@ title: "ECO 112: Principles of Macroeconomics"
 | 5 | Sep 29–Oct 1 | [Chapter 7: National Income](lecture/ch07.qmd) | • Ch6 Quiz<br>• Ch6 HW due | [Zoom Link](https://www.google.com/url?q=https://augsburg.zoom.us/j/99653626288?pwd%3DqCmwjtH90NbbC2B6LRIVvsJwF4OY2Z.1%26jst%3D2&sa=D&source=calendar&ust=1789928581323551&usg=AOvVaw22tkXzOZ9B9PdMyUuRQYKd) |
 | 6 | Oct 6–8 | [Chapter 8: Economic Growth](lecture/ch08.qmd) | • Ch7 Quiz<br>• Ch7 HW due | [Zoom Link](https://www.google.com/url?q=https://augsburg.zoom.us/j/99653626288?pwd%3DqCmwjtH90NbbC2B6LRIVvsJwF4OY2Z.1%26jst%3D2&sa=D&source=calendar&ust=1790534444768980&usg=AOvVaw2CBe8koZXFXwGOE4YNRFay) |
 | 7 | Oct 13–15 | [Chapter 9: Business Cycles, Unemployment, Inflation](lecture/ch09.qmd) | • Ch8 Quiz<br>• Ch8 HW due | - |
-| 8 | Oct 20–22 | [Exam 1 Study Guide](exam1-study-guide.qmd) | • Ch9 Quiz<br>• Ch9 HW due<br>• Exam 1 Review | **EXAM 1** (Ch 1, 2, 3, 6, 7, 8, 9) |
+| 8 | Oct 20–22 | [Exam 1 Study Guide](exam/exam1-study-guide.qmd) | • Ch9 Quiz<br>• Ch9 HW due<br>• [Exam 1 Review](exam/exam1-review-session.qmd) | **EXAM 1** (Ch 1, 2, 3, 6, 7, 8, 9) |
 | 9 | Oct 27–29 | Chapter 10: Basic Macroeconomic Relationships | • Ch7 Presentation | • Ch8 Presentation |
 | 10 | Nov 3–5 | Chapter 11: Aggregate Expenditure Model | • Ch10 Quiz<br>• Ch10 HW due | • Ch10 Presentation |
 | 11 | Nov 10–12 | Chapter 12: Aggregate Demand & Supply | • Ch11 Quiz<br>• Ch11 HW due | • Ch11 Presentation |

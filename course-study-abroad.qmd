@@ -14,6 +14,7 @@ subtitle: "Belgium, Summer 2027"
 Are you interested in learning about European business and culture while traveling abroad? This summer (2027), Augsburg University is offering a unique study abroad opportunity to Belgium and the Netherlands. Students will explore the history, culture, and business practices of multiple vibrant cities while earning academic credit.
 :::
 :::
+::::
 
 See the [course study abroad page](https://studyabroad.augsburg.edu/index.cfm?FuseAction=Programs.ViewProgramAngular&id=55912) for more information about the program, including course details, scholarship opportunities, and application instructions.
 
