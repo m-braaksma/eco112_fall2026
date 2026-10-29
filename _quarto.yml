@@ -20,9 +20,11 @@ website:
   page-footer:
     right: >
       <div style='text-align:right;'>
-        &copy; Copyright 2026<br>
+        &copy; 2026 Matthew Braaksma.<br>
+        <span style='font-size:0.8em;'>Course materials not for redistribution or commercial use without permission.<br>
+        Third-party images are used under their original licenses.<br>
         This site is built with
-        <a href='https://quarto.org/' style='color:#a9a9aa;font-weight:bold;'>Quarto</a>
+        <a href='https://quarto.org/' style='color:#a9a9aa;font-weight:bold;'>Quarto</a></span>
       </div>
     background: "#660033"
 
@@ -130,14 +132,14 @@ website:
                 text: Slides
               - href: lecture/ch10-links.qmd
                 text: Useful Links
-          #     # - href: lecture/ch10-practice.qmd
-          #     #   text: Practice Problems
-          # - section: "Ch 11: Aggregate Expenditure Model"
-          #   contents:
-          #     - href: lecture/ch11.qmd
-          #       text: Slides
-          #     - href: lecture/ch11-links.qmd
-          #       text: Useful Links
+              - href: lecture/ch10-practice.qmd
+                text: Practice Problems
+          - section: "Ch 11: Aggregate Expenditure Model"
+            contents:
+              - href: lecture/ch11.qmd
+                text: Slides
+              - href: lecture/ch11-links.qmd
+                text: Useful Links
           #     # - href: lecture/ch11-practice.qmd
           #     #   text: Practice Problems
           # - section: "Ch 12: Aggregate Demand & Supply"

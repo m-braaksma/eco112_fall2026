@@ -8,6 +8,3 @@ subtitle: "Useful links and other resources"
 - [FRED: Real Gross Domestic Product](https://fred.stlouisfed.org/series/GDPC1)
 - [FRED: Personal Consumption Expenditures](https://fred.stlouisfed.org/series/PCE)
 
-## Instructional Videos
-
-<!-- TODO: add video links for this chapter (Khan Academy, YouTube, etc.) -->
