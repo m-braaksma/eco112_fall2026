@@ -1,6 +1,20 @@
 ---
 title: "Chapter 12: Aggregate Demand and Aggregate Supply"
 subtitle: "Practice Problems"
+format:
+  html: default
+  pdf:
+    documentclass: article
+    pdf-engine: xelatex
+    mainfont: "Avenir Next"
+    fontsize: 11pt
+    geometry: margin=0.75in
+    linestretch: 1.1
+    header-includes: |
+      \usepackage{etoolbox}
+      \apptocmd{\maketitle}{\vspace*{-1.1in}}{}{}
+filters:
+  - practice-filter.lua
 ---
 
 ## Warm-Up: Quick Concept and Calculation Checks
@@ -20,8 +34,7 @@ e. A key imported input suddenly becomes much more expensive. Does this shift AS
 f. True or False: an increase in AD moves the price level and real GDP in the *same* direction,
    while a decrease in AS (a leftward shift) also raises the price level but *lowers* real GDP.
 
-<details>
-<summary>Show Answer</summary>
+::: {.solution-only}
 
 a. (i) The *real-balances effect*. (ii) The *foreign purchases effect*. (iii) The *interest-rate
    effect*.
@@ -36,7 +49,7 @@ f. *True.* This is exactly the contrast between demand-pull inflation (AD shifts
    GDP move together) and cost-push inflation (AS shifts, price level and GDP move in opposite
    directions).
 
-</details>
+:::
 
 ## Problem 1: Sizing an AD Shift with the Multiplier
 
@@ -51,8 +64,7 @@ c. Name one other component of aggregate demand (besides investment) that could 
 d. If MPC had instead been 0.5, would the same $45 billion increase in investment shift AD by
    *more* or *less* than in part (b)? Explain in one sentence.
 
-<details>
-<summary>Show Answer</summary>
+::: {.solution-only}
 
 ```{python}
 #| echo: false
@@ -83,7 +95,7 @@ d. *Less.* With MPC $=0.5$, the multiplier is only $1/(1-0.5)=2$, so the same $4
    change would shift AD by only $45 \times 2 = \$90$ billion, less than half of part (b)'s
    $225 billion.
 
-</details>
+:::
 
 ## Problem 2: Demand-Pull vs. Cost-Push Inflation
 
@@ -96,8 +108,7 @@ b. A major hurricane disrupts oil refineries, sharply raising energy costs for n
 c. The government significantly increases spending on infrastructure projects.
 d. A new tax is imposed on a key raw material used throughout manufacturing.
 
-<details>
-<summary>Show Answer</summary>
+::: {.solution-only}
 
 ```{python}
 #| echo: false
@@ -137,7 +148,7 @@ fig.add_trace(go.Scatter(x=sras1, y=gdp, mode="lines", line=dict(color=ORANGE, w
                           showlegend=False), row=1, col=2)
 fig.add_trace(go.Scatter(x=[10], y=[10], mode="markers", marker=dict(size=9, color="black"),
                           showlegend=False), row=1, col=2)
-fig.add_trace(go.Scatter(x=[8.5], y=[11.5], mode="markers", marker=dict(size=9, color=GREEN),
+fig.add_trace(go.Scatter(x=[11.5], y=[8.5], mode="markers", marker=dict(size=9, color=GREEN),
                           showlegend=False), row=1, col=2)
 
 fig.update_xaxes(title_text="Real GDP", row=1, col=1)
@@ -154,4 +165,4 @@ b. *Cost-push.* Higher energy costs raise production costs economy-wide, shiftin
 c. *Demand-pull.* Government purchases directly add to AD.
 d. *Cost-push.* A tax on a widely used input raises production costs, shifting SRAS left.
 
-</details>
+:::

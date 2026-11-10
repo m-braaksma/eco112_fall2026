@@ -140,14 +140,14 @@ website:
                 text: Slides
               - href: lecture/ch11-links.qmd
                 text: Useful Links
-          #     # - href: lecture/ch11-practice.qmd
-          #     #   text: Practice Problems
-          # - section: "Ch 12: Aggregate Demand & Supply"
-          #   contents:
-          #     - href: lecture/ch12.qmd
-          #       text: Slides
-          #     - href: lecture/ch12-links.qmd
-          #       text: Useful Links
+              - href: lecture/ch11-practice.qmd
+                text: Practice Problems
+          - section: "Ch 12: Aggregate Demand & Supply"
+            contents:
+              - href: lecture/ch12.qmd
+                text: Slides
+              - href: lecture/ch12-links.qmd
+                text: Useful Links
           #     # - href: lecture/ch12-practice.qmd
           #     #   text: Practice Problems
           # - section: "Ch 13: Fiscal Policy"

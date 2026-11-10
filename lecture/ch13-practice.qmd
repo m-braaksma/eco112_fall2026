@@ -1,6 +1,20 @@
 ---
 title: "Chapter 13: Fiscal Policy, Deficits, and Debt"
 subtitle: "Practice Problems"
+format:
+  html: default
+  pdf:
+    documentclass: article
+    pdf-engine: xelatex
+    mainfont: "Avenir Next"
+    fontsize: 11pt
+    geometry: margin=0.75in
+    linestretch: 1.1
+    header-includes: |
+      \usepackage{etoolbox}
+      \apptocmd{\maketitle}{\vspace*{-1.1in}}{}{}
+filters:
+  - practice-filter.lua
 ---
 
 ## Warm-Up: Quick Concept and Calculation Checks
@@ -20,8 +34,7 @@ f. What is the difference between *refinancing* the public debt and *retiring* i
 g. Why might economists consider debt as a *percentage of GDP* more meaningful than the absolute
    dollar amount of debt?
 
-<details>
-<summary>Show Answer</summary>
+::: {.solution-only}
 
 a. *Expansionary.* Increase government spending (G), decrease taxes (T), or both.
 b. *Contractionary.* Decrease G, increase T, or both.
@@ -40,7 +53,7 @@ g. Debt as a percentage of GDP accounts for the size of the economy that has to 
    a large absolute debt is a much smaller burden for a large, wealthy economy than for a small
    one, so comparing the percentage is more meaningful across time or across countries.
 
-</details>
+:::
 
 ## Problem 1: Closing a Recessionary Gap
 
@@ -54,8 +67,7 @@ c. How large a tax cut (T) alone would close this gap? (Recall a tax change's ef
 d. Propose one combination of a smaller increase in G together with a tax cut that, added
    together, would also close the gap exactly.
 
-<details>
-<summary>Show Answer</summary>
+::: {.solution-only}
 
 a. Multiplier $= 1/(1-0.8) = 5$.
 b. $\Delta G$ needed: $100 / 5 = \$20$ billion.
@@ -65,7 +77,7 @@ d. Many combinations work, for example: a $\$10$ billion increase in G (closes $
    billion of the gap), together closing the full $100 billion gap. Any pair of G and T changes
    that add up to $100 billion in combined AD effect works.
 
-</details>
+:::
 
 ## Problem 2: The Balanced-Budget Multiplier
 
@@ -80,8 +92,7 @@ c. Combining (a) and (b), what is the net effect on equilibrium GDP?
 d. Explain in one sentence why an equal-sized increase in G and T does not fully cancel out, even
    though the government's budget balance does not change at all.
 
-<details>
-<summary>Show Answer</summary>
+::: {.solution-only}
 
 a. $\Delta GDP$ from G: $30 \times 5 = +\$150$ billion.
 b. $\Delta GDP$ from T: $-30 \times 0.8 \times 5 = -\$120$ billion.
@@ -91,7 +102,7 @@ d. Every dollar of new government spending enters the economy in full, but a dol
    only reduces spending by $MPC$ of a dollar (households absorb the rest by saving less), so the
    spending increase always outweighs the tax increase's contractionary effect.
 
-</details>
+:::
 
 ## Problem 3: Automatic Stabilizers, Progressive vs. Flat Taxes
 
@@ -108,8 +119,7 @@ c. Under which system does the tax bill fall by *more* when income drops?
 d. Compute disposable (after-tax) income under each system at both income levels, and the *drop*
    in disposable income under each. Which system cushions the household's spending power more?
 
-<details>
-<summary>Show Answer</summary>
+::: {.solution-only}
 
 ```{python}
 #| echo: false
@@ -120,16 +130,20 @@ import plotly.graph_objects as go
 BLUE = "#1f4e79"
 ORANGE = "#c55a11"
 
+incomes = ["Income $60,000", "Income $50,000"]
+system_a = [51000, 43500]
+system_b = [49200, 41000]
+
 fig = go.Figure()
-fig.add_trace(go.Bar(x=["System A<br>(progressive)", "System B<br>(flat)"],
-                     y=[7500, 8200], marker_color=[BLUE, ORANGE],
-                     text=["Disposable income<br>drop: $7,500", "Disposable income<br>drop: $8,200"],
-                     textposition="outside",
-                     hovertemplate="%{x}: %{text}<extra></extra>"))
-fig.update_layout(yaxis_title="Drop in disposable income ($)", width=560, height=420,
-                  plot_bgcolor="white", showlegend=False)
+fig.add_trace(go.Bar(x=incomes, y=system_a, name="System A (progressive)", marker_color=BLUE,
+                     text=["$51,000", "$43,500"], textposition="outside"))
+fig.add_trace(go.Bar(x=incomes, y=system_b, name="System B (flat)", marker_color=ORANGE,
+                     text=["$49,200", "$41,000"], textposition="outside"))
+fig.update_layout(yaxis_title="Disposable (after-tax) income ($)", width=560, height=420,
+                  plot_bgcolor="white", barmode="group",
+                  legend=dict(x=0.02, y=1.15, orientation="h", font=dict(size=11)))
 fig.update_xaxes(showgrid=False)
-fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="lightgray", range=[0, 9000])
+fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="lightgray", range=[0, 56000])
 fig.show()
 ```
 
@@ -143,7 +157,7 @@ d. Disposable income, System A: $60{,}000-9{,}000=\$51{,}000$ then $50{,}000-6{,
    a drop of *\$8,200*. The *progressive* system (A) cushions the household's spending power more,
    its disposable income falls by less, exactly the automatic-stabilizer effect at work.
 
-</details>
+:::
 
 ## Problem 4: Accumulating the Public Debt
 
@@ -159,8 +173,7 @@ c. Suppose most of this debt is held by the country's own citizens and financial
 d. Name one way that financing this debt could *crowd out* private investment, connecting back to
    the market for loanable funds from Chapter 6.
 
-<details>
-<summary>Show Answer</summary>
+::: {.solution-only}
 
 a. Debt accumulates deficits minus surpluses: $45 - 10 + 20 = \$55$ billion.
 b. $55 / 550 \times 100 = 10$ percent of GDP.
@@ -173,4 +186,4 @@ d. Government borrowing to finance the deficit adds to the demand for loanable f
    projects profitable (recall the investment demand curve from Chapter 10), so some private
    investment gets "crowded out" by government borrowing.
 
-</details>
+:::

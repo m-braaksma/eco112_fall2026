@@ -1,6 +1,20 @@
 ---
 title: "Chapter 11: The Aggregate Expenditures Model"
 subtitle: "Practice Problems"
+format:
+  html: default
+  pdf:
+    documentclass: article
+    pdf-engine: xelatex
+    mainfont: "Avenir Next"
+    fontsize: 11pt
+    geometry: margin=0.75in
+    linestretch: 1.1
+    header-includes: |
+      \usepackage{etoolbox}
+      \apptocmd{\maketitle}{\vspace*{-1.1in}}{}{}
+filters:
+  - practice-filter.lua
 ---
 
 ## Warm-Up: Quick Concept and Calculation Checks
@@ -17,8 +31,7 @@ e. If the MPC in an economy is 0.75, what is the simple multiplier?
 f. A country's aggregate expenditures at full-employment GDP fall $15 billion short of what is
    needed to reach full-employment GDP. Is this a recessionary or an inflationary expenditure gap?
 
-<details>
-<summary>Show Answer</summary>
+::: {.solution-only}
 
 a. *Real output.* Because prices are sticky in the short run, changes in spending are absorbed by
    changes in how much firms produce, not by changing prices.
@@ -32,7 +45,7 @@ e. $1/(1-0.75) = 1/0.25 = 4$.
 f. A *recessionary expenditure gap* (spending falls short at full employment, producing a negative
    GDP gap).
 
-</details>
+:::
 
 ## Problem 1: Building the AE Schedule and Finding Equilibrium
 
@@ -53,8 +66,7 @@ c. At GDP $=1000$, is AE greater than or less than GDP? What does this imply is 
    unplanned inventories and future production at that GDP level?
 d. What is the MPC implied by this consumption schedule, and what is the multiplier?
 
-<details>
-<summary>Show Answer</summary>
+::: {.solution-only}
 
 ```{python}
 #| echo: false
@@ -93,7 +105,7 @@ c. At $GDP=1000$, $AE=950 < 1000$, spending falls *short* of output. Unplanned i
 d. The consumption schedule $C=150+0.75 \times GDP$ has a slope of $0.75$, so $MPC=0.75$, and the
    multiplier is $1/(1-0.75) = 4$.
 
-</details>
+:::
 
 ## Problem 2: Adding Government Spending and Taxes
 
@@ -108,8 +120,7 @@ c. The government now also imposes a lump-sum tax of $T = \$100$ billion. Since 
    the multiplier, what is the tax's effect on equilibrium GDP by itself?
 d. Combining the effects of $G$ and $T$ from parts (b) and (c), what is the new equilibrium GDP?
 
-<details>
-<summary>Show Answer</summary>
+::: {.solution-only}
 
 a. AE shifts *up by the full $50 billion* at every GDP level (government purchases add directly to
    spending).
@@ -122,7 +133,7 @@ d. Combining both effects from the original $\$800$ billion baseline: $800 + 200
    always smaller per dollar than spending's effect, since only $MPC \times T$ (not the full $T$)
    ever leaves the spending stream.
 
-</details>
+:::
 
 ## Problem 3: Net Exports and a Recessionary Gap
 
@@ -139,8 +150,7 @@ c. At full-employment GDP ($1{,}100$), aggregate expenditures are only $\$1{,}05
 d. Using the multiplier, if the government wanted to close this gap entirely, by how much would it
    need to increase spending?
 
-<details>
-<summary>Show Answer</summary>
+::: {.solution-only}
 
 ```{python}
 #| echo: false
@@ -153,7 +163,7 @@ ORANGE = "#c55a11"
 RED = "#c00000"
 
 gdp = list(range(650, 1150, 10))
-ae = [75 + 0.75*g + 100 for g in gdp]
+ae = [225 + 0.75*g for g in gdp]
 
 fig = go.Figure()
 fig.add_trace(go.Scatter(x=gdp, y=gdp, mode="lines", name="45-degree line (AE = GDP)",
@@ -187,4 +197,4 @@ d. To close a $\$50$ billion AE shortfall using a multiplier of $4$: it would ta
    $4 \times 50 = \$200$ billion, exactly closing the gap from $900$ to the full-employment level of
    $1{,}100$.
 
-</details>
+:::

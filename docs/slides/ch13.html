@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="ch13_files/libs/clipboard/clipboard.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="ch13_files/libs/clipboard/clipboard.min.js"></script>
 <script src="ch13_files/libs/quarto-html/tabby.min.js"></script>
 <script src="ch13_files/libs/quarto-html/popper.min.js"></script>
 <script src="ch13_files/libs/quarto-html/tippy.umd.min.js"></script>
@@ -28,7 +28,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="ch13_files/libs/revealjs/dist/theme/quarto-47ef377ee77cdf85c61adfa0b07e2c12.css">
+  <link rel="stylesheet" href="ch13_files/libs/revealjs/dist/theme/quarto-e00a94d0b3aba83a0d1d087aede4ee39.css">
   <link href="ch13_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="ch13_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="ch13_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -120,6 +120,18 @@
       margin-right: 0; 
     }
   </style>
+  <script src="ch13_files/libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="ch13_files/libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="ch13_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+  
+  <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+  <script>
+  window.PlotlyConfig = {MathJaxConfig: 'local'};
+  if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
+  </script>
+  <script type="module">import "https://cdn.plot.ly/plotly-3.7.0.min"</script>
+
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -146,7 +158,41 @@
 <li>The public debt: how it accumulates, how to measure it, and who holds it</li>
 <li>The crowding-out effect, and a preview of monetary policy in Chapters 14-15</li>
 </ul>
-<!-- IMAGE PLACEHOLDER: U.S. Capitol building or federal budget document, suggesting fiscal policy -->
+
+<img data-src="https://images.unsplash.com/photo-1520525003249-2b9cdda513bc?w=800&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.1.0&amp;ixid=NHwxMjA3fDA%3D" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
+<section id="where-this-fits-building-the-macro-model" class="slide level2">
+<h2>Where This Fits: Building the Macro Model</h2>
+<div style="font-size: 1.05em;">
+<p>Each chapter has added a piece to the same underlying model of the economy:</p>
+</div>
+<div class="cell" data-reveal="true" data-fig-width="10" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A["Ch 1-3&lt;br/&gt;Scarcity, PPF,&lt;br/&gt;Supply &amp; Demand"] --&gt; B["Ch 6-9&lt;br/&gt;Measuring the Economy&lt;br/&gt;(GDP, growth, business cycle)"]
+    B --&gt; C["Ch 10&lt;br/&gt;Basic Relationships&lt;br/&gt;(C, S, Investment)"]
+    C --&gt; D["Ch 11&lt;br/&gt;AE Model&lt;br/&gt;(fixed prices)"]
+    D --&gt; E["Ch 12&lt;br/&gt;AD-AS Model&lt;br/&gt;(prices can move)"]
+    E --&gt; F["Ch 13&lt;br/&gt;Fiscal Policy&lt;br/&gt;(G and T)"]
+    F --&gt; G["Ch 14-15&lt;br/&gt;Monetary Policy&lt;br/&gt;(the Fed)"]
+
+    classDef current fill:#1f4e79,color:#fff,stroke:#1f4e79;
+    classDef prior fill:#9dc3e6,color:#000,stroke:#1f4e79;
+    classDef upcoming fill:#e8e8e8,color:#555,stroke:#999,stroke-dasharray: 4 3;
+    class F current
+    class A,B,C,D,E prior
+    class G upcoming
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div style="font-size: 1.05em;">
+<p>Chapter 12 built the AD-AS model: a tool for seeing how the price level and real GDP are determined together. This chapter puts that tool to work. Fiscal policy asks: can the government deliberately shift AD on purpose, using G and T, to close a recessionary or inflationary gap?</p>
+</div>
 </section>
 <section>
 <section id="discretionary-fiscal-policy-and-the-multiplier" class="title-slide slide level1 center">
@@ -155,7 +201,40 @@
 </section>
 <section id="connecting-back-the-adas-model-chapter-12" class="slide level2">
 <h2>Connecting Back: The AD/AS Model (Chapter 12)</h2>
-<div style="font-size: 1.2em;">
+<div class="columns">
+<div class="column" style="width:48%;">
+<div id="fd4424ad" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<div style="height:340px; width:420px;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.7.0.min.js" integrity="sha256-jvTGqxNp8AGWEcvNLVuKr+8j5dGe9Yw51LQkmDH+IYA=" crossorigin="anonymous"></script>                <div id="099e2e2a-eae3-4d38-904b-54a1d9cde641" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("099e2e2a-eae3-4d38-904b-54a1d9cde641")) {                    Plotly.newPlot(                        "099e2e2a-eae3-4d38-904b-54a1d9cde641",                        [{"line":{"color":"#9dc3e6","dash":"dot","width":2},"mode":"lines","name":"AD (old)","x":[700,675,650,625,600,575,550,525,500],"y":[80,85,90,95,100,105,110,115,120],"type":"scatter"},{"line":{"color":"#1f4e79","width":3},"mode":"lines","name":"AD (new)","x":[760,735,710,685,660,635,610,585,560],"y":[80,85,90,95,100,105,110,115,120],"type":"scatter"},{"line":{"color":"#c55a11","width":3},"mode":"lines","name":"AS","x":[430,455,480,505,530,555,580,605,630],"y":[80,85,90,95,100,105,110,115,120],"type":"scatter"},{"hovertemplate":"Old equilibrium\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"gray","size":11},"mode":"markers","showlegend":false,"x":[565],"y":[107],"type":"scatter"},{"hovertemplate":"New equilibrium\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#548235","size":13,"symbol":"star"},"mode":"markers","showlegend":false,"x":[590],"y":[112],"type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"legend":{"font":{"size":10},"x":0.02,"y":1.22,"orientation":"h"},"xaxis":{"title":{"text":"Real GDP"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray"},"yaxis":{"title":{"text":"Price level"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray"},"width":420,"height":340,"plot_bgcolor":"white"},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('099e2e2a-eae3-4d38-904b-54a1d9cde641');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+</div>
+</div><div class="column" style="width:52%;">
+<div style="font-size: 1.1em;">
 <p>Chapter 12 built the <strong>aggregate demand and aggregate supply (AD/AS) model</strong>: aggregate demand slopes down, short-run aggregate supply slopes up, and equilibrium output and the price level are set where they cross.</p>
 <ul>
 <li>Aggregate demand (AD) can shift right or left, moving equilibrium GDP and the price level.</li>
@@ -163,6 +242,7 @@
 </ul>
 <p><em>Fiscal policy is exactly that: using government spending and taxes as levers to shift AD.</em></p>
 </div>
+</div></div>
 </section>
 <section id="connecting-back-the-multiplier-chapters-10-11" class="slide level2">
 <h2>Connecting Back: The Multiplier (Chapters 10-11)</h2>
@@ -190,7 +270,7 @@
 <section id="what-is-discretionary-fiscal-policy" class="slide level2">
 <h2>What Is Discretionary Fiscal Policy?</h2>
 <div style="font-size: 1.2em;">
-<p><strong>Discretionary fiscal policy</strong> is the <em>deliberate</em>, legislated use of government spending and taxes to stabilize the economy. It requires new legislation, Congress and the President must actively decide to change G or T.</p>
+<p><strong>Discretionary fiscal policy</strong> is the <em>deliberate</em>, legislated use of government spending and taxes to stabilize the economy. It requires new legislation: Congress and the President must actively decide to change G or T.</p>
 <ul>
 <li>This is distinct from <em>automatic stabilizers</em> (covered next section), which work without any new law.</li>
 <li>In the U.S., policy recommendations often come from bodies like the <strong>Council of Economic Advisers</strong>, which advises the President on macroeconomic conditions.</li>
@@ -208,7 +288,8 @@
 <li>Because it requires legislation, discretionary fiscal policy can be slow to enact compared to other policy tools, an idea we return to shortly.</li>
 </ul>
 </div>
-</section>
+
+<img data-src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&amp;w=2370&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=NHwxMjA3fDA%3D" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
 <section id="expansionary-fiscal-policy" class="slide level2">
 <h2>Expansionary Fiscal Policy</h2>
 <div style="font-size: 1.2em;">
@@ -219,6 +300,7 @@
 <li>Some combination of both</li>
 </ul>
 <p>Each of these shifts AD to the <em>right</em>, raising equilibrium GDP (and, in AD/AS terms, moving output toward potential GDP).</p>
+<p><em>Real-world examples: the 2009 American Recovery and Reinvestment Act (the “2008 stimulus”) and the 2020-21 CARES Act and American Rescue Plan were both large expansionary responses to recessions, combining new spending with tax relief.</em></p>
 </div>
 </section>
 <section id="contractionary-fiscal-policy" class="slide level2">
@@ -247,42 +329,31 @@
 </section>
 <section id="example-closing-a-recessionary-gap" class="slide level2">
 <h2>Example: Closing a Recessionary Gap</h2>
-<div style="font-size: 1.2em;">
+<div style="font-size: 1.05em;">
 <p>An economy has a recessionary gap: equilibrium GDP needs to rise by $300 billion (illustrative) to reach full-employment GDP. The MPC is <span class="math inline">\(0.75\)</span>.</p>
 <ol type="1">
 <li>Compute the spending multiplier and the tax multiplier.</li>
+</ol>
+<div class="fragment answer">
+<p>Multiplier <span class="math inline">\(= 1/\text{MPS} = 1/0.25 = 4\)</span>. Tax multiplier <span class="math inline">\(= \text{MPC} \times \text{multiplier} = 0.75 \times 4 = 3\)</span>.</p>
+</div>
+<ol start="2" type="1">
 <li>If policymakers use <em>only</em> a change in G, how large a change is needed?</li>
+</ol>
+<div class="fragment answer">
+<p>G alone: <span class="math inline">\(\Delta G = 300 / 4 = 75\)</span>. Increase G by $75 billion.</p>
+</div>
+<ol start="3" type="1">
 <li>If policymakers use <em>only</em> a change in T, how large a change is needed?</li>
+</ol>
+<div class="fragment answer">
+<p>T alone: <span class="math inline">\(\Delta T = 300 / 3 = 100\)</span>. Decrease T by $100 billion.</p>
+</div>
+<ol start="4" type="1">
 <li>Find one combination of a <em>simultaneous</em> change in G and T that closes the gap.</li>
 </ol>
-</div>
-</section>
-<section id="solution-closing-a-recessionary-gap" class="slide level2">
-<h2>Solution: Closing a Recessionary Gap</h2>
-<div style="font-size: 1.15em;">
-<ol type="1">
-<li>Multiplier <span class="math inline">\(= 1/\text{MPS} = 1/0.25 = 4\)</span>. Tax multiplier <span class="math inline">\(= \text{MPC} \times \text{multiplier} = 0.75 \times 4 = 3\)</span>.</li>
-</ol>
-</div>
-<div class="fragment">
-<div style="font-size: 1.15em;">
-<ol start="2" type="1">
-<li>G alone: <span class="math inline">\(\Delta G = 300 / 4 = 75\)</span>. Increase G by $75 billion.</li>
-</ol>
-</div>
-</div>
-<div class="fragment">
-<div style="font-size: 1.15em;">
-<ol start="3" type="1">
-<li>T alone: <span class="math inline">\(\Delta T = 300 / 3 = 100\)</span>. Decrease T by $100 billion.</li>
-</ol>
-</div>
-</div>
-<div class="fragment">
-<div style="font-size: 1.15em;">
-<ol start="4" type="1">
-<li>Combination: increase G by $45 billion <em>and</em> decrease T by $40 billion. Check: <span class="math inline">\(45 \times 4 = 180\)</span>, plus <span class="math inline">\(40 \times 3 = 120\)</span>, total <span class="math inline">\(= 300\)</span>. <em>Exactly closes the gap.</em></li>
-</ol>
+<div class="fragment answer">
+<p>Increase G by $45 billion <em>and</em> decrease T by $40 billion. Check: <span class="math inline">\(45 \times 4 = 180\)</span>, plus <span class="math inline">\(40 \times 3 = 120\)</span>, total <span class="math inline">\(= 300\)</span>. <em>Exactly closes the gap.</em></p>
 </div>
 </div>
 </section>
@@ -292,39 +363,27 @@
 <p>A different economy has an <em>inflationary</em> gap: equilibrium GDP needs to <em>fall</em> by $240 billion to reach full-employment GDP. The MPC here is <span class="math inline">\(0.6\)</span>.</p>
 <ol type="1">
 <li>Compute the spending multiplier and the tax multiplier for this economy.</li>
+</ol>
+<div class="fragment answer">
+<p>Multiplier <span class="math inline">\(= 1/0.4 = 2.5\)</span>. Tax multiplier <span class="math inline">\(= 0.6 \times 2.5 = 1.5\)</span>.</p>
+</div>
+<ol start="2" type="1">
 <li>If policymakers use <em>only</em> a change in G, how large a change is needed, and in which direction?</li>
+</ol>
+<div class="fragment answer">
+<p>G alone: <span class="math inline">\(\Delta G = 240 / 2.5 = 96\)</span>. <em>Decrease</em> G by $96 billion.</p>
+</div>
+<ol start="3" type="1">
 <li>If policymakers use <em>only</em> a change in T, how large a change is needed, and in which direction?</li>
+</ol>
+<div class="fragment answer">
+<p>T alone: <span class="math inline">\(\Delta T = 240 / 1.5 = 160\)</span>. <em>Increase</em> T by $160 billion.</p>
+</div>
+<ol start="4" type="1">
 <li>Find one combination of a simultaneous change in G and T that closes the gap.</li>
 </ol>
-<p>Work through this with a partner or in a small group before checking the next slide.</p>
-</div>
-</section>
-<section id="review-closing-an-inflationary-gap" class="slide level2">
-<h2>Review: Closing an Inflationary Gap</h2>
-<div style="font-size: 1.1em;">
-<ol type="1">
-<li>Multiplier <span class="math inline">\(= 1/0.4 = 2.5\)</span>. Tax multiplier <span class="math inline">\(= 0.6 \times 2.5 = 1.5\)</span>.</li>
-</ol>
-</div>
-<div class="fragment">
-<div style="font-size: 1.1em;">
-<ol start="2" type="1">
-<li>G alone: <span class="math inline">\(\Delta G = 240 / 2.5 = 96\)</span>. <em>Decrease</em> G by $96 billion.</li>
-</ol>
-</div>
-</div>
-<div class="fragment">
-<div style="font-size: 1.1em;">
-<ol start="3" type="1">
-<li>T alone: <span class="math inline">\(\Delta T = 240 / 1.5 = 160\)</span>. <em>Increase</em> T by $160 billion.</li>
-</ol>
-</div>
-</div>
-<div class="fragment">
-<div style="font-size: 1.1em;">
-<ol start="4" type="1">
-<li>Combination: decrease G by $60 billion <em>and</em> increase T by $60 billion. Check: <span class="math inline">\(60 \times 2.5 = 150\)</span>, plus <span class="math inline">\(60 \times 1.5 = 90\)</span>, total <span class="math inline">\(= 240\)</span>. <em>Exactly closes the gap.</em></li>
-</ol>
+<div class="fragment answer">
+<p>Combination: decrease G by $60 billion <em>and</em> increase T by $60 billion. Check: <span class="math inline">\(60 \times 2.5 = 150\)</span>, plus <span class="math inline">\(60 \times 1.5 = 90\)</span>, total <span class="math inline">\(= 240\)</span>. <em>Exactly closes the gap.</em></p>
 </div>
 </div>
 </section>
@@ -343,34 +402,25 @@
 </section>
 <section id="example-the-balanced-budget-multiplier" class="slide level2">
 <h2>Example: The Balanced-Budget Multiplier</h2>
-<div style="font-size: 1.2em;">
+<div style="font-size: 1.1em;">
 <p>An economy has MPC <span class="math inline">\(= 0.75\)</span> (multiplier <span class="math inline">\(= 4\)</span>, tax multiplier <span class="math inline">\(= 3\)</span>, as before, but use fresh numbers here). Congress raises both G and T by $60 billion each, keeping the budget balance unchanged.</p>
 <ol type="1">
 <li>What is the GDP effect of the $60 billion increase in G alone?</li>
+</ol>
+<div class="fragment answer">
+<p>G effect: <span class="math inline">\(60 \times 4 = 240\)</span> (GDP rises by 240).</p>
+</div>
+<ol start="2" type="1">
 <li>What is the GDP effect of the $60 billion increase in T alone?</li>
+</ol>
+<div class="fragment answer">
+<p>T effect: <span class="math inline">\(60 \times 3 = 180\)</span> (GDP falls by 180).</p>
+</div>
+<ol start="3" type="1">
 <li>What is the <em>net</em> effect on equilibrium GDP?</li>
 </ol>
-</div>
-</section>
-<section id="solution-the-balanced-budget-multiplier" class="slide level2">
-<h2>Solution: The Balanced-Budget Multiplier</h2>
-<div style="font-size: 1.2em;">
-<ol type="1">
-<li>G effect: <span class="math inline">\(60 \times 4 = 240\)</span> (GDP rises by 240).</li>
-</ol>
-</div>
-<div class="fragment">
-<div style="font-size: 1.2em;">
-<ol start="2" type="1">
-<li>T effect: <span class="math inline">\(60 \times 3 = 180\)</span> (GDP falls by 180).</li>
-</ol>
-</div>
-</div>
-<div class="fragment">
-<div style="font-size: 1.2em;">
-<ol start="3" type="1">
-<li>Net effect: <span class="math inline">\(240 - 180 = 60\)</span>. Equilibrium GDP rises by exactly $60 billion, the <em>same</em> as the dollar increase in G and T. <em>This confirms the balanced-budget multiplier equals 1.</em></li>
-</ol>
+<div class="fragment answer">
+<p>Net effect: <span class="math inline">\(240 - 180 = 60\)</span>. Equilibrium GDP rises by exactly $60 billion, the <em>same</em> as the dollar increase in G and T. <em>This confirms the balanced-budget multiplier equals 1.</em></p>
 </div>
 </div>
 </section>
@@ -416,11 +466,11 @@
 </section>
 <section id="example-progressive-vs.-proportional-stabilization" class="slide level2">
 <h2>Example: Progressive vs.&nbsp;Proportional Stabilization</h2>
-<div style="font-size: 1.2em;">
-<p>An economy’s GDP falls from $1{,}000 billion to $800 billion (illustrative). Compare two hypothetical tax systems:</p>
+<div style="font-size: 1.05em;">
+<p>An economy’s GDP falls from $1,000 billion to $800 billion (illustrative). Compare two hypothetical tax systems:</p>
 <ul>
 <li><strong>Proportional system</strong>: a flat <span class="math inline">\(20\%\)</span> average tax rate at every GDP level.</li>
-<li><strong>Progressive system</strong>: average tax rate is <span class="math inline">\(25\%\)</span> at GDP <span class="math inline">\(= 1{,}000\)</span>, falling to <span class="math inline">\(15\%\)</span> at GDP <span class="math inline">\(= 800\)</span>.</li>
+<li><strong>Progressive system</strong>: average tax rate is <span class="math inline">\(25\%\)</span> at GDP <span class="math inline">\(= 1,000\)</span>, falling to <span class="math inline">\(15\%\)</span> at GDP <span class="math inline">\(= 800\)</span>.</li>
 </ul>
 <ol type="1">
 <li>Compute tax revenue at both GDP levels under each system.</li>
@@ -428,9 +478,7 @@
 <li>Which system cushions the fall in disposable income more?</li>
 </ol>
 </div>
-</section>
-<section id="solution-progressive-vs.-proportional-stabilization" class="slide level2">
-<h2>Solution: Progressive vs.&nbsp;Proportional Stabilization</h2>
+<div class="fragment answer">
 <div class="columns">
 <div class="column" style="width:50%;">
 <table class="caption-top">
@@ -470,11 +518,12 @@
 </tbody>
 </table>
 </div><div class="column" style="width:50%;">
-<div style="font-size: 1.1em;">
-<p>Tax revenue <em>falls by more</em> under the progressive system ($130 vs.&nbsp;$40), which sounds bad for government revenue, but it means <em>disposable income falls by much less</em> ($70 vs.&nbsp;$160).</p>
+<div style="font-size: 0.95em;">
+<p>Tax revenue <em>falls by more</em> under the progressive system ($130 vs.&nbsp;$40), but <em>disposable income falls by much less</em> ($70 vs.&nbsp;$160).</p>
 <p><em>The progressive system automatically absorbs more of the GDP shock through taxes, leaving households’ after-tax income, and therefore their spending, more stable.</em></p>
 </div>
 </div></div>
+</div>
 </section>
 <section id="automatic-stabilizers-in-the-real-world" class="slide level2">
 <h2>Automatic Stabilizers in the Real World</h2>
@@ -526,42 +575,31 @@
 </section>
 <section id="example-actual-vs.-cyclically-adjusted-budget" class="slide level2">
 <h2>Example: Actual vs.&nbsp;Cyclically Adjusted Budget</h2>
-<div style="font-size: 1.2em;">
-<p>An economy’s potential GDP is $1{,}000 billion, but actual GDP this year is only $900 billion (a recessionary gap). The tax rate is a flat <span class="math inline">\(20\%\)</span>, and government spending is fixed at $200 billion regardless of GDP.</p>
+<div style="font-size: 1.05em;">
+<p>An economy’s potential GDP is $1,000 billion, but actual GDP this year is only $900 billion (a recessionary gap). The tax rate is a flat <span class="math inline">\(20\%\)</span>, and government spending is fixed at $200 billion regardless of GDP.</p>
 <ol type="1">
 <li>Compute actual tax revenue and the actual budget balance.</li>
-<li>Compute what tax revenue <em>would be</em> if GDP were at its potential level of $1{,}000 billion.</li>
+</ol>
+<div class="fragment answer">
+<p>Actual revenue <span class="math inline">\(= 0.20 \times 900 = 180\)</span>. Actual balance <span class="math inline">\(= 180 - 200 = -20\)</span> (a $20 billion deficit).</p>
+</div>
+<ol start="2" type="1">
+<li>Compute what tax revenue <em>would be</em> if GDP were at its potential level of $1,000 billion.</li>
+</ol>
+<div class="fragment answer">
+<p>Revenue at potential GDP <span class="math inline">\(= 0.20 \times 1,000 = 200\)</span>.</p>
+</div>
+<ol start="3" type="1">
 <li>Compute the cyclically adjusted budget balance.</li>
+</ol>
+<div class="fragment answer">
+<p>Cyclically adjusted balance <span class="math inline">\(= 200 - 200 = 0\)</span> (balanced).</p>
+</div>
+<ol start="4" type="1">
 <li>What does the comparison tell you about the <em>stance</em> of fiscal policy?</li>
 </ol>
-</div>
-</section>
-<section id="solution-actual-vs.-cyclically-adjusted-budget" class="slide level2">
-<h2>Solution: Actual vs.&nbsp;Cyclically Adjusted Budget</h2>
-<div style="font-size: 1.15em;">
-<ol type="1">
-<li>Actual revenue <span class="math inline">\(= 0.20 \times 900 = 180\)</span>. Actual balance <span class="math inline">\(= 180 - 200 = -20\)</span> (a $20 billion deficit).</li>
-</ol>
-</div>
-<div class="fragment">
-<div style="font-size: 1.15em;">
-<ol start="2" type="1">
-<li>Revenue at potential GDP <span class="math inline">\(= 0.20 \times 1{,}000 = 200\)</span>.</li>
-</ol>
-</div>
-</div>
-<div class="fragment">
-<div style="font-size: 1.15em;">
-<ol start="3" type="1">
-<li>Cyclically adjusted balance <span class="math inline">\(= 200 - 200 = 0\)</span> (balanced).</li>
-</ol>
-</div>
-</div>
-<div class="fragment">
-<div style="font-size: 1.15em;">
-<ol start="4" type="1">
-<li>The actual $20 billion deficit is entirely a <em>cyclical</em> result of GDP sitting below potential, automatic stabilizers working as intended. The cyclically adjusted budget of <span class="math inline">\(0\)</span> shows that fiscal <em>policy itself</em> is neither expansionary nor contractionary here, it is neutral.</li>
-</ol>
+<div class="fragment answer">
+<p>The actual $20 billion deficit is entirely a <em>cyclical</em> result of GDP sitting below potential, automatic stabilizers working as intended. The cyclically adjusted budget of <span class="math inline">\(0\)</span> shows that fiscal <em>policy itself</em> is neither expansionary nor contractionary here, it is neutral.</p>
 </div>
 </div>
 </section></section>
@@ -572,13 +610,47 @@
 </section>
 <section id="what-is-the-public-debt" class="slide level2">
 <h2>What Is the Public Debt?</h2>
-<div style="font-size: 1.2em;">
+<div class="columns">
+<div class="column" style="width:48%;">
+<div id="fa68b51f" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div style="height:340px; width:400px;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.7.0.min.js" integrity="sha256-jvTGqxNp8AGWEcvNLVuKr+8j5dGe9Yw51LQkmDH+IYA=" crossorigin="anonymous"></script>                <div id="70bbaba2-beff-415b-9c77-a7761157a731" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("70bbaba2-beff-415b-9c77-a7761157a731")) {                    Plotly.newPlot(                        "70bbaba2-beff-415b-9c77-a7761157a731",                        [{"marker":{"color":"#c55a11"},"name":"Deficit\u002fsurplus (flow)","x":[1,2,3,4],"y":[50,30,-10,20],"type":"bar"},{"line":{"color":"#1f4e79","width":3},"marker":{"size":9},"mode":"lines+markers","name":"Accumulated debt (stock)","x":[1,2,3,4],"y":[50,80,70,90],"type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"legend":{"font":{"size":10},"x":0.02,"y":1.22,"orientation":"h"},"xaxis":{"title":{"text":"Year"},"tickvals":[1,2,3,4],"showgrid":false},"yaxis":{"title":{"text":"$ billions"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray","zeroline":true,"zerolinecolor":"gray"},"width":400,"height":340,"plot_bgcolor":"white"},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('70bbaba2-beff-415b-9c77-a7761157a731');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+</div>
+</div><div class="column" style="width:52%;">
+<div style="font-size: 1.1em;">
 <p>The <strong>public debt</strong> is the accumulated total of past budget deficits, minus past surpluses. Each year’s deficit adds to the debt; each year’s surplus subtracts from it.</p>
 <ul>
 <li>The public debt is a <em>stock</em> (accumulated over time), while the deficit or surplus is a <em>flow</em> (measured within one year).</li>
-<li>A country can run a deficit in some years and a surplus in others; the debt reflects the running total.</li>
+<li>A country can run a deficit in some years and a surplus in others (notice Year 3 above); the debt reflects the running total.</li>
 </ul>
 </div>
+</div></div>
 </section>
 <section id="measuring-debt-absolute-dollars-vs.-percent-of-gdp" class="slide level2">
 <h2>Measuring Debt: Absolute Dollars vs.&nbsp;Percent of GDP</h2>
@@ -590,6 +662,57 @@
 </ul>
 <p><em>The percent-of-GDP measure is more meaningful for comparing debt burdens over time or across countries, since a larger economy can support a larger absolute debt without the burden being any heavier.</em></p>
 </div>
+</section>
+<section id="real-world-comparison-debt-to-gdp-across-countries" class="slide level2">
+<h2>Real-World Comparison: Debt-to-GDP Across Countries</h2>
+<div class="columns">
+<div class="column" style="width:58%;">
+<div id="a089b68e" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<div style="height:400px; width:560px;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.7.0.min.js" integrity="sha256-jvTGqxNp8AGWEcvNLVuKr+8j5dGe9Yw51LQkmDH+IYA=" crossorigin="anonymous"></script>                <div id="cad64aca-d267-4e77-81da-acdd5281c4ae" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("cad64aca-d267-4e77-81da-acdd5281c4ae")) {                    Plotly.newPlot(                        "cad64aca-d267-4e77-81da-acdd5281c4ae",                        [{"line":{"color":"#548235","dash":"solid","width":3},"mode":"lines","name":"Brazil","x":{"dtype":"i2","bdata":"0QfSB9MH1AfVB9YH1wfYB9kH2gfbB9wH3QfeB98H4AfhB+IH4wfkB+UH5gfnB+gH"},"y":{"dtype":"f8","bdata":"MshdhCnVUECoVl9dFQZTQLd6Tnrf4FFApRMJppoBUUDGaYgq\u002fL1QQE1O7QxTJlBAqkavBiiDT0Bx4qsdxbVOQGbZk8DmLFBA6UfDKXM3T0D3ksZoHVFOQMYzaOifzk5Ai8Iuih7MTUAq4Qm9\u002fs5OQC3pKAez7lFAmGpmLQVbU0CnA1lPra9UQDVfJR+7MVVAogxVMZXHVUCXVdgMcABYQGNkyRzLO1ZAxVVl3xX8VEDMQ6Z8CABVQM3Ooncq0lVA"},"type":"scatter"},{"line":{"color":"#aaaaaa","dash":"dot","width":1.5},"mode":"lines","name":"Canada","x":{"dtype":"i2","bdata":"xgfHB8gHyQfKB8sHzAfNB84HzwfQB9EH0gfTB9QH1QfWB9cH2AfZB9oH2wfcB90H3gffB+AH4QfiB+MH5AflB+YH5wfoBw=="},"y":{"dtype":"f8","bdata":"+0DyzqFvUkAlyXN9H2pUQD2elh+4DlZAC34bYryuV0DCNXf0v15YQHpTkQpjBVlAgQncupsPWUD8GkmCcNFXQERssHCSUldAtXBZhc09VkACS65i8RtUQA8r3PKRXVRAweEFEanmU0DS5c3hWvpSQP5D+u3r+FFAAoI5evyoUUAddAmH3npRQAQCnUmby1BAjSjtDb6WUUCIvVDAdnNUQJ595UF6\u002flRAcD51rFISVUBi2cwhqclVQK3ddqG55lVA7kEIyJdiVUAmGw+22AFXQCWRfZBlGVdAW7Iqwk28VkB4swbvq7FWQONw5ldzjVZAY9F0djKEXUCaX80BgidcQAx2w7ZFDVpAPSe9b3ztWkAwL8A+OrFbQA=="},"type":"scatter"},{"line":{"color":"#c00000","dash":"solid","width":3},"mode":"lines","name":"China","x":{"dtype":"i2","bdata":"ywfMB80HzgfPB9AH0QfSB9MH1AfVB9YH1wfYB9kH2gfbB9wH3QfeB98H4AfhB+IH4wfkB+UH5gfnB+gH"},"y":{"dtype":"f8","bdata":"liTP9X1sNUD76T9rfjg1QPROBdzzZDRA2xg74SVwNEC9bhEY65s1QFAYlGk0tTZA+bt31JhAOEDDLLRzmo05QNBhvrwAazpA+FW5UPn\u002fOUAK20\u002fG+Og5QCodrP9zLDlAhKCjVS21PEDul09WDLc6QP\u002fomzQN\u002fkBA\u002filVouyrQECTV+cYkJdAQK29T1Wh6UBAsJKP3QU4QkD7lc6HZ6dDQAbaHVIMZERAObnfoSjcSEAmipC6nfNKQNRFCmXhyUtAwwyNJ4K4TUBbYfpeQ0JRQNI2\u002fkRliVFAmgZF8wDdUkCgOIB+34BUQMdmR6rvFFZA"},"type":"scatter"},{"line":{"color":"#aaaaaa","dash":"dot","width":1.5},"mode":"lines","name":"France","x":{"dtype":"i2","bdata":"xgfHB8gHyQfKB8sHzAfNB84HzwfQB9EH0gfTB9QH1QfWB9cH2AfZB9oH2wfcB90H3gffB+AH4QfiB+MH5AflB+YH5wfoBw=="},"y":{"dtype":"f8","bdata":"7MA5I0plQkAXZqGd0+JCQJscPulE2kRAmN7+XDQUSEA5RNycSspJQBiT\u002fl4K50xATBjNyvZLTkDRWPs72\u002f1OQDFBDd\u002fCDE9AXI\u002fC9Si2TkAJ3SVxVtxNQKqAe54\u002fqU1AU69bBMagTkClFHR7SVdQQEZAhSNIuFBAJLa7B+gLUUAiOC7jpllQQDojSnuDXlBAwmosYW10UUDJzAUujwNVQPIk6ZrJkVVAcTyfAfUvVkAyk6gXfO9WQM0eaAWGo1dAHqM883IKWECimSfXFD5YQCzVBbzMiVhA53Pudr2wWEASEf5F0KFYQI\u002fC9ShcilhA4UVfQZq5XEAuymyQSTJcQF5LyAc911tA3QcgtYlxW0DQJ\u002fIk6UZcQA=="},"type":"scatter"},{"line":{"color":"#aaaaaa","dash":"dot","width":1.5},"mode":"lines","name":"Germany","x":{"dtype":"i2","bdata":"xgfHB8gHyQfKB8sHzAfNB84HzwfQB9EH0gfTB9QH1QfWB9cH2AfZB9oH2wfcB90H3gffB+AH4QfiB+MH5AflB+YH5wfoBw=="},"y":{"dtype":"f8","bdata":"LXk8LT9eREB8REyJJL5DQEEo7+No7kRAuk4jLZXBRkDL8nUZ\u002fu9HQMEeEynNpEtA9z5VhQYOTUB6VtKKb5pNQFOzB1qB501ARSv3ArMsTkCkqDP3kJ5NQMLaGDvhB01AGZKTiVvpTUDNlNbfEqxPQNOGw9LAPVBAgpGXNbHHUECj5qvkY5lQQDHPSlrx109ArwlpjUFKUECwH2KDhRVSQMGNlC2SQFRA9Z7KaU+dU0C8k0+PbfNTQM3pspjYW1NAryZPWU2hUkBx5eyd0c1RQF2JQPUPElFAm1Wfq60BUECzXaEPlmdOQILIIk28WU1AwaikTkACUUCgbwuW6gRRQEbQmEnUP1BAGhTNA1hwT0CZ02UxsfFPQA=="},"type":"scatter"},{"line":{"color":"#7030a0","dash":"solid","width":3},"mode":"lines","name":"India","x":{"dtype":"i2","bdata":"xwfIB8kHygfLB8wHzQfOB88H0AfRB9IH0wfUB9UH1gfXB9gH2QfaB9sH3AfdB94H3wfgB+EH4gfjB+QH5QfmB+cH6Ac="},"y":{"dtype":"f8","bdata":"xVkRNdEpU0CGOqxwy7BTQKUyxRwElVNAYMrAAS2wUkATChFwCLhRQMto5POKyFBAAimxa3tAUUAaUkXxKlJRQCbGMv0S0VFAnx1wXTG8UkC8XS9NEQdUQPjii\u002fZ4E1VAZB75g4F4VUBzDwnf+zhVQAZlGk0umFRAoIhFDDt8U0B+4CpPIN1SQCBFnbmHl1JAMIDwoUQxUkCCcAUU6uxQQKAZxAd2KVFAZHeBkgL\u002fUEA5YFeTp+1QQHl2+daHxlBAsACmDBxDUUC5iVqaWzxRQOVfyyvXalFACTICKhyZUUDpuBrZlcJSQJENpItNG1ZAuJBHcCPfVEDpK0gzFotUQCRFZFjFTlRAqU9yh01SVEA="},"type":"scatter"},{"line":{"color":"#aaaaaa","dash":"dot","width":1.5},"mode":"lines","name":"Italy","x":{"dtype":"i2","bdata":"xgfHB8gHyQfKB8sHzAfNB84HzwfQB9EH0gfTB9QH1QfWB9cH2AfZB9oH2wfcB90H3gffB+AH4QfiB+MH5AflB+YH5wfoBw=="},"y":{"dtype":"f8","bdata":"QWfSpurSV0AvxOqPMKlYQIleRrHcVlpATYQNT6\u002feXEA+BcB4BmVeQAg9m1WfxV1AxQPKply5XUCob5nTZR9dQJBJRs7CeFxAkst\u002fSL9DXEC6MT1hiS9bQMKjjSPWIFtAGCZTBaN8WkDsEtVbA0laQITTghd9L1pAWmQ730+LWkBVGFsIcpBaQIts5\u002fup3VlATx4Wak1zWkBQGf8+4whdQNHLKJZbsF1AnPnVHCDIXUBMjjulg3lfQN5Zu+1Ce2BAnMQgsHLZYEAHtkqwONlgQIRHG0esx2BAaLPqc7W3YECjryDNWMZgQBA7U+i8vGBAcv4mFCJMY0Bl3xXB\u002fzliQJs90AoMS2FAxqLp7GTUYEBPdcjNcOpgQA=="},"type":"scatter"},{"line":{"color":"#c55a11","dash":"solid","width":3},"mode":"lines","name":"Japan","x":{"dtype":"i2","bdata":"xgfHB8gHyQfKB8sHzAfNB84HzwfQB9EH0gfTB9QH1QfWB9cH2AfZB9oH2wfcB90H3gffB+AH4QfiB+MH5AflB+YH5wfoBw=="},"y":{"dtype":"f8","bdata":"Fi8WhsidT0DRWtHmODFPQNZSQNr\u002fsFBAdqkR+pk1UkCvzFt1HRdVQNBf6BGjIVdAyEEJM22DWEA1mIbhIz5aQIhjXdxGAV1AomKcvwkwYEAPC7WmefNgQGXCL\u002fXzI2JAInGPpQ9DY0AUIuAQqgBkQInqrYGtL2VAzF1LyAfTZUD4Nv3Zj8RlQK+xS1RvnmVAGCE82jibZkBHOC140dloQGU2yCQjvGlAJcy0\u002fStla0DOwp52+EJsQOZ0WUxsrmxAlX1XBP8obUAAxjNo6IhsQANDVrd6DW1AN3Fyv0PqbEBn1edqKwxtQAq6vaQxjG1A10y+2eYlcEDidf2C3bRvQGcng6PkCW9At+7mqQ7\u002fbUBjl6jeGpVtQA=="},"type":"scatter"},{"line":{"color":"#9dc3e6","dash":"dot","width":1.5},"mode":"lines","name":"United Kingdom","x":{"dtype":"i2","bdata":"xgfHB8gHyQfKB8sHzAfNB84HzwfQB9EH0gfTB9QH1QfWB9cH2AfZB9oH2wfcB90H3gffB+AH4QfiB+MH5AflB+YH5wfoBw=="},"y":{"dtype":"f8","bdata":"9dkB1xVDPEBGtvP91Lg8QBK\u002fYg0X\u002fUBALPLrh9gORUBi9UcYBlpEQFqeB3dnh0ZAwXCuYYZeRkBDA7Fs5hBGQC+KHvgY\u002fERA7x6g+3I0RECtFAK5xNdCQGtj7ISXekFAaa1oc5y3QUBQqKePwGFCQEwW9x+Z5kNARpVh3A2AREC4W5IDdgdFQH9rJ0pClkVAJNBgU+dpSUCl3H2OjzpQQHBCIQIO91JADykGSDRbVEAVAU7v4h5VQNAmh086VFVAfoy5awnGVUCTN8DMd\u002fdVQB+\u002ft+nP9FVA0sWmlUKuVUAw2A3bFpZVQFfMCG8PalVAucK7XMR1WkDcEU4LXkhaQAaFQZlG51hAiEZ3EDsXWUCqSIWxhVJZQA=="},"type":"scatter"},{"line":{"color":"#1f4e79","dash":"solid","width":3},"mode":"lines","name":"United States","x":{"dtype":"i2","bdata":"xgfHB8gHyQfKB8sHzAfNB84HzwfQB9EH0gfTB9QH1QfWB9cH2AfZB9oH2wfcB90H3gffB+AH4QfiB+MH5AflB+YH5wfoBw=="},"y":{"dtype":"f8","bdata":"7Z48LNQUT0Dzr+WV66JQQIBJKlPMM1FASPq0iv6yUUANHNDSFWVRQL3Fw3sOR1FAX9TuVwEPUUDzVfKxu3VQQLvUCP1MTU9ABCFZwASETUDi578Hr5VKQKRRgZNtqkpAeT9uv3zcS0CkiuJV1mZNQP61vHK9kVBAxJPdzOhmUEC77xge+xVQQEIibeNPL1BAlGdeDrtlUkC6o\u002f\u002flWrJVQEGADB071ldA0xIro5HrWEBhVFInoM9ZQH506spnIVpAOgZkr3cbWkCxxAPKpjZaQK7wLhfxsVpAtKuQ8pNuWkCUE+0qpMJaQAaeew+XDFtATu53KAqBYEAgXtcv2C1fQKTfvg6cs11Aq7LviuC\u002fXUDDR8SUSDJeQA=="},"type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"legend":{"font":{"size":9}},"xaxis":{"title":{"text":"Year"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray"},"yaxis":{"title":{"text":"General government debt (% of GDP)"},"showgrid":true,"gridwidth":1,"gridcolor":"lightgray"},"width":560,"height":400,"plot_bgcolor":"white"},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('cad64aca-d267-4e77-81da-acdd5281c4ae');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+</div>
+<div style="font-size: 0.75em; text-align: center;">
+<p>Source: IMF, General Government Debt (% of GDP), 1990-2024.</p>
+</div>
+</div><div class="column" style="width:42%;">
+<div style="font-size: 1.0em;">
+<p>Debt-to-GDP varies enormously, and not always in the direction you’d expect:</p>
+<ul>
+<li><strong>Japan</strong> has climbed to over 230%, by far the highest here.</li>
+<li><strong>China</strong> has risen sharply since the 2008 financial crisis as it used public spending to keep growth high.</li>
+<li><strong>Brazil</strong> and <strong>India</strong>, both emerging economies, sit in the 80-90% range, closer to the US than to Japan.</li>
+</ul>
+<div class="fragment answer">
+<p>Yet Japan hasn’t faced a debt crisis. Why? Most of its debt is <em>internally held</em> (recall the internal vs.&nbsp;external distinction), owed mostly to Japanese banks, pension funds, and the Bank of Japan itself, rather than foreign lenders.</p>
+</div>
+</div>
+</div></div>
 </section>
 <section id="refinancing-vs.-retiring-the-debt" class="slide level2">
 <h2>Refinancing vs.&nbsp;Retiring the Debt</h2>
@@ -627,7 +750,7 @@
 </section>
 <section id="example-accumulating-the-public-debt" class="slide level2">
 <h2>Example: Accumulating the Public Debt</h2>
-<div style="font-size: 1.2em;">
+<div style="font-size: 1.05em;">
 <p>A small country starts with zero public debt. Over four years, its budget results (illustrative, in billions) are:</p>
 <table class="caption-top">
 <thead>
@@ -658,27 +781,15 @@
 <p>This country’s GDP in Year 4 is $900 billion.</p>
 <ol type="1">
 <li>Compute the accumulated public debt at the end of each year.</li>
+</ol>
+<div class="fragment answer">
+<p>End of Year 1: <span class="math inline">\(0 + 50 = 50\)</span>. End of Year 2: <span class="math inline">\(50 + 30 = 80\)</span>. End of Year 3: <span class="math inline">\(80 - 10 = 70\)</span> (a surplus <em>reduces</em> the debt). End of Year 4: <span class="math inline">\(70 + 20 = 90\)</span>.</p>
+</div>
+<ol start="2" type="1">
 <li>Express the Year 4 debt as a percentage of Year 4 GDP.</li>
 </ol>
-</div>
-</section>
-<section id="solution-accumulating-the-public-debt" class="slide level2">
-<h2>Solution: Accumulating the Public Debt</h2>
-<div style="font-size: 1.15em;">
-<ol type="1">
-<li>End of Year 1: <span class="math inline">\(0 + 50 = 50\)</span>. End of Year 2: <span class="math inline">\(50 + 30 = 80\)</span>. End of Year 3: <span class="math inline">\(80 - 10 = 70\)</span> (a surplus <em>reduces</em> the debt). End of Year 4: <span class="math inline">\(70 + 20 = 90\)</span>.</li>
-</ol>
-</div>
-<div class="fragment">
-<div style="font-size: 1.15em;">
-<ol start="2" type="1">
-<li>Accumulated public debt <span class="math inline">\(= 90\)</span> billion. Debt-to-GDP <span class="math inline">\(= 90 / 900 = 10\%\)</span>.</li>
-</ol>
-</div>
-</div>
-<div class="fragment">
-<div style="font-size: 1.15em;">
-<p><em>A single year’s surplus (Year 3) slowed the growth of the debt, but did not come close to eliminating it. The debt is a running total of every year’s result, not just the most recent one.</em></p>
+<div class="fragment answer">
+<p>Accumulated public debt <span class="math inline">\(= 90\)</span> billion. Debt-to-GDP <span class="math inline">\(= 90 / 900 = 10\%\)</span>. <em>A single year’s surplus (Year 3) slowed the growth of the debt, but did not come close to eliminating it.</em></p>
 </div>
 </div>
 </section>
@@ -686,29 +797,29 @@
 <h2>Real Data: The Public Debt</h2>
 <div class="columns">
 <div class="column" style="width:60%;">
-<!-- FRED EMBED PLACEHOLDER: series GFDEBTN, Federal Debt: Total Public Debt, millions of dollars, quarterly -->
-<!-- FRED EMBED PLACEHOLDER: series GFDEGDQ188S, Federal Debt: Total Public Debt as Percent of GDP, quarterly -->
+<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=20JK0&amp;width=670&amp;height=475" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowtransparency="true" loading="lazy">
+</iframe>
 </div><div class="column" style="width:40%;">
 <div class="r-stack">
 <div class="fragment current-visible">
 <ol type="1">
-<li>Why might the dollar-amount debt series (GFDEBTN) look like it only ever goes up, even in years the economy grew strongly?</li>
-</ol>
-</div>
-<div class="fragment current-visible">
-<p><em>Answer:</em> the federal government has run a deficit, adding to the debt, in nearly every recent year, and most maturing debt is refinanced rather than retired, so the total keeps climbing.</p>
-</div>
-<div class="fragment current-visible">
-<ol start="2" type="1">
-<li>Why look at debt as a percent of GDP (GFDEGDQ188S) instead of just the dollar amount?</li>
+<li>Why is debt as a percent of GDP (GFDEGDQ188S) a more meaningful measure than the raw dollar amount?</li>
 </ol>
 </div>
 <div class="fragment current-visible">
 <p><em>Answer:</em> percent of GDP accounts for the size of the economy that has to service the debt, making it possible to compare debt burdens meaningfully across different years or countries.</p>
 </div>
 <div class="fragment current-visible">
+<ol start="2" type="1">
+<li>Notice the sharp run-ups around WWII, 2008, and 2020. What do those three episodes have in common?</li>
+</ol>
+</div>
+<div class="fragment current-visible">
+<p><em>Answer:</em> each involved a large deficit-financed response, war spending, financial-crisis stimulus, and pandemic relief, layered on top of a recession-driven fall in GDP (the denominator), both of which push the ratio up at once.</p>
+</div>
+<div class="fragment current-visible">
 <ol start="3" type="1">
-<li>Around a recession, would you expect the percent-of-GDP series to rise for reasons beyond new borrowing?</li>
+<li>Around a recession, would you expect this ratio to rise for reasons beyond new borrowing?</li>
 </ol>
 </div>
 <div class="fragment current-visible">
