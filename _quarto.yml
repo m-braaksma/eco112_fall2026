@@ -148,14 +148,14 @@ website:
                 text: Slides
               - href: lecture/ch12-links.qmd
                 text: Useful Links
-          #     # - href: lecture/ch12-practice.qmd
-          #     #   text: Practice Problems
-          # - section: "Ch 13: Fiscal Policy"
-          #   contents:
-          #     - href: lecture/ch13.qmd
-          #       text: Slides
-          #     - href: lecture/ch13-links.qmd
-          #       text: Useful Links
+              - href: lecture/ch12-practice.qmd
+                text: Practice Problems
+          - section: "Ch 13: Fiscal Policy"
+            contents:
+              - href: lecture/ch13.qmd
+                text: Slides
+              - href: lecture/ch13-links.qmd
+                text: Useful Links
           #     # - href: lecture/ch13-practice.qmd
           #     #   text: Practice Problems
           # - section: "Ch 14: Money and Banking"
