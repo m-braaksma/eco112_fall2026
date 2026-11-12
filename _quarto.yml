@@ -148,8 +148,8 @@ website:
                 text: Slides
               - href: lecture/ch12-links.qmd
                 text: Useful Links
-              - href: lecture/ch12-practice.qmd
-                text: Practice Problems
+              # - href: lecture/ch12-practice.qmd
+              #   text: Practice Problems
           - section: "Ch 13: Fiscal Policy"
             contents:
               - href: lecture/ch13.qmd
