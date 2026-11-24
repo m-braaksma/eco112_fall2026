@@ -159,22 +159,22 @@ website:
                 text: Slides
               - href: lecture/ch13-links.qmd
                 text: Useful Links
-          #     # - href: lecture/ch13-practice.qmd
-          #     #   text: Practice Problems
-          # - section: "Ch 14: Money and Banking"
-          #   contents:
-          #     - href: lecture/ch14.qmd
-          #       text: Slides
-          #     - href: lecture/ch14-links.qmd
-          #       text: Useful Links
+              - href: lecture/ch13-practice.qmd
+                text: Practice Problems
+          - section: "Ch 14: Money and Banking"
+            contents:
+              - href: lecture/ch14.qmd
+                text: Slides
+              - href: lecture/ch14-links.qmd
+                text: Useful Links
           #     # - href: lecture/ch14-practice.qmd
           #     #   text: Practice Problems
-          # - section: "Ch 15: Monetary Policy"
-          #   contents:
-          #     - href: lecture/ch15.qmd
-          #       text: Slides
-          #     - href: lecture/ch15-links.qmd
-          #       text: Useful Links
+          - section: "Ch 15: Monetary Policy"
+            contents:
+              - href: lecture/ch15.qmd
+                text: Slides
+              - href: lecture/ch15-links.qmd
+                text: Useful Links
           #     # - href: lecture/ch15-practice.qmd
           #     #   text: Practice Problems
           # - section: "Ch 16: Financial Economics"
